@@ -372,7 +372,7 @@ $public_r=array('sitename'=>'仿3500游戏源码-96KaiFa原创源码（www.96kai
 'qtoqjf'=>'',
 'ctimeaddre'=>0,
 'ctimeqaddre'=>0,
-'deftempid'=>0,'add_www_96kaifa_com_name'=>'仿3500游戏','add_www_96kaifa_com_url'=>'http://www.96kaifa.com','add_www_96kaifa_com_url2'=>'www.96kaifa.com','add_www_96kaifa_com_murl'=>'http://test.yanwowenda.cn','add_www_96kaifa_com_ba'=>'粤ICP备17024501号-2','add_www_96kaifa_com_tongji'=>'','add_www_96kaifa_com_qq'=>'21617372','add_www_96kaifa_com_wx'=>'96kaifa','add_www_96kaifa_com_qun'=>'http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b','add_www_96kaifa_com_weiduan'=>'#广告链接后台修改');
+'deftempid'=>0,'add_www_96kaifa_com_name'=>'棋游之家','add_www_96kaifa_com_url'=>'http://47.52.203.166','add_www_96kaifa_com_url2'=>'www.96kaifa.com','add_www_96kaifa_com_murl'=>'http://test.yanwowenda.cn','add_www_96kaifa_com_ba'=>'粤ICP备17024501号-2','add_www_96kaifa_com_tongji'=>'','add_www_96kaifa_com_qq'=>'21617372','add_www_96kaifa_com_wx'=>'96kaifa','add_www_96kaifa_com_qun'=>'http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b','add_www_96kaifa_com_weiduan'=>'#广告链接后台修改');
 //------------e_public
 
 //moreports

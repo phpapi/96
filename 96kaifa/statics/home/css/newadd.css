@@ -1,0 +1,212 @@
+.gamesMenu {
+	border: 1px solid #e0e0e0;
+	border-top: none;
+	margin: 10px 0;
+	position: relative;
+	margin: 0 auto;
+ 
+}
+
+.searchMorePlay {
+	height: 40px;
+	line-height: 40px;
+	position: absolute;
+	right: 20px;
+	top: 0;
+	padding-left: 25px;
+	padding-right: 12px;
+}
+
+.searchMorePlay a:before {
+	width: 32px;
+	height: 32px;
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 11px;
+	background: url('../imges/majiang.png') -188px 0 no-repeat;
+}
+
+.searchMorePlay a:after {
+	width: 7px;
+	height: 11px;
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 15px;
+	background: url('../imges/tw.gif') -242px 0 no-repeat;
+}
+
+.searchMorePlay a:link,.searchMorePlay a:visited {
+	color: #ff7a7a;
+}
+
+.searchMorePlay a:hover,.searchMorePlay a:active {
+	color: #fc4545;
+}
+
+.gamesMenu dl {
+	height: 40px;
+	width: 100%;
+	background: url(../images/gamesbg.jpg) repeat-x;
+	padding-bottom:20px;
+	
+}
+
+.gamesMenu dd {
+	float: left;
+	width: 146px;
+	height: 50px;
+	line-height:50px;
+	font-size: 18px;
+	/* color: #888; */
+	text-align: center;
+	margin: 0;
+	padding-top: 2px;
+    cursor: pointer;
+    color:#fc4545;
+    margin-left:0px;
+	font-size: 20px;
+	border-bottom: 2px solid #00BFFF;
+
+     
+ 
+}
+/* dd:hover{
+	border-top:	2px solid #00BFFF;
+	border-bottom:none;
+} */
+.gamesMenu dd img{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-top: 10px;
+	float: left;
+	margin-left: 16px;
+
+
+}
+.gamesMenu dd span{
+		
+	color:#ff9600;
+	font-weight:bold;
+	margin-top: 10px;
+}
+
+a{
+    color: #888;
+}
+.gamesMenu dd.nowshow {
+    border: 2px solid #00BFFF;
+	padding-top: 0;
+	background: #fff;
+    color: #fff;
+	margin: 1px;
+	/* border-top:	2px solid #00BFFF; */
+	border-bottom:none;
+}
+/* .nowshow img{
+   margin-top: 20px;
+    width: 32px;
+    height: 32px;
+} */
+.gamesMenu ul {
+	padding: 9px 4px 9px 9px;
+	display: none;
+	height: 100px;
+    overflow: hidden;
+	height: 100px;
+	margin-top: -8px;
+}
+
+.gamesMenu ul.column-sort {
+	padding: 9px 9px;
+}
+
+.gamesMenu li {
+	padding: 0 0;
+	overflow: hidden;
+	color: #eee;
+	margin-top: 10px;
+}
+
+.gamesMenu li cite {
+	display: inline-block;
+	float: left;
+	width: 60px;
+	height: 25px;
+	background: url(../images/icon.png) 0 -197px no-repeat;
+	font-size: 14px;
+	color: #fff;
+	line-height: 25px;
+	text-indent: 26px;
+	font-style: normal;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.gamesMenu li cite.shouyou {
+	background-position: 0 -223px;
+}
+
+.gamesMenu li cite.webyou {
+	background-position: 0 -249px;
+}
+
+.gamesMenu li cite.filmyou {
+	background-position: 0 -275px;
+}
+
+.gamesMenu li cite.movieyou {
+	background-position: 0 -301px;
+}
+
+.gamesMenu li p {
+	display: inline-block;
+	width: 1110px;
+	float: left;
+	line-height: 25px;
+    color: #eee;
+  
+    margin-top: -30px;
+}
+
+.gamesMenu li a {
+	padding: 0 8px 0 16px;
+	position: relative;
+	display: inline-block;
+	line-height: 34px;
+}
+
+.gamesMenu li a.huang:after {
+	width: 12px;
+	height: 16px;
+	background: url(../images/icon.png) -65px -197px no-repeat;
+	position: absolute;
+	right: -5px;
+	top: 0;
+	content: "";
+}
+
+.gamesMenu li a.hong:after {
+	width: 12px;
+	height: 16px;
+	background: url(../images/icon.png) -80px -197px no-repeat;
+	position: absolute;
+	right: -8px;
+	top: 0;
+	content: "";
+}
+
+.gamesMenu li a:before {
+	position: absolute;
+	right: -6px;
+	top: 10px;
+	width: 1px;
+	height: 14px;
+	background: #eee;
+	content: "";
+}
+
+
+ 

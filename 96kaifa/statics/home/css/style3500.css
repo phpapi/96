@@ -128,7 +128,7 @@
 .flinks .hezuo{ line-height:44px; color: #999; }
 .flinks .hezuo a{ color: #ea7408; }
 .flinks .fbox a:hover, .flinks .hezuo a:hover{ color:#f70; text-decoration:underline; }
-#floatCode{ position:fixed; left:50%; margin-left: 610px; top:32%; background-color: #fff; padding:0 15px; z-index:100; }
+#floatCode{ position:fixed; left:50%; margin-left: 610px; top:36%; background-color: #fff; padding:0 15px; z-index:100; }
 #floatCode div{ margin-top: 15px; }
 #floatCode img{ display: block; width:100px; height: 100px; }
 #floatCode span{ display: block; height: 38px; line-height: 32px; font-size: 12px; color: #666; text-align: center; }
@@ -315,7 +315,7 @@
 .show-news .page span, .show-news .page a{ margin-top:20px; }
 .news-con{ font-size:16px; line-height:30px; color:#4c4c4c; padding:12px 10px 3px; }
 .news-con a{color:#0000ff;}
-.news-con a:hover{color:##2c8bfb;text-decoration: none;}
+.news-con a:hover{color:#2c8bfb;text-decoration: none;}
 .news-con p{ margin-top:6px; padding-bottom:5px; }
 .news-con img{ display: inline-block; max-width: 100%; }
 .page-bor{ height:42px; margin-top:15px; padding-left: 10px; }
