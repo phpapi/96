@@ -1,0 +1,85 @@
+<?php
+@include("../../inc/header.php");
+
+/*
+		SoftName : EmpireBak
+		Author   : wm_chief
+		Copyright: Powered by www.phome.net
+*/
+
+E_D("DROP TABLE IF EXISTS `www_96kaifa_com_ecms_infoclass_libao`;");
+E_C("CREATE TABLE `www_96kaifa_com_ecms_infoclass_libao` (
+  `classid` int(10) unsigned NOT NULL DEFAULT '0',
+  `zz_title` text NOT NULL,
+  `z_title` varchar(255) NOT NULL DEFAULT '',
+  `qz_title` varchar(255) NOT NULL DEFAULT '',
+  `save_title` varchar(10) NOT NULL DEFAULT '',
+  `zz_titlepic` text NOT NULL,
+  `z_titlepic` varchar(255) NOT NULL DEFAULT '',
+  `qz_titlepic` varchar(255) NOT NULL DEFAULT '',
+  `save_titlepic` varchar(10) NOT NULL DEFAULT '',
+  `zz_newstime` text NOT NULL,
+  `z_newstime` varchar(255) NOT NULL DEFAULT '',
+  `qz_newstime` varchar(255) NOT NULL DEFAULT '',
+  `save_newstime` varchar(10) NOT NULL DEFAULT '',
+  `zz_smalltext` text NOT NULL,
+  `z_smalltext` varchar(255) NOT NULL DEFAULT '',
+  `qz_smalltext` varchar(255) NOT NULL DEFAULT '',
+  `save_smalltext` varchar(10) NOT NULL DEFAULT '',
+  `zz_writer` text NOT NULL,
+  `z_writer` varchar(255) NOT NULL DEFAULT '',
+  `qz_writer` varchar(255) NOT NULL DEFAULT '',
+  `save_writer` varchar(10) NOT NULL DEFAULT '',
+  `zz_befrom` text NOT NULL,
+  `z_befrom` varchar(255) NOT NULL DEFAULT '',
+  `qz_befrom` varchar(255) NOT NULL DEFAULT '',
+  `save_befrom` varchar(10) NOT NULL DEFAULT '',
+  `zz_diggtop` text NOT NULL,
+  `z_diggtop` varchar(255) NOT NULL DEFAULT '',
+  `qz_diggtop` varchar(255) NOT NULL DEFAULT '',
+  `save_diggtop` varchar(10) NOT NULL DEFAULT '',
+  `zz_yxid` text NOT NULL,
+  `z_yxid` varchar(255) NOT NULL,
+  `qz_yxid` varchar(255) NOT NULL,
+  `save_yxid` varchar(10) NOT NULL,
+  `zz_kstime` text NOT NULL,
+  `z_kstime` varchar(255) NOT NULL,
+  `qz_kstime` varchar(255) NOT NULL,
+  `save_kstime` varchar(10) NOT NULL,
+  `zz_jstime` text NOT NULL,
+  `z_jstime` varchar(255) NOT NULL,
+  `qz_jstime` varchar(255) NOT NULL,
+  `save_jstime` varchar(10) NOT NULL,
+  `zz_lbh` text NOT NULL,
+  `z_lbh` varchar(255) NOT NULL,
+  `qz_lbh` varchar(255) NOT NULL,
+  `save_lbh` varchar(10) NOT NULL,
+  `zz_zongshu` text NOT NULL,
+  `z_zongshu` varchar(255) NOT NULL,
+  `qz_zongshu` varchar(255) NOT NULL,
+  `save_zongshu` varchar(10) NOT NULL,
+  `zz_yiling` text NOT NULL,
+  `z_yiling` varchar(255) NOT NULL,
+  `qz_yiling` varchar(255) NOT NULL,
+  `save_yiling` varchar(10) NOT NULL,
+  `zz_lbnr` text NOT NULL,
+  `z_lbnr` varchar(255) NOT NULL,
+  `qz_lbnr` varchar(255) NOT NULL,
+  `save_lbnr` varchar(10) NOT NULL,
+  `zz_syff` text NOT NULL,
+  `z_syff` varchar(255) NOT NULL,
+  `qz_syff` varchar(255) NOT NULL,
+  `save_syff` varchar(10) NOT NULL,
+  `zz_infozm` text NOT NULL,
+  `z_infozm` varchar(255) NOT NULL,
+  `qz_infozm` varchar(255) NOT NULL,
+  `save_infozm` varchar(10) NOT NULL,
+  `zz_btfm` text NOT NULL,
+  `z_btfm` varchar(255) NOT NULL,
+  `qz_btfm` varchar(255) NOT NULL,
+  `save_btfm` varchar(10) NOT NULL,
+  PRIMARY KEY (`classid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8");
+
+@include("../../inc/footer.php");
+?>

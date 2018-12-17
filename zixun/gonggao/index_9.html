@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>公告_仿3500游戏</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/96kaifa/statics/home/css/base.css" type="text/css" rel="stylesheet">
+<link href="/96kaifa/statics/home/css/style3500.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="/96kaifa/statics/home/js/jquery-1.8.2.min.js"></script>
+</head>
+<script type="text/javascript">
+	showMobile("http://test.yanwowenda.cn/zixun/gonggao/");
+</script>
+<body>
+<div class="cover"></div>
+<div class="topbox">
+  <div class="boxin clearfix">
+    <div class="topl fl"> <span class="home"><a href="/">游戏首页</a></span>
+      <ul>
+        <li>|<a href="http://test.yanwowenda.cn" target="_blank">手机版</a></li>
+        <li>|<a href="#" target="_blank">客户端下载</a></li>
+        <li>|<a href="javascript:;" class="wx_show">关注微信</a>
+          <div class="wx_hide"> <i class="angle"></i> <img src="/96kaifa/statics/home/images/wx_code.jpg" width="103" height="103"> <span>关注微信公众号</span> </div>
+        </li>
+        <li>|<a href="#" target="_blank">开放平台</a></li>
+      </ul>
+    </div>
+    <div class="topr fr">
+      <div class="login_ok">
+	<!-- 登录 -->
+	<script>
+	document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+	$(function(){
+	var dqurl = window.location.href;
+	$('#dquurl').val(dqurl);
+	})
+	</script>
+	<!-- 登录 end-->
+	  </div>
+      <a href="javascript:;" onClick="AddFavorite();">收藏本站</a> </div>
+  </div>
+</div>
+<div class="header">
+  <div class="header-top">
+    <div class="in">
+      <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="仿3500游戏"></a></div>
+      <div class="search fr">
+        <form action="/search/game.php" method="get" target="_blank" name="searchTop">
+          <div class="search_box tr">
+            <input type="text" id="bdcsMain" name="key" class="sech_keyword" placeholder="请输入游戏名称">
+            <input type="submit" value="搜索" class="sech_btn">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="in">
+      <ul>
+        <li><a href="/" class=""><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qilei/"><span class="menu-txt">棋类</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/game/"><span class="menu-txt">网游</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/danji/"><span class="menu-txt">小游戏</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/libao/"><span class="menu-txt">礼包</span><span class="menu-line"></span></a></li>
+        <li><a class="nav-cur" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/kaifu/"><span class="menu-txt">开服表</span><span class="menu-line"></span></a></li>
+      </ul>
+      <div class="grzx">
+	  	<script> document.write('<script src="/e/member/login/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
+	  </div>
+    </div>
+  </div>
+</div>
+<div class="my_pop">
+<!--弹出登录框开始-->
+  <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">账号登录</p>
+    <form action="/e/member/doaction.php" method="post" onSubmit="return userLogin()" id="form_login1" class="form-login">
+      <input type=hidden name=ecmsfrom value="" id="dquurl">
+      <input type=hidden name=enews value=login>
+      <input name="tobind" type="hidden" id="tobind" value="0">
+      <div class="modal-body">
+        <div class="error_font">*错误提示</div>
+        <div class="outer tr"> <i class="user"></i>
+          <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
+        </div>
+        <div class="outer tr"> <i class="pwd"></i>
+          <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
+        </div>
+        <div class="outer">
+          <div class="captcha" id="logcaptcha"></div>
+        </div>
+      </div>
+      <div class="modal-footer" style="margin-bottom:40px;">
+        <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
+      </div>
+    </form>
+  </div>
+<!--弹出登录框结束-->
+<!--弹出注册框开始-->
+<div class="register_pop" style="display: none;"> <span class="pop_close"></span>
+  <p class="pop-tit">会员注册</p>
+  <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
+	<input type="hidden" name="enews" value="register">
+    <div class="modal-body">
+      <div class="error_font">*错误提示</div>
+      <div class="outer tr"> <i class="user"></i>
+        <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
+      </div>
+      <div class="outer tr"> <i class="pwd"></i>
+        <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
+      </div>
+      <div class="outer tr"> <i class="pwd"></i>
+        <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
+      </div>
+      <div class="outer tr"> <i class="user"></i>
+        <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
+      </div>
+      <div class="outer">
+        <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
+        <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
+    </div>
+    <div class="modal-footer">
+      <p class="outer"> <input type='submit' name='Submit' class="orange_btn" id="btnRegister" value="立即注册"> </p>
+      <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
+    </div>
+  </form>
+</div>
+<!--弹出注册框结束-->
+</div>
+<div class="main">
+  <div class="position">当前位置：<a href="/">首页</a>&nbsp;>&nbsp;<a href="/zixun/">资讯</a>&nbsp;>&nbsp;<a href="/zixun/gonggao/">公告</a></div>
+  <div class="container">
+    <div class="w804">
+      <div class="list-zixun">
+        <div class="hd20">
+          <h3>游戏资讯</h3>
+          <ul class="zixun_tab">
+            <li class="tab_1"><a href='/zixun/'>全部</a></li>
+            <li class="tab_1"><a href='/zixun/xinwen/'>新闻</a></li>
+            <li class="tab_1"><a href='/zixun/gonglue/'>攻略</a></li>
+            <li class="tab_1"><a href='/zixun/huodong/'>活动</a></li>
+            <li class="tab_2"><a href='/zixun/gonggao/'>公告</a></li>
+          </ul>
+        </div>
+        <div class="list-bd">
+          <ul class="news-list">
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/225.html" target="_blank"><img src="/d/file/96kaifa/201710241216/20170517104131.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/225.html" target="_blank">《风爆远征H5》夏至活动开启</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">【风爆远征H5】夏至丰富活动开启!</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/226.html" target="_blank"><img src="/d/file/96kaifa/201710241216/20170502150217.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/226.html" target="_blank">《武林霸业》6月29日例行维护及合服公告</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">《武林霸业》6月29日例行维护及合服公告<br />
+　　我们将于6月29日9:00-9:30对所有服务器停机维护;</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/227.html" target="_blank"><img src="/d/file/96kaifa/201710241216/20170511101625.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/227.html" target="_blank">《御天传奇》全新副本，强势来袭！</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">遗迹探索全新副本强势来袭<br />
+　　本周《御天传奇》将迎来一个全新的游戏玩法：探索遗迹。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/228.html" target="_blank"><img src="/d/file/96kaifa/201710241216/20170419100510.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/228.html" target="_blank">《极品三国》7月5日更新公告，结束后发放战法石和进阶丹哦</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">亲爱的各位主公，《极品三国》将于7月5日下午14：00~16:00进行停机更新，此次主要试炼塔等级拓展和主线副本等级拓展等功能，期间不能进入游戏，维护具体结束时间会根据工作进度推迟或提前。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/229.html" target="_blank"><img src="/d/file/96kaifa/201710241216/20170524131539.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/229.html" target="_blank">《不服小天王》更新了内容，有你意想不到的惊喜哦</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">我们于6月29日9:30安排全服停服更新，预计更新时间为半小时(实际可能很会很快更新完，剩下时间测试)</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/219.html" target="_blank"><img src="/d/file/96kaifa/201710241217/20170418154911.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/219.html" target="_blank">《口袋妖怪联盟》更新维护公告</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">为优化游戏体验《口袋妖怪联盟》将于2017年6月12日7:00-9:00进行更新与维护，更新时间约120分钟，期间玩家将无法进入游戏，请大家注意调整游戏时间，并相互转告。服务器开启时间会根据实际情况提前或者延后，敬请谅解。<br />
+　　更新内容：</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/220.html" target="_blank"><img src="/d/file/96kaifa/201710241217/20170208134530.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/220.html" target="_blank">​《绝世神功》6.20维护公告</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">我们将于6月20日8:30-9:00对所有服务器停机维护,优化服务器性能。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/221.html" target="_blank"><img src="/d/file/96kaifa/201710241217/20170518090512.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/221.html" target="_blank">《百战沙城》6.28合服通知</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">您好!为了给您提供更有趣的游戏环境，我们将于6月28日10:00-13:00对1、2服进行合服。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/222.html" target="_blank"><img src="/d/file/96kaifa/201710241217/20170518090512.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/222.html" target="_blank">百战沙城6.14更新内容公告</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">各位亲爱的玩家：<br />
+　　为给您提供更好的游戏体验和更丰富的游戏内容，我们将于2017年6月14日9:00-10:00进行全服停服更新，更新期间所有玩家将不能登录游戏。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/223.html" target="_blank"><img src="/d/file/96kaifa/201710241216/20170524131539.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/223.html" target="_blank">《不服小天王》6.20更新公告</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">尊敬的不服小天王玩家：<br />
+　　我们预计将于6月20日下午13:00对全部服务器进行停机更新维护，预计维护时间为2小时，如遇突发情况更新时间将顺延，给您带来的不便，敬请谅解。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/224.html" target="_blank"><img src="/d/file/96kaifa/201710241216/20170518090512.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/224.html" target="_blank">《百战沙城》6.28更新内容</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">百战沙城6月28日更新内容<br />
+　　各位亲爱的玩家：<br />
+　　为给您提供更好的游戏体验和更丰富的游戏内容，我们将于2017年6月28日9:00-10:00进行全服停服更新，</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/214.html" target="_blank"><img src="/d/file/96kaifa/201710241217/20170509100844.gif" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/214.html" target="_blank">《莽荒纪》6.16维护公告</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">亲爱的玩家：<br />
+　　《莽荒纪》将于6月16日(周五)16：30—17：00进行临时停机维护，届时请大家提前安全下线，以免造成不必要的损失。维护具体完成时间将视维护工作进展有所提前或推迟，对此给各位带来不便敬请谅解!感谢您对《莽荒纪》一如既往的支持，祝大家游戏愉快!</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/215.html" target="_blank"><img src="/d/file/96kaifa/201710241217/20170717165940.jpg" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/215.html" target="_blank">《王城霸域》6.27维护公告</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">亲爱的玩家：<br />
+　　为了给大家稳定的游戏环境和更好的游戏体验，《王城霸域》全部服务器将于2017年6月27日15:30-16:00进行停机维护，维护时间为半小时，由于维护工作数据量较大，若本次维护不能定时维护完成，那么维护将在原定时间上顺延。维护期间，大家将暂时无法登录游戏进行体验，给大家带来的不便我们在此表示诚挚的歉意!</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/216.html" target="_blank"><img src="/d/file/96kaifa/201710241217/20170518090512.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/216.html" target="_blank">《百战沙城》6.9维护公告</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">百战沙城今天16:00-17:00将临时维护，升级服务器，请知悉~</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/217.html" target="_blank"><img src="/d/file/96kaifa/201710241217/20170513090738.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/217.html" target="_blank">《决战沙城》6月20日合服公告</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">明天(6月20日)星期二上午10点会对501区-656区进行合服操作，预计停服三小时。合服后会开启合服活动。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/218.html" target="_blank"><img src="/d/file/96kaifa/201710241217/20170717110825.jpg" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/218.html" target="_blank">《梦想海岛王》6.27维护补偿啦，秘密就在你的邮件中</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">《梦想海岛王》今日需要进行日常维护，维护时间位14点30至15点30，</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/208.html" target="_blank"><img src="/d/file/96kaifa/201710241217/20170510091021.gif" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/208.html" target="_blank">《妖怪宝可萌》6.16日更新公告</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">亲爱的各位小伙伴：<br />
+　　《妖怪宝可萌》安排于本周五(06月16日)停服更新。请各位知晓。<br />
+　　预计维护需要时间：约4个小时<br />
+　　更新时间：08:00 – 12:00<br />
+　　更新完成后1小时内，将发放更新维护补偿：钻石200。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/209.html" target="_blank"><img src="/d/file/96kaifa/201710241217/20170510091021.gif" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/209.html" target="_blank">《妖怪宝可萌》6.23更新公告及活动</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">亲爱的各位小伙伴：<br />
+　　《妖怪宝可萌》安排于本周五(06月23日)停服更新。请各位知晓。<br />
+　　预计维护需要时间：约4个小时<br />
+　　更新时间：8:00—12:00<br />
+　　更新完成后1小时内，将发放停服维护补偿：钻石*200。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/210.html" target="_blank"><img src="/d/file/96kaifa/201710241217/20170513090738.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/210.html" target="_blank">《决战沙城》更新维护公告</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">《决战沙城》6月8日10:00-14:00将对851后面的区服进行停机更新维护，更新跨服5V5玩法。</p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="items clearfix"> <a class="pic" href="/zixun/211.html" target="_blank"><img src="/d/file/96kaifa/201710241217/20170524131539.png" alt=""></a>
+                <div class="con">
+                  <p class="title"><a href="/zixun/211.html" target="_blank">《不服小天王》更新公告</a></p>
+                  <p class="other"><span class="time">2017-10-24</span></p>
+                  <p class="desc">尊敬的不服小天王玩家：<br />
+　　我们预计将于6月20日上午对全部服务器进行停机更新维护，全新版本“英灵降世”将在更新结束后与大家见面。</p>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+          <div class="page"> <span class="a1 disabled">共 13 页</span><a href="/zixun/gonggao/index_8.html">上一页</a><a href="/zixun/gonggao/index_7.html">7</a><a href="/zixun/gonggao/index_8.html">8</a><span>9</span><a href="/zixun/gonggao/index_10.html">10</a><a href="/zixun/gonggao/index_11.html">11</a><a href="/zixun/gonggao/index_10.html">下一页</a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="w336">
+      <div class="w-guanggao"><script src=/d/js/acmsd/thea2.js></script></div>
+      <div class="w-news mt15">
+        <div class="hd20">
+          <h3>热门活动</h3>
+          <a href="javascript:void(0);" class="refresh" id="w_refresh">换一批<i></i></a></div>
+        <div class="wbody">
+          <div class="wlist">
+            <dl>
+              <dt><a href="/zixun/783.html" target="_blank"><img src="/d/file/zixun/huodong/2017-10-24/fea3aa79b53d76c7f189d7d16b66b0c0.jpg" alt="《梦道》修仙风限时活动！奖励送不停！"></a></dt>
+              <dd class="title"><a href="/zixun/783.html" target="_blank">《梦道》修仙风限时活动！奖励送不停！</a></dd>
+              <dd class="desc">《梦道》修仙风限时活动！奖励送不停！</dd>
+            </dl>
+            <ul>
+              <li>•<a href="/zixun/792.html" target="_blank" class="title">《妖怪宝可萌》活动，日充送好礼！</a></li>
+              <li>•<a href="/zixun/791.html" target="_blank" class="title">《龙城霸业》合服活动火爆开启，合服礼包随心领！</a></li>
+              <li>•<a href="/zixun/790.html" target="_blank" class="title">​《口袋妖怪联盟》“寒霜降至”活动！</a></li>
+              <li>•<a href="/zixun/789.html" target="_blank" class="title">《传奇来了》10月21-23日限时活动</a></li>
+            </ul>
+          </div>
+          <div class="wlist" style="display: none;">
+            <dl>
+              <dt><a href="/zixun/755.html" target="_blank"><img src="/d/file/96kaifa/201710241215/20170629152850.jpg" alt="《龙城霸业》10月9日合服，合服活动火爆开启！"></a></dt>
+              <dd class="title"><a href="/zixun/755.html" target="_blank">《龙城霸业》10月9日合服，合服活动火爆开启！</a></dd>
+              <dd class="desc">《龙城霸业》10月9日合服，合服活动火爆开启！</dd>
+            </dl>
+            <ul>
+              <li>•<a href="/zixun/788.html" target="_blank" class="title">《百战沙城》限时活动!登陆抽奖来袭！</a></li>
+              <li>•<a href="/zixun/787.html" target="_blank" class="title">《开心国王》十月豪礼献上，周末豪礼，天降元宝！</a></li>
+              <li>•<a href="/zixun/786.html" target="_blank" class="title">《龙城霸业》魔晶庆典活动火爆来袭！</a></li>
+              <li>•<a href="/zixun/785.html" target="_blank" class="title">《口袋之旅》活动：限时大轮盘！充值大礼包！</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="w-rank mt15">
+        <div class="hd20">
+          <h3>游戏排行</h3>
+          <ul class="rank_tab">
+            <li onMouseMove="onSelect(this,'rank_con')" class="tab_2">网游</li>
+            <li onMouseMove="onSelect(this,'rank_con')" class="tab_1">小游戏</li>
+          </ul>
+        </div>
+        <div class="bd">
+          <ol id="rank_con_0">
+            <li> <em class="num num1">1</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/927.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027141345.png" alt="十里桃花"></a></div>
+                <p class="tit"><a href="/game/927.html" target="_blank">十里桃花</a></p>
+                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>81人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/927.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num2">2</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/926.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171025093310.png" alt="决斗之皇"></a></div>
+                <p class="tit"><a href="/game/926.html" target="_blank">决斗之皇</a></p>
+                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>3人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/926.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num3">3</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/925.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027142939.jpg" alt="奇迹仙侠"></a></div>
+                <p class="tit"><a href="/game/925.html" target="_blank">奇迹仙侠</a></p>
+                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>7人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/925.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">4</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/924.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170306150106.png" alt="莽荒纪H5"></a></div>
+                <p class="tit"><a href="/game/924.html" target="_blank">莽荒纪H5</a></p>
+                <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>16人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/924.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">5</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/923.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170107092745.png" alt="大侠归来"></a></div>
+                <p class="tit"><a href="/game/923.html" target="_blank">大侠归来</a></p>
+                <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>8人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/923.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+          </ol>
+          <ol id="rank_con_1" style="display: none;">
+            <li> <em class="num num1">1</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/125.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615161819.jpg" alt="八爪鱼拉拉手"></a></div>
+                <p class="tit"><a href="/danji/125.html" target="_blank">八爪鱼拉拉手</a></p>
+                <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">益智</a></span><span>14人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/125.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num2">2</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/124.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615170050.jpg" alt="抽打神经猫"></a></div>
+                <p class="tit"><a href="/danji/124.html" target="_blank">抽打神经猫</a></p>
+                <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>3人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/124.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num3">3</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/123.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615175231.png" alt="大小跳不停"></a></div>
+                <p class="tit"><a href="/danji/123.html" target="_blank">大小跳不停</a></p>
+                <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>9人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/123.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">4</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/122.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615173331.png" alt="大长腿"></a></div>
+                <p class="tit"><a href="/danji/122.html" target="_blank">大长腿</a></p>
+                <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>2人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/122.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">5</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/121.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170616133704.jpg" alt="贱人配对"></a></div>
+                <p class="tit"><a href="/danji/121.html" target="_blank">贱人配对</a></p>
+                <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">益智</a></span><span>3人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/121.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="w-texts mt15">
+        <div class="hd20">
+          <h3>推荐阅读</h3>
+        </div>
+        <ul class="text-list">
+          <li>•<a href="/zixun/787.html" target="_blank" class="title">《开心国王》十月豪礼献上，周末豪礼，天降元宝！</a></li>
+          <li>•<a href="/zixun/759.html" target="_blank" class="title">《飘飘欲仙》双节同庆！好礼赠不停！</a></li>
+          <li>•<a href="/zixun/620.html" target="_blank" class="title">​《口袋妖怪联盟》欢乐庆典活动！福利乐翻天!</a></li>
+          <li>•<a href="/zixun/558.html" target="_blank" class="title">《传奇世界H5》吃西瓜大比拼！赢豪礼！</a></li>
+          <li>•<a href="/zixun/515.html" target="_blank" class="title">《口袋妖怪联盟》月月有礼活动！</a></li>
+          <li>•<a href="/zixun/482.html" target="_blank" class="title">《蜀山世界》集字活动：侠客也谈情，集字兑奖换真爱大礼</a></li>
+          <li>•<a href="/zixun/454.html" target="_blank" class="title">3500有福利 “五一”充值赠大礼</a></li>
+          <li>•<a href="/zixun/439.html" target="_blank" class="title">《口袋妖怪联盟》“周年庆典”活动隆重开启</a></li>
+          <li>•<a href="/zixun/425.html" target="_blank" class="title">《爬塔西游》幸运大放送 限时勇者免费送</a></li>
+          <li>•<a href="/zixun/420.html" target="_blank" class="title">4.1礼愚天下 《蜀山世界》愚乐无极限</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div id="footer">
+  <div class="about_me"> <a href="/aboutus.html" target="_blank">关于我们</a> | <a href="/contact.html" target="_blank">联系方式</a> | <a href="/sitemap.html" target="_blank">网站地图</a> | <a href="/explain.html" target="_blank">用户协议</a> </div>
+  <div class="safety"> <a><i class="icon_safe1"></i>中国互联网举报中心</a> <a><i class="icon_safe2"></i>网络违法举报中心</a> <a><i class="icon_safe3"></i>垃圾信息举报中心</a> <a><i class="icon_safe4"></i>闽公网安备35020302001953号</a> </div>
+  <p class="tips_text">©2017-2018 &nbsp; 仿3500游戏 &nbsp; www.96kaifa.com <em>礼包交流群：</em><a href="http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b" target="_blank" class="qqun"></a></p>
+  <p class="tips_text">备案号：粤ICP备17024501号-2 &nbsp;  技术支持：<a href="https://www.96kaifa.com" target="_blank">96KaiFa源码</a></p>
+</div>
+<div id="backtop">返回顶部</div>
+<script type="text/javascript" src="/96kaifa/statics/home/js/member.js"></script>
+<script type="text/javascript">
+	var member = new Member();
+</script>
+<script type="text/javascript" src="/96kaifa/statics/home/js/global.js"></script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+</body>
+</html>

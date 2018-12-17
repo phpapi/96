@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>《步战三国》新手攻略_仿3500游戏</title>
+<meta name="keywords" content="步战三国,步战三国新手攻略"/>
+<meta name="description" content="步战三国是一款战争策略类手机页游，玩家需要选择自己的三国战将，培养他们，使他们在战场上互相配合，击败对手，取得胜利。"/>
+<link href="/96kaifa/statics/home/css/base.css" type="text/css" rel="stylesheet">
+<link href="/96kaifa/statics/home/css/style3500.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="/96kaifa/statics/home/js/jquery-1.8.2.min.js"></script>
+</head>
+<script type="text/javascript">
+	showMobile("http://test.yanwowenda.cn/zixun/71.html");
+</script>
+<body>
+<div class="cover"></div>
+<div class="topbox">
+  <div class="boxin clearfix">
+    <div class="topl fl"> <span class="home"><a href="/">游戏首页</a></span>
+      <ul>
+        <li>|<a href="http://test.yanwowenda.cn" target="_blank">手机版</a></li>
+        <li>|<a href="#" target="_blank">客户端下载</a></li>
+        <li>|<a href="javascript:;" class="wx_show">关注微信</a>
+          <div class="wx_hide"> <i class="angle"></i> <img src="/96kaifa/statics/home/images/wx_code.jpg" width="103" height="103"> <span>关注微信公众号</span> </div>
+        </li>
+        <li>|<a href="#" target="_blank">开放平台</a></li>
+      </ul>
+    </div>
+    <div class="topr fr">
+      <div class="login_ok">
+	<!-- 登录 -->
+	<script>
+	document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+	$(function(){
+	var dqurl = window.location.href;
+	$('#dquurl').val(dqurl);
+	})
+	</script>
+	<!-- 登录 end-->
+	  </div>
+      <a href="javascript:;" onClick="AddFavorite();">收藏本站</a> </div>
+  </div>
+</div>
+<div class="header">
+  <div class="header-top">
+    <div class="in">
+      <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="仿3500游戏"></a></div>
+      <div class="search fr">
+        <form action="/search/game.php" method="get" target="_blank" name="searchTop">
+          <div class="search_box tr">
+            <input type="text" id="bdcsMain" name="key" class="sech_keyword" placeholder="请输入游戏名称">
+            <input type="submit" value="搜索" class="sech_btn">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="in">
+      <ul>
+        <li><a href="/" class=""><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qilei/"><span class="menu-txt">棋类</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/game/"><span class="menu-txt">网游</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/danji/"><span class="menu-txt">小游戏</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/libao/"><span class="menu-txt">礼包</span><span class="menu-line"></span></a></li>
+        <li><a class="nav-cur" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/kaifu/"><span class="menu-txt">开服表</span><span class="menu-line"></span></a></li>
+      </ul>
+      <div class="grzx">
+	  	<script> document.write('<script src="/e/member/login/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
+	  </div>
+    </div>
+  </div>
+</div>
+<div class="my_pop">
+<!--弹出登录框开始-->
+  <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">账号登录</p>
+    <form action="/e/member/doaction.php" method="post" onSubmit="return userLogin()" id="form_login1" class="form-login">
+      <input type=hidden name=ecmsfrom value="" id="dquurl">
+      <input type=hidden name=enews value=login>
+      <input name="tobind" type="hidden" id="tobind" value="0">
+      <div class="modal-body">
+        <div class="error_font">*错误提示</div>
+        <div class="outer tr"> <i class="user"></i>
+          <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
+        </div>
+        <div class="outer tr"> <i class="pwd"></i>
+          <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
+        </div>
+        <div class="outer">
+          <div class="captcha" id="logcaptcha"></div>
+        </div>
+      </div>
+      <div class="modal-footer" style="margin-bottom:40px;">
+        <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
+      </div>
+    </form>
+  </div>
+<!--弹出登录框结束-->
+<!--弹出注册框开始-->
+<div class="register_pop" style="display: none;"> <span class="pop_close"></span>
+  <p class="pop-tit">会员注册</p>
+  <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
+	<input type="hidden" name="enews" value="register">
+    <div class="modal-body">
+      <div class="error_font">*错误提示</div>
+      <div class="outer tr"> <i class="user"></i>
+        <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
+      </div>
+      <div class="outer tr"> <i class="pwd"></i>
+        <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
+      </div>
+      <div class="outer tr"> <i class="pwd"></i>
+        <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
+      </div>
+      <div class="outer tr"> <i class="user"></i>
+        <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
+      </div>
+      <div class="outer">
+        <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
+        <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
+    </div>
+    <div class="modal-footer">
+      <p class="outer"> <input type='submit' name='Submit' class="orange_btn" id="btnRegister" value="立即注册"> </p>
+      <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
+    </div>
+  </form>
+</div>
+<!--弹出注册框结束-->
+</div>
+<div class="main">
+  <div class="position">当前位置：<a href="/">首页</a>&nbsp;>&nbsp;<a href="/zixun/">资讯</a>&nbsp;>&nbsp;<a href="/zixun/gonglue/">攻略</a> > 《步战三国》新手攻略</div>
+  <div class="container">
+    <div class="w804">
+      <div class="show-news">
+        <div class="news-top">
+          <h1>《步战三国》新手攻略</h1>
+          <div class="info"> <span>2017-10-24 12:17:23</span> <span>作者：zhuangyf</span> <span>来源：<a href="/" target="_blank">仿3500游戏</a></span> </div>
+        </div>
+        <div class="news-con">
+		<p>　　步战三国是一款战争策略类手机页游，玩家需要选择自己的三国战将，培养他们，使他们在战场上互相配合，击败对手，取得胜利。</p><p>　　取好名字，当然也可以随机一个名字，就开始了步战三国之旅了。</p><center><img src="/d/file/96kaifa/201710122412/1487811495482950.jpg" title="1487811495482950.jpg" alt="640x180_2.jpg"/></center><p>　　<strong>新手引导</strong></p><p>　　首先，新手引导任务会引导你熟悉游戏的基本系统。完成了引导任务，手头上就有紫将关凤，红将吕蒙了。</p><p>　　其次，先把那些有红点提示的的操作，比如签到，成就，活动，能领的奖励都领了。于是你就获得了一大批铜钱和道具补给。</p><p>　　<strong>日常任务</strong></p><p>　　接下来，我们可以沿着日常任务走，日常任务会奖励大量的主公经验和道具等，这些主公经验在初期的时候可以使主公快速升级。主公等级提升后，才能把更多的武将派上战场。</p><p>　　日常任务也可以帮助玩家熟悉整个游戏流程。</p><p>　　<strong>征战</strong></p><p>　　这时，我们可以根据日常任务的引导，继续征战。征战关卡系统是游戏的主线系统，分为普通关卡和精英关卡。征战过程中根据过关得到的星级奖励，主公可以领取大量的元宝。普通关卡全三星通关后，会解锁该章节的精英关卡，在精英关卡不仅有元宝奖励，如果全三星通过，还会有虎符奖励。</p><p>　　使用虎符，主公可以在酒馆获得一次免费招募武将的机会。至于能获取到哪些武将，就看主公的运气啦。</p><p>　　<strong>道具的获取</strong></p><p>　　每个章节(普通和精英)都有四个拥有强力NPC的关卡，击败他们能获得主公所需的各种道具。三星过关后，主公只需要反复扫荡即可获取相应道具。不过，每个关卡每天可攻击次数是有限的。</p><p>　　就早期而言，普通主要打技能书为主，进阶石和武魂石为辅。20级以后主要打进阶石，武魂石和技能书为辅。精英关卡主要打神器碎片，其次打武将升星所需要的各种道具。神器合成是个考验人品的差事，一旦合成了优良的神器，你的武将会如虎添翼。</p><p>　　<strong>征收</strong></p><p>　　征收是一个用最简单的方式获取大量铜钱的系统，主公五级该系统便会开启。征收是跟等级挂钩的，每天可以领三次，第一次免费，第二次15元宝，第三次30元宝。</p><p>　　建议到达五级的时候，先不要领取。等到后面主公等级升到当天最高了，或者没有铜钱的时候，再去领取。</p><p>　　<strong>增加可上阵武将的人数</strong></p><p>　　随着主公等级的提高，我们就能把更多的武将派上战场。跟着日常任务走，把能做的都做完。比如酒馆抽五次，打十次关卡，(打完记得领征战第一章的星级奖励)扫荡一次，这些都做完了，就有十一级左右了。这时然后身上的钱和虎符也足够去酒馆招募武将了。但这时，小编建议元宝还是省着花。呵呵</p><p>　　<strong>经验书</strong></p><p>　　经验书是提高武将等级的唯一方式，游戏内有两种方式可以获取经验书，一是在征战关卡掉落，二是在商店购买。至于说完成任务后获得的经验书，数量比较少。</p><p>　　因为武将的等级上限是主公等级，所以吃书的时候，得看着点，避免经验书的浪费。</p><p>　　当主公升级后，上阵武将等级可提升时，武将入口便会出现小红点提示。</p><p>　　<strong>装备强化</strong></p><p>　　当上阵武将有装备可以升级的时候，在装备入口就会有小红点提示。装备每20级的时候，可以进阶一次。装备进阶后可获取更高的数值和一条新增的附加属性。</p><p>　　<strong>宝石镶嵌</strong></p><p>　　八级解锁宝石镶嵌功能，每个装备可以镶嵌两个不同属性的宝石，宝石在包裹里面合成，三个合成一个高一级的宝石。</p><p>　　宝石可以通过扫荡关卡，完成任务获取奖励等方式获取，也可在集市购买。获取更多更高级别的宝石，可大幅提高武将的战斗力。</p><p>　　<strong>装备洗炼</strong></p><p>　　十级开装备的洗练功能，每件装备都有附加属性，可以消耗洗炼石对附加属性进行改造，直到获取最适合武将的数值。</p><p>　　装备附加属性的条数跟装备进阶次数有关，每二十级可以进阶一次，进次一次加一条附加属性。</p><p>　　装备附加属性的洗炼，使得每个玩家培养的武将都有不同的数值，极大的增加了武将的差异性，和战斗结果的不确定性。洗炼的结果全凭运气，即使是不花钱的玩家，如果你运气足够好，也能培养出一流的战将。培养武将的策略，主要就体现在这个方面，</p><p>　　<strong>武将的技能和星级提升</strong></p><p>　　在完成日常任务的过程中，玩家至少已经可以上阵4个武将，把抽到的将给放上去，对了两个蓝将不用管他，没有升级的价值。然后根据小红点的提示，把武将的等级升满，把武将的装备升满。对了，这时如果有足够的道具，别忘了提高武将的技能和星级哦，这对武将的战斗力提升也是很重要的。</p><p>　　<strong>竞技场</strong></p><p>　　在征战的过程中，主公会很快达到12级，这时会解锁竞技场功能。主公在这里可以与其它玩家进行竞技。提升自己的排名可以获得丰厚的元宝奖励，而且只要拥有一定的排名，还可以每天通过邮件领取奖励。这点么，可以看界面右上角的规则介绍。</p><p>　　<strong>讨伐战</strong></p><p>　　当主公15级的时候，讨伐系统就解锁了。主公可以在这里搜索全国的玩家，攻击之，击败之，然后可获得丰富的铜钱、宝箱、军功等的奖励。军功可以用于在军功商店购买道具和强力武将。黄忠、张辽等强力金将，在此等候主公前往。</p><p>　　讨伐战每天可开动十次，这是必须打的，一是检验自己的实力，二是可以获取军功、大量铜钱和道具。</p><p>　　<strong>名将获取的快捷方式</strong></p><p>　　讨伐战解锁的时候，主公就可以上阵五个将领了，如果感觉名将不够用了。可以考虑先买个首充，首充任意金额有送强力金将关羽。还有个更节约的方案就是，可以考虑再开个月卡。月卡也很划算，购买就送300元宝，连续三十天，每天能拿100元宝。那么就是100*30=3000元宝。而且充值活动中，充300元宝还会赠送强力弓将孙尚香，以及大量铜钱、道具，VIP礼包还会赠送大量……。</p><p>　　另外再补充一个，V5可以使用跳过按钮，直接跳过征战关卡的战斗，极大简便主公操作。</p><p>　　<strong>神器</strong></p><p>　　主公18级的时候会解锁神器系统。每个武将都可以装备一件神器，神器各有不同的特性和数值，例如有的神器可提高武将的暴击率，有的可提高武将的技能伤害效果……而且每件神器都天生附带一条或者两条随机附加属性。</p><p>　　玩家在精英关卡可以得到神器碎片，10个神器碎片可以合成一件完整的神器，但是这件神器完全是随机产生的，它分为紫、红、金三个品阶，得到什么品阶的神器，全靠玩家的运气。</p><p>　　而且神器的附加属性的品阶和属性也是完全随机的，金色品阶的神器也可能携带蓝色的附加属性。因此，获取高价值的神器是一件拼人品的活儿。</p><p>　　<strong>闯关</strong></p><p>　　二十级的时候会开放闯关功能，一共有十关。在这个系统，你的武将一旦阵亡，就不能继续使用了，但是只要将不死，下一关就能满血活。要是死了一个，那就需要重新布阵，用其它武将替代已经阵亡的武将。</p><p>　　闯关难度最高，但是奖励也是最丰厚的。闯关通关是玩家实力的最高体现。</p><p>　　<strong>酒馆</strong></p><p>　　酒馆能否招募到强力的武将，全看玩家的运气。如果你想不花钱就培养出强大的战队，那么早期获取的元宝可以主要去抽将。将有金将，红将，紫将。当然是金将最值得培养。</p><p>　　整个游戏总的来说，就是打关卡打得越远，然后扫荡这些关卡获取武将培养所需的各种道具。游戏系统简单，策略性强，闲暇之余，玩家的智慧可以在这里发挥的淋漓尽致。</p>        </div>
+		<div class="page"></div>
+        <div class="guanggao mt20"><script src=/d/js/acmsd/thea1.js></script></div>
+        <div class="page-bor"> <span class="page-pre">上一篇：
+		  <a target="_blank" href="/zixun/70.html">魂淡放开我!《蜀山世界》群战生存攻略!</a>
+		</span> <span class="page-next">下一篇：
+		  <a target="_blank" href="/zixun/72.html">《蜀山世界》丨渡劫转生攻略</a>
+	
+		</span> </div>
+      </div>
+      <div class="rel-zixun">
+        <div class="hd20">
+          <h3>相关资讯</h3>
+        </div>
+        <ul class="relist clearfix">
+          <li>•<a href="/zixun/792.html" target="_blank" class="title">《妖怪宝可萌》活动，日充送好礼！</a></li>
+          <li>•<a href="/zixun/791.html" target="_blank" class="title">《龙城霸业》合服活动火爆开启，合服礼包随心领！</a></li>
+          <li>•<a href="/zixun/790.html" target="_blank" class="title">​《口袋妖怪联盟》“寒霜降至”活动！</a></li>
+          <li>•<a href="/zixun/789.html" target="_blank" class="title">《传奇来了》10月21-23日限时活动</a></li>
+          <li>•<a href="/zixun/788.html" target="_blank" class="title">《百战沙城》限时活动!登陆抽奖来袭！</a></li>
+          <li>•<a href="/zixun/787.html" target="_blank" class="title">《开心国王》十月豪礼献上，周末豪礼，天降元宝！</a></li>
+          <li>•<a href="/zixun/786.html" target="_blank" class="title">《龙城霸业》魔晶庆典活动火爆来袭！</a></li>
+          <li>•<a href="/zixun/785.html" target="_blank" class="title">《口袋之旅》活动：限时大轮盘！充值大礼包！</a></li>
+          <li>•<a href="/zixun/784.html" target="_blank" class="title">《异世修真之我是传奇活动》活动火热开启！充值送礼</a></li>
+          <li>•<a href="/zixun/783.html" target="_blank" class="title">《梦道》修仙风限时活动！奖励送不停！</a></li>
+        </ul>
+      </div>
+      <div class="rel-libao">
+        <div class="hd20">
+          <h3>相关礼包</h3>
+          <a href="/search/libao.php?key=" class="more">更多<i></i></a></div>
+        <ul>
+          <li>
+            <div class="libao-name"><a href="/libao/21.html" target="_blank">口袋妖怪联盟教师节礼包</a></div>
+            <div class="libao-num">剩余：<span class="progress"><span style="width: -462%;"></span></span><em>-462%</em></div>
+            <div class="libao-btn"><a href="/libao/21.html" target="_blank" class="lqBtn">领取</a></div>
+          </li>
+          <li>
+            <div class="libao-name"><a href="/libao/20.html" target="_blank">血战沙城专属礼包</a></div>
+            <div class="libao-num">剩余：<span class="progress"><span style="width: 100%;"></span></span><em>100%</em></div>
+            <div class="libao-btn"><a href="/libao/20.html" target="_blank" class="lqBtn">领取</a></div>
+          </li>
+          <li>
+            <div class="libao-name"><a href="/libao/19.html" target="_blank">修仙三国加群礼包</a></div>
+            <div class="libao-num">剩余：<span class="progress"><span style="width: 50%;"></span></span><em>50%</em></div>
+            <div class="libao-btn"><a href="/libao/19.html" target="_blank" class="lqBtn">领取</a></div>
+          </li>
+          <li>
+            <div class="libao-name"><a href="/libao/18.html" target="_blank">传奇来了新手礼包（补仓）</a></div>
+            <div class="libao-num">剩余：<span class="progress"><span style="width: 100%;"></span></span><em>100%</em></div>
+            <div class="libao-btn"><a href="/libao/18.html" target="_blank" class="lqBtn">领取</a></div>
+          </li>
+        </ul>
+      </div>
+      <div class="new-games">
+        <div class="hd20">
+          <h3>最新游戏</h3>
+          <a href="/game/" class="more">更多<i></i></a></div>
+        <ul class="new_game_list clearfix">
+          <li> <a href="/game/927.html" target="_blank" title="十里桃花"><img src="/d/file/96kaifa/201710281132/20171027141345.png" alt="十里桃花"><span>十里桃花</span></a>
+            <p>角色扮演</p>
+          </li>
+          <li> <a href="/game/926.html" target="_blank" title="决斗之皇"><img src="/d/file/96kaifa/201710281132/20171025093310.png" alt="决斗之皇"><span>决斗之皇</span></a>
+            <p>角色扮演</p>
+          </li>
+          <li> <a href="/game/925.html" target="_blank" title="奇迹仙侠"><img src="/d/file/96kaifa/201710281132/20171027142939.jpg" alt="奇迹仙侠"><span>奇迹仙侠</span></a>
+            <p>角色扮演</p>
+          </li>
+          <li> <a href="/game/924.html" target="_blank" title="莽荒纪H5"><img src="/d/file/96kaifa/201710241648/20170306150106.png" alt="莽荒纪H5"><span>莽荒纪H5</span></a>
+            <p>卡牌游戏</p>
+          </li>
+          <li> <a href="/game/923.html" target="_blank" title="大侠归来"><img src="/d/file/96kaifa/201710241648/20170107092745.png" alt="大侠归来"><span>大侠归来</span></a>
+            <p>卡牌游戏</p>
+          </li>
+          <li> <a href="/game/922.html" target="_blank" title="三国战争"><img src="/d/file/96kaifa/201710241648/20170112105150.png" alt="三国战争"><span>三国战争</span></a>
+            <p>动作游戏</p>
+          </li>
+          <li> <a href="/game/921.html" target="_blank" title="点兵三国志"><img src="/d/file/96kaifa/201710241648/20170123093500.png" alt="点兵三国志"><span>点兵三国志</span></a>
+            <p>动作游戏</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="w336">
+      <div class="w-news">
+        <div class="hd20">
+          <h3>热门活动</h3>
+          <a href="javascript:void(0);" class="refresh" id="w_refresh">换一批<i></i></a></div>
+        <div class="wbody">
+          <div class="wlist">
+            <dl>
+              <dt><a href="/zixun/783.html" target="_blank"><img src="/d/file/zixun/huodong/2017-10-24/fea3aa79b53d76c7f189d7d16b66b0c0.jpg" alt="《梦道》修仙风限时活动！奖励送不停！"></a></dt>
+              <dd class="title"><a href="/zixun/783.html" target="_blank">《梦道》修仙风限时活动！奖励送不停！</a></dd>
+              <dd class="desc">《梦道》修仙风限时活动！奖励送不停！</dd>
+            </dl>
+            <ul>
+              <li>•<a href="/zixun/792.html" target="_blank" class="title">《妖怪宝可萌》活动，日充送好礼！</a></li>
+              <li>•<a href="/zixun/791.html" target="_blank" class="title">《龙城霸业》合服活动火爆开启，合服礼包随心领！</a></li>
+              <li>•<a href="/zixun/790.html" target="_blank" class="title">​《口袋妖怪联盟》“寒霜降至”活动！</a></li>
+              <li>•<a href="/zixun/789.html" target="_blank" class="title">《传奇来了》10月21-23日限时活动</a></li>
+            </ul>
+          </div>
+          <div class="wlist">
+            <dl>
+              <dt><a href="/zixun/755.html" target="_blank"><img src="/d/file/96kaifa/201710241215/20170629152850.jpg" alt="《龙城霸业》10月9日合服，合服活动火爆开启！"></a></dt>
+              <dd class="title"><a href="/zixun/755.html" target="_blank">《龙城霸业》10月9日合服，合服活动火爆开启！</a></dd>
+              <dd class="desc">《龙城霸业》10月9日合服，合服活动火爆开启！</dd>
+            </dl>
+            <ul>
+              <li>•<a href="/zixun/788.html" target="_blank" class="title">《百战沙城》限时活动!登陆抽奖来袭！</a></li>
+              <li>•<a href="/zixun/787.html" target="_blank" class="title">《开心国王》十月豪礼献上，周末豪礼，天降元宝！</a></li>
+              <li>•<a href="/zixun/786.html" target="_blank" class="title">《龙城霸业》魔晶庆典活动火爆来袭！</a></li>
+              <li>•<a href="/zixun/785.html" target="_blank" class="title">《口袋之旅》活动：限时大轮盘！充值大礼包！</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="w-rank mt15">
+        <div class="hd20">
+          <h3>游戏排行</h3>
+          <ul class="rank_tab">
+            <li onMouseMove="onSelect(this,'rank_con')" class="tab_2">网游</li>
+            <li onMouseMove="onSelect(this,'rank_con')" class="tab_1">小游戏</li>
+          </ul>
+        </div>
+        <div class="bd">
+          <ol id="rank_con_0">
+            <li> <em class="num num1">1</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/927.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027141345.png" alt="十里桃花"></a></div>
+                <p class="tit"><a href="/game/927.html" target="_blank">十里桃花</a></p>
+                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>81人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/927.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num2">2</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/926.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171025093310.png" alt="决斗之皇"></a></div>
+                <p class="tit"><a href="/game/926.html" target="_blank">决斗之皇</a></p>
+                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>3人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/926.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num3">3</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/925.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027142939.jpg" alt="奇迹仙侠"></a></div>
+                <p class="tit"><a href="/game/925.html" target="_blank">奇迹仙侠</a></p>
+                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>7人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/925.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">4</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/924.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170306150106.png" alt="莽荒纪H5"></a></div>
+                <p class="tit"><a href="/game/924.html" target="_blank">莽荒纪H5</a></p>
+                <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>16人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/924.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">5</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/923.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170107092745.png" alt="大侠归来"></a></div>
+                <p class="tit"><a href="/game/923.html" target="_blank">大侠归来</a></p>
+                <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>8人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/923.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+          </ol>
+          <ol id="rank_con_1" style="display: none;">
+            <li> <em class="num num1">1</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/125.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615161819.jpg" alt="八爪鱼拉拉手"></a></div>
+                <p class="tit"><a href="/danji/125.html" target="_blank">八爪鱼拉拉手</a></p>
+                <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">益智</a></span><span>14人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/125.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num2">2</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/124.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615170050.jpg" alt="抽打神经猫"></a></div>
+                <p class="tit"><a href="/danji/124.html" target="_blank">抽打神经猫</a></p>
+                <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>3人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/124.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num3">3</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/123.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615175231.png" alt="大小跳不停"></a></div>
+                <p class="tit"><a href="/danji/123.html" target="_blank">大小跳不停</a></p>
+                <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>9人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/123.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">4</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/122.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615173331.png" alt="大长腿"></a></div>
+                <p class="tit"><a href="/danji/122.html" target="_blank">大长腿</a></p>
+                <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>2人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/122.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">5</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/121.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170616133704.jpg" alt="贱人配对"></a></div>
+                <p class="tit"><a href="/danji/121.html" target="_blank">贱人配对</a></p>
+                <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">益智</a></span><span>3人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/121.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="w-texts mt15">
+        <div class="hd20">
+          <h3>推荐阅读</h3>
+        </div>
+        <ul class="text-list">
+          <li>•<a href="/zixun/787.html" target="_blank" class="title">《开心国王》十月豪礼献上，周末豪礼，天降元宝！</a></li>
+          <li>•<a href="/zixun/759.html" target="_blank" class="title">《飘飘欲仙》双节同庆！好礼赠不停！</a></li>
+          <li>•<a href="/zixun/620.html" target="_blank" class="title">​《口袋妖怪联盟》欢乐庆典活动！福利乐翻天!</a></li>
+          <li>•<a href="/zixun/558.html" target="_blank" class="title">《传奇世界H5》吃西瓜大比拼！赢豪礼！</a></li>
+          <li>•<a href="/zixun/515.html" target="_blank" class="title">《口袋妖怪联盟》月月有礼活动！</a></li>
+          <li>•<a href="/zixun/482.html" target="_blank" class="title">《蜀山世界》集字活动：侠客也谈情，集字兑奖换真爱大礼</a></li>
+          <li>•<a href="/zixun/454.html" target="_blank" class="title">3500有福利 “五一”充值赠大礼</a></li>
+          <li>•<a href="/zixun/439.html" target="_blank" class="title">《口袋妖怪联盟》“周年庆典”活动隆重开启</a></li>
+          <li>•<a href="/zixun/425.html" target="_blank" class="title">《爬塔西游》幸运大放送 限时勇者免费送</a></li>
+          <li>•<a href="/zixun/420.html" target="_blank" class="title">4.1礼愚天下 《蜀山世界》愚乐无极限</a></li>
+        </ul>
+      </div>
+      <div class="w-texts mt15">
+        <div class="hd20">
+          <h3>最新资讯</h3>
+        </div>
+        <ul class="text-list">
+          <li>•<a href="/zixun/792.html" target="_blank" class="title">《妖怪宝可萌》活动，日充送好礼！</a></li>
+          <li>•<a href="/zixun/791.html" target="_blank" class="title">《龙城霸业》合服活动火爆开启，合服礼包随心领！</a></li>
+          <li>•<a href="/zixun/790.html" target="_blank" class="title">​《口袋妖怪联盟》“寒霜降至”活动！</a></li>
+          <li>•<a href="/zixun/789.html" target="_blank" class="title">《传奇来了》10月21-23日限时活动</a></li>
+          <li>•<a href="/zixun/788.html" target="_blank" class="title">《百战沙城》限时活动!登陆抽奖来袭！</a></li>
+          <li>•<a href="/zixun/787.html" target="_blank" class="title">《开心国王》十月豪礼献上，周末豪礼，天降元宝！</a></li>
+          <li>•<a href="/zixun/786.html" target="_blank" class="title">《龙城霸业》魔晶庆典活动火爆来袭！</a></li>
+          <li>•<a href="/zixun/785.html" target="_blank" class="title">《口袋之旅》活动：限时大轮盘！充值大礼包！</a></li>
+          <li>•<a href="/zixun/784.html" target="_blank" class="title">《异世修真之我是传奇活动》活动火热开启！充值送礼</a></li>
+          <li>•<a href="/zixun/783.html" target="_blank" class="title">《梦道》修仙风限时活动！奖励送不停！</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div id="footer">
+  <div class="about_me"> <a href="/aboutus.html" target="_blank">关于我们</a> | <a href="/contact.html" target="_blank">联系方式</a> | <a href="/sitemap.html" target="_blank">网站地图</a> | <a href="/explain.html" target="_blank">用户协议</a> </div>
+  <div class="safety"> <a><i class="icon_safe1"></i>中国互联网举报中心</a> <a><i class="icon_safe2"></i>网络违法举报中心</a> <a><i class="icon_safe3"></i>垃圾信息举报中心</a> <a><i class="icon_safe4"></i>闽公网安备35020302001953号</a> </div>
+  <p class="tips_text">©2017-2018 &nbsp; 仿3500游戏 &nbsp; www.96kaifa.com <em>礼包交流群：</em><a href="http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b" target="_blank" class="qqun"></a></p>
+  <p class="tips_text">备案号：粤ICP备17024501号-2 &nbsp;  技术支持：<a href="https://www.96kaifa.com" target="_blank">96KaiFa源码</a></p>
+</div>
+<script src="/e/public/onclick/?enews=donews&classid=3&id=71"></script><div id="backtop">返回顶部</div>
+<script type="text/javascript" src="/96kaifa/statics/home/js/member.js"></script>
+<script type="text/javascript">
+	var member = new Member();
+</script>
+<script type="text/javascript" src="/96kaifa/statics/home/js/global.js"></script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+</body>
+</html>

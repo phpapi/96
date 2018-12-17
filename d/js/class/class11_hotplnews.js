@@ -1,0 +1,1 @@
+document.write("<li><a href=\"/majiang/1.html\" title=\"123\">123</a></li>");

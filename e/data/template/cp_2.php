@@ -1,0 +1,13 @@
+<?php
+if(!defined('InEmpireCMS'))
+{
+	exit();
+}
+?></td>
+        </tr>
+      </table></td>
+</tr>
+</table>
+[!--temp.footer--]
+</body>
+</html>

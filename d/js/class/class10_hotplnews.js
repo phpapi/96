@@ -1,0 +1,1 @@
+document.write("<li><a href=\"/puke/1.html\" title=\"QQ斗地主\">QQ斗地主</a></li><li><a href=\"/puke/2.html\" title=\"333\">333</a></li>");

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>深入解析《战舰帝国》教你如何成为战舰之神_仿3500游戏</title>
+<meta name="keywords" content="战舰帝国,战舰帝国攻略"/>
+<meta name="description" content="《战舰帝国》是一款互动型海战游戏，操作简便，策略丰富，且完美的还原了各类战舰。在游戏中玩家可以通过各种征战和活动打造属于自己的无敌舰队。超过200艘，横跨日德兰到莱特湾最辉煌的海战年代的著名战舰等待你的收集。而五大特色系统也保证了玩家舰队的成长和体验舰队养成的乐趣。在征程中玩家还可与志同道合之士共同组成军团，共同展开称霸四海的事业。"/>
+<link href="/96kaifa/statics/home/css/base.css" type="text/css" rel="stylesheet">
+<link href="/96kaifa/statics/home/css/style3500.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="/96kaifa/statics/home/js/jquery-1.8.2.min.js"></script>
+</head>
+<script type="text/javascript">
+	showMobile("http://test.yanwowenda.cn/zixun/75.html");
+</script>
+<body>
+<div class="cover"></div>
+<div class="topbox">
+  <div class="boxin clearfix">
+    <div class="topl fl"> <span class="home"><a href="/">游戏首页</a></span>
+      <ul>
+        <li>|<a href="http://test.yanwowenda.cn" target="_blank">手机版</a></li>
+        <li>|<a href="#" target="_blank">客户端下载</a></li>
+        <li>|<a href="javascript:;" class="wx_show">关注微信</a>
+          <div class="wx_hide"> <i class="angle"></i> <img src="/96kaifa/statics/home/images/wx_code.jpg" width="103" height="103"> <span>关注微信公众号</span> </div>
+        </li>
+        <li>|<a href="#" target="_blank">开放平台</a></li>
+      </ul>
+    </div>
+    <div class="topr fr">
+      <div class="login_ok">
+	<!-- 登录 -->
+	<script>
+	document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+	$(function(){
+	var dqurl = window.location.href;
+	$('#dquurl').val(dqurl);
+	})
+	</script>
+	<!-- 登录 end-->
+	  </div>
+      <a href="javascript:;" onClick="AddFavorite();">收藏本站</a> </div>
+  </div>
+</div>
+<div class="header">
+  <div class="header-top">
+    <div class="in">
+      <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="仿3500游戏"></a></div>
+      <div class="search fr">
+        <form action="/search/game.php" method="get" target="_blank" name="searchTop">
+          <div class="search_box tr">
+            <input type="text" id="bdcsMain" name="key" class="sech_keyword" placeholder="请输入游戏名称">
+            <input type="submit" value="搜索" class="sech_btn">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="in">
+      <ul>
+        <li><a href="/" class=""><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qilei/"><span class="menu-txt">棋类</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/game/"><span class="menu-txt">网游</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/danji/"><span class="menu-txt">小游戏</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/libao/"><span class="menu-txt">礼包</span><span class="menu-line"></span></a></li>
+        <li><a class="nav-cur" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/kaifu/"><span class="menu-txt">开服表</span><span class="menu-line"></span></a></li>
+      </ul>
+      <div class="grzx">
+	  	<script> document.write('<script src="/e/member/login/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
+	  </div>
+    </div>
+  </div>
+</div>
+<div class="my_pop">
+<!--弹出登录框开始-->
+  <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">账号登录</p>
+    <form action="/e/member/doaction.php" method="post" onSubmit="return userLogin()" id="form_login1" class="form-login">
+      <input type=hidden name=ecmsfrom value="" id="dquurl">
+      <input type=hidden name=enews value=login>
+      <input name="tobind" type="hidden" id="tobind" value="0">
+      <div class="modal-body">
+        <div class="error_font">*错误提示</div>
+        <div class="outer tr"> <i class="user"></i>
+          <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
+        </div>
+        <div class="outer tr"> <i class="pwd"></i>
+          <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
+        </div>
+        <div class="outer">
+          <div class="captcha" id="logcaptcha"></div>
+        </div>
+      </div>
+      <div class="modal-footer" style="margin-bottom:40px;">
+        <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
+      </div>
+    </form>
+  </div>
+<!--弹出登录框结束-->
+<!--弹出注册框开始-->
+<div class="register_pop" style="display: none;"> <span class="pop_close"></span>
+  <p class="pop-tit">会员注册</p>
+  <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
+	<input type="hidden" name="enews" value="register">
+    <div class="modal-body">
+      <div class="error_font">*错误提示</div>
+      <div class="outer tr"> <i class="user"></i>
+        <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
+      </div>
+      <div class="outer tr"> <i class="pwd"></i>
+        <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
+      </div>
+      <div class="outer tr"> <i class="pwd"></i>
+        <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
+      </div>
+      <div class="outer tr"> <i class="user"></i>
+        <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
+      </div>
+      <div class="outer">
+        <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
+        <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
+    </div>
+    <div class="modal-footer">
+      <p class="outer"> <input type='submit' name='Submit' class="orange_btn" id="btnRegister" value="立即注册"> </p>
+      <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
+    </div>
+  </form>
+</div>
+<!--弹出注册框结束-->
+</div>
+<div class="main">
+  <div class="position">当前位置：<a href="/">首页</a>&nbsp;>&nbsp;<a href="/zixun/">资讯</a>&nbsp;>&nbsp;<a href="/zixun/gonglue/">攻略</a> > 深入解析《战舰帝国》教你如何成为战舰之神</div>
+  <div class="container">
+    <div class="w804">
+      <div class="show-news">
+        <div class="news-top">
+          <h1>深入解析《战舰帝国》教你如何成为战舰之神</h1>
+          <div class="info"> <span>2017-10-24 12:17:24</span> <span>作者：zhuangyf</span> <span>来源：<a href="/" target="_blank">仿3500游戏</a></span> </div>
+        </div>
+        <div class="remgame">
+          <div class="item"> <a class="img" href="/game/895.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170301090115.png" alt="战舰帝国"></a>
+            <p class="name"><a href="/game/895.html" target="_blank">战舰帝国</a></p>
+            <p class="other"><a href="/list-6-0-0-0.html" target="_blank">战争策略</a><span>|</span>0人在玩</p>
+            <p class="other">首款H5写实海战策略游戏</p>
+            <a class="btn playgame" href="/game/895.html" target="_blank">进入游戏</a> </div>
+        </div>
+        <div class="news-con">
+		<p>　　《战舰帝国》是一款互动型海战游戏，操作简便，策略丰富，且完美的还原了各类战舰。在游戏中玩家可以通过各种征战和活动打造属于自己的无敌舰队。超过200艘，横跨日德兰到莱特湾最辉煌的海战年代的著名战舰等待你的收集。而五大特色系统也保证了玩家舰队的成长和体验舰队养成的乐趣。在征程中玩家还可与志同道合之士共同组成军团，共同展开称霸四海的事业。<br/></p><p>　　现在就让小编来为大家详细解说一下《战舰帝国》的玩法与攻略!</p><p>　　<strong>※战舰类型※</strong><br/></p><p>　　一共有8种战舰，分别是：<span style="color: rgb(0, 176, 240);">战列舰、战列巡洋舰、重型巡洋舰、轻型巡洋舰、重型航空母舰、轻型航空母舰、驱逐舰、潜艇。</span></p><p>　　<strong>※战舰获得※</strong></p><p>　　在游戏中，所有的战舰图纸都可以通过战役副本，玩法或其他活动来获得。获得战舰图纸后，可以在造船厂生产出对应的战舰。</p><p>　　<strong>※战舰品质※</strong></p><p>　　在游戏中，获得的战舰品质依次为，橙色最好，紫色其次，蓝色次之，绿色再次之，白色最差。游戏中还可能获得橙色、紫色战舰图纸碎片，碎片可以合成战舰。</p><p>　　<strong>※战舰技能※</strong></p><p>　　每艘战舰，拥有3个技能，分别是，普通攻击，主动技能，旗舰技能。</p><p>　　每种战舰技能均不相同。有的技能可以用很高的伤害攻击对手，有的技能可以大面积群体攻击对手。点击阵容后，在阵容界面，可以看到每艘战舰的详细技能。</p><p>　　<strong>※战舰布阵※</strong></p><p>　　战舰在队伍中分为前排与后排。在大部分的战斗中，可以把生命高的战舰放在前排，抵抗对手的攻击。攻击高的战舰放到后排，负责攻击对手。</p><p>　　一些副本中，遇到拥有攻击后排目标的对手时，转换一下布阵思路即可轻松通关。</p><p>　　<strong>※战役※</strong></p><p>　　战役分为普通战役副本与精英战役副本。精英战役副本限制每天征服次数，精英战役副本掉落战舰图纸及战舰碎片的几率高于普通战役副本。</p><p>　　<strong>※旗舰※</strong></p><p>　　阵容里，总有一艘旗舰，只有当一艘战舰成为旗舰后，它的旗舰技能才会发挥效果。可以设置阵容中的任何一艘战舰为旗舰，但是通常我们设置旗舰技能最好的那一艘。</p><p>　　在战斗时，请注意保护好旗舰，如果它沉没，旗舰效果也会随着消失。</p><p>　　<strong>※战舰图纸※</strong></p><p>　　战舰图纸是用来生产战舰的必须材料，战舰图纸的品质决定了生产出来的战舰品质。战舰图纸一般通过副本与雇佣特工来获得。</p><p>　　<strong>※战舰图纸碎片※</strong></p><p>　　相同的战舰图纸碎片，当收集到一定数量时，可以合成为战舰图纸。战役副本中的BOSS均会掉落各种战舰图纸碎片。</p><p>　　<strong>※万能图纸※</strong></p><p>　　消耗一定数量的万能图纸，可以兑换所需要的各种战舰图纸。</p><p>　　如果有不需要的战舰或战舰图纸，可以将其分解为万能图纸。同时也可以在各种战役副本中获得万能图纸。</p><p>　　<strong>※火炮攻击※</strong></p><p>　　战列舰、战列巡洋舰、重型巡洋舰、轻型巡洋舰所有的攻击均为火炮攻击。</p><p>　　<strong>※爆破攻击※</strong></p><p>　　重型航空母舰、轻型航空母舰、驱逐舰、潜艇所有的攻击均为爆破攻击。</p><p>　　<strong>※配件※</strong></p><p>　　所有的战舰，均可以装备配件。</p><p>　　武器配件，分为炮弹(火炮攻击)、鱼雷(爆破攻击)两种。炮弹可以装备于战列舰、战列巡洋舰、重型巡洋舰、轻型巡洋舰;鱼雷可以装备于重型航空母舰、轻型航空母舰、驱逐舰、潜艇。</p><p>　　装甲配件、雷达配件、发动机配件，可以装备于所有类型的战舰。</p><p>　　<strong>※配件碎片※</strong></p><p>　　征服战役副本和开启宝箱时有机率获得某些配件的碎片，得到某一个配件的碎片后，便可以在夺宝奇兵系统中找到对应的配件进行抢夺。</p><p>　　<strong>※经验※</strong></p><p>　　征服战役副本可以获得经验，经验可以提升主角等级。点击主角头像，可以看到主角级别与经验。</p><p>　　<strong>※科技图纸※</strong></p><p>　　科技图纸可以用来升级科技中心。科技中心升级后，会整体提升舰队各项属性。征服战役副本可以获得科技图纸。</p><p>　　<strong>※科技点※</strong></p><p>　　科技点是很稀有的货币，可以用来进行配件改造。分解多余的配件也可以获得科技点。</p><p>　　<strong>※训练弹药※</strong></p><p>　　训练弹药可以用来对战舰进行训练，经过训练的战舰会提升各项属性。竞技场积分可以用来兑换训练弹药。</p><p>　　<strong>※技能手册※</strong></p><p>　　技能手册用来升级战舰的普通技能、主动技能与旗舰技能，升级后的战舰技能可以造成更大的伤害。参与守卫油田活动，可以获得技能手册。</p><p>　　<strong>※活动※</strong></p><p>　　游戏中有各种活动，可以免费领取金币、钻石及战舰图纸等稀有道具。</p><p>　　<strong>※军团※</strong></p><p>　　玩家可以加入军团，与志同道合的朋友们一起游戏。</p><p>　　<strong>※军团建设和个人贡献※</strong></p><p>　　加入军团后，捐献军费可以增加军团建设和个人贡献，军团建设用于升级军团等级，个人贡献用于购买军团商城中的道具。个人贡献不会因为军团的改变而清空。</p><p>　　<strong>※军功※</strong></p><p>　　征服战役副本可以获得副本星数，消耗副本星数可以开启军功，开启军功可以给全部舰船增加属性。</p><p>　　<strong>※军衔※</strong></p><p>　　指挥官获得荣誉值逐步将自己的军衔从列兵进阶到大元帅，每次军衔进阶都可以获得一定的属性加成。</p><p>　　<strong>※图鉴※</strong></p><p>　　图鉴分为舰船、舰长和勋章图鉴三类，在此可以查看相应的收集情况。当指挥官首次获得某舰船图纸、舰长或勋章时，对应图鉴激活，获得一定的属性加成，并可以查看相关的历史信息。</p><p>　　<strong>※阵型※</strong></p><p>　　30级开启阵型更换、升级和成就功能。共有6种阵型供指挥官选择，每种阵型对不同位置的舰船有不同的属性加成，指挥官可以根据需要选择使用的阵型。</p><p>　　每种阵型可通过消耗阵型手册升级以获得更高的属性加成。</p><p>　　当多种阵型都达到某特定等级时(如两个阵型达到10级)获得阵型成就，可以获得额外的百分比属性加成。</p><p>　　<strong>※阵型手册※</strong></p><p>　　阵型手册用于阵型升级，可通过大西洋运输线和王者争霸赛奖励兑换获得。</p><p>　　<strong>※勋章※</strong></p><p>　　40级之后，指挥官可以通过勋章探索获得勋章，每艘船最多可以装备6个不同类型勋章，勋章可以通过升级和改造大幅提升舰船的战斗力。</p><p>　　<strong>※功勋点※</strong></p><p>　　勋章改造需消耗功勋点，指挥官可以通过分解紫色以上品质的勋章获得功勋点。</p><p>　　<strong>※天赋※</strong></p><p>　　47级开启天赋功能，指挥官需通过达成通关守卫油田，提升等级等条件，消耗天赋点和金币激活天赋以获得天赋加成。</p><p>　　激活天赋后需在达到升级条件的情况下，消耗天赋点和金币以获得更高的天赋加成。</p><p>　　<strong>※天赋点※</strong></p><p>　　天赋点可用于激活和升级天赋，指挥官可通过竞技场积分兑换、中途岛海战通关奖励和全服争霸赛排名奖励等途径获得。</p><p>　　<strong>※红船※</strong></p><p>　　50级之后，当指挥官的橙色舰船达到橙色+5的品质后，可以使用5张相同舰船的图纸、150个精密部件及一定数量的金币将橙色+5的舰船进阶为红色品质的舰船，红船首轮攻击100%触发主动技能。</p><p>　　<strong>※舰长※</strong></p><p>　　50级开启舰长功能，指挥官可以通过招募，玩法或其他活动获得舰长。</p><p>　　每艘舰船只可以任命一位舰长，上阵舰长可以通过升级和晋升大幅提升舰船的战斗力。</p><p>　　每位舰长都有国籍和擅长的舰船类型，当舰长任命于相同国籍和擅长类型的舰船上，并达到相应等级时可以获得额外的属性加成。</p><p>　　<strong>※舰长碎片※</strong></p><p>　　每位舰长都有相应的舰长碎片，当收集到一定数量的舰长碎片时，可以合成对应的舰长;舰长碎片可以通过活动和玩法中获得。</p><p>　　<strong>※将魂※</strong></p><p>　　消耗一定数量的将魂，可以兑换所需要的舰长;将魂可以通过分解不需要的舰长获得。</p><p>　　<strong>※争霸※</strong></p><p>　　争霸有多种玩法，并且每种玩法均限定每天次数，争霸玩法能产出很多资源及道具。比如海盗的宝藏，能够获得大量金币;竞技场，能够兑换各种道具。</p><p>　　打开争霸界面，可以看到各种玩法的详细信息。</p><p>　　<strong>※海盗的宝藏※</strong></p><p>　　12级开启海盗的宝藏玩法，消耗原油战胜海盗可以获得海量金币。</p><p>　　马六甲海盗和加勒比海盗有极高的火炮防御，攻击成功后会消耗更多的原油，但获得的金币也会大幅提升。</p><p>　　<strong>※答题※</strong></p><p>　　12级开启答题系统，每天中午12:30，指挥官可以回答在题库中随机选择的20道题以获取积分，回答正确且每道题用时越短获得的积分越高。</p><p>　　通过积分排名，排名越高的指挥官会获取越多的金币奖励。</p><p>　　<strong>※竞技场※</strong></p><p>　　15级开启竞技场玩法，指挥官可以挑战本区服内的其他指挥官争夺竞技场排名。</p><p>　　每天22点可以根据当时排名获得相应的积分和荣誉，排名越高获得的积分和荣誉也越多。</p><p>　　获得的积分可在竞技场商店兑换游戏内的稀有道具,获得的荣誉可用于升级军衔。</p><p>　　每天有10次免费的挑战次数，亦可消耗挑战令获取挑战次数，挑战次数每日0点重置，需要注意的是挑战次数多于10次也会被重置为10次的哦。</p><p>　　<strong>※大西洋运输线※</strong></p><p>　　18级开启大西洋运输线玩法，消耗原油打击NPC运输线可以获得海量科技点。</p><p>　　远洋运输舰和军用运输舰有极高的爆破防御，攻击成功后会消耗更多的原油，但获得的科技点也会大幅提升。</p><p>　　<strong>※夺宝奇兵※</strong></p><p>　　19级开启夺宝奇兵玩法，通过其他途径获得配件的碎片后，可在夺宝奇兵中通过寻宝其他指挥官获得该配件的其他碎片，当集齐配件的所有碎片后便可合成该配件。</p><p>　　需要指挥官注意的是，未合成的配件碎片有可能会被其他玩家寻宝。</p><p>　　对其他玩家寻宝需消耗寻宝令，寻宝令每20分钟恢复一个，寻宝令也可通过使用寻宝证和皇家寻宝证获得。当指挥官达到40级后亦可寻宝经验勋章的碎片。</p><p>　　<strong>※守卫油田※</strong></p><p>　　25级开启守卫油田玩法，玩法开启后，指挥官需要从第1波开始挑战，每波都有不同的通关条件，当战斗胜利且满足通关条件后才可对下一波进行挑战。</p><p>　　每通过1关都会有金币奖励，通关5的倍数的波数会有特定宝箱奖励。</p><p>　　指挥官可以将挑战重置，重置后需要从第1波重新挑战或直接对已通关的波数进行扫荡，每天有2次免费的重置次数，每次重新挑战或扫荡都可获得通关奖励。</p><p>　　<strong>※太平洋大海战※</strong></p><p>　　25级开启太平洋大海战玩法，不同阵营的指挥官通过占领岛屿为本阵营累积资源以争夺阵营排名。</p><p>　　每周二、五、日20:00开战，战斗持续20分钟。战斗开启后，三大阵营的指挥官从各自的母港出发，占领太平洋中的中立港口或其他阵营的港口，被占领的港口会归属于自己的阵营。</p><p>　　所有的战斗都是围绕攻击或防守港口而进行，指挥官可以攻击自己相邻的其他阵营港口，击败港口内的所有驻军即可占领该港口，占领港口后，己方阵营的其他指挥官可以向港口驻军。</p><p>　　在该玩法中，每位指挥官拥有100点士气，每次战斗会消耗一定数量士气，当士气为0时，视为战败，会自动返回母港休整一段时间后士气回满并重新投入战斗。</p><p>　　每个港口每分钟为所属阵营产出一定数量的战略资源，其中珍珠港产生资源最快，母港相连的3个军港产生资源最慢，战斗结束后会依据3个阵营的战略资源量进行阵营排名，第1名的阵营会获得高额的奖励。</p><p>　　珍珠港是太平洋中最重要的港口，战斗结束时占领珍珠港的阵营每位参战指挥官可以额外领取一次原油奖励。</p><p>　　指挥官每次发起进攻，都能够获得一定数量战功，战斗结束后会依据指挥官的战功，进行阵营内战功排行，上榜的指挥官会根据在阵营内的排行获得对应的声望奖励。每天前5次进攻可以获得大量额外战功。</p><p>　　<strong>※七武海※</strong></p><p>　　30级开启七武海玩法，指挥官需加入军团，并与其他军团的成员进行夺岛战斗并争夺排名第一。</p><p>　　每次比赛过程分为3个阶段：报名阶段、驻守阶段、比赛阶段。</p><p>　　报名阶段：军团长和副军团长有资格报名，报名后各军团将根据军团成员捐献的建设值进行排名，报名截止时，排名前20的军团有资格参加七武海战役。</p><p>　　驻守阶段：报名截止后进入驻守阶段，获得参赛资格军团的成员可以点击按钮进行驻守，驻守后的成员将被记录在军团所在七武海岛屿的阵容中，即使不参与战斗也可以作为防守成员(不会获得战功)。</p><p>　　比赛阶段：七武海中有8座岛屿，岛屿1-7分别归属报名阶段排名前7的军团，其余军团均在岛屿8，战斗开始后可以攻击相邻岛屿，将对方岛屿全部成员击杀后，即可占领该岛，1个军团可同时占领多个岛屿。</p><p>　　所有岛屿每隔一定时间产出资源，比赛结束后将按照军团资源排名发放军团奖励。</p><p>　　每位指挥官初始有100士气，发起战斗可获得战功，具体规则和太平洋大海战规则相同，比赛结束后根据个人战功排名给予奖励。</p><p>　　<strong>※血战太平洋※</strong></p><p>　　40级开启血战太平洋玩法，该玩法为“太平洋大海战”的跨服升级版，同平台内所有服务器的指挥官都将在一起进行战斗。</p><p>　　系统会依据角色等级将指挥官们分配至对应等级战场进行战斗，等级相近的指挥官会在同一个等级段的战场内。</p><p>　　战场等级越高，奖励越丰富，每个战场都有独立的战功排行榜奖励。</p><p>　　为平衡阵营间的实力差距，每次血战太平洋战场开启后，参战的指挥官将被随机分配到正义、铁血、荣耀阵营中的一个，战场中的随机阵营与指挥官实际阵营互不影响，随机阵营仅在本次血战太平洋战场中生效。</p><p>　　与“太平洋大海战”相比，“血战太平洋”中指挥官的初始士气上限由100点改为60点，被击杀后有45秒的复活冷却时间，指挥官每被击杀3次都会获得随机增益属性加成，属性加成效果在下次被击杀时消失。最终占领珍珠港的阵营原油奖励提升至50点。战功排名不再区分阵营。</p><p>　　<strong>※金银岛※</strong></p><p>　　45级开启金银岛玩法，消耗原油占领岛屿后对应岛屿会在指挥官占领期间不断产出金币。</p><p>　　金银岛分普通海域和神秘海域，并各有10个子海域，神秘海域中的岛屿的金币产出量更多。</p><p>　　共有5种岛屿类型，并且紫晶岛产出﹥精金岛产出﹥金岛产出﹥银岛产出﹥铜岛产出。</p><p>　　指挥官可夺取其他指挥官的岛屿以获得占领权，无占领者的岛屿有守卫舰队。指挥官亦可邀请本军团成员协助守岛，当有其他指挥官夺岛时需先打败协助者，而协助者亦可在成功协助后每分钟获取占领者奖励的20%。</p><p>　　<strong>※中途岛海战※</strong></p><p>　　47级开启中途岛海战玩法，每周一、三、五开启挑战，每天可挑战3次。</p><p>　　该玩法设置了唯一起点和唯一终点，指挥官可以选择不同路线从唯一起点行进到唯一终点，路线上将遇到战斗、获得资源和其他随机事件，对应会获得不同的奖励。</p><p>　　指挥官需要下达前进指令获得步数(随机1-6步)，每前进一步消耗一次步数，当前进步数为0时，需要重新下达前进指令获得步数，直至打败唯一终点的大boss后可以通关战役。</p><p>　　在唯一起点和唯一终点之间设置了几条支线，支线上共有两个小boss，击败boss可以获得稀有道具奖励，击败所有boss即可获得三颗星。</p><p>　　资源奖励：经过路线上的资源点(宝箱)，将在金币、科技点、技能手册3种道具中随机获得一种。</p><p>　　战斗：经过路线上的战斗点(火炮图标)，将会发生战斗，战斗胜利后可从勋章碎片、天赋点、金币中随机获得一种奖励。</p><p>　　随机事件：经过路线上的随机事件点(问号图标)，将会从获得前进步数、获得增益属性加成中随机获得一种奖励，随机属性加成仅在下一次战斗中生效。</p><p>　　需要注意的是，在中途岛战役中，指挥官上阵的美国籍舰船在战斗中会有额外的属性加成哦!</p><p>　　<strong>※挑战七巨头※</strong></p><p>　　55级开启挑战七巨头玩法，指挥官可在每周六、周日，每天免费挑战1次七巨头，亦可每天使用钻石增加挑战次数(最多5次)。</p><p>　　每次挑战的战斗只进行1回合，结束时按造成的总伤害折算成相应的金币数奖励给指挥官，指挥官对七巨头造成的伤害越大，获得的金币数量越多。</p><p>　　活动结束后根据本区服内所有指挥官各自对七巨头造成的总伤害进行排名并发放排名奖励，排名越高，获得的奖励越多。</p><p>　　<strong>※王者争霸赛※</strong></p><p>　　65级开启王者争霸赛玩法，同平台所有服务器的指挥官同台竞技，彼此战斗获取积分，角逐最高积分的最强王者。</p><p>　　王者争霸赛每周开启1次，周一至周五开启报名，报名成功的指挥官可在周六9点至周日23点挑战其他已报名的指挥官。</p><p>　　根据指挥官报名时的等级，系统会将其分配至对应等级段的赛场，等级相近的指挥官将会在同一个等级段的赛场内。等级段越高的赛场，奖励越丰富，每个赛场都有独立的积分排行榜系统。</p><p>　　挑战开启后，每位指挥官有1000的默认积分，需要从三位系统选定的其他指挥官中选择一位发起挑战，每次挑战胜利，胜利方获得一定积分，同时对手失去一定积分，若挑战失败，双方积分不变。每次挑战结束，系统会重新选择三位其他指挥官以供选择。</p><p>　　王者争霸赛挑战期间，指挥官每天可以免费发起30次挑战，也可使用钻石增加挑战次数，每次挑战同时消耗1个寻宝令。</p><p>　　每一届王者争霸赛结束后，依据积分高低排名，上榜玩家可获得大量稀有道具奖励。</p><p>　　周一至周五，65级以上玩家可以每天膜拜一次上届冠军，同时获得膜拜奖励。</p><p>　　<strong>※全服争霸赛※</strong></p><p>　　80级开启全服争霸赛，同平台所有服务器指挥官通过类似世界杯的赛程比赛晋级，角逐全服的最强王者。</p><p>　　全服争霸赛共分三个阶段：报名阶段、多服比赛阶段和全服比赛阶段。</p><p>　　多服比赛阶段分为多服海选赛和多服晋级赛。多服海选赛随机为指挥官分配对手，每比赛一场更换一个对手，当指挥官累积失败三场后立即被淘汰，直至决出32强，多服海选赛32强自动进入多服晋级赛。多服32强分成16组，每组两人进行5局3胜制比赛，直至决出多服冠军，多服4强直接进入全服比赛阶段。</p><p>　　全服比赛阶段分为全服海选赛和全服晋级赛，赛程赛制和多服比赛阶段相同，直至决出全服冠军。</p><p>　　在多服和全服4强晋级赛开始前，所有指挥官可选择一名参赛选手进行助威，当被助威方获得相应冠军后，助威方可获得助威奖励。</p><p>　　全服晋级赛结束后，全服冠军可被所有指挥官每天膜拜一次，膜拜可获得丰厚的奖励。</p><p>　　参加比赛的指挥官均会按照成绩排名获得奖励，比赛结束后，冠军所在区服的所有玩家上线后可领取一份奖励。</p>        </div>
+		<div class="page"></div>
+        <div class="guanggao mt20"><script src=/d/js/acmsd/thea1.js></script></div>
+        <div class="page-bor"> <span class="page-pre">上一篇：
+		  <a target="_blank" href="/zixun/74.html">《蜀山世界》猎魂篇丨上古仙器的抽取与升级</a>
+		</span> <span class="page-next">下一篇：
+		  <a target="_blank" href="/zixun/76.html">再也不怕没钱了 《大富豪3》G币获取16式曝光</a>
+	
+		</span> </div>
+      </div>
+      <div class="rel-zixun">
+        <div class="hd20">
+          <h3>相关资讯</h3>
+        </div>
+        <ul class="relist clearfix">
+          <li>•<a href="/zixun/75.html" target="_blank" class="title">深入解析《战舰帝国》教你如何成为战舰之神</a></li>
+        </ul>
+      </div>
+      <div class="new-games">
+        <div class="hd20">
+          <h3>最新游戏</h3>
+          <a href="/game/" class="more">更多<i></i></a></div>
+        <ul class="new_game_list clearfix">
+          <li> <a href="/game/927.html" target="_blank" title="十里桃花"><img src="/d/file/96kaifa/201710281132/20171027141345.png" alt="十里桃花"><span>十里桃花</span></a>
+            <p>角色扮演</p>
+          </li>
+          <li> <a href="/game/926.html" target="_blank" title="决斗之皇"><img src="/d/file/96kaifa/201710281132/20171025093310.png" alt="决斗之皇"><span>决斗之皇</span></a>
+            <p>角色扮演</p>
+          </li>
+          <li> <a href="/game/925.html" target="_blank" title="奇迹仙侠"><img src="/d/file/96kaifa/201710281132/20171027142939.jpg" alt="奇迹仙侠"><span>奇迹仙侠</span></a>
+            <p>角色扮演</p>
+          </li>
+          <li> <a href="/game/924.html" target="_blank" title="莽荒纪H5"><img src="/d/file/96kaifa/201710241648/20170306150106.png" alt="莽荒纪H5"><span>莽荒纪H5</span></a>
+            <p>卡牌游戏</p>
+          </li>
+          <li> <a href="/game/923.html" target="_blank" title="大侠归来"><img src="/d/file/96kaifa/201710241648/20170107092745.png" alt="大侠归来"><span>大侠归来</span></a>
+            <p>卡牌游戏</p>
+          </li>
+          <li> <a href="/game/922.html" target="_blank" title="三国战争"><img src="/d/file/96kaifa/201710241648/20170112105150.png" alt="三国战争"><span>三国战争</span></a>
+            <p>动作游戏</p>
+          </li>
+          <li> <a href="/game/921.html" target="_blank" title="点兵三国志"><img src="/d/file/96kaifa/201710241648/20170123093500.png" alt="点兵三国志"><span>点兵三国志</span></a>
+            <p>动作游戏</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="w336">
+      <div class="w-news">
+        <div class="hd20">
+          <h3>热门活动</h3>
+          <a href="javascript:void(0);" class="refresh" id="w_refresh">换一批<i></i></a></div>
+        <div class="wbody">
+          <div class="wlist">
+            <dl>
+              <dt><a href="/zixun/783.html" target="_blank"><img src="/d/file/zixun/huodong/2017-10-24/fea3aa79b53d76c7f189d7d16b66b0c0.jpg" alt="《梦道》修仙风限时活动！奖励送不停！"></a></dt>
+              <dd class="title"><a href="/zixun/783.html" target="_blank">《梦道》修仙风限时活动！奖励送不停！</a></dd>
+              <dd class="desc">《梦道》修仙风限时活动！奖励送不停！</dd>
+            </dl>
+            <ul>
+              <li>•<a href="/zixun/792.html" target="_blank" class="title">《妖怪宝可萌》活动，日充送好礼！</a></li>
+              <li>•<a href="/zixun/791.html" target="_blank" class="title">《龙城霸业》合服活动火爆开启，合服礼包随心领！</a></li>
+              <li>•<a href="/zixun/790.html" target="_blank" class="title">​《口袋妖怪联盟》“寒霜降至”活动！</a></li>
+              <li>•<a href="/zixun/789.html" target="_blank" class="title">《传奇来了》10月21-23日限时活动</a></li>
+            </ul>
+          </div>
+          <div class="wlist">
+            <dl>
+              <dt><a href="/zixun/755.html" target="_blank"><img src="/d/file/96kaifa/201710241215/20170629152850.jpg" alt="《龙城霸业》10月9日合服，合服活动火爆开启！"></a></dt>
+              <dd class="title"><a href="/zixun/755.html" target="_blank">《龙城霸业》10月9日合服，合服活动火爆开启！</a></dd>
+              <dd class="desc">《龙城霸业》10月9日合服，合服活动火爆开启！</dd>
+            </dl>
+            <ul>
+              <li>•<a href="/zixun/788.html" target="_blank" class="title">《百战沙城》限时活动!登陆抽奖来袭！</a></li>
+              <li>•<a href="/zixun/787.html" target="_blank" class="title">《开心国王》十月豪礼献上，周末豪礼，天降元宝！</a></li>
+              <li>•<a href="/zixun/786.html" target="_blank" class="title">《龙城霸业》魔晶庆典活动火爆来袭！</a></li>
+              <li>•<a href="/zixun/785.html" target="_blank" class="title">《口袋之旅》活动：限时大轮盘！充值大礼包！</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="w-rank mt15">
+        <div class="hd20">
+          <h3>游戏排行</h3>
+          <ul class="rank_tab">
+            <li onMouseMove="onSelect(this,'rank_con')" class="tab_2">网游</li>
+            <li onMouseMove="onSelect(this,'rank_con')" class="tab_1">小游戏</li>
+          </ul>
+        </div>
+        <div class="bd">
+          <ol id="rank_con_0">
+            <li> <em class="num num1">1</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/927.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027141345.png" alt="十里桃花"></a></div>
+                <p class="tit"><a href="/game/927.html" target="_blank">十里桃花</a></p>
+                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>81人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/927.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num2">2</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/926.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171025093310.png" alt="决斗之皇"></a></div>
+                <p class="tit"><a href="/game/926.html" target="_blank">决斗之皇</a></p>
+                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>3人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/926.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num3">3</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/925.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027142939.jpg" alt="奇迹仙侠"></a></div>
+                <p class="tit"><a href="/game/925.html" target="_blank">奇迹仙侠</a></p>
+                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>7人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/925.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">4</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/924.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170306150106.png" alt="莽荒纪H5"></a></div>
+                <p class="tit"><a href="/game/924.html" target="_blank">莽荒纪H5</a></p>
+                <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>16人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/924.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">5</em>
+              <div class="box1">
+                <div class="pic"><a href="/game/923.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170107092745.png" alt="大侠归来"></a></div>
+                <p class="tit"><a href="/game/923.html" target="_blank">大侠归来</a></p>
+                <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>8人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/game/923.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+          </ol>
+          <ol id="rank_con_1" style="display: none;">
+            <li> <em class="num num1">1</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/125.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615161819.jpg" alt="八爪鱼拉拉手"></a></div>
+                <p class="tit"><a href="/danji/125.html" target="_blank">八爪鱼拉拉手</a></p>
+                <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">益智</a></span><span>14人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/125.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num2">2</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/124.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615170050.jpg" alt="抽打神经猫"></a></div>
+                <p class="tit"><a href="/danji/124.html" target="_blank">抽打神经猫</a></p>
+                <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>3人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/124.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num3">3</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/123.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615175231.png" alt="大小跳不停"></a></div>
+                <p class="tit"><a href="/danji/123.html" target="_blank">大小跳不停</a></p>
+                <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>9人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/123.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">4</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/122.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615173331.png" alt="大长腿"></a></div>
+                <p class="tit"><a href="/danji/122.html" target="_blank">大长腿</a></p>
+                <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>2人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/122.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">5</em>
+              <div class="box1">
+                <div class="pic"><a href="/danji/121.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170616133704.jpg" alt="贱人配对"></a></div>
+                <p class="tit"><a href="/danji/121.html" target="_blank">贱人配对</a></p>
+                <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">益智</a></span><span>3人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/danji/121.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="w-texts mt15">
+        <div class="hd20">
+          <h3>推荐阅读</h3>
+        </div>
+        <ul class="text-list">
+          <li>•<a href="/zixun/787.html" target="_blank" class="title">《开心国王》十月豪礼献上，周末豪礼，天降元宝！</a></li>
+          <li>•<a href="/zixun/759.html" target="_blank" class="title">《飘飘欲仙》双节同庆！好礼赠不停！</a></li>
+          <li>•<a href="/zixun/620.html" target="_blank" class="title">​《口袋妖怪联盟》欢乐庆典活动！福利乐翻天!</a></li>
+          <li>•<a href="/zixun/558.html" target="_blank" class="title">《传奇世界H5》吃西瓜大比拼！赢豪礼！</a></li>
+          <li>•<a href="/zixun/515.html" target="_blank" class="title">《口袋妖怪联盟》月月有礼活动！</a></li>
+          <li>•<a href="/zixun/482.html" target="_blank" class="title">《蜀山世界》集字活动：侠客也谈情，集字兑奖换真爱大礼</a></li>
+          <li>•<a href="/zixun/454.html" target="_blank" class="title">3500有福利 “五一”充值赠大礼</a></li>
+          <li>•<a href="/zixun/439.html" target="_blank" class="title">《口袋妖怪联盟》“周年庆典”活动隆重开启</a></li>
+          <li>•<a href="/zixun/425.html" target="_blank" class="title">《爬塔西游》幸运大放送 限时勇者免费送</a></li>
+          <li>•<a href="/zixun/420.html" target="_blank" class="title">4.1礼愚天下 《蜀山世界》愚乐无极限</a></li>
+        </ul>
+      </div>
+      <div class="w-texts mt15">
+        <div class="hd20">
+          <h3>最新资讯</h3>
+        </div>
+        <ul class="text-list">
+          <li>•<a href="/zixun/792.html" target="_blank" class="title">《妖怪宝可萌》活动，日充送好礼！</a></li>
+          <li>•<a href="/zixun/791.html" target="_blank" class="title">《龙城霸业》合服活动火爆开启，合服礼包随心领！</a></li>
+          <li>•<a href="/zixun/790.html" target="_blank" class="title">​《口袋妖怪联盟》“寒霜降至”活动！</a></li>
+          <li>•<a href="/zixun/789.html" target="_blank" class="title">《传奇来了》10月21-23日限时活动</a></li>
+          <li>•<a href="/zixun/788.html" target="_blank" class="title">《百战沙城》限时活动!登陆抽奖来袭！</a></li>
+          <li>•<a href="/zixun/787.html" target="_blank" class="title">《开心国王》十月豪礼献上，周末豪礼，天降元宝！</a></li>
+          <li>•<a href="/zixun/786.html" target="_blank" class="title">《龙城霸业》魔晶庆典活动火爆来袭！</a></li>
+          <li>•<a href="/zixun/785.html" target="_blank" class="title">《口袋之旅》活动：限时大轮盘！充值大礼包！</a></li>
+          <li>•<a href="/zixun/784.html" target="_blank" class="title">《异世修真之我是传奇活动》活动火热开启！充值送礼</a></li>
+          <li>•<a href="/zixun/783.html" target="_blank" class="title">《梦道》修仙风限时活动！奖励送不停！</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div id="footer">
+  <div class="about_me"> <a href="/aboutus.html" target="_blank">关于我们</a> | <a href="/contact.html" target="_blank">联系方式</a> | <a href="/sitemap.html" target="_blank">网站地图</a> | <a href="/explain.html" target="_blank">用户协议</a> </div>
+  <div class="safety"> <a><i class="icon_safe1"></i>中国互联网举报中心</a> <a><i class="icon_safe2"></i>网络违法举报中心</a> <a><i class="icon_safe3"></i>垃圾信息举报中心</a> <a><i class="icon_safe4"></i>闽公网安备35020302001953号</a> </div>
+  <p class="tips_text">©2017-2018 &nbsp; 仿3500游戏 &nbsp; www.96kaifa.com <em>礼包交流群：</em><a href="http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b" target="_blank" class="qqun"></a></p>
+  <p class="tips_text">备案号：粤ICP备17024501号-2 &nbsp;  技术支持：<a href="https://www.96kaifa.com" target="_blank">96KaiFa源码</a></p>
+</div>
+<script src="/e/public/onclick/?enews=donews&classid=3&id=75"></script><div id="backtop">返回顶部</div>
+<script type="text/javascript" src="/96kaifa/statics/home/js/member.js"></script>
+<script type="text/javascript">
+	var member = new Member();
+</script>
+<script type="text/javascript" src="/96kaifa/statics/home/js/global.js"></script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+</body>
+</html>

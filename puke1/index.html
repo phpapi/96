@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>扑克_扑克游戏大全【免费在线】-棋游之家_仿3500游戏</title>
+<meta name="keywords" content="扑克,扑克游戏" />
+<meta name="description" content="棋游之家，提供1000款全国各种地方扑克游戏大全，免费领取各种扑克游戏礼包、金币，免费在线，无需下载！" />
+<link href="/96kaifa/statics/home/css/base.css" type="text/css" rel="stylesheet">
+<link href="/96kaifa/statics/home/css/style3500.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="/96kaifa/statics/home/js/jquery-1.8.2.min.js"></script>
+</head>
+<script type="text/javascript">
+	showMobile("http://m.96kaifa.com//47.52.203.166/puke/");
+</script>
+<body>
+<div class="cover"></div>
+<div class="topbox">
+  <div class="boxin clearfix">
+    <div class="topl fl"> <span class="home"><a href="/">游戏首页</a></span>
+      <ul>
+        <li>|<a href="http://m.96kaifa.com" target="_blank">手机版</a></li>
+        <li>|<a href="#" target="_blank">客户端下载</a></li>
+        <li>|<a href="javascript:;" class="wx_show">关注微信</a>
+          <div class="wx_hide"> <i class="angle"></i> <img src="/96kaifa/statics/home/images/wx_code.jpg" width="103" height="103"> <span>关注微信公众号</span> </div>
+        </li>
+        <li>|<a href="#" target="_blank">开放平台</a></li>
+      </ul>
+    </div>
+    <div class="topr fr">
+      <div class="login_ok">
+	<!-- 登录 -->
+	<script>
+	document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+	$(function(){
+	var dqurl = window.location.href;
+	$('#dquurl').val(dqurl);
+	})
+	</script>
+	<!-- 登录 end-->
+	  </div>
+      <a href="javascript:;" onClick="AddFavorite();">收藏本站</a> </div>
+  </div>
+</div>
+<div class="header">
+  <div class="header-top">
+    <div class="in">
+      <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="仿3500游戏"></a></div>
+      <div class="search fr">
+        <form action="/search/game.php" method="get" target="_blank" name="searchTop">
+          <div class="search_box tr">
+            <input type="text" id="bdcsMain" name="key" class="sech_keyword" placeholder="请输入游戏名称">
+            <input type="submit" value="搜索" class="sech_btn">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="in">
+      <ul>
+        <li><a href="/" class=""><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+        <li><a class="nav-cur" href="//47.52.203.166/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="//47.52.203.166/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="//47.52.203.166/qilei/"><span class="menu-txt">棋类</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="//47.52.203.166/danji/"><span class="menu-txt">小游戏</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="//47.52.203.166/libao/"><span class="menu-txt">礼包</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="//47.52.203.166/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="//47.52.203.166/kaifu/"><span class="menu-txt">开服表</span><span class="menu-line"></span></a></li>
+      </ul>
+      <div class="grzx">
+	  	<script> document.write('<script src="/e/member/login/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
+	  </div>
+    </div>
+  </div>
+</div>
+<div class="my_pop">
+<!--弹出登录框开始-->
+  <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">账号登录</p>
+    <form action="/e/member/doaction.php" method="post" onSubmit="return userLogin()" id="form_login1" class="form-login">
+      <input type=hidden name=ecmsfrom value="" id="dquurl">
+      <input type=hidden name=enews value=login>
+      <input name="tobind" type="hidden" id="tobind" value="0">
+      <div class="modal-body">
+        <div class="error_font">*错误提示</div>
+        <div class="outer tr"> <i class="user"></i>
+          <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
+        </div>
+        <div class="outer tr"> <i class="pwd"></i>
+          <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
+        </div>
+        <div class="outer">
+          <div class="captcha" id="logcaptcha"></div>
+        </div>
+      </div>
+      <div class="modal-footer" style="margin-bottom:40px;">
+        <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
+      </div>
+    </form>
+  </div>
+<!--弹出登录框结束-->
+<!--弹出注册框开始-->
+<div class="register_pop" style="display: none;"> <span class="pop_close"></span>
+  <p class="pop-tit">会员注册</p>
+  <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
+	<input type="hidden" name="enews" value="register">
+    <div class="modal-body">
+      <div class="error_font">*错误提示</div>
+      <div class="outer tr"> <i class="user"></i>
+        <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
+      </div>
+      <div class="outer tr"> <i class="pwd"></i>
+        <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
+      </div>
+      <div class="outer tr"> <i class="pwd"></i>
+        <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
+      </div>
+      <div class="outer tr"> <i class="user"></i>
+        <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
+      </div>
+      <div class="outer">
+        <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
+        <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
+    </div>
+    <div class="modal-footer">
+      <p class="outer"> <input type='submit' name='Submit' class="orange_btn" id="btnRegister" value="立即注册"> </p>
+      <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
+    </div>
+  </form>
+</div>
+<!--弹出注册框结束-->
+</div>
+<div class="main">
+  <div class="position">当前位置：<a href="//47.52.203.166/">首页</a>&nbsp;>&nbsp;<a href="//47.52.203.166/puke/">扑克</a></div>
+  <div class="game-filter">
+    <h3>游戏筛选</h3>
+	<dl class="clearfix"><dt>分类>></dt><dd><a href="//47.52.203.166/list-0-0-0-0.html" class="on">全部</a> <a href="//47.52.203.166/list-1-0-0-0.html" class="fieldandcss">斗地主</a> <a href="//47.52.203.166/list-2-0-0-0.html" class="fieldandcss">跑胡子</a> <a href="//47.52.203.166/list-3-0-0-0.html" class="fieldandcss">21点</a> <a href="//47.52.203.166/list-4-0-0-0.html" class="fieldandcss">保皇</a> <a href="//47.52.203.166/list-5-0-0-0.html" class="fieldandcss">打滚子</a> <a href="//47.52.203.166/list-6-0-0-0.html" class="fieldandcss">干瞪眼</a> <a href="//47.52.203.166/list-7-0-0-0.html" class="fieldandcss">打大A</a> <a href="//47.52.203.166/list-8-0-0-0.html" class="fieldandcss">四冲</a> <a href="//47.52.203.166/list-9-0-0-0.html" class="fieldandcss">qq三代</a> <a href="//47.52.203.166/list-10-0-0-0.html" class="fieldandcss">5十K</a> <a href="//47.52.203.166/list-11-0-0-0.html" class="fieldandcss">三打一</a> <a href="//47.52.203.166/list-12-0-0-0.html" class="fieldandcss">挖坑</a> <a href="//47.52.203.166/list-13-0-0-0.html" class="fieldandcss">拱猪</a> <a href="//47.52.203.166/list-14-0-0-0.html" class="fieldandcss">红五</a> <a href="//47.52.203.166/list-15-0-0-0.html" class="fieldandcss">黑尖</a> <a href="//47.52.203.166/list-16-0-0-0.html" class="fieldandcss">攉龙</a> <a href="//47.52.203.166/list-%0D%0A++++++++17-0-0-0.html" class="fieldandcss">大怪路子</a> <a href="//47.52.203.166/list-18-0-0-0.html" class="fieldandcss">掼蛋</a> <a href="//47.52.203.166/list-19-0-0-0.html" class="fieldandcss">包分</a> <a href="//47.52.203.166/list-20-0-0-0.html" class="fieldandcss">拖拉机</a> <a href="//47.52.203.166/list-21-0-0-0.html" class="fieldandcss">接龙</a> <a href="//47.52.203.166/list-22-0-0-0.html" class="fieldandcss">跑得快</a> <a href="//47.52.203.166/list-23-0-0-0.html" class="fieldandcss">锄大地</a> <a href="//47.52.203.166/list-24-0-0-0.html" class="fieldandcss">梭哈</a> <a href="//47.52.203.166/list-25-0-0-0.html" class="fieldandcss">德州扑克</a> <a href="//47.52.203.166/list-26-0-0-0.html" class="fieldandcss">炸金花</a> <a href="//47.52.203.166/list-27-0-0-0.html" class="fieldandcss">够级</a> <a href="//47.52.203.166/list-28-0-0-0.html" class="fieldandcss">纸牌</a> <a href="//47.52.203.166/list-29-0-0-0.html" class="fieldandcss">牌九</a> <a href="//47.52.203.166/list-31-0-0-0.html" class="fieldandcss">十三张</a> <a href="//47.52.203.166/list-32-0-0-0.html" class="fieldandcss">刨幺</a> <a href="//47.52.203.166/list-34-0-0-0.html" class="fieldandcss">升级</a> <a href="//47.52.203.166/list-35-0-0-0.html" class="fieldandcss">三公</a> <a href="//47.52.203.166/list-36-0-0-0.html" class="fieldandcss">尖子顶</a> <a href="//47.52.203.166/list-37-0-0-0.html" class="fieldandcss">花牌</a> <a href="//47.52.203.166/list-38-0-0-0.html" class="fieldandcss">红十</a> </dd> </dl>    <dl class="clearfix m-list-paixu">
+      <dt>排序>></dt>
+      <dd><a href="/list-0-0-0-0.html" class="on">最新</a><a href="/list-0-1-0-0.html">最热</a></dd>
+    </dl>
+  </div>
+  <div class="game-ku">
+    <ul class="game-list clearfix">
+
+<li>
+        <div class="img"><a href="//47.52.203.166/game/932.html" target="_blank"><img src="//47.52.203.166/e/data/images/notimg.gif" alt="123"></a></div>
+        <div class="con"> <a href="//47.52.203.166/game/932.html" target="_blank" class="title">123</a>
+          <p><a href="/list-1-0-0-0.html">斗地主</a><span>|</span>0人在玩</p>
+          <p>123</p>
+        </div>
+        <div class="wan-btn"><a href="//47.52.203.166/game/932.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="//47.52.203.166/game/930.html" target="_blank"><img src="//47.52.203.166/e/data/images/notimg.gif" alt="欢乐斗地主"></a></div>
+        <div class="con"> <a href="//47.52.203.166/game/930.html" target="_blank" class="title">欢乐斗地主</a>
+          <p><a href="/list-1-0-0-0.html">斗地主</a><span>|</span>0人在玩</p>
+          <p>欢乐斗地主是由腾讯游戏精心打造的首款实时对战经典棋牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="//47.52.203.166/game/930.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/927.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027141345.png" alt="十里桃花"></a></div>
+        <div class="con"> <a href="/game/927.html" target="_blank" class="title">十里桃花</a>
+          <p><a href="/list-2-0-0-0.html">跑胡子</a><span>|</span>76人在玩</p>
+          <p>正版影视授权，白浅夜华邀你仙恋之旅</p>
+        </div>
+        <div class="wan-btn"><a href="/game/927.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/925.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027142939.jpg" alt="奇迹仙侠"></a></div>
+        <div class="con"> <a href="/game/925.html" target="_blank" class="title">奇迹仙侠</a>
+          <p><a href="/list-2-0-0-0.html">跑胡子</a><span>|</span>5人在玩</p>
+          <p>仙魔争霸，谁能一统九天？</p>
+        </div>
+        <div class="wan-btn"><a href="/game/925.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/926.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171025093310.png" alt="决斗之皇"></a></div>
+        <div class="con"> <a href="/game/926.html" target="_blank" class="title">决斗之皇</a>
+          <p><a href="/list-2-0-0-0.html">跑胡子</a><span>|</span>3人在玩</p>
+          <p>完美复刻卡牌竞技策略真人对战H5手游</p>
+        </div>
+        <div class="wan-btn"><a href="/game/926.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="//47.52.203.166/game/924.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170306150106.png" alt="莽荒纪H5"></a></div>
+        <div class="con"> <a href="//47.52.203.166/game/924.html" target="_blank" class="title">莽荒纪H5</a>
+          <p><a href="/list-1-0-0-0.html">斗地主</a><span>|</span>19人在玩</p>
+          <p>同名小说正版授权释放你的洪荒之力</p>
+        </div>
+        <div class="wan-btn"><a href="//47.52.203.166/game/924.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/920.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170112093450.png" alt="大主宰"></a></div>
+        <div class="con"> <a href="/game/920.html" target="_blank" class="title">大主宰</a>
+          <p><a href="/list-1-0-0-0.html">斗地主</a><span>|</span>2人在玩</p>
+          <p>金牌网络小说---《大主宰》正版授权！</p>
+        </div>
+        <div class="wan-btn"><a href="/game/920.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/921.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170123093500.png" alt="点兵三国志"></a></div>
+        <div class="con"> <a href="/game/921.html" target="_blank" class="title">点兵三国志</a>
+          <p><a href="/list-5-0-0-0.html">打滚子</a><span>|</span>3人在玩</p>
+          <p>点千军万马，成三国霸业！</p>
+        </div>
+        <div class="wan-btn"><a href="/game/921.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/922.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170112105150.png" alt="三国战争"></a></div>
+        <div class="con"> <a href="/game/922.html" target="_blank" class="title">三国战争</a>
+          <p><a href="/list-5-0-0-0.html">打滚子</a><span>|</span>20人在玩</p>
+          <p>攻城PK+国战停不下来！</p>
+        </div>
+        <div class="wan-btn"><a href="/game/922.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/923.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170107092745.png" alt="大侠归来"></a></div>
+        <div class="con"> <a href="/game/923.html" target="_blank" class="title">大侠归来</a>
+          <p><a href="/list-1-0-0-0.html">斗地主</a><span>|</span>8人在玩</p>
+          <p>国民武侠，你我的江湖梦！</p>
+        </div>
+        <div class="wan-btn"><a href="/game/923.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/914.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170522145233.png" alt="龙珠龙珠"></a></div>
+        <div class="con"> <a href="/game/914.html" target="_blank" class="title">龙珠龙珠</a>
+          <p><a href="/list-8-0-0-0.html">四冲</a><span>|</span>1人在玩</p>
+          <p>龙珠是用来捡的！</p>
+        </div>
+        <div class="wan-btn"><a href="/game/914.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/915.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170209165703.png" alt="恶魔猎手"></a></div>
+        <div class="con"> <a href="/game/915.html" target="_blank" class="title">恶魔猎手</a>
+          <p><a href="/list-8-0-0-0.html">四冲</a><span>|</span>2人在玩</p>
+          <p>致敬经典，年度首款创新型PVP大作</p>
+        </div>
+        <div class="wan-btn"><a href="/game/915.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/916.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170418154911.png" alt="口袋妖怪联盟"></a></div>
+        <div class="con"> <a href="/game/916.html" target="_blank" class="title">口袋妖怪联盟</a>
+          <p><a href="/list-1-0-0-0.html">斗地主</a><span>|</span>23人在玩</p>
+          <p>一起去抓小精灵吧！</p>
+        </div>
+        <div class="wan-btn"><a href="/game/916.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/917.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170122141815.png" alt="幻城H5"></a></div>
+        <div class="con"> <a href="/game/917.html" target="_blank" class="title">幻城H5</a>
+          <p><a href="/list-8-0-0-0.html">四冲</a><span>|</span>0人在玩</p>
+          <p>影游联动、幻你回城</p>
+        </div>
+        <div class="wan-btn"><a href="/game/917.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/918.html" target="_blank"><img src="/d/file/96kaifa/201710241647/20170513090738.png" alt="决战沙城"></a></div>
+        <div class="con"> <a href="/game/918.html" target="_blank" class="title">决战沙城</a>
+          <p><a href="/list-2-0-0-0.html">跑胡子</a><span>|</span>15人在玩</p>
+          <p>热血传奇正版授权，全民抢BOSS，橙装人人有</p>
+        </div>
+        <div class="wan-btn"><a href="/game/918.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/919.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170117094517.png" alt="古惑三国志"></a></div>
+        <div class="con"> <a href="/game/919.html" target="_blank" class="title">古惑三国志</a>
+          <p><a href="/list-1-0-0-0.html">斗地主</a><span>|</span>11人在玩</p>
+          <p>仗古惑道义行侠三国</p>
+        </div>
+        <div class="wan-btn"><a href="/game/919.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/908.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170204105654.png" alt="超人守卫2"></a></div>
+        <div class="con"> <a href="/game/908.html" target="_blank" class="title">超人守卫2</a>
+          <p><a href="/list-6-0-0-0.html">干瞪眼</a><span>|</span>0人在玩</p>
+          <p>首款Q版史诗级塔防策略游戏！（送红将）</p>
+        </div>
+        <div class="wan-btn"><a href="/game/908.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/909.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170124084559.png" alt="勇敢冲冲冲"></a></div>
+        <div class="con"> <a href="/game/909.html" target="_blank" class="title">勇敢冲冲冲</a>
+          <p><a href="/list-5-0-0-0.html">打滚子</a><span>|</span>1人在玩</p>
+          <p>今天也要愉快的~勇敢冲冲冲！</p>
+        </div>
+        <div class="wan-btn"><a href="/game/909.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/910.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170904161642.png" alt="荣耀与远征"></a></div>
+        <div class="con"> <a href="/game/910.html" target="_blank" class="title">荣耀与远征</a>
+          <p><a href="/list-1-0-0-0.html">斗地主</a><span>|</span>0人在玩</p>
+          <p>撸BOSS，虐跨服，做第一！千人实时在线PK！</p>
+        </div>
+        <div class="wan-btn"><a href="/game/910.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/911.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170124143704.png" alt="烈火战神"></a></div>
+        <div class="con"> <a href="/game/911.html" target="_blank" class="title">烈火战神</a>
+          <p><a href="/list-2-0-0-0.html">跑胡子</a><span>|</span>0人在玩</p>
+          <p>一起引燃心中烈火，一战成神!</p>
+        </div>
+        <div class="wan-btn"><a href="/game/911.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/912.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170208134530.png" alt="绝世神功"></a></div>
+        <div class="con"> <a href="/game/912.html" target="_blank" class="title">绝世神功</a>
+          <p><a href="/list-3-0-0-0.html">21点</a><span>|</span>2人在玩</p>
+          <p>首款可以打群架的即时战斗游戏！</p>
+        </div>
+        <div class="wan-btn"><a href="/game/912.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/913.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170717091815.gif" alt="传奇世界H5"></a></div>
+        <div class="con"> <a href="/game/913.html" target="_blank" class="title">传奇世界H5</a>
+          <p><a href="/list-2-0-0-0.html">跑胡子</a><span>|</span>6人在玩</p>
+          <p>官方正版授权可视化自动PK Html 5游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/game/913.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/902.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170112090421.png" alt="合体三国"></a></div>
+        <div class="con"> <a href="/game/902.html" target="_blank" class="title">合体三国</a>
+          <p><a href="/list-2-0-0-0.html">跑胡子</a><span>|</span>0人在玩</p>
+          <p>上千名将任你差遣，多重阵法助你重写三国</p>
+        </div>
+        <div class="wan-btn"><a href="/game/902.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/903.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170223093505.png" alt="大富豪3"></a></div>
+        <div class="con"> <a href="/game/903.html" target="_blank" class="title">大富豪3</a>
+          <p><a href="/list-3-0-0-0.html">21点</a><span>|</span>1人在玩</p>
+          <p>开公司，搞投资，做富豪</p>
+        </div>
+        <div class="wan-btn"><a href="/game/903.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/904.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170524101003.png" alt="美男有毒"></a></div>
+        <div class="con"> <a href="/game/904.html" target="_blank" class="title">美男有毒</a>
+          <p><a href="/list-8-0-0-0.html">四冲</a><span>|</span>0人在玩</p>
+          <p>王爷中毒了？快脱衣</p>
+        </div>
+        <div class="wan-btn"><a href="/game/904.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/905.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170207165155.png" alt="冰与火之歌"></a></div>
+        <div class="con"> <a href="/game/905.html" target="_blank" class="title">冰与火之歌</a>
+          <p><a href="/list-2-0-0-0.html">跑胡子</a><span>|</span>0人在玩</p>
+          <p>炫酷奥义，极品神器，称霸暗黑世界</p>
+        </div>
+        <div class="wan-btn"><a href="/game/905.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/906.html" target="_blank"><img src="/d/file/96kaifa/201710241647/20170220100535.png" alt="蜀山世界"></a></div>
+        <div class="con"> <a href="/game/906.html" target="_blank" class="title">蜀山世界</a>
+          <p><a href="/list-2-0-0-0.html">跑胡子</a><span>|</span>4人在玩</p>
+          <p>H5首款多人同屏混战MMORPG游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/game/906.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/907.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170215102429.png" alt="错嫁太子妃"></a></div>
+        <div class="con"> <a href="/game/907.html" target="_blank" class="title">错嫁太子妃</a>
+          <p><a href="/list-8-0-0-0.html">四冲</a><span>|</span>1人在玩</p>
+          <p>穿越就洞房，激情调教太子陪你飞</p>
+        </div>
+        <div class="wan-btn"><a href="/game/907.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/896.html" target="_blank"><img src="/d/file/96kaifa/201710241647/20170320145639.png" alt="全民穿越之宫"></a></div>
+        <div class="con"> <a href="/game/896.html" target="_blank" class="title">全民穿越之宫</a>
+          <p><a href="/list-2-0-0-0.html">跑胡子</a><span>|</span>1人在玩</p>
+          <p>穿越时空，体验不同的爱情故事</p>
+        </div>
+        <div class="wan-btn"><a href="/game/896.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/game/897.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170224092722.png" alt="暴走大乱逗"></a></div>
+        <div class="con"> <a href="/game/897.html" target="_blank" class="title">暴走大乱逗</a>
+          <p><a href="/list-1-0-0-0.html">斗地主</a><span>|</span>0人在玩</p>
+          <p>至尊佛祖等你来战</p>
+        </div>
+        <div class="wan-btn"><a href="/game/897.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+    </ul>
+    <div class="page"> <span class="a1 disabled">共 5 页</span><span>1</span><a href="//47.52.203.166/puke/index_2.html">2</a><a href="//47.52.203.166/puke/index_3.html">3</a><a href="//47.52.203.166/puke/index_4.html">4</a><a href="//47.52.203.166/puke/index_5.html">5</a><a href="//47.52.203.166/puke/index_2.html">下一页</a> </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="about_me"> <a href="/aboutus.html" target="_blank">关于我们</a> | <a href="/contact.html" target="_blank">联系方式</a> | <a href="/sitemap.html" target="_blank">网站地图</a> | <a href="/explain.html" target="_blank">用户协议</a> </div>
+  <div class="safety"> <a><i class="icon_safe1"></i>中国互联网举报中心</a> <a><i class="icon_safe2"></i>网络违法举报中心</a> <a><i class="icon_safe3"></i>垃圾信息举报中心</a> <a><i class="icon_safe4"></i>闽公网安备35020302001953号</a> </div>
+  <p class="tips_text">©2017-2018 &nbsp; 仿3500游戏 &nbsp; www.96kaifa.com <em>礼包交流群：</em><a href="http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b" target="_blank" class="qqun"></a></p>
+  <p class="tips_text">备案号：粤ICP备17024501号-2 &nbsp;  技术支持：<a href="https://www.96kaifa.com" target="_blank">96KaiFa源码</a></p>
+</div>
+<div id="backtop">返回顶部</div>
+<script type="text/javascript" src="/96kaifa/statics/home/js/member.js"></script>
+<script type="text/javascript">
+	var member = new Member();
+</script>
+<script type="text/javascript" src="/96kaifa/statics/home/js/global.js"></script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+</body>
+</html>

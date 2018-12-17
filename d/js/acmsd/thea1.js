@@ -1,0 +1,1 @@
+document.write("<div style=\"width:802px;height:98px;overflow:hidden;margin:auto;border:1px #f60 dashed;text-align:center;background:#fff; \">id_1广告位-804*100  &nbsp;唯一官网：<a href=\"https://www.96kaifa.com\" target=\"_blank\" style=\"color:#ed252f;\">www.96kaifa.com</a></div>")

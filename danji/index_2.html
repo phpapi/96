@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>最热最新手机在线单机小游戏,H5小游戏大全_仿3500游戏</title>
+<meta name="keywords" content="手机在线小游戏,H5小游戏" />
+<meta name="description" content="单机在线小游戏平台提供时下最好玩的在线手机H5小游戏,手机网页小游戏在线玩。" />
+<link href="/96kaifa/statics/home/css/base.css" type="text/css" rel="stylesheet">
+<link href="/96kaifa/statics/home/css/style3500.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="/96kaifa/statics/home/js/jquery-1.8.2.min.js"></script>
+</head>
+<script type="text/javascript">
+	showMobile("http://test.yanwowenda.cn/danji/");
+</script>
+<body>
+<div class="cover"></div>
+<div class="topbox">
+  <div class="boxin clearfix">
+    <div class="topl fl"> <span class="home"><a href="/">游戏首页</a></span>
+      <ul>
+        <li>|<a href="http://test.yanwowenda.cn" target="_blank">手机版</a></li>
+        <li>|<a href="#" target="_blank">客户端下载</a></li>
+        <li>|<a href="javascript:;" class="wx_show">关注微信</a>
+          <div class="wx_hide"> <i class="angle"></i> <img src="/96kaifa/statics/home/images/wx_code.jpg" width="103" height="103"> <span>关注微信公众号</span> </div>
+        </li>
+        <li>|<a href="#" target="_blank">开放平台</a></li>
+      </ul>
+    </div>
+    <div class="topr fr">
+      <div class="login_ok">
+	<!-- 登录 -->
+	<script>
+	document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+	$(function(){
+	var dqurl = window.location.href;
+	$('#dquurl').val(dqurl);
+	})
+	</script>
+	<!-- 登录 end-->
+	  </div>
+      <a href="javascript:;" onClick="AddFavorite();">收藏本站</a> </div>
+  </div>
+</div>
+<div class="header">
+  <div class="header-top">
+    <div class="in">
+      <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="仿3500游戏"></a></div>
+      <div class="search fr">
+        <form action="/search/game.php" method="get" target="_blank" name="searchTop">
+          <div class="search_box tr">
+            <input type="text" id="bdcsMain" name="key" class="sech_keyword" placeholder="请输入游戏名称">
+            <input type="submit" value="搜索" class="sech_btn">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="in">
+      <ul>
+        <li><a href="/" class=""><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qilei/"><span class="menu-txt">棋类</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/game/"><span class="menu-txt">网游</span><span class="menu-line"></span></a></li>
+        <li><a class="nav-cur" href="/danji/"><span class="menu-txt">小游戏</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/libao/"><span class="menu-txt">礼包</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/kaifu/"><span class="menu-txt">开服表</span><span class="menu-line"></span></a></li>
+      </ul>
+      <div class="grzx">
+	  	<script> document.write('<script src="/e/member/login/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
+	  </div>
+    </div>
+  </div>
+</div>
+<div class="my_pop">
+<!--弹出登录框开始-->
+  <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">账号登录</p>
+    <form action="/e/member/doaction.php" method="post" onSubmit="return userLogin()" id="form_login1" class="form-login">
+      <input type=hidden name=ecmsfrom value="" id="dquurl">
+      <input type=hidden name=enews value=login>
+      <input name="tobind" type="hidden" id="tobind" value="0">
+      <div class="modal-body">
+        <div class="error_font">*错误提示</div>
+        <div class="outer tr"> <i class="user"></i>
+          <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
+        </div>
+        <div class="outer tr"> <i class="pwd"></i>
+          <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
+        </div>
+        <div class="outer">
+          <div class="captcha" id="logcaptcha"></div>
+        </div>
+      </div>
+      <div class="modal-footer" style="margin-bottom:40px;">
+        <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
+      </div>
+    </form>
+  </div>
+<!--弹出登录框结束-->
+<!--弹出注册框开始-->
+<div class="register_pop" style="display: none;"> <span class="pop_close"></span>
+  <p class="pop-tit">会员注册</p>
+  <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
+	<input type="hidden" name="enews" value="register">
+    <div class="modal-body">
+      <div class="error_font">*错误提示</div>
+      <div class="outer tr"> <i class="user"></i>
+        <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
+      </div>
+      <div class="outer tr"> <i class="pwd"></i>
+        <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
+      </div>
+      <div class="outer tr"> <i class="pwd"></i>
+        <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
+      </div>
+      <div class="outer tr"> <i class="user"></i>
+        <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
+      </div>
+      <div class="outer">
+        <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
+        <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
+    </div>
+    <div class="modal-footer">
+      <p class="outer"> <input type='submit' name='Submit' class="orange_btn" id="btnRegister" value="立即注册"> </p>
+      <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
+    </div>
+  </form>
+</div>
+<!--弹出注册框结束-->
+</div>
+<div class="main">
+  <div class="position">当前位置：<a href="/">首页</a>&nbsp;>&nbsp;<a href="/danji/">小游戏</a></div>
+  <div class="game-filter">
+    <h3>游戏筛选</h3>
+	<dl class="clearfix"><dt>分类>></dt><dd><a href="/list-0-0-0-1.html" class="on">全部</a> <a href="/list-1-0-0-1.html" class="fieldandcss">益智</a> <a href="/list-2-0-0-1.html" class="fieldandcss">动作</a> <a href="/list-3-0-0-1.html" class="fieldandcss">射击</a> <a href="/list-4-0-0-1.html" class="fieldandcss">休闲</a> <a href="/list-5-0-0-1.html" class="fieldandcss">敏捷</a> <a href="/list-6-0-0-1.html" class="fieldandcss">棋牌</a> <a href="/list-7-0-0-1.html" class="fieldandcss">经营</a> <a href="/list-8-0-0-1.html" class="fieldandcss">体育</a> <a href="/list-9-0-0-1.html" class="fieldandcss">策略</a> <a href="/list-10-0-0-1.html" class="fieldandcss">冒险</a> <a href="/list-11-0-0-1.html" class="fieldandcss">装扮</a> </dd> </dl>    <dl class="clearfix m-list-paixu">
+      <dt>排序>></dt>
+      <dd><a href="/list-0-0-0-1.html" class="on">最新</a><a href="/list-0-1-0-1.html">最热</a></dd>
+    </dl>
+  </div>
+  <div class="game-ku">
+    <ul class="game-list clearfix">
+
+<li>
+        <div class="img"><a href="/danji/96.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170627133733.jpg" alt="情侣版2048"></a></div>
+        <div class="con"> <a href="/danji/96.html" target="_blank" class="title">情侣版2048</a>
+          <p><a href="/list-4-0-0-1.html">休闲</a><span>|</span>0人在玩</p>
+          <p>情侣版，你懂得。</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/96.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/97.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170616175003.png" alt="影子传说"></a></div>
+        <div class="con"> <a href="/danji/97.html" target="_blank" class="title">影子传说</a>
+          <p><a href="/list-2-0-0-1.html">动作</a><span>|</span>0人在玩</p>
+          <p>一款经典忍者类动作小游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/97.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/90.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170629141958.jpg" alt="极限旋转2"></a></div>
+        <div class="con"> <a href="/danji/90.html" target="_blank" class="title">极限旋转2</a>
+          <p><a href="/list-4-0-0-1.html">休闲</a><span>|</span>0人在玩</p>
+          <p>我在第1关玩了100分，我想说我还没晕！</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/90.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/91.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170629145406.jpg" alt="挖掘机"></a></div>
+        <div class="con"> <a href="/danji/91.html" target="_blank" class="title">挖掘机</a>
+          <p><a href="/list-5-0-0-1.html">敏捷</a><span>|</span>0人在玩</p>
+          <p>挖挖挖，根本停不下来。</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/91.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/92.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170627144432.jpg" alt="2048骰子版"></a></div>
+        <div class="con"> <a href="/danji/92.html" target="_blank" class="title">2048骰子版</a>
+          <p><a href="/list-4-0-0-1.html">休闲</a><span>|</span>0人在玩</p>
+          <p>我点，我点，我点点点！</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/92.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/93.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170627145804.jpg" alt="刀客"></a></div>
+        <div class="con"> <a href="/danji/93.html" target="_blank" class="title">刀客</a>
+          <p><a href="/list-2-0-0-1.html">动作</a><span>|</span>0人在玩</p>
+          <p>请不要问我的名字，因为这是我的隐私。</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/93.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/86.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170630172500.jpg" alt="虐心拼图"></a></div>
+        <div class="con"> <a href="/danji/86.html" target="_blank" class="title">虐心拼图</a>
+          <p><a href="/list-1-0-0-1.html">益智</a><span>|</span>0人在玩</p>
+          <p>玩虐心拼图，虐的不只是心，还有智商。</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/86.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/87.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170703174008.jpg" alt="杯具达人"></a></div>
+        <div class="con"> <a href="/danji/87.html" target="_blank" class="title">杯具达人</a>
+          <p><a href="/list-4-0-0-1.html">休闲</a><span>|</span>0人在玩</p>
+          <p>吃霸王餐，就要作好挨揍的准备。</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/87.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/88.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170629174454.jpg" alt="星际穿越"></a></div>
+        <div class="con"> <a href="/danji/88.html" target="_blank" class="title">星际穿越</a>
+          <p><a href="/list-4-0-0-1.html">休闲</a><span>|</span>0人在玩</p>
+          <p>脱离星球引力真不是件容易的事啊。</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/88.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/89.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170703161446.jpg" alt="滚雪球"></a></div>
+        <div class="con"> <a href="/danji/89.html" target="_blank" class="title">滚雪球</a>
+          <p><a href="/list-2-0-0-1.html">动作</a><span>|</span>0人在玩</p>
+          <p>翻滚吧，大雪球！</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/89.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/82.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170708105248.jpg" alt="摘苹果"></a></div>
+        <div class="con"> <a href="/danji/82.html" target="_blank" class="title">摘苹果</a>
+          <p><a href="/list-4-0-0-1.html">休闲</a><span>|</span>0人在玩</p>
+          <p>想吃苹果，只有自己动手摘了！</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/82.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/83.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170706145703.jpg" alt="超级虐跳"></a></div>
+        <div class="con"> <a href="/danji/83.html" target="_blank" class="title">超级虐跳</a>
+          <p><a href="/list-2-0-0-1.html">动作</a><span>|</span>1人在玩</p>
+          <p>最虐心的动作类游戏，你准备好了吗？</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/83.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/84.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170706101502.jpg" alt="青蛙闯关"></a></div>
+        <div class="con"> <a href="/danji/84.html" target="_blank" class="title">青蛙闯关</a>
+          <p><a href="/list-1-0-0-1.html">益智</a><span>|</span>0人在玩</p>
+          <p>记得之前爆火的《史上最难小游戏》吗？</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/84.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/85.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170704165348.jpg" alt="忍者寿司"></a></div>
+        <div class="con"> <a href="/danji/85.html" target="_blank" class="title">忍者寿司</a>
+          <p><a href="/list-5-0-0-1.html">敏捷</a><span>|</span>0人在玩</p>
+          <p>从此再也不想吃寿司了。</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/85.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/80.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170616173907.jpg" alt="一线连"></a></div>
+        <div class="con"> <a href="/danji/80.html" target="_blank" class="title">一线连</a>
+          <p><a href="/list-1-0-0-1.html">益智</a><span>|</span>0人在玩</p>
+          <p>最受欢迎的连线类小游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/80.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/81.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170713175042.jpg" alt="香蕉收集车"></a></div>
+        <div class="con"> <a href="/danji/81.html" target="_blank" class="title">香蕉收集车</a>
+          <p><a href="/list-4-0-0-1.html">休闲</a><span>|</span>0人在玩</p>
+          <p>爱吃香蕉的你，能抢到几根香蕉呢？</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/81.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/74.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170622151348.jpg" alt="管道工"></a></div>
+        <div class="con"> <a href="/danji/74.html" target="_blank" class="title">管道工</a>
+          <p><a href="/list-1-0-0-1.html">益智</a><span>|</span>0人在玩</p>
+          <p>致敬经典，管道工小游戏。</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/74.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/75.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170627151432.jpg" alt="跳跃的蜗牛"></a></div>
+        <div class="con"> <a href="/danji/75.html" target="_blank" class="title">跳跃的蜗牛</a>
+          <p><a href="/list-5-0-0-1.html">敏捷</a><span>|</span>0人在玩</p>
+          <p>小小的天，有大大的梦想。</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/75.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/76.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170617090829.jpg" alt="张小盒心花路放"></a></div>
+        <div class="con"> <a href="/danji/76.html" target="_blank" class="title">张小盒心花路放</a>
+          <p><a href="/list-4-0-0-1.html">休闲</a><span>|</span>0人在玩</p>
+          <p>最受上班族喜爱的休闲益智类小游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/76.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/77.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170621111959.jpg" alt="独轮车"></a></div>
+        <div class="con"> <a href="/danji/77.html" target="_blank" class="title">独轮车</a>
+          <p><a href="/list-5-0-0-1.html">敏捷</a><span>|</span>0人在玩</p>
+          <p>考验平衡度的一款在线小游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/77.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/78.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170621104440.jpg" alt="糖果乐园"></a></div>
+        <div class="con"> <a href="/danji/78.html" target="_blank" class="title">糖果乐园</a>
+          <p><a href="/list-4-0-0-1.html">休闲</a><span>|</span>2人在玩</p>
+          <p>经典消除类小游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/78.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/79.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170616172312.jpg" alt="下一个数字"></a></div>
+        <div class="con"> <a href="/danji/79.html" target="_blank" class="title">下一个数字</a>
+          <p><a href="/list-5-0-0-1.html">敏捷</a><span>|</span>0人在玩</p>
+          <p>考验眼力的一款竞速类小游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/79.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/68.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170623175613.jpg" alt="人从哪里来2048"></a></div>
+        <div class="con"> <a href="/danji/68.html" target="_blank" class="title">人从哪里来2048</a>
+          <p><a href="/list-4-0-0-1.html">休闲</a><span>|</span>0人在玩</p>
+          <p>500万年前，人类诞生了。</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/68.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/69.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170629172704.jpg" alt="贪吃鸟"></a></div>
+        <div class="con"> <a href="/danji/69.html" target="_blank" class="title">贪吃鸟</a>
+          <p><a href="/list-4-0-0-1.html">休闲</a><span>|</span>0人在玩</p>
+          <p>太虐心，手残者慎入！</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/69.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/70.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170622153202.jpg" alt="橄榄球"></a></div>
+        <div class="con"> <a href="/danji/70.html" target="_blank" class="title">橄榄球</a>
+          <p><a href="/list-8-0-0-1.html">体育</a><span>|</span>0人在玩</p>
+          <p>我玩橄榄球得了100分，MVP非我莫属！</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/70.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/71.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170623172935.jpg" alt="射点什么"></a></div>
+        <div class="con"> <a href="/danji/71.html" target="_blank" class="title">射点什么</a>
+          <p><a href="/list-5-0-0-1.html">敏捷</a><span>|</span>0人在玩</p>
+          <p>少年，射点什么？</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/71.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/72.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170628134245.jpg" alt="炮炮进洞"></a></div>
+        <div class="con"> <a href="/danji/72.html" target="_blank" class="title">炮炮进洞</a>
+          <p><a href="/list-4-0-0-1.html">休闲</a><span>|</span>0人在玩</p>
+          <p>家里的苍蝇都是被我这么打死的，你也来几炮？</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/72.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/73.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170622145953.jpg" alt="赛艇"></a></div>
+        <div class="con"> <a href="/danji/73.html" target="_blank" class="title">赛艇</a>
+          <p><a href="/list-5-0-0-1.html">敏捷</a><span>|</span>0人在玩</p>
+          <p>小艇跑得快，全靠手速带。</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/73.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/62.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170706154252.jpg" alt="甜蜜花园"></a></div>
+        <div class="con"> <a href="/danji/62.html" target="_blank" class="title">甜蜜花园</a>
+          <p><a href="/list-4-0-0-1.html">休闲</a><span>|</span>1人在玩</p>
+          <p>不一样的甜蜜，不一样的花园。</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/62.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/danji/63.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170703163956.jpg" alt="老虎不吃素"></a></div>
+        <div class="con"> <a href="/danji/63.html" target="_blank" class="title">老虎不吃素</a>
+          <p><a href="/list-3-0-0-1.html">射击</a><span>|</span>0人在玩</p>
+          <p>老虎可不是吃素的哟。</p>
+        </div>
+        <div class="wan-btn"><a href="/danji/63.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+    </ul>
+    <div class="page"> <span class="a1 disabled">共 5 页</span><a href="/danji/index.html">上一页</a><a href="/danji/index.html">1</a><span>2</span><a href="/danji/index_3.html">3</a><a href="/danji/index_4.html">4</a><a href="/danji/index_5.html">5</a><a href="/danji/index_3.html">下一页</a> </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="about_me"> <a href="/aboutus.html" target="_blank">关于我们</a> | <a href="/contact.html" target="_blank">联系方式</a> | <a href="/sitemap.html" target="_blank">网站地图</a> | <a href="/explain.html" target="_blank">用户协议</a> </div>
+  <div class="safety"> <a><i class="icon_safe1"></i>中国互联网举报中心</a> <a><i class="icon_safe2"></i>网络违法举报中心</a> <a><i class="icon_safe3"></i>垃圾信息举报中心</a> <a><i class="icon_safe4"></i>闽公网安备35020302001953号</a> </div>
+  <p class="tips_text">©2017-2018 &nbsp; 仿3500游戏 &nbsp; www.96kaifa.com <em>礼包交流群：</em><a href="http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b" target="_blank" class="qqun"></a></p>
+  <p class="tips_text">备案号：粤ICP备17024501号-2 &nbsp;  技术支持：<a href="https://www.96kaifa.com" target="_blank">96KaiFa源码</a></p>
+</div>
+<div id="backtop">返回顶部</div>
+<script type="text/javascript" src="/96kaifa/statics/home/js/member.js"></script>
+<script type="text/javascript">
+	var member = new Member();
+</script>
+<script type="text/javascript" src="/96kaifa/statics/home/js/global.js"></script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+</body>
+</html>
