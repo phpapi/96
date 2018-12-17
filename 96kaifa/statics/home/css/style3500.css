@@ -2,7 +2,7 @@
 /* CSS Document */
 
 .main{ width: 1168px; padding:0 16px 20px; margin:0 auto; background-color: #fff; }
-.top_game{ padding-top: 30px; width: 1176px; position: relative; overflow: hidden; }
+.top_game{ padding-top: 4px; width: 1176px; position: relative; overflow: hidden; }
 .top_game dl{ height: 103px; overflow: hidden; }
 .top_game dt{ float: left; width: 20px; padding:12px 8px; height: 79px; text-align: center; background-color: #5bba22; margin-right:16px; border-radius: 0 10px 10px 0; }
 .top_game dt span{ font-size: 14px; color: #fff; line-height: 19px; }

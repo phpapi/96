@@ -70,7 +70,7 @@ input::-moz-placeholder { color:#a9a9a9; }  /* Mozilla Firefox 19+*/
 .nav li a.nav-cur .menu-txt{ line-height: 38px; }
 .nav li a:hover .menu-line{ padding: 0 40%; }
 .grzx{ position:absolute; right:0; top:0; }
-.grzx a{ background-color: #ed8208; display:block; width:130px; height:50px; font-size:18px; color:#fff; line-height:50px; text-align: center; }
+.grzx a{ background-color: #2ca5ff; display:block; width:130px; height:50px; font-size:18px; color:#fff; line-height:50px; text-align: center; }
 .grzx a:hover{ color: #ff0 }
 /*footer*/
 #footer{ width:100%; background:#e4e4e4; min-width:1200px; padding:20px 0; line-height: 30px; text-align:center; margin-top: 20px; }
