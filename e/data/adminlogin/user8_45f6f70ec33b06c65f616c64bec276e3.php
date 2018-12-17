@@ -1,0 +1,16 @@
+<?php
+define('EcmsAdminLogin','EmpireCMS');
+define('EcmsAdminLoginDEF','dg6c1dd88d729ba35b7ee5f820eb37d4d7');
+$ecms_adminloginr=array();
+$ecms_adminloginr=Array('userid'=>'8',
+'ernd'=>'GAHQz3AOXNUhGxFaGrhl1QOLhP1',
+'erndtwo'=>'mhPRtgRdVSNc7yYS6fna',
+'erndadd'=>'t7BmSW5dUL1cr91LDDo4AyMej7Dd45Ek',
+'ehash'=>'UyL3mTLa21b5wH7uw5zu',
+'ehashname'=>'ehash_si5Bt',
+'rhash'=>'8gngpkGQmwFG',
+'rhashname'=>'rhash_B9mkW',
+'eckdiyvar'=>'emecpUgVxAUX',
+'eckdiyval'=>'eZW3MlWMAnvIaAqgYh',
+'edbdata'=>'0');
+?>
