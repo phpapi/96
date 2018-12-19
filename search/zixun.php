@@ -90,10 +90,10 @@ $num=$empire->gettotal("select count(*) as total from www_96kaifa_com_ecms_news 
     <div class="result">
       <div class="result-tab">
         <ul>
-          <li class="tab_1"><a href="/search/game.php?key=<?=$word?>">网游</a><i></i></li>
-          <li class="tab_1"><a href="/search/danji.php?key=<?=$word?>">小游戏</a><i></i></li>
-          <li class="tab_1"><a href="/search/libao.php?key=<?=$word?>">礼包</a><i></i></li>
-          <li class="tab_2">资讯<i></i></li>
+          <li class="tab_1"><a href="/search/game.php?key=<?=$word?>">扑克</a><i></i></li>
+          <li class="tab_1"><a href="/search/majiang.php?key=<?=$word?>">麻将</a><i></i></li>
+          <li class="tab_1"><a href="/search/qipai.php?key=<?=$word?>">棋牌</a><i></i></li>
+          <li class="tab_2"><a href="/search/zixun.php?key=<?=$word?>">资讯<i></i></li>
         </ul>
       </div>
       <div class="result-box">

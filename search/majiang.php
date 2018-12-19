@@ -90,8 +90,8 @@ $num=$empire->gettotal("select count(*) as total from www_96kaifa_com_ecms_majia
     <div class="result">
       <div class="result-tab">
         <ul>
-          <li class="tab_2">扑克<i></i></li>
-          <li class="tab_1"><a href="/search/majiang.php?key=<?=$word?>">麻将</a><i></i></li>
+          <li class="tab_1">扑克<i></i></li>
+          <li class="tab_2"><a href="/search/majiang.php?key=<?=$word?>">麻将</a><i></i></li>
           <li class="tab_1"><a href="/search/qipai.php?key=<?=$word?>">棋类</a><i></i></li>
           <li class="tab_1"><a href="/search/zixun.php?key=<?=$word?>">资讯</a><i></i></li>
         </ul>
@@ -125,43 +125,38 @@ $sql=$empire->query("select * from www_96kaifa_com_ecms_majiang where title like
 
 while ($row=$empire->fetch($sql)) {
 
-if($row[fenlei]==1){$fenlei="斗地主";}
-else if($row[fenlei]==2){$fenlei="跑胡子";}
-else if($row[fenlei]==3){$fenlei="21点";}
-else if($row[fenlei]==4){$fenlei="保皇";}
-else if($row[fenlei]==5){$fenlei="打滚子";}
-else if($row[fenlei]==6){$fenlei="干瞪眼";}
-else if($row[fenlei]==7){$fenlei="打大A";}
-else if($row[fenlei]==8){$fenlei="四冲";}
-else if($row[fenlei]==9){$fenlei="三代";}
-else if($row[fenlei]==10){$fenlei="5十K";}
-else if($row[fenlei]==11){$fenlei="三打一";}
-else if($row[fenlei]==12){$fenlei="挖坑";}
-else if($row[fenlei]==13){$fenlei="拱猪";}
-else if($row[fenlei]==14){$fenlei="红五";}
-else if($row[fenlei]==15){$fenlei="黑尖";}
-else if($row[fenlei]==16){$fenlei="攉龙";}
-else if($row[fenlei]==17){$fenlei="大怪路子";}
-else if($row[fenlei]==18){$fenlei="掼蛋";}
-else if($row[fenlei]==19){$fenlei="包分";}
-else if($row[fenlei]==20){$fenlei="拖拉机";}
-else if($row[fenlei]==21){$fenlei="接龙";}
-else if($row[fenlei]==22){$fenlei="跑得快";}
-else if($row[fenlei]==23){$fenlei="锄大地";}
-else if($row[fenlei]==24){$fenlei="梭哈";}
-else if($row[fenlei]==25){$fenlei="德州扑克";}
-else if($row[fenlei]==26){$fenlei="炸金花";}
-else if($row[fenlei]==27){$fenlei="够级";}
-else if($row[fenlei]==28){$fenlei="纸牌";}
-else if($row[fenlei]==29){$fenlei="牌九";}
-else if($row[fenlei]==30){$fenlei="十三张";}
-else if($row[fenlei]==31){$fenlei="刨幺";}
-else if($row[fenlei]==32){$fenlei="升级";}
-else if($row[fenlei]==33){$fenlei="三公";}
-else if($row[fenlei]==34){$fenlei="尖子顶";}
-else if($row[fenlei]==35){$fenlei="花牌";}
-else if($row[fenlei]==36){$fenlei="红十";}
-else if($row[fenlei]==37){$fenlei="斗牛";}
+if($row[fenlei]==1){$fenlei="二人麻将";}
+else if($row[fenlei]==2){$bfenlei="三人麻将";}
+else if($row[fenlei]==3){$bfenlei="四人麻将";}
+else if($row[fenlei]==4){$bfenlei="日本麻将";}
+else if($row[fenlei]==5){$bfenlei="贵阳麻将";}
+else if($row[fenlei]==6){$bfenlei="台湾麻将";}
+else if($row[fenlei]==7){$bfenlei="上海麻将";}
+else if($row[fenlei]==8){$bfenlei="四川麻将";}
+else if($row[fenlei]==9){$bfenlei="北京麻将";}
+else if($row[fenlei]==10){$bfenlei="广东麻将";}
+else if($row[fenlei]==11){$bfenlei="陕西麻将";}
+else if($row[fenlei]==12){$bfenlei="南昌麻将";}
+else if($row[fenlei]==13){$bfenlei="长沙麻将";}
+else if($row[fenlei]==14){$bfenlei="长春麻将";}
+else if($row[fenlei]==15){$bfenlei="武汉麻将";}
+else if($row[fenlei]==16){$bfenlei="山东麻将";}
+else if($row[fenlei]==17){$bfenlei="宁波麻将";}
+else if($row[fenlei]==18){$bfenlei="合肥麻将";}
+else if($row[fenlei]==19){$bfenlei="河北麻将";}
+else if($row[fenlei]==20){$bfenlei="天津麻将";}
+else if($row[fenlei]==21){$bfenlei="太原麻将";}
+else if($row[fenlei]==22){$bfenlei="福州麻将";}
+else if($row[fenlei]==23){$bfenlei="杭州麻将";}
+else if($row[fenlei]==24){$bfenlei="南京麻将";}
+else if($row[fenlei]==25){$bfenlei="大连麻将";}
+else if($row[fenlei]==26){$bfenlei="芜湖麻将";}
+else if($row[fenlei]==27){$bfenlei="淮安麻将";}
+else if($row[fenlei]==28){$bfenlei="南宁麻将";}
+else if($row[fenlei]==29){$bfenlei="沈阳麻将";}
+else if($row[fenlei]==30){$bfenlei="西安麻将";}
+else if($row[fenlei]==31){$bfenlei="红中麻将";}
+else if($row[fenlei]==32){$bfenlei="麻将接龙";}
 ?> 		
           <li>
             <div class="img"><a href="<?php echo $row['titleurl']?>" target="_blank"><img src="<?php echo $row['titlepic']?>" alt="<?php echo $row['title']?>"></a></div>

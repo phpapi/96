@@ -90,7 +90,7 @@ $num=$empire->gettotal("select count(*) as total from www_96kaifa_com_ecms_puke 
     <div class="result">
       <div class="result-tab">
         <ul>
-          <li class="tab_2">扑克<i></i></li>
+          <li class="tab_2"><a href="/search/game.php?key=<?=$word?>">扑克<i></i></li>
           <li class="tab_1"><a href="/search/majiang.php?key=<?=$word?>">麻将</a><i></i></li>
           <li class="tab_1"><a href="/search/qipai.php?key=<?=$word?>">棋类</a><i></i></li>
           <li class="tab_1"><a href="/search/zixun.php?key=<?=$word?>">资讯</a><i></i></li>
