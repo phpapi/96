@@ -66,7 +66,7 @@ $link=db_connect();
 $empire=new mysqlquery(); 
 $www_96kaifa_com_header=$empire->fetch1("select varvalue from {$dbtbpre}enewstempvar where myvar='www_96kaifa_com_shead' limit 1");
 $www_96kaifa_com_footer=$empire->fetch1("select varvalue from {$dbtbpre}enewstempvar where myvar='www_96kaifa_com_sfoot' limit 1");
-$num=$empire->gettotal("select count(*) as total from www_96kaifa_com_ecms_puke  where title like '%$word%'");
+$num=$empire->gettotal("select count(*) as total from www_96kaifa_com_ecms_qipai  where title like '%$word%'");
 ?>
 <!doctype html>
 <!DOCTYPE html>
@@ -107,7 +107,7 @@ $num=$empire->gettotal("select count(*) as total from www_96kaifa_com_ecms_puke 
 <!--无关键词结束-->
 <?php }else{
 $Page_size=20; 
-$result=$empire->query("select * from www_96kaifa_com_ecms_puke where title like '%$word%'");
+$result=$empire->query("select * from www_96kaifa_com_ecms_qipai where title like '%$word%'");
 $count = mysqli_num_rows($result); 
 $page_count = ceil($count/$Page_size); 
 $init=1; 
@@ -121,7 +121,7 @@ $page=1;
 $page=$_GET['page']; 
 } 
 $offset=$Page_size*($page-1); 
-$sql=$empire->query("select * from www_96kaifa_com_ecms_puke where title like '%$word%' order by newstime desc limit $offset,$Page_size");
+$sql=$empire->query("select * from www_96kaifa_com_ecms_qipai where title like '%$word%' order by newstime desc limit $offset,$Page_size");
 
 while ($row=$empire->fetch($sql)) {
 
@@ -191,7 +191,7 @@ $key='<div class="page">';
 $key.="<span class=\"a1 disabled\">共 ".$page_count." 页</span> "; //第几页,共几页 
 if($page!=1){ 
 //$key.="<a href=\"/search/game.php?key=".$word."&page=1"."\" class=\"a1\">首页</a> "; //首页 
-$key.="<a href=\"/search/game.php?key=".$word."&page=".($page-1)."\" class=\"a1\">上一页</a>"; //上一页 
+$key.="<a href=\"/search/qipai.php?key=".$word."&page=".($page-1)."\" class=\"a1\">上一页</a>"; //上一页
 }else { 
 $key.="";//首页 
 $key.=""; //上一页 
@@ -216,13 +216,13 @@ for($i=$init;$i<=$max_p;$i++){
 if($i==$page){ 
 if($page_count==1){}else{$key.=' <span>'.$i.'</span>'; }
 } else { 
-$key.=" <a href=\"/search/game.php?key=".$word."&page=".$i."\" class=\"a1\">".$i."</a>"; 
+$key.=" <a href=\"/search/qipai.php?key=".$word."&page=".$i."\" class=\"a1\">".$i."</a>";
 } 
 } 
 if($page!=$pages){ 
 
 
-$key.=" <a href=\"/search/game.php?key=".$word."&page=".($page+1)."\" class=\"a1\">下一页</a> ";//下一页 
+$key.=" <a href=\"/search/qipai.php?key=".$word."&page=".($page+1)."\" class=\"a1\">下一页</a> ";//下一页
 //$key.=" <a href=\"/search/game.php?key=".$word."&page=".$pages."\" class=\"a1\">尾页</a>"; //尾页 
 }else { 
 $key.=" ";//下一页 
