@@ -83,7 +83,7 @@ $num=$empire->gettotal("select count(*) as total from www_96kaifa_com_ecms_qipai
 </head>
 <body>
 <div class="cover"></div>
-<?=stripslashes($www_96kaifa_com_header[1])?>
+<?=stripslashes($www_96kaifa_com_header[0])?>
 <div class="main">
   <div class="position">当前位置：<a href="/">首页</a> > 搜索 "<em class="red"><?=$word?></em>" 相关内容<?=$num?>个</div>
   <div class="container">
