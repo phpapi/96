@@ -64,7 +64,7 @@ require("../e/class/db_sql.php");
 require("../e/class/q_functions.php"); 
 $link=db_connect(); 
 $empire=new mysqlquery(); 
-$www_96kaifa_com_header=$empire->fetch1("select varvalue from {$dbtbpre}enewstempvar where myvar='www_96kaifa_com_shead' limit 1");
+$www_96kaifa_com_header=$empire->fetch1("select varvalue from {$dbtbpre}enewstempvar where myvar='www_96kaifa_com_header' limit 1");
 $www_96kaifa_com_footer=$empire->fetch1("select varvalue from {$dbtbpre}enewstempvar where myvar='www_96kaifa_com_sfoot' limit 1");
 $num=$empire->gettotal("select count(*) as total from www_96kaifa_com_ecms_puke  where title like '%$word%'");
 ?>
