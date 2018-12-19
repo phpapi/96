@@ -83,7 +83,120 @@ $num=$empire->gettotal("select count(*) as total from www_96kaifa_com_ecms_qipai
 </head>
 <body>
 <div class="cover"></div>
-<?=stripslashes($www_96kaifa_com_header[0])?>
+<div class="topbox">
+    <div class="boxin clearfix">
+        <div class="topl fl"> <span class="home"><a href="/">游戏首页</a></span>
+            <ul>
+                <li>|<a href="<?=$public_r['add_www_96kaifa_com_murl']?>" target="_blank">手机版</a></li>
+                <li>|<a href="#" target="_blank">客户端下载</a></li>
+                <li>|<a href="javascript:;" class="wx_show">关注微信</a>
+                    <div class="wx_hide"> <i class="angle"></i> <img src="/96kaifa/statics/home/images/wx_code.jpg" width="103" height="103"> <span>关注微信公众号</span> </div>
+                </li>
+                <li>|<a href="#" target="_blank">开放平台</a></li>
+            </ul>
+        </div>
+        <div class="topr fr">
+            <div class="login_ok">
+                <!-- 登录 -->
+                <script>
+                    document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+                    $(function(){
+                        var dqurl = window.location.href;
+                        $('#dquurl').val(dqurl);
+                    })
+                </script>
+                <!-- 登录 end-->
+            </div>
+            <a href="javascript:;" onClick="AddFavorite();">收藏本站</a> </div>
+    </div>
+</div>
+<div class="header">
+    <div class="header-top">
+        <div class="in">
+            <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="<?=$public_r['add_www_96kaifa_com_name']?>"></a></div>
+            <div class="search fr">
+                <form action="/search/game.php" method="get" target="_blank" name="searchTop">
+                    <div class="search_box tr">
+                        <input type="text" id="bdcsMain" name="key" class="sech_keyword" placeholder="请输入游戏名称">
+                        <input type="submit" value="搜索" class="sech_btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="in">
+            <ul>
+                <?php if($GLOBALS[navclassid]=='' || $GLOBALS[navclassid]==null){$shou="nav-cur";}else{$shou="";} ?>
+                <li><a href="/" class="<?=$shou?>"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+                [e:loop={"select classid,classname from {$dbtbpre}enewsclass where bclassid=0 order by myorder asc limit 8",0,24,0}]
+                <?php if($bqr[classid]==$GLOBALS[navclassid] || $bqr[classid]==$class_r[$GLOBALS[navclassid]][bclassid]){$classon="nav-cur";}else{$classon="";}?>
+                <li><a class="<?=$classon?>" href="<?=$bqsr[classurl]?>"><span class="menu-txt"><?=$bqr[classname]?></span><span class="menu-line"></span></a></li>
+                [/e:loop]
+            </ul>
+            <div class="grzx">
+                <script> document.write('<script src="/e/member/login/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="my_pop">
+    <!--弹出登录框开始-->
+    <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
+        <p class="pop-tit">账号登录</p>
+        <form action="/e/member/doaction.php" method="post" onSubmit="return userLogin()" id="form_login1" class="form-login">
+            <input type=hidden name=ecmsfrom value="" id="dquurl">
+            <input type=hidden name=enews value=login>
+            <input name="tobind" type="hidden" id="tobind" value="0">
+            <div class="modal-body">
+                <div class="error_font">*错误提示</div>
+                <div class="outer tr"> <i class="user"></i>
+                    <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
+                </div>
+                <div class="outer tr"> <i class="pwd"></i>
+                    <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
+                </div>
+                <div class="outer">
+                    <div class="captcha" id="logcaptcha"></div>
+                </div>
+            </div>
+            <div class="modal-footer" style="margin-bottom:40px;">
+                <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
+            </div>
+        </form>
+    </div>
+    <!--弹出登录框结束-->
+    <!--弹出注册框开始-->
+    <div class="register_pop" style="display: none;"> <span class="pop_close"></span>
+        <p class="pop-tit">会员注册</p>
+        <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
+            <input type="hidden" name="enews" value="register">
+            <div class="modal-body">
+                <div class="error_font">*错误提示</div>
+                <div class="outer tr"> <i class="user"></i>
+                    <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
+                </div>
+                <div class="outer tr"> <i class="pwd"></i>
+                    <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
+                </div>
+                <div class="outer tr"> <i class="pwd"></i>
+                    <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
+                </div>
+                <div class="outer tr"> <i class="user"></i>
+                    <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
+                </div>
+                <div class="outer">
+                    <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
+                    <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
+            </div>
+            <div class="modal-footer">
+                <p class="outer"> <input type='submit' name='Submit' class="orange_btn" id="btnRegister" value="立即注册"> </p>
+                <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
+            </div>
+        </form>
+    </div>
+    <!--弹出注册框结束-->
+</div>
 <div class="main">
   <div class="position">当前位置：<a href="/">首页</a> > 搜索 "<em class="red"><?=$word?></em>" 相关内容<?=$num?>个</div>
   <div class="container">
