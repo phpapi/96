@@ -125,19 +125,19 @@ $sql=$empire->query("select * from www_96kaifa_com_ecms_qipai where title like '
 
 while ($row=$empire->fetch($sql)) {
 
-if($row[fenlei]==1){$bfenlei="五子棋";}
-else if($row[fenlei]==2){$bfenlei="象棋";}
-else if($row[fenlei]==3){$bfenlei="围棋";}
-else if($row[fenlei]==4){$bfenlei="飞行棋";}
-else if($row[fenlei]==5){$bfenlei="中国暗棋";}
-else if($row[fenlei]==6){$bfenlei="跳棋";}
-else if($row[fenlei]==7){$bfenlei="井字棋";}
-else if($row[fenlei]==8){$bfenlei="军棋";}
-else if($row[fenlei]==9){$bfenlei="斗兽棋";}
-else if($row[fenlei]==10){$bfenlei="将棋";}
-else if($row[fenlei]==11){$bfenlei="四子棋";}
-else if($row[fenlei]==12){$bfenlei="大富翁";}
-else if($row[fenlei]==13){$bfenlei="国际象棋";}
+if($row[fenlei]==1){$fenlei="五子棋";}
+else if($row[fenlei]==2){$fenlei="象棋";}
+else if($row[fenlei]==3){$fenlei="围棋";}
+else if($row[fenlei]==4){$fenlei="飞行棋";}
+else if($row[fenlei]==5){$fenlei="中国暗棋";}
+else if($row[fenlei]==6){$fenlei="跳棋";}
+else if($row[fenlei]==7){$fenlei="井字棋";}
+else if($row[fenlei]==8){$fenlei="军棋";}
+else if($row[fenlei]==9){$fenlei="斗兽棋";}
+else if($row[fenlei]==10){$fenlei="将棋";}
+else if($row[fenlei]==11){$fenlei="四子棋";}
+else if($row[fenlei]==12){$fenlei="大富翁";}
+else if($row[fenlei]==13){$fenlei="国际象棋";}
 ?> 		
           <li>
             <div class="img"><a href="<?php echo $row['titleurl']?>" target="_blank"><img src="<?php echo $row['titlepic']?>" alt="<?php echo $row['title']?>"></a></div>

@@ -90,7 +90,7 @@ $num=$empire->gettotal("select count(*) as total from www_96kaifa_com_ecms_majia
     <div class="result">
       <div class="result-tab">
         <ul>
-          <li class="tab_1">扑克<i></i></li>
+          <li class="tab_1"><a href="/search/game.php?key=<?=$word?>">扑克<i></i></li>
           <li class="tab_2"><a href="/search/majiang.php?key=<?=$word?>">麻将</a><i></i></li>
           <li class="tab_1"><a href="/search/qipai.php?key=<?=$word?>">棋类</a><i></i></li>
           <li class="tab_1"><a href="/search/zixun.php?key=<?=$word?>">资讯</a><i></i></li>
@@ -126,37 +126,37 @@ $sql=$empire->query("select * from www_96kaifa_com_ecms_majiang where title like
 while ($row=$empire->fetch($sql)) {
 
 if($row[fenlei]==1){$fenlei="二人麻将";}
-else if($row[fenlei]==2){$bfenlei="三人麻将";}
-else if($row[fenlei]==3){$bfenlei="四人麻将";}
-else if($row[fenlei]==4){$bfenlei="日本麻将";}
-else if($row[fenlei]==5){$bfenlei="贵阳麻将";}
-else if($row[fenlei]==6){$bfenlei="台湾麻将";}
-else if($row[fenlei]==7){$bfenlei="上海麻将";}
-else if($row[fenlei]==8){$bfenlei="四川麻将";}
-else if($row[fenlei]==9){$bfenlei="北京麻将";}
-else if($row[fenlei]==10){$bfenlei="广东麻将";}
-else if($row[fenlei]==11){$bfenlei="陕西麻将";}
-else if($row[fenlei]==12){$bfenlei="南昌麻将";}
-else if($row[fenlei]==13){$bfenlei="长沙麻将";}
-else if($row[fenlei]==14){$bfenlei="长春麻将";}
-else if($row[fenlei]==15){$bfenlei="武汉麻将";}
-else if($row[fenlei]==16){$bfenlei="山东麻将";}
-else if($row[fenlei]==17){$bfenlei="宁波麻将";}
-else if($row[fenlei]==18){$bfenlei="合肥麻将";}
-else if($row[fenlei]==19){$bfenlei="河北麻将";}
-else if($row[fenlei]==20){$bfenlei="天津麻将";}
-else if($row[fenlei]==21){$bfenlei="太原麻将";}
-else if($row[fenlei]==22){$bfenlei="福州麻将";}
-else if($row[fenlei]==23){$bfenlei="杭州麻将";}
-else if($row[fenlei]==24){$bfenlei="南京麻将";}
-else if($row[fenlei]==25){$bfenlei="大连麻将";}
-else if($row[fenlei]==26){$bfenlei="芜湖麻将";}
-else if($row[fenlei]==27){$bfenlei="淮安麻将";}
-else if($row[fenlei]==28){$bfenlei="南宁麻将";}
-else if($row[fenlei]==29){$bfenlei="沈阳麻将";}
-else if($row[fenlei]==30){$bfenlei="西安麻将";}
-else if($row[fenlei]==31){$bfenlei="红中麻将";}
-else if($row[fenlei]==32){$bfenlei="麻将接龙";}
+else if($row[fenlei]==2){$fenlei="三人麻将";}
+else if($row[fenlei]==3){$fenlei="四人麻将";}
+else if($row[fenlei]==4){$fenlei="日本麻将";}
+else if($row[fenlei]==5){$fenlei="贵阳麻将";}
+else if($row[fenlei]==6){$fenlei="台湾麻将";}
+else if($row[fenlei]==7){$fenlei="上海麻将";}
+else if($row[fenlei]==8){$fenlei="四川麻将";}
+else if($row[fenlei]==9){$fenlei="北京麻将";}
+else if($row[fenlei]==10){$fenlei="广东麻将";}
+else if($row[fenlei]==11){$fenlei="陕西麻将";}
+else if($row[fenlei]==12){$fenlei="南昌麻将";}
+else if($row[fenlei]==13){$fenlei="长沙麻将";}
+else if($row[fenlei]==14){$fenlei="长春麻将";}
+else if($row[fenlei]==15){$fenlei="武汉麻将";}
+else if($row[fenlei]==16){$fenlei="山东麻将";}
+else if($row[fenlei]==17){$fenlei="宁波麻将";}
+else if($row[fenlei]==18){$fenlei="合肥麻将";}
+else if($row[fenlei]==19){$fenlei="河北麻将";}
+else if($row[fenlei]==20){$fenlei="天津麻将";}
+else if($row[fenlei]==21){$fenlei="太原麻将";}
+else if($row[fenlei]==22){$fenlei="福州麻将";}
+else if($row[fenlei]==23){$fenlei="杭州麻将";}
+else if($row[fenlei]==24){$fenlei="南京麻将";}
+else if($row[fenlei]==25){$fenlei="大连麻将";}
+else if($row[fenlei]==26){$fenlei="芜湖麻将";}
+else if($row[fenlei]==27){$fenlei="淮安麻将";}
+else if($row[fenlei]==28){$fenlei="南宁麻将";}
+else if($row[fenlei]==29){$fenlei="沈阳麻将";}
+else if($row[fenlei]==30){$fenlei="西安麻将";}
+else if($row[fenlei]==31){$fenlei="红中麻将";}
+else if($row[fenlei]==32){$fenlei="麻将接龙";}
 ?> 		
           <li>
             <div class="img"><a href="<?php echo $row['titleurl']?>" target="_blank"><img src="<?php echo $row['titlepic']?>" alt="<?php echo $row['title']?>"></a></div>
@@ -186,7 +186,7 @@ $key='<div class="page">';
 $key.="<span class=\"a1 disabled\">共 ".$page_count." 页</span> "; //第几页,共几页 
 if($page!=1){ 
 //$key.="<a href=\"/search/game.php?key=".$word."&page=1"."\" class=\"a1\">首页</a> "; //首页 
-$key.="<a href=\"/search/majaing.php?key=".$word."&page=".($page-1)."\" class=\"a1\">上一页</a>"; //上一页
+$key.="<a href=\"/search/majiang.php?key=".$word."&page=".($page-1)."\" class=\"a1\">上一页</a>"; //上一页
 }else { 
 $key.="";//首页 
 $key.=""; //上一页 
@@ -211,13 +211,13 @@ for($i=$init;$i<=$max_p;$i++){
 if($i==$page){ 
 if($page_count==1){}else{$key.=' <span>'.$i.'</span>'; }
 } else { 
-$key.=" <a href=\"/search/majaing.php?key=".$word."&page=".$i."\" class=\"a1\">".$i."</a>";
+$key.=" <a href=\"/search/majiang.php?key=".$word."&page=".$i."\" class=\"a1\">".$i."</a>";
 } 
 } 
 if($page!=$pages){ 
 
 
-$key.=" <a href=\"/search/majaing.php?key=".$word."&page=".($page+1)."\" class=\"a1\">下一页</a> ";//下一页
+$key.=" <a href=\"/search/majiang.php?key=".$word."&page=".($page+1)."\" class=\"a1\">下一页</a> ";//下一页
 //$key.=" <a href=\"/search/game.php?key=".$word."&page=".$pages."\" class=\"a1\">尾页</a>"; //尾页 
 }else { 
 $key.=" ";//下一页 
