@@ -138,3 +138,33 @@ input::-moz-placeholder { color:#a9a9a9; }  /* Mozilla Firefox 19+*/
 .modal-body .accept input{ margin-right: 5px; vertical-align: -2px; }
 .modal-body .accept a{ color: #00a2ff; }
 .modal-body .accept a:hover{ text-decoration: underline; }
+
+
+/* 游戏简介代码开始 */
+
+/* 分享图标 */
+.bdsharebuttonbox{
+	float: right;
+	right: 0;
+}
+.game_The{
+	margin-top: 40px;
+	line-height: 26px;
+
+}
+h2{
+	font-weight:bold
+}
+.figure{
+	border-bottom: 1px #dcdcdc solid;
+	width: 332%;
+	margin-top: 10px;
+	float: right;
+}
+.The_game{
+	line-height: 40px;
+}
+.gameplay{
+	line-height: 40px;
+}
+/* 游戏简介代码结束 */
