@@ -73,7 +73,7 @@
 .game-news dd.title{ line-height: 26px; padding-top: 1px; }
 .game-news dd.title a:hover{ text-decoration: underline; }
 .game-news dd.desc{ font-size: 12px; color: #999; line-height: 22px; margin-top: 6px; }
-.game-news ul{ margin-top: 20px; }
+.game-news ul{margin-top: 20px;}
 .game-news ul li{ padding:13px 0; line-height: 29px; border-top: 1px dashed #e4e4e4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .game-news ul li .flei{ color: #999; margin-right: 7px; }
 .game-news ul li a:hover{ text-decoration: underline; }
@@ -91,7 +91,7 @@
 /*排行榜*/
 .rank-box{ float: left; width: 268px; margin-right: 32px; }
 .rank-box h4{ font-size: 20px; padding-left: 28px; margin-top: 20px; position: relative; }
-.rank-box h4 i{ position: absolute; left: 0; top: 0; display: block; width: 21px; height: 23px; background: url(./) no-repeat; overflow: hidden; }
+.rank-box h4 i{ position: absolute; left: 0; top: 0; display: block; width: 21px; height: 23px; background: url(../images/icos.png) no-repeat; overflow: hidden; }
 .xy-rank h4 i{ background-position: 0 -60px; }
 .xy-rank h4 b{ font-weight: normal; color: #ff5858; }
 .wy-rank h4 i{ background-position: 0 -95px; }
@@ -527,11 +527,11 @@
 .fmodal .outer{ margin-top: 25px; height: 44px; }
 .fmodal label{ display: inline-block; float: left; width: 110px; padding-right: 8px; text-align: right; font-size: 16px; color: #666; line-height: 44px; }
 .fmodal .input-txt{ border:1px solid #ccc; width: 316px; height: 22px; *height:20px; line-height: 22px; color: #444; padding: 10px 15px; transition:all 0.3s ease-out;
-	-webkit-transition:all 0.3s ease-out;
-	-moz-transition:all 0.3s ease-out; }
+    -webkit-transition:all 0.3s ease-out;
+    -moz-transition:all 0.3s ease-out; }
 .fmodal .new-input-txt{ border:1px solid #ff9a00; box-shadow: 0 0 12px #f9e4c5;
-	-webkit-box-shadow: 0 0 12px #f9e4c5;
-	-moz-box-shadow: 0 0 12px #f9e4c5; }
+    -webkit-box-shadow: 0 0 12px #f9e4c5;
+    -moz-box-shadow: 0 0 12px #f9e4c5; }
 .fmodal span.input-txt{ display: inline-block; }
 .fmodal .error_font{ float: none; margin-left: 117px; margin-top: 20px; }
 .fmodal .button{ width: 348px; margin-left: 117px; margin-top: 25px; }
