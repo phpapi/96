@@ -29,7 +29,7 @@ input::-moz-placeholder { color:#a9a9a9; }  /* Mozilla Firefox 19+*/
 
 /*topbox*/
 .topbox{ width:100%; min-width: 1200px; border-bottom:1px solid #eaeaea; background-color:#fafafa; }
-/*.topbox a{ color:#666; }*/
+/*.topbox a{ color:#666; }*/ 
 .topbox .boxin{ height:39px; line-height:39px; width:1200px; margin:0 auto; color:#a9a9a9; }
 .topbox .topl .home{ float:left; margin-right:10px; padding-left: 2px; }
 .topbox .topl .home a{ color:#888; background: url(../images/icos.png) no-repeat -150px -197px; padding-left: 22px; }
