@@ -70,6 +70,6 @@ document.write("&raquo;&nbsp;<font color=red><b><?=$myusername?></b></font>&nbsp
 	db_close();
 	$empire=null;
 }
-/*else {?>
-document.write("<form name=login method=post action=\"/e/member/doaction.php\">    <input type=hidden name=enews value=login>    <input type=hidden name=ecmsfrom value=9>    用户名：<input name=\"username\" type=\"text\" class=\"inputText\" size=\"16\" />&nbsp;    密码：<input name=\"password\" type=\"password\" class=\"inputText\" size=\"16\" />&nbsp;    <input type=\"submit\" name=\"Submit\" value=\"登陆\" class=\"inputSub\" />&nbsp;    <input type=\"button\" name=\"Submit2\" value=\"注册\" class=\"inputSub\" onclick=\"window.open(\'/e/member/register/\');\" /></form>");
-<?php} ?>*/
+else {?>
+document.write("<form name=login method=post action=\"/e/member/doaction.php\">    <input type=hidden name=enews value=login>    <input type=hidden name=ecmsfrom value=9>    <input type=\"submit\" name=\"Submit\" value=\"登陆\" class=\"inputSub\" />&nbsp;    <input type=\"button\" name=\"Submit2\" value=\"注册\" class=\"inputSub\" onclick=\"window.open(\'/e/member/register/\');\" /></form>");
+<?php} ?>
