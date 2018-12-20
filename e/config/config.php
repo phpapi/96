@@ -157,7 +157,7 @@ $public_r=array('sitename'=>'仿3500游戏源码-96KaiFa原创源码（www.96kai
 'newslink'=>0,
 'checked'=>0,
 'searchtime'=>2,
-'loginnum'=>5,
+'loginnum'=>50,
 'logintime'=>60,
 'addnews_ok'=>0,
 'register_ok'=>0,
