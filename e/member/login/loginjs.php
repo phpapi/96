@@ -74,7 +74,7 @@ else
 {
 ?>
 
-document.write("<form name=login method=post action=\"//www.96.com/e/member/doaction.php\">    <input type=hidden name=enews value=login>    <input type=hidden name=ecmsfrom value=9>  <a href=\"javascript:;\" class=\"a1 a_login\" id=\"a_login\">登录</a><a href=\"javascript:;\" class=\"a2 a_register\" id=\"register_btn\">注册</a>   /></form>");
+document.write("<form name=login method=post action=\"//www.96.com/e/member/doaction.php\">    <input type=hidden name=enews value=login>    <input type=hidden name=ecmsfrom value=9>  <a href=\"javascript:;\" class=\"a1 a_login\" id=\"a_login\">登录</a><a href=\"javascript:;\" class=\"a2 a_register\" id=\"register_btn\">注册</a>  </form>");
 
 <?php
 }
