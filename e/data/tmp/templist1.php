@@ -24,7 +24,7 @@ if(!defined('InEmpireCMS'))
   <div class="boxin clearfix">
     <div class="topl fl"> <span class="home"><a href="/">游戏首页</a></span>
       <ul>
-        <li>|<a href="<?=$public_r['add_www_96kaifa_com_murl']?>" target="_blank">手机版</a></li>
+        <li>|<a href="http://www.96kaifa.com" target="_blank">手机版</a></li>
         <li>|<a href="#" target="_blank">客户端下载</a></li>
         <li>|<a href="javascript:;" class="wx_show">关注微信</a>
           <div class="wx_hide"> <i class="angle"></i> <img src="/96kaifa/statics/home/images/wx_code.jpg" width="103" height="103"> <span>关注微信公众号</span> </div>
@@ -33,25 +33,25 @@ if(!defined('InEmpireCMS'))
       </ul>
     </div>
     <div class="topr fr">
-      <div class="login_ok">
-	<!-- 登录 -->
-	<script>
-	document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
-	$(function(){
-	var dqurl = window.location.href;
-	$('#dquurl').val(dqurl);
-	})
-	</script>
-	<!-- 登录 end-->
-	  </div>
-      <a href="javascript:;" onClick="AddFavorite();">收藏本站</a> </div>
-  </div>
+        <div class="login_ok">
+        
+        <script>
+            document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+            $(function(){
+            var dqurl = window.location.href;
+            $('#dquurl').val(dqurl);
+            })
+            </script>
+        
+        </div>
+        <a href="javascript:;" onclick="AddFavorite();">收藏本站</a> </div>
 </div>
 <div class="header">
   <div class="header-top">
     <div class="in">
-      <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="<?=$public_r['add_www_96kaifa_com_name']?>"></a></div>
+      <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="棋游之家"></a></div>
       <div class="search fr">
+       
         <form action="/search/game.php" method="get" target="_blank" name="searchTop">
           <div class="search_box tr">
             <input type="text" id="bdcsMain" name="key" class="sech_keyword" placeholder="请输入游戏名称">
@@ -64,86 +64,76 @@ if(!defined('InEmpireCMS'))
   <div class="nav">
     <div class="in">
       <ul>
-<?php if($GLOBALS[navclassid]=='' || $GLOBALS[navclassid]==null){$shou="nav-cur";}else{$shou="";} ?>
-        <li><a href="/" class="<?=$shou?>"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
-<?php
-$bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select classid,classname from {$dbtbpre}enewsclass where bclassid=0 order by myorder asc limit 8",0,24,0);
-if($ecms_bq_sql){
-while($bqr=$empire->fetch($ecms_bq_sql)){
-$bqsr=sys_ReturnEcmsLoopStext($bqr);
-$bqno++;
-?>
-<?php if($bqr[classid]==$GLOBALS[navclassid] || $bqr[classid]==$class_r[$GLOBALS[navclassid]][bclassid]){$classon="nav-cur";}else{$classon="";}?>
-        <li><a class="<?=$classon?>" href="<?=$bqsr[classurl]?>"><span class="menu-txt"><?=$bqr[classname]?></span><span class="menu-line"></span></a></li>
-<?php
-}
-}
-?>
+        <li><a href="/" class="nav-cur"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qipailei/"><span class="menu-txt">棋牌</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qilei/"><span class="menu-txt">棋类</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qiyouchangshang/"><span class="menu-txt">棋游厂商</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
       </ul>
       <div class="grzx">
-	  	<script> document.write('<script src="/e/member/login/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
+	  	<script> document.write('<script src="./e/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
 	  </div>
     </div>
   </div>
 </div>
 <div class="my_pop">
-<!--弹出登录框开始-->
-  <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
+    <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
     <p class="pop-tit">账号登录</p>
-    <form action="/e/member/doaction.php" method="post" onSubmit="return userLogin()" id="form_login1" class="form-login">
-      <input type=hidden name=ecmsfrom value="" id="dquurl">
-      <input type=hidden name=enews value=login>
-      <input name="tobind" type="hidden" id="tobind" value="0">
-      <div class="modal-body">
-        <div class="error_font">*错误提示</div>
-        <div class="outer tr"> <i class="user"></i>
-          <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
-        </div>
-        <div class="outer tr"> <i class="pwd"></i>
-          <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
-        </div>
-        <div class="outer">
-          <div class="captcha" id="logcaptcha"></div>
-        </div>
-      </div>
-      <div class="modal-footer" style="margin-bottom:40px;">
-        <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
-      </div>
-    </form>
-  </div>
-<!--弹出登录框结束-->
-<!--弹出注册框开始-->
-<div class="register_pop" style="display: none;"> <span class="pop_close"></span>
-  <p class="pop-tit">会员注册</p>
-  <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
-	<input type="hidden" name="enews" value="register">
+    <form action="/e/member/doaction.php" method="post" onsubmit="return userLogin()" id="form_login1" class="form-login">
+    <input type="hidden" name="ecmsfrom" value="http://3500.96demo.com/" id="dquurl">
+    <input type="hidden" name="enews" value="login">
+    <input name="tobind" type="hidden" id="tobind" value="0">
     <div class="modal-body">
-      <div class="error_font">*错误提示</div>
-      <div class="outer tr"> <i class="user"></i>
-        <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
-      </div>
-      <div class="outer tr"> <i class="pwd"></i>
-        <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
-      </div>
-      <div class="outer tr"> <i class="pwd"></i>
-        <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
-      </div>
-      <div class="outer tr"> <i class="user"></i>
-        <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
-      </div>
-      <div class="outer">
-        <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
-        <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
+    <div class="error_font">*错误提示</div>
+     <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
+    </div>
+    <div class="outer">
+    <div class="captcha" id="logcaptcha"></div>
+    </div>
+    </div>
+    <div class="modal-footer" style="margin-bottom:40px;">
+    <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
+    </div>
+    </form>
+    </div>
+    
+    
+    <div class="register_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">会员注册</p>
+    <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
+    <input type="hidden" name="enews" value="register">
+    <div class="modal-body">
+    <div class="error_font">*错误提示</div>
+    <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
+    </div>
+    <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
+    </div>
+    <div class="outer">
+    <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
+    <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&amp;t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
     </div>
     <div class="modal-footer">
-      <p class="outer"> <input type='submit' name='Submit' class="orange_btn" id="btnRegister" value="立即注册"> </p>
-      <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
+    <p class="outer"> <input type="submit" name="Submit" class="orange_btn" id="btnRegister" value="立即注册"> </p>
+    <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
     </div>
-  </form>
-</div>
-<!--弹出注册框结束-->
-</div>
+    </form>
+    </div>
+    
+    </div>
 <div class="main">
   <div class="position">当前位置：[!--newsnav--]</div>
   <div class="container">
@@ -185,30 +175,14 @@ $bqno++;
       <div class="w-news mt15">
         <div class="hd20">
           <h3>热门活动</h3>
-          <a href="javascript:void(0);" class="refresh" id="w_refresh">换一批<i></i></a></div>
+          <!--<a href="javascript:void(0);" class="refresh" id="w_refresh">换一批<i></i></a>--></div>
         <div class="wbody">
           <div class="wlist">
-<?php
-$bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_news where fmimg<>'' order by newstime desc limit 1",6,24,0);
-if($ecms_bq_sql){
-while($bqr=$empire->fetch($ecms_bq_sql)){
-$bqsr=sys_ReturnEcmsLoopStext($bqr);
-$bqno++;
-?>
-            <dl>
-              <dt><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['fmimg']?>" alt="<?=$bqr['title']?>"></a></dt>
-              <dd class="title"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></dd>
-              <dd class="desc"><?=$bqr['title']?></dd>
-            </dl>
-<?php
-}
-}
-?>
+
             <ul>
 <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_news order by newstime desc limit 4",6,24,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_news where classid=4 order by newstime desc limit 5",6,24,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
@@ -221,69 +195,61 @@ $bqno++;
 ?>
             </ul>
           </div>
-          <div class="wlist" style="display: none;">
-<?php
-$bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_news where fmimg<>'' order by newstime desc limit 1,1",6,24,0);
-if($ecms_bq_sql){
-while($bqr=$empire->fetch($ecms_bq_sql)){
-$bqsr=sys_ReturnEcmsLoopStext($bqr);
-$bqno++;
-?>
-            <dl>
-              <dt><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['fmimg']?>" alt="<?=$bqr['title']?>"></a></dt>
-              <dd class="title"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></dd>
-              <dd class="desc"><?=$bqr['title']?></dd>
-            </dl>
-<?php
-}
-}
-?>
-            <ul>
-<?php
-$bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_news order by newstime desc limit 4,4",6,24,0);
-if($ecms_bq_sql){
-while($bqr=$empire->fetch($ecms_bq_sql)){
-$bqsr=sys_ReturnEcmsLoopStext($bqr);
-$bqno++;
-?>
-              <li>•<a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a></li>
-<?php
-}
-}
-?>
-            </ul>
-          </div>
+          
         </div>
       </div>
       <div class="w-rank mt15">
         <div class="hd20">
           <h3>游戏排行</h3>
-          <ul class="rank_tab">
-            <li onMouseMove="onSelect(this,'rank_con')" class="tab_2">网游</li>
-            <li onMouseMove="onSelect(this,'rank_con')" class="tab_1">小游戏</li>
-          </ul>
         </div>
         <div class="bd">
           <ol id="rank_con_0">
 <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_game order by newstime desc limit 3",6,24,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_puke order by newstime desc limit 2",6,24,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
 <?php
-if($bqr[fenlei]==1){$bfenlei="卡牌游戏";}
-else if($bqr[fenlei]==2){$bfenlei="角色扮演";}
-else if($bqr[fenlei]==3){$bfenlei="模拟经营";}
-else if($bqr[fenlei]==4){$bfenlei="射击游戏";}
-else if($bqr[fenlei]==5){$bfenlei="动作游戏";}
-else if($bqr[fenlei]==6){$bfenlei="战争策略";}
-else if($bqr[fenlei]==7){$bfenlei="棋牌游戏";}
-else if($bqr[fenlei]==8){$bfenlei="休闲游戏";}
+if($bqr[fenlei]==1){$bfenlei="斗地主";}
+else if($bqr[fenlei]==2){$bfenlei="跑胡子";}
+else if($bqr[fenlei]==3){$bfenlei="21点";}
+else if($bqr[fenlei]==4){$bfenlei="保皇";}
+else if($bqr[fenlei]==5){$bfenlei="打滚子";}
+else if($bqr[fenlei]==6){$bfenlei="干瞪眼";}
+else if($bqr[fenlei]==7){$bfenlei="打大A";}
+else if($bqr[fenlei]==8){$bfenlei="四冲";}
+else if($bqr[fenlei]==9){$bfenlei="三代";}
+else if($bqr[fenlei]==10){$bfenlei="5十K";}
+else if($bqr[fenlei]==11){$bfenlei="三打一";}
+else if($bqr[fenlei]==12){$bfenlei="挖坑";}
+else if($bqr[fenlei]==13){$bfenlei="拱猪";}
+else if($bqr[fenlei]==14){$bfenlei="红五";}
+else if($bqr[fenlei]==15){$bfenlei="黑尖";}
+else if($bqr[fenlei]==16){$bfenlei="攉龙";}
+else if($bqr[fenlei]==17){$bfenlei="大怪路子";}
+else if($bqr[fenlei]==18){$bfenlei="掼蛋";}
+else if($bqr[fenlei]==19){$bfenlei="包分";}
+else if($bqr[fenlei]==20){$bfenlei="拖拉机";}
+else if($bqr[fenlei]==21){$bfenlei="接龙";}
+else if($bqr[fenlei]==22){$bfenlei="跑得快";}
+else if($bqr[fenlei]==23){$bfenlei="锄大地";}
+else if($bqr[fenlei]==24){$bfenlei="梭哈";}
+else if($bqr[fenlei]==25){$bfenlei="德州扑克";}
+else if($bqr[fenlei]==26){$bfenlei="炸金花";}
+else if($bqr[fenlei]==27){$bfenlei="够级";}
+else if($bqr[fenlei]==28){$bfenlei="纸牌";}
+else if($bqr[fenlei]==29){$bfenlei="牌九";}
+else if($bqr[fenlei]==30){$bfenlei="十三张";}
+else if($bqr[fenlei]==31){$bfenlei="刨幺";}
+else if($bqr[fenlei]==32){$bfenlei="升级";}
+else if($bqr[fenlei]==33){$bfenlei="三公";}
+else if($bqr[fenlei]==34){$bfenlei="尖子顶";}
+else if($bqr[fenlei]==35){$bfenlei="花牌";}
+else if($bqr[fenlei]==36){$bfenlei="红十";}
+else if($bqr[fenlei]==37){$bfenlei="斗牛";}
 ?>
             <li> <em class="num num<?=$bqno?>"><?=$bqno?></em>
               <div class="box1">
@@ -299,23 +265,47 @@ else if($bqr[fenlei]==8){$bfenlei="休闲游戏";}
 ?>
 <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_game order by newstime desc limit 3,2",6,24,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_majiang order by newstime desc limit 2",6,24,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
 <?php
-if($bqr[fenlei]==1){$bfenlei="卡牌游戏";}
-else if($bqr[fenlei]==2){$bfenlei="角色扮演";}
-else if($bqr[fenlei]==3){$bfenlei="模拟经营";}
-else if($bqr[fenlei]==4){$bfenlei="射击游戏";}
-else if($bqr[fenlei]==5){$bfenlei="动作游戏";}
-else if($bqr[fenlei]==6){$bfenlei="战争策略";}
-else if($bqr[fenlei]==7){$bfenlei="棋牌游戏";}
-else if($bqr[fenlei]==8){$bfenlei="休闲游戏";}
+if($bqr[fenlei]==1){$bfenlei="二人麻将";}
+else if($bqr[fenlei]==2){$bfenlei="三人麻将";}
+else if($bqr[fenlei]==3){$bfenlei="四人麻将";}
+else if($bqr[fenlei]==4){$bfenlei="日本麻将";}
+else if($bqr[fenlei]==5){$bfenlei="贵阳麻将";}
+else if($bqr[fenlei]==6){$bfenlei="台湾麻将";}
+else if($bqr[fenlei]==7){$bfenlei="上海麻将";}
+else if($bqr[fenlei]==8){$bfenlei="四川麻将";}
+else if($bqr[fenlei]==9){$bfenlei="北京麻将";}
+else if($bqr[fenlei]==10){$bfenlei="广东麻将";}
+else if($bqr[fenlei]==11){$bfenlei="陕西麻将";}
+else if($bqr[fenlei]==12){$bfenlei="南昌麻将";}
+else if($bqr[fenlei]==13){$bfenlei="长沙麻将";}
+else if($bqr[fenlei]==14){$bfenlei="长春麻将";}
+else if($bqr[fenlei]==15){$bfenlei="武汉麻将";}
+else if($bqr[fenlei]==16){$bfenlei="山东麻将";}
+else if($bqr[fenlei]==17){$bfenlei="宁波麻将";}
+else if($bqr[fenlei]==18){$bfenlei="合肥麻将";}
+else if($bqr[fenlei]==19){$bfenlei="河北麻将";}
+else if($bqr[fenlei]==20){$bfenlei="天津麻将";}
+else if($bqr[fenlei]==21){$bfenlei="太原麻将";}
+else if($bqr[fenlei]==22){$bfenlei="福州麻将";}
+else if($bqr[fenlei]==23){$bfenlei="杭州麻将";}
+else if($bqr[fenlei]==24){$bfenlei="南京麻将";}
+else if($bqr[fenlei]==25){$bfenlei="大连麻将";}
+else if($bqr[fenlei]==26){$bfenlei="芜湖麻将";}
+else if($bqr[fenlei]==27){$bfenlei="淮安麻将";}
+else if($bqr[fenlei]==28){$bfenlei="南宁麻将";}
+else if($bqr[fenlei]==29){$bfenlei="沈阳麻将";}
+else if($bqr[fenlei]==30){$bfenlei="西安麻将";}
+else if($bqr[fenlei]==31){$bfenlei="红中麻将";}
+else if($bqr[fenlei]==32){$bfenlei="麻将接龙";}
 ?>
-            <li> <em class="num num"><?=$bqno+3?></em>
+            <li> <em class="num num<?=$bqno+2?>"><?=$bqno+2?></em>
               <div class="box1">
                 <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
                 <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
@@ -327,34 +317,35 @@ else if($bqr[fenlei]==8){$bfenlei="休闲游戏";}
 }
 }
 ?>
-          </ol>
-          <ol id="rank_con_1" style="display: none;">
+         
 <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_danji order by newstime desc limit 3",6,24,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_qipai order by newstime desc limit 1",6,24,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
 <?php
-if($bqr[fenlei]==1){$fenlei="益智";}
-else if($bqr[fenlei]==2){$fenlei="动作";}
-else if($bqr[fenlei]==3){$fenlei="射击";}
-else if($bqr[fenlei]==4){$fenlei="休闲";}
-else if($bqr[fenlei]==5){$fenlei="敏捷";}
-else if($bqr[fenlei]==6){$fenlei="棋牌";}
-else if($bqr[fenlei]==7){$fenlei="经营";}
-else if($bqr[fenlei]==8){$fenlei="体育";}
-else if($bqr[fenlei]==9){$fenlei="策略";}
-else if($bqr[fenlei]==10){$fenlei="冒险";}
-else if($bqr[fenlei]==11){$fenlei="装扮";}
+if($bqr[fenlei]==1){$bfenlei="五子棋";}
+else if($bqr[fenlei]==2){$bfenlei="象棋";}
+else if($bqr[fenlei]==3){$bfenlei="围棋";}
+else if($bqr[fenlei]==4){$bfenlei="飞行棋";}
+else if($bqr[fenlei]==5){$bfenlei="中国暗棋";}
+else if($bqr[fenlei]==6){$bfenlei="跳棋";}
+else if($bqr[fenlei]==7){$bfenlei="井字棋";}
+else if($bqr[fenlei]==8){$bfenlei="军棋";}
+else if($bqr[fenlei]==9){$bfenlei="斗兽棋";}
+else if($bqr[fenlei]==10){$bfenlei="将棋";}
+else if($bqr[fenlei]==11){$bfenlei="四子棋";}
+else if($bqr[fenlei]==12){$bfenlei="大富翁";}
+else if($bqr[fenlei]==13){$bfenlei="国际象棋";}
 ?>
-            <li> <em class="num num<?=$bqno?>"><?=$bqno?></em>
+            <li> <em class="num num<?=$bqno+4?>"><?=$bqno+4?></em>
               <div class="box1">
                 <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
                 <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-                <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank" class="flei"><?=$fenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+                <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
               </div>
               <div class="ksw"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
             </li>
@@ -362,39 +353,7 @@ else if($bqr[fenlei]==11){$fenlei="装扮";}
 }
 }
 ?>
-<?php
-$bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_danji order by newstime desc limit 3,2",6,24,0);
-if($ecms_bq_sql){
-while($bqr=$empire->fetch($ecms_bq_sql)){
-$bqsr=sys_ReturnEcmsLoopStext($bqr);
-$bqno++;
-?>
-<?php
-if($bqr[fenlei]==1){$fenlei="益智";}
-else if($bqr[fenlei]==2){$fenlei="动作";}
-else if($bqr[fenlei]==3){$fenlei="射击";}
-else if($bqr[fenlei]==4){$fenlei="休闲";}
-else if($bqr[fenlei]==5){$fenlei="敏捷";}
-else if($bqr[fenlei]==6){$fenlei="棋牌";}
-else if($bqr[fenlei]==7){$fenlei="经营";}
-else if($bqr[fenlei]==8){$fenlei="体育";}
-else if($bqr[fenlei]==9){$fenlei="策略";}
-else if($bqr[fenlei]==10){$fenlei="冒险";}
-else if($bqr[fenlei]==11){$fenlei="装扮";}
-?>
-            <li> <em class="num num"><?=$bqno+3?></em>
-              <div class="box1">
-                <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
-                <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-                <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank" class="flei"><?=$fenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
-              </div>
-              <div class="ksw"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
-            </li>
-<?php
-}
-}
-?>
+
           </ol>
         </div>
       </div>

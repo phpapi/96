@@ -21,7 +21,7 @@
   <div class="boxin clearfix">
     <div class="topl fl"> <span class="home"><a href="/">游戏首页</a></span>
       <ul>
-        <li>|<a href="http://test.yanwowenda.cn" target="_blank">手机版</a></li>
+        <li>|<a href="http://www.96kaifa.com" target="_blank">手机版</a></li>
         <li>|<a href="#" target="_blank">客户端下载</a></li>
         <li>|<a href="javascript:;" class="wx_show">关注微信</a>
           <div class="wx_hide"> <i class="angle"></i> <img src="/96kaifa/statics/home/images/wx_code.jpg" width="103" height="103"> <span>关注微信公众号</span> </div>
@@ -30,25 +30,25 @@
       </ul>
     </div>
     <div class="topr fr">
-      <div class="login_ok">
-	<!-- 登录 -->
-	<script>
-	document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
-	$(function(){
-	var dqurl = window.location.href;
-	$('#dquurl').val(dqurl);
-	})
-	</script>
-	<!-- 登录 end-->
-	  </div>
-      <a href="javascript:;" onClick="AddFavorite();">收藏本站</a> </div>
-  </div>
+        <div class="login_ok">
+        
+        <script>
+            document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+            $(function(){
+            var dqurl = window.location.href;
+            $('#dquurl').val(dqurl);
+            })
+            </script>
+        
+        </div>
+        <a href="javascript:;" onclick="AddFavorite();">收藏本站</a> </div>
 </div>
 <div class="header">
   <div class="header-top">
     <div class="in">
-      <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="仿3500游戏"></a></div>
+      <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="棋游之家"></a></div>
       <div class="search fr">
+       
         <form action="/search/game.php" method="get" target="_blank" name="searchTop">
           <div class="search_box tr">
             <input type="text" id="bdcsMain" name="key" class="sech_keyword" placeholder="请输入游戏名称">
@@ -62,153 +62,183 @@
     <div class="in">
       <ul>
         <li><a href="/" class="nav-cur"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qipailei/"><span class="menu-txt">棋牌</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/qilei/"><span class="menu-txt">棋类</span><span class="menu-line"></span></a></li>
-        <li><a class="" href="/game/"><span class="menu-txt">网游</span><span class="menu-line"></span></a></li>
-        <li><a class="" href="/danji/"><span class="menu-txt">小游戏</span><span class="menu-line"></span></a></li>
-        <li><a class="" href="/libao/"><span class="menu-txt">礼包</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qiyouchangshang/"><span class="menu-txt">棋游厂商</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
-        <li><a class="" href="/kaifu/"><span class="menu-txt">开服表</span><span class="menu-line"></span></a></li>
       </ul>
       <div class="grzx">
-	  	<script> document.write('<script src="/e/member/login/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
+	  	<script> document.write('<script src="./e/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
 	  </div>
     </div>
   </div>
 </div>
 <div class="my_pop">
-<!--弹出登录框开始-->
-  <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
+    <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
     <p class="pop-tit">账号登录</p>
-    <form action="/e/member/doaction.php" method="post" onSubmit="return userLogin()" id="form_login1" class="form-login">
-      <input type=hidden name=ecmsfrom value="" id="dquurl">
-      <input type=hidden name=enews value=login>
-      <input name="tobind" type="hidden" id="tobind" value="0">
-      <div class="modal-body">
-        <div class="error_font">*错误提示</div>
-        <div class="outer tr"> <i class="user"></i>
-          <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
-        </div>
-        <div class="outer tr"> <i class="pwd"></i>
-          <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
-        </div>
-        <div class="outer">
-          <div class="captcha" id="logcaptcha"></div>
-        </div>
-      </div>
-      <div class="modal-footer" style="margin-bottom:40px;">
-        <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
-      </div>
-    </form>
-  </div>
-<!--弹出登录框结束-->
-<!--弹出注册框开始-->
-<div class="register_pop" style="display: none;"> <span class="pop_close"></span>
-  <p class="pop-tit">会员注册</p>
-  <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
-	<input type="hidden" name="enews" value="register">
+    <form action="/e/member/doaction.php" method="post" onsubmit="return userLogin()" id="form_login1" class="form-login">
+    <input type="hidden" name="ecmsfrom" value="http://3500.96demo.com/" id="dquurl">
+    <input type="hidden" name="enews" value="login">
+    <input name="tobind" type="hidden" id="tobind" value="0">
     <div class="modal-body">
-      <div class="error_font">*错误提示</div>
-      <div class="outer tr"> <i class="user"></i>
-        <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
-      </div>
-      <div class="outer tr"> <i class="pwd"></i>
-        <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
-      </div>
-      <div class="outer tr"> <i class="pwd"></i>
-        <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
-      </div>
-      <div class="outer tr"> <i class="user"></i>
-        <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
-      </div>
-      <div class="outer">
-        <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
-        <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
+    <div class="error_font">*错误提示</div>
+     <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
+    </div>
+    <div class="outer">
+    <div class="captcha" id="logcaptcha"></div>
+    </div>
+    </div>
+    <div class="modal-footer" style="margin-bottom:40px;">
+    <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
+    </div>
+    </form>
+    </div>
+    
+    
+    <div class="register_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">会员注册</p>
+    <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
+    <input type="hidden" name="enews" value="register">
+    <div class="modal-body">
+    <div class="error_font">*错误提示</div>
+    <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
+    </div>
+    <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
+    </div>
+    <div class="outer">
+    <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
+    <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&amp;t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
     </div>
     <div class="modal-footer">
-      <p class="outer"> <input type='submit' name='Submit' class="orange_btn" id="btnRegister" value="立即注册"> </p>
-      <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
+    <p class="outer"> <input type="submit" name="Submit" class="orange_btn" id="btnRegister" value="立即注册"> </p>
+    <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
     </div>
-  </form>
-</div>
-<!--弹出注册框结束-->
-</div>
+    </form>
+    </div>
+    
+    </div>
 <div class="main">
 <div class="top_game htop_game">
   <div class="gamesMenu">
     <a href="http://news.52pk.com/zt/2017pd/" target="_blank" style="display:none;width:380px;height:57px;position:absolute; right:0; top:-11px;"><img src="http://www.52pk.com/style/1512files/images/pd2017-2.png"></a>
     <dl>
         
-        <dd class="nowshow"> <img src="/96kaifa/statics/home/images/2.jpg" alt=""> <span>热门推荐</span> </dd>
-        <dd class=""> <img src="/96kaifa/statics/home/images/3.jpg" alt=""> <span>手机游戏</span> </dd>
-        <dd class=""> <img src="/96kaifa/statics/home/images/4.jpg" alt=""> <span>网络游戏</span> </dd>
-        <dd class=""> <img src="/96kaifa/statics/home/images/5.jpg" alt=""> <span>网页游戏</span> </dd>
-        <dd class=""> <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3459690979,957173466&fm=26&gp=0.jpg" alt=""> <span>棋盘游戏</span> </dd>
-        <dd class=""> <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2697131486,2435653672&fm=27&gp=0.jpg" alt=""> <span>麻将游戏</span> </dd>
-        <dd class=""> <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=576761244,3143239532&fm=26&gp=0.jpg" alt=""> <span>象棋游戏</span> </dd>
-        <dd style="color:#ff9600; font-weight:bold;" class=""><img src="/96kaifa/statics/home/images/6.jpg" alt=""> <span>软件下载</span> </dd>
+        <dd class="nowshow"> <img src="/96kaifa/statics/home/images/1.png" alt=""> <span>棋牌推荐</span> </dd>
+        <dd class=""> <img src="/96kaifa/statics/home/images/2.png" alt=""> <span>牛牛</span> </dd>
+        <dd class=""> <img src="/96kaifa/statics/home/images/3.png" alt=""> <span>炸金花</span> </dd>
+        <dd class=""> <img src="/96kaifa/statics/home/images/4.png" alt=""> <span>21点</span> </dd>
+        <dd class=""> <img src="/96kaifa/statics/home/images/5.png" alt=""> <span>捕鱼</span> </dd>
+        <dd class=""> <img src="/96kaifa/statics/home/images/6.png" alt=""> <span>梭哈</span> </dd>
+        <dd class=""> <img src="/96kaifa/statics/home/images/7.png" alt=""> <span>德州扑克</span> </dd>
+         <dd class=""> <img src="/96kaifa/statics/home/images/8.png" alt=""> <span>牌九</span> </dd>
     </dl>
     <ul class="cc" style="display: block;">
         <li>
-            <cite>网游</cite>
-            <p>
-               <a href="http://wzry.52pk.com/" target="_blank">王者荣耀</a><a href="http://www.youxibao.com/cfm/" target="_blank">穿越火线：荒岛特训</a><a href="http://xin.52pk.com/sy_ku/zmq/" target="_blank">镇魔曲手游</a><a href="http://www.youxibao.com/ku/jl/" target="_blank">街篮</a><a href="http://www.52pk.com/games/mhhy/" target="_blank">梦幻花园</a><a href="http://xin.52pk.com/sy_ku/jzhsmyjsy/" target="x_blank">九州海上牧云记</a><a href="http://www.youxibao.com/ku/fgo/" target="_blank">FateGo</a><a href="http://xin.52pk.com/sy_ku/ws3sy/" target="_blank">神武3手游</a><a href="http://xin.52pk.com/sy_ku/wjsy/" target="_blank">无尽神域</a><a href="http://www.youxibao.com/ku/lzgsy/" target="_blank">龙之谷手游</a><a href="http://www.52pk.com/games/yys/" target="_blank">阴阳师手游</a><a href="http://xin.52pk.com/sy_ku/hyrz/" target="_blank">火影忍者</a><a href="http://xin.52pk.com/sy_ku/dhxy/" target="_blank">大话西游手游</a><a href="http://xin.52pk.com/sy_ku/wdsjsjb/" target="_blank">我的世界手机版</a><a href="http://xin.52pk.com/sy_ku/lscs/" target="_blank">炉石传说</a><a href="http://xin.52pk.com/sy_ku/qqdzz/" target="_blank">球球大作战</a><a href="http://xin.52pk.com/sy_ku/jx3/" target="_blank">剑网3：指尖江湖</a><a href="http://xin.52pk.com/sy_ku/mxsy/" target="_blank">梦想世界手游</a><a href="http://xin.52pk.com/sy_ku/kxxxl/" target="_blank">开心消消乐</a><a href="http://xin.52pk.com/sy_ku/cytus2/" target="_blank">音乐世界Cytus II</a><a href="http://xin.52pk.com/sy_ku/zjz2spr/" target="_blank">终结者2：审判日</a><a href="http://xin.52pk.com/sy_ku/zt2/" target="_blank">征途2手游</a><a href="http://xin.52pk.com/sy_ku/xyjlwys/" target="_blank">轩辕剑龙舞云山</a><a href="http://xin.52pk.com/sy_ku/ysyy/" target="_blank">云裳羽衣</a><a href="http://xin.52pk.com/sy_ku/zxsy/" target="_blank">诛仙手游</a><a href="http://xin.52pk.com/sy_ku/gydj/" target="_blank">光影对决</a><a href="http://xin.52pk.com/sy_ku/cjmlakp/" target="_blank">超级马里奥酷跑</a><a href="http://xin.52pk.com/sy_ku/zgjqxs/" target="_blank">中国惊奇先生</a> 
-
-            </p>
+ <a href="/qilei/13.html" target="_blank">欢乐围棋</a>
+ <a href="/qilei/3.html" target="_blank">腾讯欢乐五子棋</a>
+ <a href="/qilei/28.html" target="_blank">多乐中国象棋</a>
+ <a href="/qilei/1.html" target="_blank">天天象棋</a>
+ <a href="/qilei/22.html" target="_blank">彩色五子棋</a>
+ <a href="/qilei/2.html" target="_blank">天天军旗</a>
+ <a href="/qilei/4.html" target="_blank">飞行棋</a>
+ <a href="/qilei/6.html" target="_blank">中国象棋</a>
+ <a href="/qilei/9.html" target="_blank">途游五子棋</a>
+ <a href="/qilei/17.html" target="_blank">四国军棋</a>
+ <a href="/qilei/23.html" target="_blank">奥维五子棋</a>
+ <a href="/qilei/30.html" target="_blank">宽立象棋</a>
+ <a href="/qilei/7.html" target="_blank">腾讯围棋</a>
+ <a href="/qilei/10.html" target="_blank">丁丁中国象棋</a>
+ <a href="/qilei/24.html" target="_blank">斗兽棋</a>
+ <a href="/qilei/26.html" target="_blank">国际象棋</a>
+ <a href="/qilei/29.html" target="_blank">欢乐中国象棋</a>
+ <a href="/qilei/31.html" target="_blank">同城游象棋</a>
+ <a href="/qilei/5.html" target="_blank">将棋の王</a>
+ <a href="/qilei/8.html" target="_blank">军棋</a>
+ <a href="/qilei/15.html" target="_blank">黑白五子棋</a>
+ <a href="/qilei/18.html" target="_blank">高级五子棋</a>
+ <a href="/qilei/12.html" target="_blank">天天五子棋</a>
+ <a href="/qilei/21.html" target="_blank">超难五子棋</a>
+ <a href="/qilei/33.html" target="_blank">忘忧围棋</a>
+ <a href="/qilei/16.html" target="_blank">水晶跳棋</a>
+ <a href="/qilei/20.html" target="_blank">将棋</a>
+ <a href="/qilei/32.html" target="_blank">途游中国象棋</a>
+ <a href="/qilei/11.html" target="_blank">五子棋</a>
+ <a href="/qilei/14.html" target="_blank">双人五子棋</a>
         </li>
-        <li>
-            <cite class="shouyou">手游</cite>
-            <p>
-                <a href="http://cf.52pk.com/cfm/" target="_blank">穿越火线：荒岛特训</a><a href="http://wzry.52pk.com/" target="_blank" style=" color:#f8656c;" class="hong">王者荣耀</a><a href="http://xin.52pk.com/sy_ku/jdqscjzc/" target="_blank">绝地求生：刺激战场</a><a href="http://xin.52pk.com/sy_ku/dwrg/index.shtml" target="_blank">第五人格</a><a href="http://xin.52pk.com/sy_ku/jxsj2sy/" target="_blank">剑侠世界2</a><a href="http://xin.52pk.com/sy_ku/zyhx/" target="_blank">自由幻想</a><a href="http://xin.52pk.com/sy_ku/ysyy/" target="_blank">云裳羽衣</a><a href="http://www.youxibao.com/ku/fgo/" target="_blank">FateGo</a><a href="http://xin.52pk.com/sy_ku/frxy/" target="_blank">非人学院</a><a href="http://xin.52pk.com/sy_ku/dpcqddzl/" target="_blank">斗破苍穹</a><a href="http://xin.52pk.com/sy_ku/skzqsy/" target="_blank">实况足球</a> 
-            </p>
-        </li>
-        <li>
-            <cite class="webyou">页游</cite>
-            <p>
-                <a href="http://web.52pk.com/yhmy/" target="_blank">魔域永恒</a><a href="http://web.52pk.com/jsxw/" target="_blank">绝世仙王</a><a href="http://web.52pk.com/lsqy/" target="_blank" class="huang">龙神契约</a><a href="http://web.52pk.com/hyrz/" target="_blank">火影忍者ol</a><a href="http://web.52pk.com/cqby/" target="_blank">传奇霸业</a><a href="http://web.52pk.com/taiji2/" target="_blank">太极崛起</a><a href="http://web.52pk.com/bsw/" target="_blank">剑灵洪门崛起</a><a href="http://web.52pk.com/dtszj/" target="_blank" style=" color:#f8656c;" class="hong">大天使之剑</a><a href="http://web.52pk.com/xzcq/" target="_blank">小志传奇</a><a href="http://web.52pk.com/hlw/" target="_blank">葫芦娃</a><a href="http://web.52pk.com/lycq/" target="_blank">蓝月传奇</a><a href="http://web.52pk.com/sdyxz/" target="_blank">新射雕英雄传</a>
-            </p>
-        </li>
-    </ul>
-    <ul class="column-sort cc" style="display: none;">
-        <li>
-            <a href="http://wzry.52pk.com/" target="_blank">王者荣耀</a><a href="http://www.youxibao.com/cfm/" target="_blank">穿越火线：荒岛特训</a><a href="http://xin.52pk.com/sy_ku/zmq/" target="_blank">镇魔曲手游</a><a href="http://www.youxibao.com/ku/jl/" target="_blank">街篮</a><a href="http://www.52pk.com/games/mhhy/" target="_blank">梦幻花园</a><a href="http://xin.52pk.com/sy_ku/jzhsmyjsy/" target="x_blank">九州海上牧云记</a><a href="http://www.youxibao.com/ku/fgo/" target="_blank">FateGo</a><a href="http://xin.52pk.com/sy_ku/ws3sy/" target="_blank">神武3手游</a><a href="http://xin.52pk.com/sy_ku/wjsy/" target="_blank">无尽神域</a><a href="http://www.youxibao.com/ku/lzgsy/" target="_blank">龙之谷手游</a><a href="http://www.52pk.com/games/yys/" target="_blank">阴阳师手游</a><a href="http://xin.52pk.com/sy_ku/hyrz/" target="_blank">火影忍者</a><a href="http://xin.52pk.com/sy_ku/dhxy/" target="_blank">大话西游手游</a><a href="http://xin.52pk.com/sy_ku/wdsjsjb/" target="_blank">我的世界手机版</a><a href="http://xin.52pk.com/sy_ku/lscs/" target="_blank">炉石传说</a><a href="http://xin.52pk.com/sy_ku/qqdzz/" target="_blank">球球大作战</a><a href="http://xin.52pk.com/sy_ku/jx3/" target="_blank">剑网3：指尖江湖</a><a href="http://xin.52pk.com/sy_ku/mxsy/" target="_blank">梦想世界手游</a><a href="http://xin.52pk.com/sy_ku/kxxxl/" target="_blank">开心消消乐</a><a href="http://xin.52pk.com/sy_ku/cytus2/" target="_blank">音乐世界Cytus II</a><a href="http://xin.52pk.com/sy_ku/zjz2spr/" target="_blank">终结者2：审判日</a><a href="http://xin.52pk.com/sy_ku/zt2/" target="_blank">征途2手游</a><a href="http://xin.52pk.com/sy_ku/xyjlwys/" target="_blank">轩辕剑龙舞云山</a><a href="http://xin.52pk.com/sy_ku/ysyy/" target="_blank">云裳羽衣</a><a href="http://xin.52pk.com/sy_ku/zxsy/" target="_blank">诛仙手游</a><a href="http://xin.52pk.com/sy_ku/gydj/" target="_blank">光影对决</a><a href="http://xin.52pk.com/sy_ku/cjmlakp/" target="_blank">超级马里奥酷跑</a><a href="http://xin.52pk.com/sy_ku/zgjqxs/" target="_blank">中国惊奇先生</a><a href="http://xin.52pk.com/sy_ku/jdqscjzc/" target="_blank">绝地求生：刺激战场</a><a href="http://xin.52pk.com/sy_ku/qjmujx/" target="_blank">奇迹MU：觉醒</a><a href="http://xin.52pk.com/sy_ku/jdqsqjcj/" target="_blank">绝地求生：全军出击</a><a href="http://xin.52pk.com/sy_ku/skygy/" target="_blank">Sky光遇</a><a href="http://xin.52pk.com/sy_ku/fknsg2/" target="_blank">放开那三国2</a><a href="http://xin.52pk.com/sy_ku/cqbysy/" target="_blank">传奇霸业手游</a><a href="http://xin.52pk.com/sy_ku/shumen/" target="_blank">蜀门手游</a><a href="http://xin.52pk.com/sy_ku/tksjsjz/" target="_blank">坦克世界闪击战</a><a href="http://xin.52pk.com/sy_ku/xyzhxz/" target="_blank">圣斗士星矢-小宇宙幻想传</a><a href="http://xin.52pk.com/sy_ku/jnbg2/" target="_blank">纪念碑谷2</a><a href="http://xin.52pk.com/sy_ku/frxy/" target="_blank">非人学园</a><a href="http://xin.52pk.com/sy_ku/blhx/" target="_blank">碧蓝航线</a><a href="http://xin.52pk.com/sy_ku/wd/" target="_blank">问道手游</a><a href="http://xin.52pk.com/sy_ku/mfjsml/" target="_blank">魔法禁书目录</a><a href="http://xin.52pk.com/sy_ku/xmct/" target="_blank">星盟冲突</a><a href="http://xin.52pk.com/sy_ku/bsymg/" target="_blank">不思议迷宫</a><a href="http://xin.52pk.com/sy_ku/qqfc/" target="_blank">QQ飞车手游</a><a href="http://xin.52pk.com/sy_ku/fjlrs/" target="_blank">饭局狼人杀</a><a href="http://xin.52pk.com/sy_ku/hhwjz/" target="_blank">航海王激战</a><a href="http://xin.52pk.com/sy_ku/xmxy/" target="_blank">星梦学院</a><a href="http://xin.52pk.com/sy_ku/snkfq/" target="_blank">少女咖啡枪</a><a href="http://xin.52pk.com/sy_ku/fknsg/" target="_blank">放开那三国</a><a href="http://xin.52pk.com/sy_ku/cqsjsy/" target="_blank">传奇世界手游</a><a href="http://xin.52pk.com/sy_ku/xjcsshyhda/" target="_blank">仙境传说RO：守护永恒的爱</a><a href="http://xin.52pk.com/sy_ku/mfsnxy/" target="_blank">魔法少女小圆</a><a href="http://xin.52pk.com/sy_ku/jyzj/" target="_blank">九阴</a>
-        </li>
-    </ul>
-    <ul class="column-sort cc" style="display: none;">
-        <li>
-            <a href="http://ow.52pk.com/" target="_blank">守望先锋</a><a href="http://lscs.52pk.com/" target="_blank">炉石传说</a><a href="http://wow.52pk.com/" target="_blank">魔兽世界</a><a href="http://hots.52pk.com/" target="_blank">风暴英雄</a><a href="http://jx3.52pk.com/" target="_blank">剑网3</a><a href="http://bns.52pk.com/" target="_blank">剑灵</a><a href="http://dnf.52pk.com/" target="_blank">DNF</a><a href="http://wuxia.52pk.com/" target="_blank">天涯明月刀</a><a href="http://cf.52pk.com/" target="_blank" style="color:#f8656c;" class="hong">穿越火线</a><a href="http://mxd2.52pk.com/" target="_blank">冒险岛2</a><a href="http://gw2.52pk.com/" target="_blank">激战2</a><a href="http://nz.52pk.com/" target="_blank">逆战</a><a href="http://codol.52pk.com/" target="_blank">使命召唤ol</a><a href="http://csgo.52pk.com/" target="_blank">CSGO</a><a href="http://gjol.52pk.com/" target="_blank">古剑奇谭ol</a><a href="http://daihao0.52pk.com/" target="_blank">灵山奇缘</a><a href="http://xin.52pk.com/game/index_11036.shtml" target="_blank">宝藏世界</a><a href="http://xin.52pk.com/game/index_11006.shtml" target="_blank">虚幻争霸</a><a href="http://xin.52pk.com/game/index_11012.shtml" target="_blank" class="huang">逆水寒</a><a href="http://xin.52pk.com/game/index_10944.shtml" target="_blank">我的世界</a><a href="http://xin.52pk.com/game/index_11040.shtml" target="_blank">火箭联盟</a><a href="http://xin.52pk.com/game/index_10924.shtml" target="_blank">龙魂时刻</a><a href="http://tianyu.52pk.com/" target="_blank">天谕</a><a href="http://shenwu.52pk.com/" target="_blank">神武2</a><a href="http://poe.52pk.com/" target="_blank">流放之路</a><a href="http://xin.52pk.com/game/index_10288.shtml" target="_blank">救世之树</a><a href="http://xin.52pk.com/game/index_10956.shtml" target="_blank">枪火游侠</a><a href="http://xin.52pk.com/game/index_10788.shtml" target="_blank">战意</a><a href="http://black.52pk.com/" target="_blank">黑色沙漠</a><a href="http://xin.52pk.com/game/index_10818.shtml" target="_blank">失落的方舟</a><a href="http://xin.52pk.com/game/index_16063.shtml" target="_blank">蛮荒搜神记</a><a href="http://tfol.52pk.com/" target="_blank">变形金刚</a><a href="http://nfsol.52pk.com/" target="_blank">极品飞车ol</a><a href="http://tksj.52pk.com/" target="_blank">坦克世界</a><a href="http://xin.52pk.com/game/index_10890.shtml" target="_blank">勇者斗恶龙X</a><a href="http://zjsj.52pk.com/" target="_blank">战舰世界</a><a href="http://cqyh.52pk.com/" target="_blank">传奇永恒</a><a href="http://xin.52pk.com/game/index_10824.shtml" target="_blank">天衍录</a><a href="http://xin.52pk.com/game/index_10996.shtml" target="_blank">自由禁区</a><a href="http://xin.52pk.com/game/index_3434.shtml" target="_blank">黑暗与光明</a><a href="http://xin.52pk.com/game/index_11042.shtml" target="_blank">百变球球</a><a href="http://xin.52pk.com/game/index_11197.shtml" target="_blank">神武3</a><a href="http://xin.52pk.com/game/index_11207.shtml" target="_blank">传送门骑士</a><a href="http://xin.52pk.com/game/index_2506.shtml" target="_blank">镇魔曲</a><a href="http://xin.52pk.com/game/index_5302.shtml" target="_blank">最终幻想14</a><a href="http://fifaol.52pk.com/" target="_blank">FIFA online3</a><a href="http://xin.52pk.com/game/index_11002.shtml" target="_blank">幻想全明星</a><a href="http://xin.52pk.com/game/index_5176.shtml" target="_blank">新倩女幽魂</a><a href="http://xin.52pk.com/game/index_11010.shtml" target="_blank">方舟生存进化</a><a href="http://dota2.52pk.com/" target="_blank">DOTA2</a><a href="http://xxsj2.52pk.com/" target="_blank">仙侠世界2</a><a href="http://ywz.52pk.com/" target="_blank">影武者</a><a href="http://pubg.52pk.com/" target="_blank" style="color:#f8656c;">绝地求生</a><a href="http://xin.52pk.com/game/index_11083.shtml" target="_blank">九阴真经2</a><a href="http://xin.52pk.com/game/index_11220.shtml" target="_blank">无限法则</a><a href="http://xin.52pk.com/game/index_10918.shtml" target="_blank">永恒都市3</a><a href="http://lol.52pk.com/" target="_blank" style="color:#f8656c;">英雄联盟</a><a href="http://omd.52pk.com/" target="_blank">兽人必须死</a><a href="http://qj.52pk.com/" target="_blank">枪界</a><a href="http://xin.52pk.com/game/index_11138.shtml" target="_blank">阿佩尔物语</a><a href="http://xin.52pk.com/game/index_11108.shtml" target="_blank">巫师之昆特牌</a><a href="http://xin.52pk.com/game/index_11086.shtml" target="_blank">泰亚史诗</a><a href="http://xin.52pk.com/game/index_11085.shtml" target="_blank">天之禁2</a><a href="http://xin.52pk.com/game/index_11014.shtml" target="_blank">秘境对决</a><a href="http://xin.52pk.com/game/index_10966.shtml" target="_blank">装甲战争</a><a href="http://xin.52pk.com/game/index_10838.shtml" target="_blank">封印者</a><a href="http://mh.52pk.com/" target="_blank">洛奇英雄传</a><a href="http://xin.52pk.com/game/index_14471.shtml" target="_blank">天下3</a><a href="http://xin.52pk.com/game/index_10268.shtml" target="_blank">虎豹骑</a><a href="http://xin.52pk.com/game/index_10844.shtml" target="_blank">第十域：英雄起源</a><a href="http://xin.52pk.com/game/index_4212.shtml" target="_blank">反恐精英OL</a><a href="http://xin.52pk.com/game/index_4468.shtml" target="_blank">龙之谷2</a><a href="http://nba2kol.52pk.com/" target="_blank">NBA2K Online</a>
-        </li>
-    </ul>
-    <ul class="column-sort cc" style="display: none;">
-        <li>
-            <a href="http://wzry.52pk.com/" target="_blank">王者荣耀</a><a href="http://www.youxibao.com/cfm/" target="_blank">穿越火线：荒岛特训</a><a href="http://xin.52pk.com/sy_ku/zmq/" target="_blank">镇魔曲手游</a><a href="http://www.youxibao.com/ku/jl/" target="_blank">街篮</a><a href="http://www.52pk.com/games/mhhy/" target="_blank">梦幻花园</a><a href="http://xin.52pk.com/sy_ku/jzhsmyjsy/" target="x_blank">九州海上牧云记</a><a href="http://www.youxibao.com/ku/fgo/" target="_blank">FateGo</a><a href="http://xin.52pk.com/sy_ku/ws3sy/" target="_blank">神武3手游</a><a href="http://xin.52pk.com/sy_ku/wjsy/" target="_blank">无尽神域</a><a href="http://www.youxibao.com/ku/lzgsy/" target="_blank">龙之谷手游</a><a href="http://www.52pk.com/games/yys/" target="_blank">阴阳师手游</a><a href="http://xin.52pk.com/sy_ku/hyrz/" target="_blank">火影忍者</a><a href="http://xin.52pk.com/sy_ku/dhxy/" target="_blank">大话西游手游</a><a href="http://xin.52pk.com/sy_ku/wdsjsjb/" target="_blank">我的世界手机版</a><a href="http://xin.52pk.com/sy_ku/lscs/" target="_blank">炉石传说</a><a href="http://xin.52pk.com/sy_ku/qqdzz/" target="_blank">球球大作战</a><a href="http://xin.52pk.com/sy_ku/jx3/" target="_blank">剑网3：指尖江湖</a><a href="http://xin.52pk.com/sy_ku/mxsy/" target="_blank">梦想世界手游</a><a href="http://xin.52pk.com/sy_ku/kxxxl/" target="_blank">开心消消乐</a><a href="http://xin.52pk.com/sy_ku/cytus2/" target="_blank">音乐世界Cytus II</a><a href="http://xin.52pk.com/sy_ku/zjz2spr/" target="_blank">终结者2：审判日</a><a href="http://xin.52pk.com/sy_ku/zt2/" target="_blank">征途2手游</a><a href="http://xin.52pk.com/sy_ku/xyjlwys/" target="_blank">轩辕剑龙舞云山</a><a href="http://xin.52pk.com/sy_ku/ysyy/" target="_blank">云裳羽衣</a><a href="http://xin.52pk.com/sy_ku/zxsy/" target="_blank">诛仙手游</a><a href="http://xin.52pk.com/sy_ku/gydj/" target="_blank">光影对决</a><a href="http://xin.52pk.com/sy_ku/cjmlakp/" target="_blank">超级马里奥酷跑</a><a href="http://xin.52pk.com/sy_ku/zgjqxs/" target="_blank">中国惊奇先生</a> 
-<li><a href="http://web.52pk.com/nh/" title="怒魂" target="_blank">怒魂</a><a target="_blank" href="http://web.52pk.com/qm/" title="求魔">求魔</a><a target="_blank" href="http://web.52pk.com/sha/" title="刺沙">刺沙</a><a target="_blank" href="http://web.52pk.com/xyj/" title="轩辕剑">轩辕剑</a><a target="_blank" href="http://web.52pk.com/hlw/" title="葫芦娃">葫芦娃</a><a target="_blank" href="http://web.52pk.com/jyjx/" title="九阴绝学">九阴绝学</a><a target="_blank" href="http://web.52pk.com/zzxy/" title="主宰西游">主宰西游</a><a target="_blank" href="http://web.52pk.com/bzzr/" title="霸者之刃">霸者之刃</a><a target="_blank" href="http://web.52pk.com/zlcq/" title="斩龙传奇">斩龙传奇</a><a target="_blank" href="http://web.52pk.com/cqss/" title="传奇盛世">传奇盛世</a><a href="http://web.52pk.com/cycs2/" title="赤月传说2" target="_blank">赤月传说2</a><a href="http://web.52pk.com/hyrz/" title="火影忍者ol" target="_blank">火影忍者ol</a><a target="_blank" href="http://web.52pk.com/cqz/" title="特工皇妃楚乔传">特工皇妃楚乔传</a><a target="_blank" href="http://web.52pk.com/dhhsd5/" title="大航海时代5">大航海时代5</a></li>
-
-<li><a target="_blank" href="http://web.52pk.com/tj/" title="天局">天局</a>|<a target="_blank" href="http://web.52pk.com/qh/" title="枪魂">枪魂</a>|<a target="_blank" href="http://web.52pk.com/js/" title="将神">将神</a>|<a target="_blank" href="http://web.52pk.com/lyb/" title="琅琊榜">琅琊榜</a>|<a target="_blank" href="http://web.52pk.com/touch/" title="Touch">Touch</a>|<a target="_blank" href="http://web.52pk.com/lkwg/" title="洛克王国">洛克王国</a>|<a target="_blank" href="http://web.52pk.com/zshh/" title="诸神黄昏">诸神黄昏</a>|<a target="_blank" href="http://web.52pk.com/wssb/" title="无上神兵">无上神兵</a>|<a target="_blank" href="http://web.52pk.com/tqsg/" title="铁骑三国">铁骑三国</a>|<a target="_blank" href="http://web.52pk.com/fbdl/" title="风暴大陆">风暴大陆</a>|<a target="_blank" href="http://web.52pk.com/gdlr2/" title="格斗猎人2">格斗猎人2</a>|<a target="_blank" href="http://web.52pk.com/lycq/" title="蓝月传奇">蓝月传奇</a>|<a target="_blank" href="http://web.52pk.com/wszzl/" title="武神赵子龙">武神赵子龙</a>|<a target="_blank" href="http://web.52pk.com/xm/" title="信喵之野望">信喵之野望</a>|<a target="_blank" href="http://web.52pk.com/blswz/" title="部落守卫战">部落守卫战</a> |<a target="_blank" href="http://web.52pk.com/abd/" title="奥比岛">奥比岛</a></li>
-
-
         
     </ul>
     <ul class="column-sort cc" style="display: none;">
         <li>
-            <a href="http://www.52pk.com/soft/201803/95185.shtml" target="_blank">有道词典</a><a href="http://www.52pk.com/soft/201803/95720.shtml" target="_blank" class="h_games">WPS2018</a><a href="http://www.52pk.com/soft/201803/95140.shtml" target="_blank" class="h_games">360安全卫士</a><a href="http://www.52pk.com/soft/201803/95230.shtml" target="_blank">腾讯qq2018</a><a href="http://www.52pk.com/soft/201803/95142.shtml" target="_blank">百度网盘</a><a href="http://www.52pk.com/soft/201803/95131.shtml" target="_blank">腾讯企点</a><a href="http://www.52pk.com/soft/201803/95206.shtml" target="_blank">暴风影音</a><a href="http://www.52pk.com/soft/201803/95732.shtml" target="_blank" class="h_games">谷歌浏览器</a><a href="http://www.52pk.com/soft/201803/95190.shtml" target="_blank">wifi共享大师</a><a href="http://www.52pk.com/soft/201803/95200.shtml" target="_blank" class="h_games">winrar免费版</a><a href="http://www.52pk.com/soft/201803/95719.shtml" target="_blank">风行视频</a><a href="http://www.52pk.com/soft/201803/95174.shtml" target="_blank">苹果恢复大师</a><a href="http://www.52pk.com/soft/201803/95462.shtml" target="_blank">火绒安全</a><a href="http://www.52pk.com/soft/201803/95233.shtml" target="_blank">酷狗音乐</a><a href="http://down.52pk.com/xiazai/131.shtml" target="_blank" class="h_games">虚拟光驱下载</a><a href="http://www.52pk.com/soft/201803/95743.shtml" target="_blank">网易加速器</a><a href="http://www.52pk.com/soft/201803/95660.shtml" target="_blank">网易云音乐</a><a href="http://www.52pk.com/soft/201803/95473.shtml" target="_blank">驱动精灵万能网卡版</a><a href="http://www.52pk.com/soft/201803/95766.shtml" target="_blank">猎豹浏览器</a><a href="http://www.52pk.com/soft/201803/95164.shtml" target="_blank">格式工厂</a><a href="http://www.52pk.com/soft/201803/95163.shtml" target="_blank" class="h_games">腾讯桌面工具</a><a href="http://www.52pk.com/soft/201803/95147.shtml" target="_blank">爱思苹果助手</a><a href="http://www.52pk.com/soft/201803/95195.shtml" target="_blank" class="h_games">全民k歌</a><a href="http://www.52pk.com/soft/201803/95773.shtml" target="_blank">搜狗浏览器</a><a href="http://www.52pk.com/soft/201803/95170.shtml" target="_blank">影音先锋播放器</a><a href="http://www.52pk.com/soft/201803/95265.shtml" target="_blank">斗鱼直播平台</a><a href="http://www.52pk.com/soft/201803/95134.shtml" target="_blank">安卓模拟器</a><a href="http://www.52pk.com/soft/201803/95665.shtml" target="_blank">360快剪辑</a><a href="http://www.52pk.com/soft/201803/95191.shtml" target="_blank">高清视频录制软件</a><a href="http://www.52pk.com/soft/201803/95172.shtml" target="_blank">psd文件修复软件</a><a href="http://www.52pk.com/soft/201705/71705.shtml" target="_blank">天意装机软件工具箱</a><a href="http://www.52pk.com/soft/201803/95797.shtml" target="_blank">暴风影音v5.74官方版</a><a href="http://www.52pk.com/soft/201803/95788.shtml" target="_blank">微信电脑版</a><a href="http://www.52pk.com/soft/201803/95785.shtml" target="_blank">foxmail邮箱</a><a href="http://www.52pk.com/soft/201803/95138.shtml" target="_blank">小皮助手模拟器</a><a href="http://www.52pk.com/soft/201803/95137.shtml" target="_blank">金山卫士2018版</a><a href="http://www.52pk.com/soft/201803/95133.shtml" target="_blank">光影魔术手2018版</a><a href="http://www.52pk.com/soft/201803/95176.shtml" target="_blank">熊猫加速器</a><a href="http://www.52pk.com/soft/201803/95150.shtml" target="_blank">火萤视频桌面</a><a href="http://www.52pk.com/soft/201803/95208.shtml" target="_blank">光盘数据恢复工具</a><a href="http://www.52pk.com/soft/201803/95204.shtml" target="_blank">虚拟光驱绿色版DAEMON</a><a href="http://down.52pk.com/xiazai/821.shtml" target="_blank">360安全卫士下载</a>
+ <a href="/puke/65.html" target="_blank">欢乐斗牛</a>
+ <a href="/puke/81.html" target="_blank">旺财斗牛牛</a>
+ <a href="/puke/66.html" target="_blank">百人斗牛牛</a>
+ <a href="/puke/70.html" target="_blank">欢乐斗牛 (茶苑版)</a>
+ <a href="/puke/67.html" target="_blank">疯狂斗牛 </a>
+ <a href="/puke/68.html" target="_blank">好友斗牛</a>
+ <a href="/puke/74.html" target="_blank">经典牛牛</a>
+ <a href="/puke/72.html" target="_blank">欢乐牛牛 </a>
+ <a href="/puke/76.html" target="_blank">全民斗牛</a>
+        </li>
+    </ul>
+    <ul class="column-sort cc" style="display: none;">
+        <li>
+ <a href="/puke/63.html" target="_blank">炸金花</a>
+ <a href="/puke/24.html" target="_blank">至尊炸金花</a>
+        </li>
+    </ul>
+    <ul class="column-sort cc" style="display: none;">
+        <li>
+ <a href="/puke/26.html" target="_blank">老友21点</a>
+ <a href="/puke/99.html" target="_blank">3对一黑杰克21点</a>
+ <a href="/puke/116.html" target="_blank">热辣21点</a>
+ <a href="/puke/102.html" target="_blank">赌城21点</a>
+ <a href="/puke/111.html" target="_blank">爵士21点</a>
+ <a href="/puke/119.html" target="_blank">橡皮泥21点</a>
+ <a href="/puke/123.html" target="_blank">另类21点</a>
+ <a href="/puke/104.html" target="_blank">黑杰克21点</a>
+ <a href="/puke/107.html" target="_blank">经典21点</a>
+ <a href="/puke/109.html" target="_blank">决胜21点</a>
+ <a href="/puke/113.html" target="_blank">米尼21点</a>
+        </li>
+        
+    </ul>
+    <ul class="column-sort cc" style="display: none;">
+       <li>
         </li>
     </ul>
    
     <ul class="column-sort cc" style="display: none;">
         <li>
-            <a href="http://ow.52pk.com/" target="_blank">守望先锋</a><a href="http://lscs.52pk.com/" target="_blank">炉石传说</a><a href="http://wow.52pk.com/" target="_blank">魔兽世界</a><a href="http://hots.52pk.com/" target="_blank">风暴英雄</a><a href="http://jx3.52pk.com/" target="_blank">剑网3</a><a href="http://bns.52pk.com/" target="_blank">剑灵</a><a href="http://dnf.52pk.com/" target="_blank">DNF</a><a href="http://wuxia.52pk.com/" target="_blank">天涯明月刀</a><a href="http://cf.52pk.com/" target="_blank" style="color:#f8656c;" class="hong">穿越火线</a><a href="http://mxd2.52pk.com/" target="_blank">冒险岛2</a><a href="http://gw2.52pk.com/" target="_blank">激战2</a><a href="http://nz.52pk.com/" target="_blank">逆战</a><a href="http://codol.52pk.com/" target="_blank">使命召唤ol</a><a href="http://csgo.52pk.com/" target="_blank">CSGO</a><a href="http://gjol.52pk.com/" target="_blank">古剑奇谭ol</a><a href="http://daihao0.52pk.com/" target="_blank">灵山奇缘</a><a href="http://xin.52pk.com/game/index_11036.shtml" target="_blank">宝藏世界</a><a href="http://xin.52pk.com/game/index_11006.shtml" target="_blank">虚幻争霸</a><a href="http://xin.52pk.com/game/index_11012.shtml" target="_blank" class="huang">逆水寒</a><a href="http://xin.52pk.com/game/index_10944.shtml" target="_blank">我的世界</a><a href="http://xin.52pk.com/game/index_11040.shtml" target="_blank">火箭联盟</a><a href="http://xin.52pk.com/game/index_10924.shtml" target="_blank">龙魂时刻</a><a href="http://tianyu.52pk.com/" target="_blank">天谕</a><a href="http://shenwu.52pk.com/" target="_blank">神武2</a><a href="http://poe.52pk.com/" target="_blank">流放之路</a><a href="http://xin.52pk.com/game/index_10288.shtml" target="_blank">救世之树</a><a href="http://xin.52pk.com/game/index_10956.shtml" target="_blank">枪火游侠</a><a href="http://xin.52pk.com/game/index_10788.shtml" target="_blank">战意</a><a href="http://black.52pk.com/" target="_blank">黑色沙漠</a><a href="http://xin.52pk.com/game/index_10818.shtml" target="_blank">失落的方舟</a><a href="http://xin.52pk.com/game/index_16063.shtml" target="_blank">蛮荒搜神记</a><a href="http://tfol.52pk.com/" target="_blank">变形金刚</a><a href="http://nfsol.52pk.com/" target="_blank">极品飞车ol</a><a href="http://tksj.52pk.com/" target="_blank">坦克世界</a><a href="http://xin.52pk.com/game/index_10890.shtml" target="_blank">勇者斗恶龙X</a><a href="http://zjsj.52pk.com/" target="_blank">战舰世界</a><a href="http://cqyh.52pk.com/" target="_blank">传奇永恒</a><a href="http://xin.52pk.com/game/index_10824.shtml" target="_blank">天衍录</a><a href="http://xin.52pk.com/game/index_10996.shtml" target="_blank">自由禁区</a><a href="http://xin.52pk.com/game/index_3434.shtml" target="_blank">黑暗与光明</a><a href="http://xin.52pk.com/game/index_11042.shtml" target="_blank">百变球球</a><a href="http://xin.52pk.com/game/index_11197.shtml" target="_blank">神武3</a><a href="http://xin.52pk.com/game/index_11207.shtml" target="_blank">传送门骑士</a><a href="http://xin.52pk.com/game/index_2506.shtml" target="_blank">镇魔曲</a><a href="http://xin.52pk.com/game/index_5302.shtml" target="_blank">最终幻想14</a><a href="http://fifaol.52pk.com/" target="_blank">FIFA online3</a><a href="http://xin.52pk.com/game/index_11002.shtml" target="_blank">幻想全明星</a><a href="http://xin.52pk.com/game/index_5176.shtml" target="_blank">新倩女幽魂</a><a href="http://xin.52pk.com/game/index_11010.shtml" target="_blank">方舟生存进化</a><a href="http://dota2.52pk.com/" target="_blank">DOTA2</a><a href="http://xxsj2.52pk.com/" target="_blank">仙侠世界2</a><a href="http://ywz.52pk.com/" target="_blank">影武者</a><a href="http://pubg.52pk.com/" target="_blank" style="color:#f8656c;">绝地求生</a><a href="http://xin.52pk.com/game/index_11083.shtml" target="_blank">九阴真经2</a><a href="http://xin.52pk.com/game/index_11220.shtml" target="_blank">无限法则</a><a href="http://xin.52pk.com/game/index_10918.shtml" target="_blank">永恒都市3</a><a href="http://lol.52pk.com/" target="_blank" style="color:#f8656c;">英雄联盟</a><a href="http://omd.52pk.com/" target="_blank">兽人必须死</a><a href="http://qj.52pk.com/" target="_blank">枪界</a><a href="http://xin.52pk.com/game/index_11138.shtml" target="_blank">阿佩尔物语</a><a href="http://xin.52pk.com/game/index_11108.shtml" target="_blank">巫师之昆特牌</a><a href="http://xin.52pk.com/game/index_11086.shtml" target="_blank">泰亚史诗</a><a href="http://xin.52pk.com/game/index_11085.shtml" target="_blank">天之禁2</a><a href="http://xin.52pk.com/game/index_11014.shtml" target="_blank">秘境对决</a><a href="http://xin.52pk.com/game/index_10966.shtml" target="_blank">装甲战争</a><a href="http://xin.52pk.com/game/index_10838.shtml" target="_blank">封印者</a><a href="http://mh.52pk.com/" target="_blank">洛奇英雄传</a><a href="http://xin.52pk.com/game/index_14471.shtml" target="_blank">天下3</a><a href="http://xin.52pk.com/game/index_10268.shtml" target="_blank">虎豹骑</a><a href="http://xin.52pk.com/game/index_10844.shtml" target="_blank">第十域：英雄起源</a><a href="http://xin.52pk.com/game/index_4212.shtml" target="_blank">反恐精英OL</a><a href="http://xin.52pk.com/game/index_4468.shtml" target="_blank">龙之谷2</a><a href="http://nba2kol.52pk.com/" target="_blank">NBA2K Online</a>
+ <a href="/puke/34.html" target="_blank">梭哈</a>
         </li>
     </ul>
     <ul class="column-sort cc" style="display: none;">
         <li>
-            <a href="http://www.52pk.com/soft/201803/95185.shtml" target="_blank">有道词典</a><a href="http://www.52pk.com/soft/201803/95720.shtml" target="_blank" class="h_games">WPS2018</a><a href="http://www.52pk.com/soft/201803/95140.shtml" target="_blank" class="h_games">360安全卫士</a><a href="http://www.52pk.com/soft/201803/95230.shtml" target="_blank">腾讯qq2018</a><a href="http://www.52pk.com/soft/201803/95142.shtml" target="_blank">百度网盘</a><a href="http://www.52pk.com/soft/201803/95131.shtml" target="_blank">腾讯企点</a><a href="http://www.52pk.com/soft/201803/95206.shtml" target="_blank">暴风影音</a><a href="http://www.52pk.com/soft/201803/95732.shtml" target="_blank" class="h_games">谷歌浏览器</a><a href="http://www.52pk.com/soft/201803/95190.shtml" target="_blank">wifi共享大师</a><a href="http://www.52pk.com/soft/201803/95200.shtml" target="_blank" class="h_games">winrar免费版</a><a href="http://www.52pk.com/soft/201803/95719.shtml" target="_blank">风行视频</a><a href="http://www.52pk.com/soft/201803/95174.shtml" target="_blank">苹果恢复大师</a><a href="http://www.52pk.com/soft/201803/95462.shtml" target="_blank">火绒安全</a><a href="http://www.52pk.com/soft/201803/95233.shtml" target="_blank">酷狗音乐</a><a href="http://down.52pk.com/xiazai/131.shtml" target="_blank" class="h_games">虚拟光驱下载</a><a href="http://www.52pk.com/soft/201803/95743.shtml" target="_blank">网易加速器</a><a href="http://www.52pk.com/soft/201803/95660.shtml" target="_blank">网易云音乐</a><a href="http://www.52pk.com/soft/201803/95473.shtml" target="_blank">驱动精灵万能网卡版</a><a href="http://www.52pk.com/soft/201803/95766.shtml" target="_blank">猎豹浏览器</a><a href="http://www.52pk.com/soft/201803/95164.shtml" target="_blank">格式工厂</a><a href="http://www.52pk.com/soft/201803/95163.shtml" target="_blank" class="h_games">腾讯桌面工具</a><a href="http://www.52pk.com/soft/201803/95147.shtml" target="_blank">爱思苹果助手</a><a href="http://www.52pk.com/soft/201803/95195.shtml" target="_blank" class="h_games">全民k歌</a><a href="http://www.52pk.com/soft/201803/95773.shtml" target="_blank">搜狗浏览器</a><a href="http://www.52pk.com/soft/201803/95170.shtml" target="_blank">影音先锋播放器</a><a href="http://www.52pk.com/soft/201803/95265.shtml" target="_blank">斗鱼直播平台</a><a href="http://www.52pk.com/soft/201803/95134.shtml" target="_blank">安卓模拟器</a><a href="http://www.52pk.com/soft/201803/95665.shtml" target="_blank">360快剪辑</a><a href="http://www.52pk.com/soft/201803/95191.shtml" target="_blank">高清视频录制软件</a><a href="http://www.52pk.com/soft/201803/95172.shtml" target="_blank">psd文件修复软件</a><a href="http://www.52pk.com/soft/201705/71705.shtml" target="_blank">天意装机软件工具箱</a><a href="http://www.52pk.com/soft/201803/95797.shtml" target="_blank">暴风影音v5.74官方版</a><a href="http://www.52pk.com/soft/201803/95788.shtml" target="_blank">微信电脑版</a><a href="http://www.52pk.com/soft/201803/95785.shtml" target="_blank">foxmail邮箱</a><a href="http://www.52pk.com/soft/201803/95138.shtml" target="_blank">小皮助手模拟器</a><a href="http://www.52pk.com/soft/201803/95137.shtml" target="_blank">金山卫士2018版</a><a href="http://www.52pk.com/soft/201803/95133.shtml" target="_blank">光影魔术手2018版</a><a href="http://www.52pk.com/soft/201803/95176.shtml" target="_blank">熊猫加速器</a><a href="http://www.52pk.com/soft/201803/95150.shtml" target="_blank">火萤视频桌面</a><a href="http://www.52pk.com/soft/201803/95208.shtml" target="_blank">光盘数据恢复工具</a><a href="http://www.52pk.com/soft/201803/95204.shtml" target="_blank">虚拟光驱绿色版DAEMON</a><a href="http://down.52pk.com/xiazai/821.shtml" target="_blank">360安全卫士下载</a>
+ <a href="/puke/12.html" target="_blank">德州扑克</a>
+ <a href="/puke/97.html" target="_blank">联众德州扑克</a>
+ <a href="/puke/94.html" target="_blank">360德州扑克</a>
+ <a href="/puke/95.html" target="_blank">德州扑克2</a>
+ <a href="/puke/96.html" target="_blank">老k德州扑克</a>
+ <a href="/puke/98.html" target="_blank">智友德州扑克</a>
         </li>
     </ul>
     <ul class="column-sort cc" style="display: none;">
         <li>
-            <a href="http://wzry.52pk.com/" target="_blank">王者荣耀</a><a href="http://www.youxibao.com/cfm/" target="_blank">穿越火线：荒岛特训</a><a href="http://xin.52pk.com/sy_ku/zmq/" target="_blank">镇魔曲手游</a><a href="http://www.youxibao.com/ku/jl/" target="_blank">街篮</a><a href="http://www.52pk.com/games/mhhy/" target="_blank">梦幻花园</a><a href="http://xin.52pk.com/sy_ku/jzhsmyjsy/" target="x_blank">九州海上牧云记</a><a href="http://www.youxibao.com/ku/fgo/" target="_blank">FateGo</a><a href="http://xin.52pk.com/sy_ku/ws3sy/" target="_blank">神武3手游</a><a href="http://xin.52pk.com/sy_ku/wjsy/" target="_blank">无尽神域</a><a href="http://www.youxibao.com/ku/lzgsy/" target="_blank">龙之谷手游</a><a href="http://www.52pk.com/games/yys/" target="_blank">阴阳师手游</a><a href="http://xin.52pk.com/sy_ku/hyrz/" target="_blank">火影忍者</a><a href="http://xin.52pk.com/sy_ku/dhxy/" target="_blank">大话西游手游</a><a href="http://xin.52pk.com/sy_ku/wdsjsjb/" target="_blank">我的世界手机版</a><a href="http://xin.52pk.com/sy_ku/lscs/" target="_blank">炉石传说</a><a href="http://xin.52pk.com/sy_ku/qqdzz/" target="_blank">球球大作战</a><a href="http://xin.52pk.com/sy_ku/jx3/" target="_blank">剑网3：指尖江湖</a><a href="http://xin.52pk.com/sy_ku/mxsy/" target="_blank">梦想世界手游</a><a href="http://xin.52pk.com/sy_ku/kxxxl/" target="_blank">开心消消乐</a><a href="http://xin.52pk.com/sy_ku/cytus2/" target="_blank">音乐世界Cytus II</a><a href="http://xin.52pk.com/sy_ku/zjz2spr/" target="_blank">终结者2：审判日</a><a href="http://xin.52pk.com/sy_ku/zt2/" target="_blank">征途2手游</a><a href="http://xin.52pk.com/sy_ku/xyjlwys/" target="_blank">轩辕剑龙舞云山</a><a href="http://xin.52pk.com/sy_ku/ysyy/" target="_blank">云裳羽衣</a><a href="http://xin.52pk.com/sy_ku/zxsy/" target="_blank">诛仙手游</a><a href="http://xin.52pk.com/sy_ku/gydj/" target="_blank">光影对决</a><a href="http://xin.52pk.com/sy_ku/cjmlakp/" target="_blank">超级马里奥酷跑</a><a href="http://xin.52pk.com/sy_ku/zgjqxs/" target="_blank">中国惊奇先生</a><a href="http://xin.52pk.com/sy_ku/jdqscjzc/" target="_blank">绝地求生：刺激战场</a><a href="http://xin.52pk.com/sy_ku/qjmujx/" target="_blank">奇迹MU：觉醒</a><a href="http://xin.52pk.com/sy_ku/jdqsqjcj/" target="_blank">绝地求生：全军出击</a><a href="http://xin.52pk.com/sy_ku/skygy/" target="_blank">Sky光遇</a><a href="http://xin.52pk.com/sy_ku/fknsg2/" target="_blank">放开那三国2</a><a href="http://xin.52pk.com/sy_ku/cqbysy/" target="_blank">传奇霸业手游</a><a href="http://xin.52pk.com/sy_ku/shumen/" target="_blank">蜀门手游</a><a href="http://xin.52pk.com/sy_ku/tksjsjz/" target="_blank">坦克世界闪击战</a><a href="http://xin.52pk.com/sy_ku/xyzhxz/" target="_blank">圣斗士星矢-小宇宙幻想传</a><a href="http://xin.52pk.com/sy_ku/jnbg2/" target="_blank">纪念碑谷2</a><a href="http://xin.52pk.com/sy_ku/frxy/" target="_blank">非人学园</a><a href="http://xin.52pk.com/sy_ku/blhx/" target="_blank">碧蓝航线</a><a href="http://xin.52pk.com/sy_ku/wd/" target="_blank">问道手游</a><a href="http://xin.52pk.com/sy_ku/mfjsml/" target="_blank">魔法禁书目录</a><a href="http://xin.52pk.com/sy_ku/xmct/" target="_blank">星盟冲突</a><a href="http://xin.52pk.com/sy_ku/bsymg/" target="_blank">不思议迷宫</a><a href="http://xin.52pk.com/sy_ku/qqfc/" target="_blank">QQ飞车手游</a><a href="http://xin.52pk.com/sy_ku/fjlrs/" target="_blank">饭局狼人杀</a><a href="http://xin.52pk.com/sy_ku/hhwjz/" target="_blank">航海王激战</a><a href="http://xin.52pk.com/sy_ku/xmxy/" target="_blank">星梦学院</a><a href="http://xin.52pk.com/sy_ku/snkfq/" target="_blank">少女咖啡枪</a><a href="http://xin.52pk.com/sy_ku/fknsg/" target="_blank">放开那三国</a><a href="http://xin.52pk.com/sy_ku/cqsjsy/" target="_blank">传奇世界手游</a><a href="http://xin.52pk.com/sy_ku/xjcsshyhda/" target="_blank">仙境传说RO：守护永恒的爱</a><a href="http://xin.52pk.com/sy_ku/mfsnxy/" target="_blank">魔法少女小圆</a><a href="http://xin.52pk.com/sy_ku/jyzj/" target="_blank">九阴</a>
+ <a href="/puke/14.html" target="_blank">牌九</a>
         </li>
     </ul>
  
@@ -243,6 +273,82 @@ exchange(".yuleSortBtn dd",".yuleHji","cur");
  <!-- 结束 -->
 
 </div>
+
+<div class="module">
+  <div class="mogame fl">
+    <div class="hd">
+      <h3>新游上线</h3>
+      <a href="/game/" class="more">更多<i></i></a></div>
+    <ul class="game-list clearfix">
+      <li>
+        <div class="img"><a href="/puke/132.html" target="_blank"><img src="/d/file/puke/2018-12-20/d1f90948ee187b722fe2ca424df04c5e.jpg" alt="阿闪衡阳棋牌"></a></div>
+        <div class="con"> <a href="/puke/132.html" target="_blank" class="title">阿闪衡阳棋牌</a>
+          <p><a href="/list-2-0-0-0.html" target="_blank">跑胡子</a><span>|</span>4人在玩</p>
+          <p>阿闪衡阳棋牌游戏是阿闪出品的一款湖南地区棋牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/132.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+      <li>
+        <div class="img"><a href="/puke/131.html" target="_blank"><img src="/d/file/puke/2018-12-20/d2cd5b2616a80345cbe7918c52c6a241.jpg" alt="阿闪常德跑"></a></div>
+        <div class="con"> <a href="/puke/131.html" target="_blank" class="title">阿闪常德跑</a>
+          <p><a href="/list-2-0-0-0.html" target="_blank">跑胡子</a><span>|</span>4人在玩</p>
+          <p>阿闪常德跑是常德棋牌游戏由阿闪出品</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/131.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+      <li>
+        <div class="img"><a href="/majiang/36.html" target="_blank"><img src="/d/file/majiang/2018-12-20/8c840b7485539c4b648b28dee775423c.jpg" alt="熊猫四人麻将"></a></div>
+        <div class="con"> <a href="/majiang/36.html" target="_blank" class="title">熊猫四人麻将</a>
+          <p><a href="/list-3-0-0-0.html" target="_blank">四人麻将</a><span>|</span>3人在玩</p>
+          <p>熊猫四人麻将是一款四川风格的手机棋牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/majiang/36.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+      <li>
+        <div class="img"><a href="/majiang/35.html" target="_blank"><img src="/d/file/majiang/2018-12-20/0e050fa0911a11ffb1a64b7cad77eba5.jpg" alt="四川麻将之血战到底"></a></div>
+        <div class="con"> <a href="/majiang/35.html" target="_blank" class="title">四川麻将之血战到底</a>
+          <p><a href="/list-8-0-0-0.html" target="_blank">四川麻将</a><span>|</span>2人在玩</p>
+          <p>四川麻将之血战到底是四川麻将最流行的玩法。</p>
+        </div>
+        <div class="wan-btn"><a href="/majiang/35.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+      <li>
+        <div class="img"><a href="/qilei/39.html" target="_blank"><img src="/d/file/qilei/2018-12-20/66fae4197131606d02e3d44a51185787.png" alt="谷歌围棋"></a></div>
+        <div class="con"> <a href="/qilei/39.html" target="_blank" class="title">谷歌围棋</a>
+          <p><a href="/list-3-0-0-0.html" target="_blank">围棋</a><span>|</span>1人在玩</p>
+          <p>阿尔法围棋AlphaGo是一款围棋人工智能程序，“AlphaGo”会吸收职业棋手的摆子画面等信息，记住可以获胜的方法，通过自己与自己对弈学习取胜之道。如果你对这款电脑程序感兴趣可与下载体验一下吧！</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/39.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+      <li>
+        <div class="img"><a href="/qilei/38.html" target="_blank"><img src="/d/file/qilei/2018-12-20/4423b28ebc021493c8bbb679c570195c.png" alt="元游围棋"></a></div>
+        <div class="con"> <a href="/qilei/38.html" target="_blank" class="title">元游围棋</a>
+          <p><a href="/list-3-0-0-0.html" target="_blank">围棋</a><span>|</span>2人在玩</p>
+          <p>元游围棋是一款益智类竞技游戏，多种棋牌围棋玩法，音乐古典，操作简单，界面清新，棋艺大比拼。更设有单机智能，天梯匹配，残局玩法，等你来挑战，感兴趣的朋友快来试试吧。</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/38.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+    </ul>
+  </div>
+  <div class="game-news fr">
+    <div class="hd">
+      <h3>游戏资讯</h3>
+      <a href="/zixun/" class="more">更多<i></i></a></div>
+
+    <ul>
+      <li><a href="/zixun/gonglue/" target="_blank" class="flei">[攻略]</a><a href="/zixun/795.html" target="_blank" class="title">欢乐斗地主获取欢乐豆攻略</a></li>
+      <li><a href="/zixun/gonglue/" target="_blank" class="flei">[攻略]</a><a href="/zixun/794.html" target="_blank" class="title">《欢乐斗地主》新手攻略</a></li>
+      <li><a href="/zixun/huodong/" target="_blank" class="flei">[活动]</a><a href="/zixun/792.html" target="_blank" class="title">《妖怪宝可萌》活动，日充送好礼！</a></li>
+      <li><a href="/zixun/huodong/" target="_blank" class="flei">[活动]</a><a href="/zixun/791.html" target="_blank" class="title">《龙城霸业》合服活动火爆开启，合服礼包随心领！</a></li>
+      <li><a href="/zixun/huodong/" target="_blank" class="flei">[活动]</a><a href="/zixun/790.html" target="_blank" class="title">​《口袋妖怪联盟》“寒霜降至”活动！</a></li>
+      <li><a href="/zixun/huodong/" target="_blank" class="flei">[活动]</a><a href="/zixun/789.html" target="_blank" class="title">《传奇来了》10月21-23日限时活动</a></li>
+      <li><a href="/zixun/huodong/" target="_blank" class="flei">[活动]</a><a href="/zixun/788.html" target="_blank" class="title">《百战沙城》限时活动!登陆抽奖来袭！</a></li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+</div>
 <div class="slider" id="banner-slide">
   <div class="scrollable">
     <ul class="items clearfix">
@@ -258,298 +364,392 @@ exchange(".yuleSortBtn dd",".yuleHji","cur");
   </div>
   <div class="prev prev-next"></div>
   <div class="next prev-next"></div>
-</div>
-<div class="module">
-  <div class="mogame fl">
-    <div class="hd">
-      <h3>新游上线</h3>
-      <a href="/game/" class="more">更多<i></i></a></div>
-    <ul class="game-list clearfix">
-      <li>
-        <div class="img"><a href="/game/927.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027141345.png" alt="十里桃花"></a></div>
-        <div class="con"> <a href="/game/927.html" target="_blank" class="title">十里桃花</a>
-          <p><a href="/list-2-0-0-0.html" target="_blank">角色扮演</a><span>|</span>92人在玩</p>
-          <p>正版影视授权，白浅夜华邀你仙恋之旅</p>
-        </div>
-        <div class="wan-btn"><a href="/game/927.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
-      </li>
-      <li>
-        <div class="img"><a href="/game/926.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171025093310.png" alt="决斗之皇"></a></div>
-        <div class="con"> <a href="/game/926.html" target="_blank" class="title">决斗之皇</a>
-          <p><a href="/list-2-0-0-0.html" target="_blank">角色扮演</a><span>|</span>3人在玩</p>
-          <p>完美复刻卡牌竞技策略真人对战H5手游</p>
-        </div>
-        <div class="wan-btn"><a href="/game/926.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
-      </li>
-      <li>
-        <div class="img"><a href="/game/925.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027142939.jpg" alt="奇迹仙侠"></a></div>
-        <div class="con"> <a href="/game/925.html" target="_blank" class="title">奇迹仙侠</a>
-          <p><a href="/list-2-0-0-0.html" target="_blank">角色扮演</a><span>|</span>10人在玩</p>
-          <p>仙魔争霸，谁能一统九天？</p>
-        </div>
-        <div class="wan-btn"><a href="/game/925.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
-      </li>
-      <li>
-        <div class="img"><a href="/game/924.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170306150106.png" alt="莽荒纪H5"></a></div>
-        <div class="con"> <a href="/game/924.html" target="_blank" class="title">莽荒纪H5</a>
-          <p><a href="/list-1-0-0-0.html" target="_blank">卡牌游戏</a><span>|</span>17人在玩</p>
-          <p>同名小说正版授权释放你的洪荒之力</p>
-        </div>
-        <div class="wan-btn"><a href="/game/924.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
-      </li>
-      <li>
-        <div class="img"><a href="/game/923.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170107092745.png" alt="大侠归来"></a></div>
-        <div class="con"> <a href="/game/923.html" target="_blank" class="title">大侠归来</a>
-          <p><a href="/list-1-0-0-0.html" target="_blank">卡牌游戏</a><span>|</span>8人在玩</p>
-          <p>国民武侠，你我的江湖梦！</p>
-        </div>
-        <div class="wan-btn"><a href="/game/923.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
-      </li>
-      <li>
-        <div class="img"><a href="/game/922.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170112105150.png" alt="三国战争"></a></div>
-        <div class="con"> <a href="/game/922.html" target="_blank" class="title">三国战争</a>
-          <p><a href="/list-5-0-0-0.html" target="_blank">动作游戏</a><span>|</span>20人在玩</p>
-          <p>攻城PK+国战停不下来！</p>
-        </div>
-        <div class="wan-btn"><a href="/game/922.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
-      </li>
-    </ul>
-  </div>
-  <div class="game-news fr">
-    <div class="hd">
-      <h3>游戏资讯</h3>
-      <a href="/zixun/" class="more">更多<i></i></a></div>
-    <dl>
-      <dt><a href="/zixun/783.html" target="_blank"><img src="/d/file/zixun/huodong/2017-10-24/fea3aa79b53d76c7f189d7d16b66b0c0.jpg" alt="《梦道》修仙风限时活动！奖励送不停！"></a></dt>
-      <dd class="title"><a href="/zixun/783.html" target="_blank" class="red">《梦道》修仙风限时活动！奖励送不停！</a></dd>
-      <dd class="desc">梦道修仙风限时活动！奖励送不停！</dd>
-    </dl>
-    <ul>
-      <li><a href="/zixun/huodong/" target="_blank" class="flei">[活动]</a><a href="/zixun/792.html" target="_blank" class="title">《妖怪宝可萌》活动，日充送好礼！</a></li>
-      <li><a href="/zixun/huodong/" target="_blank" class="flei">[活动]</a><a href="/zixun/791.html" target="_blank" class="title">《龙城霸业》合服活动火爆开启，合服礼包随心领！</a></li>
-      <li><a href="/zixun/huodong/" target="_blank" class="flei">[活动]</a><a href="/zixun/790.html" target="_blank" class="title">​《口袋妖怪联盟》“寒霜降至”活动！</a></li>
-      <li><a href="/zixun/huodong/" target="_blank" class="flei">[活动]</a><a href="/zixun/789.html" target="_blank" class="title">《传奇来了》10月21-23日限时活动</a></li>
-      <li><a href="/zixun/huodong/" target="_blank" class="flei">[活动]</a><a href="/zixun/788.html" target="_blank" class="title">《百战沙城》限时活动!登陆抽奖来袭！</a></li>
-    </ul>
-  </div>
-  <div class="clear"></div>
-</div>
-<div class="game_libao">
-  <div class="hd">
-    <h3>最新礼包</h3>
-    <a href="/libao/" class="more">更多<i></i></a></div>
-  <div class="libao-con">
-    <dl>
-      <dt><a href="/libao/" target="_blank" title="口袋妖怪联盟教师节礼包"><img src="/d/file/libao/2017-10-26/e8345ee134daeb81676bcb14921c3df1.png" alt="口袋妖怪联盟教师节礼包">
-        <p>口袋妖怪联盟教师节礼包</p>
-        </a></dt>
-      <dd class="shengyu">剩余94%</dd>
-      <dd class="lingqu"><a href="/libao/" target="_blank" class="lqBtn">领取</a></dd>
-    </dl>
-    <dl>
-      <dt><a href="/libao/" target="_blank" title="血战沙城专属礼包"><img src="/d/file/libao/2017-10-26/648f389862826b8ae738cd869800b916.png" alt="血战沙城专属礼包">
-        <p>血战沙城专属礼包</p>
-        </a></dt>
-      <dd class="shengyu">剩余100%</dd>
-      <dd class="lingqu"><a href="/libao/" target="_blank" class="lqBtn">领取</a></dd>
-    </dl>
-    <dl>
-      <dt><a href="/libao/" target="_blank" title="修仙三国加群礼包"><img src="/d/file/libao/2017-10-26/14bed25e57c925ab0667d4026d196cf3.jpg" alt="修仙三国加群礼包">
-        <p>修仙三国加群礼包</p>
-        </a></dt>
-      <dd class="shengyu">剩余99%</dd>
-      <dd class="lingqu"><a href="/libao/" target="_blank" class="lqBtn">领取</a></dd>
-    </dl>
-    <dl>
-      <dt><a href="/libao/" target="_blank" title="传奇来了新手礼包（补仓）"><img src="/d/file/libao/2017-10-26/11ffdcd1cf8e2a853fd740e34f51e70b.jpg" alt="传奇来了新手礼包（补仓）">
-        <p>传奇来了新手礼包（补仓）</p>
-        </a></dt>
-      <dd class="shengyu">剩余100%</dd>
-      <dd class="lingqu"><a href="/libao/" target="_blank" class="lqBtn">领取</a></dd>
-    </dl>
-    <dl>
-      <dt><a href="/libao/" target="_blank" title="烈焰之战双节礼包"><img src="/d/file/libao/2017-10-26/b583d0798705de2d24b099a81ccff07f.gif" alt="烈焰之战双节礼包">
-        <p>烈焰之战双节礼包</p>
-        </a></dt>
-      <dd class="shengyu">剩余99%</dd>
-      <dd class="lingqu"><a href="/libao/" target="_blank" class="lqBtn">领取</a></dd>
-    </dl>
-    <dl>
-      <dt><a href="/libao/" target="_blank" title="仙剑客栈中秋礼包"><img src="/d/file/libao/2017-10-26/3751fa76a4b7d9bd1111a631ae7897c4.jpg" alt="仙剑客栈中秋礼包">
-        <p>仙剑客栈中秋礼包</p>
-        </a></dt>
-      <dd class="shengyu">剩余99%</dd>
-      <dd class="lingqu"><a href="/libao/" target="_blank" class="lqBtn">领取</a></dd>
-    </dl>
-  </div>
-</div>
+</div>  
+
 <div class="module">
   <div class="mogame">
     <div class="hd">
-      <h3>精品网游</h3>
+      <h3>精品游戏</h3>
       <a href="/game/" class="more">更多<i></i></a></div>
     <ul class="game-list clearfix">
       <li>
-        <div class="img"><a href="/game/831.html" target="_blank"><img src="/d/file/96kaifa/201710241646/20170821175129.jpg" alt="战国美人"></a></div>
-        <div class="con"> <a href="/game/831.html" target="_blank" class="title">战国美人</a>
-          <p><a href="/list-2-0-0-0.html" target="_blank">角色扮演</a><span>|</span>0人在玩</p>
-          <p>美人为伴七国征战，成就千古帝王</p>
+        <div class="img"><a href="/puke/10.html" target="_blank"><img src="/d/file/puke/2018-12-17/a07fb5e08bbaf30ba15ccf786499dec9.png" alt="JJ斗地主"></a></div>
+        <div class="con"> <a href="/puke/10.html" target="_blank" class="title">JJ斗地主</a>
+          <p><a href="/list-1-0-0-0.html" target="_blank">斗地主</a><span>|</span>46人在玩</p>
+          <p>JJ斗地主是由北京竞技世界公司采用比赛形式制作的棋牌游戏</p>
         </div>
-        <div class="wan-btn"><a href="/game/831.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+        <div class="wan-btn"><a href="/puke/10.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
       </li>
       <li>
-        <div class="img"><a href="/game/827.html" target="_blank"><img src="/d/file/96kaifa/201710241646/20171018093618.jpg" alt="鬼武之刃之皇城至尊"></a></div>
-        <div class="con"> <a href="/game/827.html" target="_blank" class="title">鬼武之刃之皇城至尊</a>
-          <p><a href="/list-2-0-0-0.html" target="_blank">角色扮演</a><span>|</span>1人在玩</p>
-          <p>我的传奇时代，带上兄弟重回沙巴克！</p>
+        <div class="img"><a href="/puke/65.html" target="_blank"><img src="/d/file/puke/2018-12-20/ee5b81b306802f6fc8ffd8fb2f00045d.png" alt="欢乐斗牛"></a></div>
+        <div class="con"> <a href="/puke/65.html" target="_blank" class="title">欢乐斗牛</a>
+          <p><a href="/list-37-0-0-0.html" target="_blank">斗牛</a><span>|</span>13人在玩</p>
+          <p>欢乐斗牛是由腾讯公司打造的一款快节奏棋牌手游。</p>
         </div>
-        <div class="wan-btn"><a href="/game/827.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+        <div class="wan-btn"><a href="/puke/65.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
       </li>
       <li>
-        <div class="img"><a href="/game/816.html" target="_blank"><img src="/d/file/96kaifa/201710241646/20170908090442.jpg" alt="剑意逍遥"></a></div>
-        <div class="con"> <a href="/game/816.html" target="_blank" class="title">剑意逍遥</a>
-          <p><a href="/list-2-0-0-0.html" target="_blank">角色扮演</a><span>|</span>0人在玩</p>
-          <p>以力证道，斩妖除魔，夺龙魂修仙途</p>
+        <div class="img"><a href="/qilei/6.html" target="_blank"><img src="/d/file/qilei/2018-12-19/962935430cd3a26840fb6ddaba80df40.png" alt="中国象棋"></a></div>
+        <div class="con"> <a href="/qilei/6.html" target="_blank" class="title">中国象棋</a>
+          <p><a href="/list-2-0-0-0.html" target="_blank">象棋</a><span>|</span>16人在玩</p>
+          <p>中国象棋是中国比较流行的一款传统益智棋类游戏</p>
         </div>
-        <div class="wan-btn"><a href="/game/816.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+        <div class="wan-btn"><a href="/qilei/6.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
       </li>
       <li>
-        <div class="img"><a href="/game/808.html" target="_blank"><img src="/d/file/96kaifa/201710241646/20170815100319.jpg" alt="街机捕鱼"></a></div>
-        <div class="con"> <a href="/game/808.html" target="_blank" class="title">街机捕鱼</a>
-          <p><a href="/list-8-0-0-0.html" target="_blank">休闲游戏</a><span>|</span>1人在玩</p>
-          <p>万人同台休闲捕鱼,每日话费送不停</p>
+        <div class="img"><a href="/qilei/4.html" target="_blank"><img src="/d/file/qilei/2018-12-18/27e593800bbdd2f8ea591094f697ca70.png" alt="飞行棋"></a></div>
+        <div class="con"> <a href="/qilei/4.html" target="_blank" class="title">飞行棋</a>
+          <p><a href="/list-4-0-0-0.html" target="_blank">飞行棋</a><span>|</span>16人在玩</p>
+          <p>飞行棋是一款休闲放松的棋类游戏</p>
         </div>
-        <div class="wan-btn"><a href="/game/808.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+        <div class="wan-btn"><a href="/qilei/4.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
       </li>
       <li>
-        <div class="img"><a href="/game/812.html" target="_blank"><img src="/d/file/96kaifa/201710241646/20170904093029.jpg" alt="王者之塔"></a></div>
-        <div class="con"> <a href="/game/812.html" target="_blank" class="title">王者之塔</a>
-          <p><a href="/list-2-0-0-0.html" target="_blank">角色扮演</a><span>|</span>0人在玩</p>
-          <p>集结士兵，召唤勇者！魔物高塔众人推！</p>
+        <div class="img"><a href="/majiang/23.html" target="_blank"><img src="/d/file/majiang/2018-12-18/d29ea653f4c84020e925cbce96f7de9c.jpg" alt="四川麻将"></a></div>
+        <div class="con"> <a href="/majiang/23.html" target="_blank" class="title">四川麻将</a>
+          <p><a href="/list-8-0-0-0.html" target="_blank">四川麻将</a><span>|</span>60人在玩</p>
+          <p>一款为喜爱四川麻将的牌友量身打造的麻将棋牌游戏</p>
         </div>
-        <div class="wan-btn"><a href="/game/812.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+        <div class="wan-btn"><a href="/majiang/23.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
       </li>
       <li>
-        <div class="img"><a href="/game/802.html" target="_blank"><img src="/d/file/96kaifa/201710241646/20170830095026.jpg" alt="狼人趴"></a></div>
-        <div class="con"> <a href="/game/802.html" target="_blank" class="title">狼人趴</a>
-          <p><a href="/list-2-0-0-0.html" target="_blank">角色扮演</a><span>|</span>0人在玩</p>
-          <p>最火爆烧脑的狼人杀桌游平台</p>
+        <div class="img"><a href="/majiang/24.html" target="_blank"><img src="/d/file/majiang/2018-12-19/60554299953ce0644cdcd632c2ea96cc.png" alt="广东麻将"></a></div>
+        <div class="con"> <a href="/majiang/24.html" target="_blank" class="title">广东麻将</a>
+          <p><a href="/list-10-0-0-0.html" target="_blank">广东麻将</a><span>|</span>54人在玩</p>
+          <p>广东麻将是专业开发的麻将手游。</p>
         </div>
-        <div class="wan-btn"><a href="/game/802.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+        <div class="wan-btn"><a href="/majiang/24.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
       </li>
       <li>
-        <div class="img"><a href="/game/806.html" target="_blank"><img src="/d/file/96kaifa/201710241646/20170919093123.gif" alt="新仙剑奇侠传H5"></a></div>
-        <div class="con"> <a href="/game/806.html" target="_blank" class="title">新仙剑奇侠传H5</a>
-          <p><a href="/list-2-0-0-0.html" target="_blank">角色扮演</a><span>|</span>0人在玩</p>
-          <p>乘风御剑，重温仙剑情缘</p>
+        <div class="img"><a href="/majiang/20.html" target="_blank"><img src="/d/file/majiang/2018-12-19/9edde4252bcb4b2a4d33041f1b8360c1.png" alt="南昌麻将"></a></div>
+        <div class="con"> <a href="/majiang/20.html" target="_blank" class="title">南昌麻将</a>
+          <p><a href="/list-12-0-0-0.html" target="_blank">南昌麻将</a><span>|</span>8人在玩</p>
+          <p>南昌麻将是在南昌、赣州、吉安等地区流行的地方特色游戏。</p>
         </div>
-        <div class="wan-btn"><a href="/game/806.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+        <div class="wan-btn"><a href="/majiang/20.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
       </li>
       <li>
-        <div class="img"><a href="/game/799.html" target="_blank"><img src="/d/file/96kaifa/201710241646/20171010135743.jpg" alt="我要当首富2"></a></div>
-        <div class="con"> <a href="/game/799.html" target="_blank" class="title">我要当首富2</a>
-          <p><a href="/list-3-0-0-0.html" target="_blank">模拟经营</a><span>|</span>2人在玩</p>
-          <p>定个小目标，赚钱，就是这么简单！</p>
+        <div class="img"><a href="/puke/11.html" target="_blank"><img src="/d/file/puke/2018-12-20/01e676bcf66d26cabf63afef61b81a7a.png" alt="锄大地"></a></div>
+        <div class="con"> <a href="/puke/11.html" target="_blank" class="title">锄大地</a>
+          <p><a href="/list-23-0-0-0.html" target="_blank">锄大地</a><span>|</span>20人在玩</p>
+          <p>锄大地是一款玩法非常简单的扑克游戏</p>
         </div>
-        <div class="wan-btn"><a href="/game/799.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+        <div class="wan-btn"><a href="/puke/11.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
       </li>
     </ul>
   </div>
-  <div class="kftab fr">
+  
+<div class="game-news fr">
     <div class="hd">
-      <h3>开服信息</h3>
-      <a href="/kaifu/" class="more">更多<i></i></a></div>
-    <div class="tab_con">
-      <p class="p_th"> <span class="time">时间</span> <span class="name">游戏名称</span> <span class="server">服务器名</span> </p>
-      <ul class="clearfix">  
-        <li> <span class="time">12-27 00:41</span> <span class="name"><a href="/game/837.html" target="_blank">梦道</a></span> <span class="server">S91</span> </li>
-        <li> <span class="time">12-30 08:11</span> <span class="name"><a href="/game/916.html" target="_blank">口袋妖怪联盟</a></span> <span class="server">557区</span> </li>
-        <li> <span class="time">02-03 12:31</span> <span class="name"><a href="/game/851.html" target="_blank">百战沙城</a></span> <span class="server">百战162区</span> </li>
-        <li> <span class="time">12-01 12:50</span> <span class="name"><a href="/game/800.html" target="_blank">仙剑客栈</a></span> <span class="server">蜀山名人</span> </li>
-        <li> <span class="time">12-10 12:58</span> <span class="name"><a href="/game/822.html" target="_blank">开心国王</a></span> <span class="server">148区</span> </li>
-        <li> <span class="time">11-27 11:06</span> <span class="name"><a href="/game/828.html" target="_blank">传奇世界正版H5</a></span> <span class="server">40服</span> </li>
-        <li> <span class="time">11-10 12:17</span> <span class="name"><a href="/game/822.html" target="_blank">开心国王</a></span> <span class="server">147区</span> </li>
-      </ul>
-    </div>
+      <h3>游戏攻略</h3>
+      <a href="/zixun/gonglue" class="more">更多<i></i></a></div>
+
+    <ul>
+      <li><a href="/zixun/gonglue/" target="_blank" class="flei">[攻略]</a><a href="/zixun/795.html" target="_blank" class="title">欢乐斗地主获取欢乐豆攻略</a></li>
+      <li><a href="/zixun/gonglue/" target="_blank" class="flei">[攻略]</a><a href="/zixun/794.html" target="_blank" class="title">《欢乐斗地主》新手攻略</a></li>
+      <li><a href="/zixun/gonglue/" target="_blank" class="flei">[攻略]</a><a href="/zixun/144.html" target="_blank" class="title">《剑意逍遥》攻略篇。剑意逍遥哪个职业好，全面介绍玩家必看</a></li>
+      <li><a href="/zixun/gonglue/" target="_blank" class="flei">[攻略]</a><a href="/zixun/145.html" target="_blank" class="title">《传奇来了》攻略：终极寻宝</a></li>
+      <li><a href="/zixun/gonglue/" target="_blank" class="flei">[攻略]</a><a href="/zixun/146.html" target="_blank" class="title">《龙城霸业》精英试炼玩法攻略</a></li>
+      <li><a href="/zixun/gonglue/" target="_blank" class="flei">[攻略]</a><a href="/zixun/138.html" target="_blank" class="title">《绝世屠龙》不仅仅是王者荣耀，这款游戏也是火到不行</a></li>
+      <li><a href="/zixun/gonglue/" target="_blank" class="flei">[攻略]</a><a href="/zixun/139.html" target="_blank" class="title">《王者之塔》金币获取攻略</a></li>
+      <li><a href="/zixun/gonglue/" target="_blank" class="flei">[攻略]</a><a href="/zixun/140.html" target="_blank" class="title">《真王H5》“王者荣耀”-夺旗大作战</a></li>
+      <li><a href="/zixun/gonglue/" target="_blank" class="flei">[攻略]</a><a href="/zixun/141.html" target="_blank" class="title">《传奇来了》攻略：道士篇</a></li>
+    </ul>
   </div>
   <div class="clear"></div>
 </div>
+
+
 <div class="h5game">
   <div class="hd">
-    <h3>H5小游戏</h3>
+    <h3>扑克游戏</h3>
     <a href="/danji/" class="more">更多<i></i></a></div>
   <ul class="game-list clearfix">
+
     <li>
-      <div class="img"><a href="/danji/125.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615161819.jpg" alt="八爪鱼拉拉手"></a></div>
-      <div class="con"> <a href="/danji/125.html" target="_blank" class="title">八爪鱼拉拉手</a>
-        <p><a href="/list-1-0-0-1.html" target="_blank">益智</a><span>|</span>14人在玩</p>
-        <p>游戏的主角是可爱的八爪鱼，玩家要合理的控制八爪鱼才能顺利通关</p>
+      <div class="img"><a href="/puke/1.html" target="_blank"><img src="/d/file/puke/2018-12-15/6f8befea7aa4df48fab66312d2c956af.png" alt="欢乐斗地主"></a></div>
+      <div class="con"> <a href="/puke/1.html" target="_blank" class="title">欢乐斗地主</a>
+        <p><a href="/list-1-0-0-1.html" target="_blank">斗地主</a><span>|</span>318人在玩</p>
+        <p>腾讯游戏出品的一款即时在线棋牌游戏！</p>
       </div>
-      <div class="wan-btn"><a href="/danji/125.html" target="_blank" class="wanBtn">开始玩</a></div>
+      <div class="wan-btn"><a href="/puke/1.html" target="_blank" class="wanBtn">开始玩</a></div>
     </li>
+
     <li>
-      <div class="img"><a href="/danji/124.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615170050.jpg" alt="抽打神经猫"></a></div>
-      <div class="con"> <a href="/danji/124.html" target="_blank" class="title">抽打神经猫</a>
-        <p><a href="/list-4-0-0-1.html" target="_blank">休闲</a><span>|</span>3人在玩</p>
-        <p>再也不用担心我手残</p>
+      <div class="img"><a href="/puke/65.html" target="_blank"><img src="/d/file/puke/2018-12-20/ee5b81b306802f6fc8ffd8fb2f00045d.png" alt="欢乐斗牛"></a></div>
+      <div class="con"> <a href="/puke/65.html" target="_blank" class="title">欢乐斗牛</a>
+        <p><a href="/list-37-0-0-1.html" target="_blank">斗牛</a><span>|</span>13人在玩</p>
+        <p>欢乐斗牛是由腾讯公司打造的一款快节奏棋牌手游。</p>
       </div>
-      <div class="wan-btn"><a href="/danji/124.html" target="_blank" class="wanBtn">开始玩</a></div>
+      <div class="wan-btn"><a href="/puke/65.html" target="_blank" class="wanBtn">开始玩</a></div>
     </li>
+
     <li>
-      <div class="img"><a href="/danji/123.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615175231.png" alt="大小跳不停"></a></div>
-      <div class="con"> <a href="/danji/123.html" target="_blank" class="title">大小跳不停</a>
-        <p><a href="/list-4-0-0-1.html" target="_blank">休闲</a><span>|</span>9人在玩</p>
-        <p>大小跳不停，看你跳多久</p>
+      <div class="img"><a href="/puke/12.html" target="_blank"><img src="/d/file/puke/2018-12-20/92e840161d1da8281d823dd5dbd93987.png" alt="德州扑克"></a></div>
+      <div class="con"> <a href="/puke/12.html" target="_blank" class="title">德州扑克</a>
+        <p><a href="/list-25-0-0-1.html" target="_blank">德州扑克</a><span>|</span>17人在玩</p>
+        <p>由美国德克萨斯扑克开发优化而来的手游</p>
       </div>
-      <div class="wan-btn"><a href="/danji/123.html" target="_blank" class="wanBtn">开始玩</a></div>
+      <div class="wan-btn"><a href="/puke/12.html" target="_blank" class="wanBtn">开始玩</a></div>
     </li>
+
     <li>
-      <div class="img"><a href="/danji/122.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615173331.png" alt="大长腿"></a></div>
-      <div class="con"> <a href="/danji/122.html" target="_blank" class="title">大长腿</a>
-        <p><a href="/list-4-0-0-1.html" target="_blank">休闲</a><span>|</span>2人在玩</p>
-        <p>考验反应的一款益智休闲游戏</p>
+      <div class="img"><a href="/puke/60.html" target="_blank"><img src="/d/file/puke/2018-12-19/90a68f6bfb0635325977dfc0dc3a587f.png" alt="掼蛋"></a></div>
+      <div class="con"> <a href="/puke/60.html" target="_blank" class="title">掼蛋</a>
+        <p><a href="/list-18-0-0-1.html" target="_blank">掼蛋</a><span>|</span>102人在玩</p>
+        <p>掼蛋起源于苏皖地区的棋牌游戏</p>
       </div>
-      <div class="wan-btn"><a href="/danji/122.html" target="_blank" class="wanBtn">开始玩</a></div>
+      <div class="wan-btn"><a href="/puke/60.html" target="_blank" class="wanBtn">开始玩</a></div>
     </li>
+
     <li>
-      <div class="img"><a href="/danji/121.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170616133704.jpg" alt="贱人配对"></a></div>
-      <div class="con"> <a href="/danji/121.html" target="_blank" class="title">贱人配对</a>
-        <p><a href="/list-1-0-0-1.html" target="_blank">益智</a><span>|</span>3人在玩</p>
-        <p>记忆力和配对消除相结合的一款小游戏</p>
+      <div class="img"><a href="/puke/61.html" target="_blank"><img src="/d/file/puke/2018-12-19/17fa2808c9a525ea735ded237ea02e11.png" alt="干瞪眼"></a></div>
+      <div class="con"> <a href="/puke/61.html" target="_blank" class="title">干瞪眼</a>
+        <p><a href="/list-6-0-0-1.html" target="_blank">干瞪眼</a><span>|</span>31人在玩</p>
+        <p>干瞪眼是一款流行于四川地区的扑克牌游戏</p>
       </div>
-      <div class="wan-btn"><a href="/danji/121.html" target="_blank" class="wanBtn">开始玩</a></div>
+      <div class="wan-btn"><a href="/puke/61.html" target="_blank" class="wanBtn">开始玩</a></div>
     </li>
+
     <li>
-      <div class="img"><a href="/danji/120.html" target="_blank"><img src="/d/file/96kaifa/201710260938/20170616091554.jpg" alt="高尔夫花园"></a></div>
-      <div class="con"> <a href="/danji/120.html" target="_blank" class="title">高尔夫花园</a>
-        <p><a href="/list-8-0-0-1.html" target="_blank">体育</a><span>|</span>2人在玩</p>
-        <p>一款好玩有趣的高尔夫小游戏，两种模式任你选择。</p>
+      <div class="img"><a href="/puke/62.html" target="_blank"><img src="/d/file/puke/2018-12-19/f2e143a77d0dc3d84f381ddec7f84e3a.jpg" alt="挖坑"></a></div>
+      <div class="con"> <a href="/puke/62.html" target="_blank" class="title">挖坑</a>
+        <p><a href="/list-12-0-0-1.html" target="_blank">挖坑</a><span>|</span>8人在玩</p>
+        <p>挖坑游戏是一款根据陕西西安，宝鸡一带的扑克牌游戏制作而成的棋牌游戏</p>
       </div>
-      <div class="wan-btn"><a href="/danji/120.html" target="_blank" class="wanBtn">开始玩</a></div>
+      <div class="wan-btn"><a href="/puke/62.html" target="_blank" class="wanBtn">开始玩</a></div>
     </li>
+
     <li>
-      <div class="img"><a href="/danji/119.html" target="_blank"><img src="/d/file/96kaifa/201710260938/20170616140857.jpg" alt="迷你炫斗"></a></div>
-      <div class="con"> <a href="/danji/119.html" target="_blank" class="title">迷你炫斗</a>
-        <p><a href="/list-2-0-0-1.html" target="_blank">动作</a><span>|</span>12人在玩</p>
-        <p>连招根本停不下来！</p>
+      <div class="img"><a href="/puke/37.html" target="_blank"><img src="/d/file/puke/2018-12-20/e9f69927c2ac25576520939d17ae373d.png" alt="拱猪"></a></div>
+      <div class="con"> <a href="/puke/37.html" target="_blank" class="title">拱猪</a>
+        <p><a href="/list-13-0-0-1.html" target="_blank">拱猪</a><span>|</span>9人在玩</p>
+        <p>拱猪是一款流行于中国及海外的扑克牌类游戏，玩法的独特新颖，节奏明快，操作简单，是您休闲娱乐最好的选择。希望您能在这款游戏中体会到快乐，喜欢的朋友们快来下载吧！</p>
       </div>
-      <div class="wan-btn"><a href="/danji/119.html" target="_blank" class="wanBtn">开始玩</a></div>
+      <div class="wan-btn"><a href="/puke/37.html" target="_blank" class="wanBtn">开始玩</a></div>
     </li>
+
     <li>
-      <div class="img"><a href="/danji/118.html" target="_blank"><img src="/d/file/96kaifa/201710260938/20170616092759.png" alt="得到36"></a></div>
-      <div class="con"> <a href="/danji/118.html" target="_blank" class="title">得到36</a>
-        <p><a href="/list-1-0-0-1.html" target="_blank">益智</a><span>|</span>15人在玩</p>
-        <p>一款好玩的方块消除游戏</p>
+      <div class="img"><a href="/puke/63.html" target="_blank"><img src="/d/file/puke/2018-12-19/61807bf5a29f797c42fd2bb0cb8a47ee.jpg" alt="炸金花"></a></div>
+      <div class="con"> <a href="/puke/63.html" target="_blank" class="title">炸金花</a>
+        <p><a href="/list-26-0-0-1.html" target="_blank">炸金花</a><span>|</span>14人在玩</p>
+        <p>一款以三张牌比胜负的棋牌游戏</p>
       </div>
-      <div class="wan-btn"><a href="/danji/118.html" target="_blank" class="wanBtn">开始玩</a></div>
+      <div class="wan-btn"><a href="/puke/63.html" target="_blank" class="wanBtn">开始玩</a></div>
     </li>
+
     <li>
-      <div class="img"><a href="/danji/117.html" target="_blank"><img src="/d/file/96kaifa/201710260938/20170616142616.jpg" alt="能接多少杯"></a></div>
-      <div class="con"> <a href="/danji/117.html" target="_blank" class="title">能接多少杯</a>
-        <p><a href="/list-4-0-0-1.html" target="_blank">休闲</a><span>|</span>0人在玩</p>
-        <p>考验反应能力的小游戏</p>
+      <div class="img"><a href="/puke/64.html" target="_blank"><img src="/d/file/puke/2018-12-19/2c99b1e803f2c267ad0197ebef084b40.png" alt="保皇"></a></div>
+      <div class="con"> <a href="/puke/64.html" target="_blank" class="title">保皇</a>
+        <p><a href="/list-4-0-0-1.html" target="_blank">保皇</a><span>|</span>12人在玩</p>
+        <p>保皇是一款由5人使用4副扑克进行的棋牌游戏</p>
       </div>
-      <div class="wan-btn"><a href="/danji/117.html" target="_blank" class="wanBtn">开始玩</a></div>
+      <div class="wan-btn"><a href="/puke/64.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/puke/10.html" target="_blank"><img src="/d/file/puke/2018-12-17/a07fb5e08bbaf30ba15ccf786499dec9.png" alt="JJ斗地主"></a></div>
+      <div class="con"> <a href="/puke/10.html" target="_blank" class="title">JJ斗地主</a>
+        <p><a href="/list-1-0-0-1.html" target="_blank">斗地主</a><span>|</span>46人在玩</p>
+        <p>JJ斗地主是由北京竞技世界公司采用比赛形式制作的棋牌游戏</p>
+      </div>
+      <div class="wan-btn"><a href="/puke/10.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/puke/56.html" target="_blank"><img src="/d/file/puke/2018-12-18/27b505d6aff5d7a5b5c3645fb9017200.png" alt="天天斗地主"></a></div>
+      <div class="con"> <a href="/puke/56.html" target="_blank" class="title">天天斗地主</a>
+        <p><a href="/list-1-0-0-1.html" target="_blank">斗地主</a><span>|</span>22人在玩</p>
+        <p>天天斗地主游戏天天玩</p>
+      </div>
+      <div class="wan-btn"><a href="/puke/56.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/puke/34.html" target="_blank"><img src="/d/file/puke/2018-12-20/453b6340de117fe287b4d8d66cb6c02a.png" alt="梭哈"></a></div>
+      <div class="con"> <a href="/puke/34.html" target="_blank" class="title">梭哈</a>
+        <p><a href="/list-24-0-0-1.html" target="_blank">梭哈</a><span>|</span>22人在玩</p>
+        <p>根据流行的梭哈扑克游戏开发的棋牌游戏</p>
+      </div>
+      <div class="wan-btn"><a href="/puke/34.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+  </ul>
+</div>
+<div class="h5game">
+  <div class="hd">
+    <h3>棋盘游戏</h3>
+    <a href="/danji/" class="more">更多<i></i></a></div>
+  <ul class="game-list clearfix">
+
+    <li>
+      <div class="img"><a href="/qilei/17.html" target="_blank"><img src="/d/file/qilei/2018-12-19/34ff486bb8463bc0580d1e38afee5c86.jpg" alt="四国军棋"></a></div>
+      <div class="con"> <a href="/qilei/17.html" target="_blank" class="title">四国军棋</a>
+        <p><a href="/list-8-0-0-1.html" target="_blank">军棋</a><span>|</span>12人在玩</p>
+        <p>四国军棋是一种艺术化的棋类对弈游戏。</p>
+      </div>
+      <div class="wan-btn"><a href="/qilei/17.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/qilei/6.html" target="_blank"><img src="/d/file/qilei/2018-12-19/962935430cd3a26840fb6ddaba80df40.png" alt="中国象棋"></a></div>
+      <div class="con"> <a href="/qilei/6.html" target="_blank" class="title">中国象棋</a>
+        <p><a href="/list-2-0-0-1.html" target="_blank">象棋</a><span>|</span>16人在玩</p>
+        <p>中国象棋是中国比较流行的一款传统益智棋类游戏</p>
+      </div>
+      <div class="wan-btn"><a href="/qilei/6.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/qilei/4.html" target="_blank"><img src="/d/file/qilei/2018-12-18/27e593800bbdd2f8ea591094f697ca70.png" alt="飞行棋"></a></div>
+      <div class="con"> <a href="/qilei/4.html" target="_blank" class="title">飞行棋</a>
+        <p><a href="/list-4-0-0-1.html" target="_blank">飞行棋</a><span>|</span>16人在玩</p>
+        <p>飞行棋是一款休闲放松的棋类游戏</p>
+      </div>
+      <div class="wan-btn"><a href="/qilei/4.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/qilei/26.html" target="_blank"><img src="/d/file/qilei/2018-12-19/fb6c529165903152a6e9e3f9b10a3786.png" alt="国际象棋"></a></div>
+      <div class="con"> <a href="/qilei/26.html" target="_blank" class="title">国际象棋</a>
+        <p><a href="/list-13-0-0-1.html" target="_blank">国际象棋</a><span>|</span>8人在玩</p>
+        <p>一款3D国际象棋游戏</p>
+      </div>
+      <div class="wan-btn"><a href="/qilei/26.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/qilei/13.html" target="_blank"><img src="/d/file/qilei/2018-12-19/85705316b31d9161138d9ea28db1b647.png" alt="欢乐围棋"></a></div>
+      <div class="con"> <a href="/qilei/13.html" target="_blank" class="title">欢乐围棋</a>
+        <p><a href="/list-3-0-0-1.html" target="_blank">围棋</a><span>|</span>154人在玩</p>
+        <p>欢乐围棋是为了给围棋爱好者开发的对战网络手游。</p>
+      </div>
+      <div class="wan-btn"><a href="/qilei/13.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/qilei/16.html" target="_blank"><img src="/d/file/qilei/2018-12-19/9747c421c77c3d2197f27c17e6f29be5.jpg" alt="水晶跳棋"></a></div>
+      <div class="con"> <a href="/qilei/16.html" target="_blank" class="title">水晶跳棋</a>
+        <p><a href="/list-6-0-0-1.html" target="_blank">跳棋</a><span>|</span>4人在玩</p>
+        <p>水晶跳棋是一款由二到六人可以同时进行的电脑游戏。</p>
+      </div>
+      <div class="wan-btn"><a href="/qilei/16.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/qilei/8.html" target="_blank"><img src="/d/file/qilei/2018-12-19/a0dfa9543f781ca674c6a9c962033c07.jpg" alt="军棋"></a></div>
+      <div class="con"> <a href="/qilei/8.html" target="_blank" class="title">军棋</a>
+        <p><a href="/list-8-0-0-1.html" target="_blank">军棋</a><span>|</span>7人在玩</p>
+        <p>军棋是一款经典的两人对战策略类手游</p>
+      </div>
+      <div class="wan-btn"><a href="/qilei/8.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/qilei/24.html" target="_blank"><img src="/d/file/qilei/2018-12-19/07198d8d30d3f5267494d8aeea76a10b.jpg" alt="斗兽棋"></a></div>
+      <div class="con"> <a href="/qilei/24.html" target="_blank" class="title">斗兽棋</a>
+        <p><a href="/list-9-0-0-1.html" target="_blank">斗兽棋</a><span>|</span>8人在玩</p>
+        <p>斗兽棋是一款古老而传统的中国游戏</p>
+      </div>
+      <div class="wan-btn"><a href="/qilei/24.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/qilei/20.html" target="_blank"><img src="/d/file/qilei/2018-12-19/4948a577e9f823c655c7ebeadced957f.png" alt="将棋"></a></div>
+      <div class="con"> <a href="/qilei/20.html" target="_blank" class="title">将棋</a>
+        <p><a href="/list-10-0-0-1.html" target="_blank">将棋</a><span>|</span>4人在玩</p>
+        <p>将棋是一款在日本流行的棋类游戏</p>
+      </div>
+      <div class="wan-btn"><a href="/qilei/20.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+  </ul>
+</div>
+
+<div class="h5game">
+  <div class="hd">
+    <h3>麻将游戏</h3>
+    <a href="/danji/" class="more">更多<i></i></a></div>
+  <ul class="game-list clearfix">
+
+    <li>
+      <div class="img"><a href="/majiang/24.html" target="_blank"><img src="/d/file/majiang/2018-12-19/60554299953ce0644cdcd632c2ea96cc.png" alt="广东麻将"></a></div>
+      <div class="con"> <a href="/majiang/24.html" target="_blank" class="title">广东麻将</a>
+        <p><a href="/list-10-0-0-1.html" target="_blank">广东麻将</a><span>|</span>54人在玩</p>
+        <p>广东麻将是专业开发的麻将手游。</p>
+      </div>
+      <div class="wan-btn"><a href="/majiang/24.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/majiang/23.html" target="_blank"><img src="/d/file/majiang/2018-12-18/d29ea653f4c84020e925cbce96f7de9c.jpg" alt="四川麻将"></a></div>
+      <div class="con"> <a href="/majiang/23.html" target="_blank" class="title">四川麻将</a>
+        <p><a href="/list-8-0-0-1.html" target="_blank">四川麻将</a><span>|</span>60人在玩</p>
+        <p>一款为喜爱四川麻将的牌友量身打造的麻将棋牌游戏</p>
+      </div>
+      <div class="wan-btn"><a href="/majiang/23.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/majiang/30.html" target="_blank"><img src="/d/file/majiang/2018-12-19/00e12dcfbfa693a64d0093eb716f16b5.png" alt="皮皮四川麻将"></a></div>
+      <div class="con"> <a href="/majiang/30.html" target="_blank" class="title">皮皮四川麻将</a>
+        <p><a href="/list-8-0-0-1.html" target="_blank">皮皮四川麻将</a><span>|</span>6人在玩</p>
+        <p>皮皮四川麻将是具有最正宗的四川真人麻将玩法的手机游戏。</p>
+      </div>
+      <div class="wan-btn"><a href="/majiang/30.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/majiang/28.html" target="_blank"><img src="/d/file/majiang/2018-12-19/5b936691bf76c1c3e9f78bb2084f9207.jpg" alt="欢乐麻将"></a></div>
+      <div class="con"> <a href="/majiang/28.html" target="_blank" class="title">欢乐麻将</a>
+        <p><a href="/list-3-0-0-1.html" target="_blank">四人麻将</a><span>|</span>7人在玩</p>
+        <p>欢乐麻将是腾讯游戏开发团队汇集诸多麻将玩法而开发出来的一款麻将手游。</p>
+      </div>
+      <div class="wan-btn"><a href="/majiang/28.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/majiang/26.html" target="_blank"><img src="/d/file/majiang/2018-12-19/88615d7314c2e0ee5fe7078ece7f8d9d.png" alt="二人麻将"></a></div>
+      <div class="con"> <a href="/majiang/26.html" target="_blank" class="title">二人麻将</a>
+        <p><a href="/list-1-0-0-1.html" target="_blank">二人麻将</a><span>|</span>3人在玩</p>
+        <p>二人麻将是一款不同与四人麻将的全新的麻将游戏</p>
+      </div>
+      <div class="wan-btn"><a href="/majiang/26.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/majiang/25.html" target="_blank"><img src="/d/file/majiang/2018-12-19/e7c14e1ceaa01dadba3f0028c7a529b2.jpg" alt="四人麻将"></a></div>
+      <div class="con"> <a href="/majiang/25.html" target="_blank" class="title">四人麻将</a>
+        <p><a href="/list-3-0-0-1.html" target="_blank">四人麻将</a><span>|</span>3人在玩</p>
+        <p>四人麻将是按照正宗的国标玩法的规则制作的一款经典的休闲棋牌游戏</p>
+      </div>
+      <div class="wan-btn"><a href="/majiang/25.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/majiang/13.html" target="_blank"><img src="/d/file/majiang/2018-12-20/67a8beba6bc72ca831c7e4a877e15da9.png" alt="长沙麻将"></a></div>
+      <div class="con"> <a href="/majiang/13.html" target="_blank" class="title">长沙麻将</a>
+        <p><a href="/list-13-0-0-1.html" target="_blank">长沙麻将</a><span>|</span>9人在玩</p>
+        <p>长沙麻将是一款最地道，最好玩的长沙麻将。</p>
+      </div>
+      <div class="wan-btn"><a href="/majiang/13.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/majiang/27.html" target="_blank"><img src="/d/file/majiang/2018-12-19/0a7fcb5dc25b05279ccbb55d34bb62c1.jpg" alt="日本麻将"></a></div>
+      <div class="con"> <a href="/majiang/27.html" target="_blank" class="title">日本麻将</a>
+        <p><a href="/list-4-0-0-1.html" target="_blank">日本麻将</a><span>|</span>5人在玩</p>
+        <p>日本麻将是由中国麻将玩法为核心而改编的特色地方游戏</p>
+      </div>
+      <div class="wan-btn"><a href="/majiang/27.html" target="_blank" class="wanBtn">开始玩</a></div>
+    </li>
+
+    <li>
+      <div class="img"><a href="/majiang/29.html" target="_blank"><img src="/d/file/majiang/2018-12-19/e2383a94c38b5837995d4011837adece.jpg" alt="麻将来了"></a></div>
+      <div class="con"> <a href="/majiang/29.html" target="_blank" class="title">麻将来了</a>
+        <p><a href="/list-3-0-0-1.html" target="_blank">四人麻将</a><span>|</span>5人在玩</p>
+        <p>麻将来了是腾讯针对全国300多种麻将玩法开发而来的麻将游戏。</p>
+      </div>
+      <div class="wan-btn"><a href="/majiang/29.html" target="_blank" class="wanBtn">开始玩</a></div>
     </li>
   </ul>
 </div>
@@ -561,458 +761,466 @@ exchange(".yuleSortBtn dd",".yuleHji","cur");
 <div class="rank-box xy-rank">
   <h4><i></i><b>新游</b>排行榜</h4>
   <ul>
+
 <li class="top"> <em class="num num1">1</em>
   <div class="box1">
-    <div class="pic"><a href="/game/927.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027141345.png" alt="十里桃花"></a></div>
-    <p class="tit"><a href="/game/927.html" target="_blank">十里桃花</a></p>
-    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>92人在玩</span></p>
+    <div class="pic"><a href="/puke/132.html" target="_blank"><img src="/d/file/puke/2018-12-20/d1f90948ee187b722fe2ca424df04c5e.jpg" alt="阿闪衡阳棋牌"></a></div>
+    <p class="tit"><a href="/puke/132.html" target="_blank">阿闪衡阳棋牌</a></p>
+    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">跑胡子</a></span><span>4人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">十里桃花</p>
-    <p class="flei">角色扮演</p>
+    <p class="tit">阿闪衡阳棋牌</p>
+    <p class="flei">跑胡子</p>
   </div>
 </li>
+
+
 <li> <em class="num num2">2</em>
   <div class="box1">
-    <div class="pic"><a href="/game/926.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171025093310.png" alt="决斗之皇"></a></div>
-    <p class="tit"><a href="/game/926.html" target="_blank">决斗之皇</a></p>
-    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>3人在玩</span></p>
+    <div class="pic"><a href="/puke/131.html" target="_blank"><img src="/d/file/puke/2018-12-20/d2cd5b2616a80345cbe7918c52c6a241.jpg" alt="阿闪常德跑"></a></div>
+    <p class="tit"><a href="/puke/131.html" target="_blank">阿闪常德跑</a></p>
+    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">跑胡子</a></span><span>4人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">决斗之皇</p>
-    <p class="flei">角色扮演</p>
+    <p class="tit">阿闪常德跑</p>
+    <p class="flei">跑胡子</p>
   </div>
 </li>
 <li> <em class="num num3">3</em>
   <div class="box1">
-    <div class="pic"><a href="/game/925.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027142939.jpg" alt="奇迹仙侠"></a></div>
-    <p class="tit"><a href="/game/925.html" target="_blank">奇迹仙侠</a></p>
-    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>10人在玩</span></p>
+    <div class="pic"><a href="/puke/130.html" target="_blank"><img src="/d/file/puke/2018-12-20/417a656a187170dcb25f219fb2674cd7.jpg" alt="yy跑胡子"></a></div>
+    <p class="tit"><a href="/puke/130.html" target="_blank">yy跑胡子</a></p>
+    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">跑胡子</a></span><span>1人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">奇迹仙侠</p>
-    <p class="flei">角色扮演</p>
+    <p class="tit">yy跑胡子</p>
+    <p class="flei">跑胡子</p>
   </div>
 </li>
 <li> <em class="num">4</em>
   <div class="box1">
-    <div class="pic"><a href="/game/924.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170306150106.png" alt="莽荒纪H5"></a></div>
-    <p class="tit"><a href="/game/924.html" target="_blank">莽荒纪H5</a></p>
-    <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>17人在玩</span></p>
+    <div class="pic"><a href="/puke/129.html" target="_blank"><img src="/d/file/puke/2018-12-20/87a60b32f494875aecd2bba7a6831aa5.jpg" alt="YY耒阳跑胡子"></a></div>
+    <p class="tit"><a href="/puke/129.html" target="_blank">YY耒阳跑胡子</a></p>
+    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">跑胡子</a></span><span>4人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">莽荒纪H5</p>
-    <p class="flei">卡牌游戏</p>
+    <p class="tit">YY耒阳跑胡子</p>
+    <p class="flei">跑胡子</p>
   </div>
 </li>
+
 <li> <em class="num">5</em>
   <div class="box1">
-    <div class="pic"><a href="/game/923.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170107092745.png" alt="大侠归来"></a></div>
-    <p class="tit"><a href="/game/923.html" target="_blank">大侠归来</a></p>
-    <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>8人在玩</span></p>
+    <div class="pic"><a href="/majiang/36.html" target="_blank"><img src="/d/file/majiang/2018-12-20/8c840b7485539c4b648b28dee775423c.jpg" alt="熊猫四人麻将"></a></div>
+    <p class="tit"><a href="/majiang/36.html" target="_blank">熊猫四人麻将</a></p>
+    <p><span><a href="/list-3-0-0-0.html" target="_blank" class="flei">四人麻将</a></span><span>3人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">大侠归来</p>
-    <p class="flei">卡牌游戏</p>
+    <p class="tit">熊猫四人麻将</p>
+    <p class="flei">四人麻将</p>
   </div>
 </li>
 <li> <em class="num">6</em>
   <div class="box1">
-    <div class="pic"><a href="/game/922.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170112105150.png" alt="三国战争"></a></div>
-    <p class="tit"><a href="/game/922.html" target="_blank">三国战争</a></p>
-    <p><span><a href="/list-5-0-0-0.html" target="_blank" class="flei">动作游戏</a></span><span>20人在玩</span></p>
+    <div class="pic"><a href="/majiang/35.html" target="_blank"><img src="/d/file/majiang/2018-12-20/0e050fa0911a11ffb1a64b7cad77eba5.jpg" alt="四川麻将之血战到底"></a></div>
+    <p class="tit"><a href="/majiang/35.html" target="_blank">四川麻将之血战到底</a></p>
+    <p><span><a href="/list-8-0-0-0.html" target="_blank" class="flei">四川麻将</a></span><span>2人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">三国战争</p>
-    <p class="flei">动作游戏</p>
+    <p class="tit">四川麻将之血战到底</p>
+    <p class="flei">四川麻将</p>
   </div>
 </li>
 <li> <em class="num">7</em>
   <div class="box1">
-    <div class="pic"><a href="/game/921.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170123093500.png" alt="点兵三国志"></a></div>
-    <p class="tit"><a href="/game/921.html" target="_blank">点兵三国志</a></p>
-    <p><span><a href="/list-5-0-0-0.html" target="_blank" class="flei">动作游戏</a></span><span>3人在玩</span></p>
+    <div class="pic"><a href="/majiang/34.html" target="_blank"><img src="/d/file/majiang/2018-12-20/d2acc7252058700334d1f7d546a33428.jpg" alt="四川麻将2"></a></div>
+    <p class="tit"><a href="/majiang/34.html" target="_blank">四川麻将2</a></p>
+    <p><span><a href="/list-8-0-0-0.html" target="_blank" class="flei">四川麻将</a></span><span>2人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">点兵三国志</p>
-    <p class="flei">动作游戏</p>
+    <p class="tit">四川麻将2</p>
+    <p class="flei">四川麻将</p>
   </div>
 </li>
 <li> <em class="num">8</em>
   <div class="box1">
-    <div class="pic"><a href="/game/920.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170112093450.png" alt="大主宰"></a></div>
-    <p class="tit"><a href="/game/920.html" target="_blank">大主宰</a></p>
-    <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>2人在玩</span></p>
+    <div class="pic"><a href="/majiang/33.html" target="_blank"><img src="/d/file/majiang/2018-12-20/dd69711903b72110a9eb50cd400a4eeb.jpg" alt="四川麻将(血战到底)"></a></div>
+    <p class="tit"><a href="/majiang/33.html" target="_blank">四川麻将(血战到底)</a></p>
+    <p><span><a href="/list-8-0-0-0.html" target="_blank" class="flei">四川麻将</a></span><span>4人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">大主宰</p>
-    <p class="flei">卡牌游戏</p>
+    <p class="tit">四川麻将(血战到底)</p>
+    <p class="flei">四川麻将</p>
   </div>
 </li>
+
+
 <li> <em class="num">9</em>
   <div class="box1">
-    <div class="pic"><a href="/game/919.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170117094517.png" alt="古惑三国志"></a></div>
-    <p class="tit"><a href="/game/919.html" target="_blank">古惑三国志</a></p>
-    <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>11人在玩</span></p>
+    <div class="pic"><a href="/qilei/39.html" target="_blank"><img src="/d/file/qilei/2018-12-20/66fae4197131606d02e3d44a51185787.png" alt="谷歌围棋"></a></div>
+    <p class="tit"><a href="/qilei/39.html" target="_blank">谷歌围棋</a></p>
+    <p><span><a href="/list-3-0-0-0.html" target="_blank" class="flei">围棋</a></span><span>1人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">古惑三国志</p>
-    <p class="flei">卡牌游戏</p>
+    <p class="tit">谷歌围棋</p>
+    <p class="flei">围棋</p>
   </div>
 </li>
 <li> <em class="num">10</em>
   <div class="box1">
-    <div class="pic"><a href="/game/918.html" target="_blank"><img src="/d/file/96kaifa/201710241647/20170513090738.png" alt="决战沙城"></a></div>
-    <p class="tit"><a href="/game/918.html" target="_blank">决战沙城</a></p>
-    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>15人在玩</span></p>
+    <div class="pic"><a href="/qilei/38.html" target="_blank"><img src="/d/file/qilei/2018-12-20/4423b28ebc021493c8bbb679c570195c.png" alt="元游围棋"></a></div>
+    <p class="tit"><a href="/qilei/38.html" target="_blank">元游围棋</a></p>
+    <p><span><a href="/list-3-0-0-0.html" target="_blank" class="flei">围棋</a></span><span>2人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">决战沙城</p>
-    <p class="flei">角色扮演</p>
+    <p class="tit">元游围棋</p>
+    <p class="flei">围棋</p>
   </div>
 </li>
+
+
   </ul>
 </div>
 <div class="rank-box wy-rank">
-<h4><i></i><b>网游</b>排行榜</h4>
+<h4><i></i><b>扑克</b>排行榜</h4>
 <ul>
 <li class="top"> <em class="num num1">1</em>
   <div class="box1">
-    <div class="pic"><a href="/game/927.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027141345.png" alt="十里桃花"></a></div>
-    <p class="tit"><a href="/game/927.html" target="_blank">十里桃花</a></p>
-    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>92人在玩</span></p>
+    <div class="pic"><a href="/puke/1.html" target="_blank"><img src="/d/file/puke/2018-12-15/6f8befea7aa4df48fab66312d2c956af.png" alt="欢乐斗地主"></a></div>
+    <p class="tit"><a href="/puke/1.html" target="_blank">欢乐斗地主</a></p>
+    <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">围棋</a></span><span>318人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">十里桃花</p>
-    <p class="flei">角色扮演</p>
+    <p class="tit">欢乐斗地主</p>
+    <p class="flei">围棋</p>
   </div>
 </li>
 <li> <em class="num num2">2</em>
   <div class="box1">
-    <div class="pic"><a href="/game/916.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170418154911.png" alt="口袋妖怪联盟"></a></div>
-    <p class="tit"><a href="/game/916.html" target="_blank">口袋妖怪联盟</a></p>
-    <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>24人在玩</span></p>
+    <div class="pic"><a href="/puke/60.html" target="_blank"><img src="/d/file/puke/2018-12-19/90a68f6bfb0635325977dfc0dc3a587f.png" alt="掼蛋"></a></div>
+    <p class="tit"><a href="/puke/60.html" target="_blank">掼蛋</a></p>
+    <p><span><a href="/list-18-0-0-0.html" target="_blank" class="flei">掼蛋</a></span><span>102人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">口袋妖怪联盟</p>
-    <p class="flei">卡牌游戏</p>
+    <p class="tit">掼蛋</p>
+    <p class="flei">掼蛋</p>
   </div>
 </li>
 <li> <em class="num num3">3</em>
   <div class="box1">
-    <div class="pic"><a href="/game/922.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170112105150.png" alt="三国战争"></a></div>
-    <p class="tit"><a href="/game/922.html" target="_blank">三国战争</a></p>
-    <p><span><a href="/list-5-0-0-0.html" target="_blank" class="flei">动作游戏</a></span><span>20人在玩</span></p>
+    <div class="pic"><a href="/puke/88.html" target="_blank"><img src="/d/file/puke/2018-12-20/464d781ddf01780f1e2becfb0ea5d45c.jpg" alt="天天挖坑"></a></div>
+    <p class="tit"><a href="/puke/88.html" target="_blank">天天挖坑</a></p>
+    <p><span><a href="/list-12-0-0-0.html" target="_blank" class="flei">挖坑</a></span><span>69人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">三国战争</p>
-    <p class="flei">动作游戏</p>
+    <p class="tit">天天挖坑</p>
+    <p class="flei">挖坑</p>
   </div>
 </li>
 <li> <em class="num">4</em>
   <div class="box1">
-    <div class="pic"><a href="/game/924.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170306150106.png" alt="莽荒纪H5"></a></div>
-    <p class="tit"><a href="/game/924.html" target="_blank">莽荒纪H5</a></p>
-    <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>17人在玩</span></p>
+    <div class="pic"><a href="/puke/57.html" target="_blank"><img src="/d/file/puke/2018-12-18/d6fa7b0ab12eac4f2e97fd14f54a0289.jpg" alt="大连红五"></a></div>
+    <p class="tit"><a href="/puke/57.html" target="_blank">大连红五</a></p>
+    <p><span><a href="/list-14-0-0-0.html" target="_blank" class="flei">红五</a></span><span>66人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">莽荒纪H5</p>
-    <p class="flei">卡牌游戏</p>
+    <p class="tit">大连红五</p>
+    <p class="flei">红五</p>
   </div>
 </li>
 <li> <em class="num">5</em>
   <div class="box1">
-    <div class="pic"><a href="/game/918.html" target="_blank"><img src="/d/file/96kaifa/201710241647/20170513090738.png" alt="决战沙城"></a></div>
-    <p class="tit"><a href="/game/918.html" target="_blank">决战沙城</a></p>
-    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>15人在玩</span></p>
+    <div class="pic"><a href="/puke/10.html" target="_blank"><img src="/d/file/puke/2018-12-17/a07fb5e08bbaf30ba15ccf786499dec9.png" alt="JJ斗地主"></a></div>
+    <p class="tit"><a href="/puke/10.html" target="_blank">JJ斗地主</a></p>
+    <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">红五</a></span><span>46人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">决战沙城</p>
-    <p class="flei">角色扮演</p>
+    <p class="tit">JJ斗地主</p>
+    <p class="flei">红五</p>
   </div>
 </li>
 <li> <em class="num">6</em>
   <div class="box1">
-    <div class="pic"><a href="/game/919.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170117094517.png" alt="古惑三国志"></a></div>
-    <p class="tit"><a href="/game/919.html" target="_blank">古惑三国志</a></p>
-    <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>11人在玩</span></p>
+    <div class="pic"><a href="/puke/51.html" target="_blank"><img src="/d/file/puke/2018-12-18/e6b42818a5d6c2305047b3611c17de6d.png" alt="陕西三代"></a></div>
+    <p class="tit"><a href="/puke/51.html" target="_blank">陕西三代</a></p>
+    <p><span><a href="/list-9-0-0-0.html" target="_blank" class="flei">三代</a></span><span>36人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">古惑三国志</p>
-    <p class="flei">卡牌游戏</p>
+    <p class="tit">陕西三代</p>
+    <p class="flei">三代</p>
   </div>
 </li>
 <li> <em class="num">7</em>
   <div class="box1">
-    <div class="pic"><a href="/game/891.html" target="_blank"><img src="/d/file/96kaifa/201710241647/20170628092649.png" alt="武道至尊"></a></div>
-    <p class="tit"><a href="/game/891.html" target="_blank">武道至尊</a></p>
-    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>10人在玩</span></p>
+    <div class="pic"><a href="/puke/61.html" target="_blank"><img src="/d/file/puke/2018-12-19/17fa2808c9a525ea735ded237ea02e11.png" alt="干瞪眼"></a></div>
+    <p class="tit"><a href="/puke/61.html" target="_blank">干瞪眼</a></p>
+    <p><span><a href="/list-6-0-0-0.html" target="_blank" class="flei">干瞪眼</a></span><span>31人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">武道至尊</p>
-    <p class="flei">角色扮演</p>
+    <p class="tit">干瞪眼</p>
+    <p class="flei">干瞪眼</p>
   </div>
 </li>
 <li> <em class="num">8</em>
   <div class="box1">
-    <div class="pic"><a href="/game/925.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027142939.jpg" alt="奇迹仙侠"></a></div>
-    <p class="tit"><a href="/game/925.html" target="_blank">奇迹仙侠</a></p>
-    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>10人在玩</span></p>
+    <div class="pic"><a href="/puke/3.html" target="_blank"><img src="/d/file/puke/2018-12-17/64d77976eb11d1aeb20778c84be245a7.png" alt="开启干瞪眼"></a></div>
+    <p class="tit"><a href="/puke/3.html" target="_blank">开启干瞪眼</a></p>
+    <p><span><a href="/list-6-0-0-0.html" target="_blank" class="flei">干瞪眼</a></span><span>26人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">奇迹仙侠</p>
-    <p class="flei">角色扮演</p>
+    <p class="tit">开启干瞪眼</p>
+    <p class="flei">干瞪眼</p>
   </div>
 </li>
 <li> <em class="num">9</em>
   <div class="box1">
-    <div class="pic"><a href="/game/888.html" target="_blank"><img src="/d/file/96kaifa/201710241647/20170407085353.png" alt="爬塔西游"></a></div>
-    <p class="tit"><a href="/game/888.html" target="_blank">爬塔西游</a></p>
-    <p><span><a href="/list-8-0-0-0.html" target="_blank" class="flei">休闲游戏</a></span><span>9人在玩</span></p>
+    <div class="pic"><a href="/puke/8.html" target="_blank"><img src="/d/file/puke/2018-12-17/d2e93c91e93760b8ebab9acdc61acd4f.png" alt="DD斗地主"></a></div>
+    <p class="tit"><a href="/puke/8.html" target="_blank">DD斗地主</a></p>
+    <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">干瞪眼</a></span><span>24人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">爬塔西游</p>
-    <p class="flei">休闲游戏</p>
+    <p class="tit">DD斗地主</p>
+    <p class="flei">干瞪眼</p>
   </div>
 </li>
 <li> <em class="num">10</em>
   <div class="box1">
-    <div class="pic"><a href="/game/923.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170107092745.png" alt="大侠归来"></a></div>
-    <p class="tit"><a href="/game/923.html" target="_blank">大侠归来</a></p>
-    <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>8人在玩</span></p>
+    <div class="pic"><a href="/puke/28.html" target="_blank"><img src="/d/file/puke/2018-12-20/647509c240f73f45cd234d587d611d69.png" alt="超级挖坑"></a></div>
+    <p class="tit"><a href="/puke/28.html" target="_blank">超级挖坑</a></p>
+    <p><span><a href="/list-12-0-0-0.html" target="_blank" class="flei">挖坑</a></span><span>22人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">大侠归来</p>
-    <p class="flei">卡牌游戏</p>
+    <p class="tit">超级挖坑</p>
+    <p class="flei">挖坑</p>
   </div>
 </li>
 </div>
 <div class="rank-box xyx-rank">
-  <h4><i></i><b>小游戏</b>排行榜</h4>
+  <h4><i></i><b>棋盘</b>排行榜</h4>
   <ul>
 <li class="top"> <em class="num num1">1</em>
   <div class="box1">
-    <div class="pic"><a href="/danji/118.html" target="_blank"><img src="/d/file/96kaifa/201710260938/20170616092759.png" alt="得到36"></a></div>
-    <p class="tit"><a href="/danji/118.html" target="_blank">得到36</a></p>
-    <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">益智</a></span><span>15人在玩</span></p>
+    <div class="pic"><a href="/qilei/13.html" target="_blank"><img src="/d/file/qilei/2018-12-19/85705316b31d9161138d9ea28db1b647.png" alt="欢乐围棋"></a></div>
+    <p class="tit"><a href="/qilei/13.html" target="_blank">欢乐围棋</a></p>
+    <p><span><a href="/list-3-0-0-1.html" target="_blank" class="flei">斗地主</a></span><span>154人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">得到36</p>
-    <p class="flei">益智</p>
+    <p class="tit">欢乐围棋</p>
+    <p class="flei">斗地主</p>
   </div>
 </li>
 <li> <em class="num num2">2</em>
   <div class="box1">
-    <div class="pic"><a href="/danji/125.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615161819.jpg" alt="八爪鱼拉拉手"></a></div>
-    <p class="tit"><a href="/danji/125.html" target="_blank">八爪鱼拉拉手</a></p>
-    <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">益智</a></span><span>14人在玩</span></p>
+    <div class="pic"><a href="/qilei/3.html" target="_blank"><img src="/d/file/qilei/2018-12-17/bfa4a0baa6360542e9be924d796e6552.png" alt="腾讯欢乐五子棋"></a></div>
+    <p class="tit"><a href="/qilei/3.html" target="_blank">腾讯欢乐五子棋</a></p>
+    <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">斗地主</a></span><span>106人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">八爪鱼拉拉手</p>
-    <p class="flei">益智</p>
+    <p class="tit">腾讯欢乐五子棋</p>
+    <p class="flei">斗地主</p>
   </div>
 </li>
 <li> <em class="num num3">3</em>
   <div class="box1">
-    <div class="pic"><a href="/danji/119.html" target="_blank"><img src="/d/file/96kaifa/201710260938/20170616140857.jpg" alt="迷你炫斗"></a></div>
-    <p class="tit"><a href="/danji/119.html" target="_blank">迷你炫斗</a></p>
-    <p><span><a href="/list-2-0-0-1.html" target="_blank" class="flei">动作</a></span><span>12人在玩</span></p>
+    <div class="pic"><a href="/qilei/28.html" target="_blank"><img src="/d/file/qilei/2018-12-19/2c2cca711f1ee418f6f4e658972fbc4f.png" alt="多乐中国象棋"></a></div>
+    <p class="tit"><a href="/qilei/28.html" target="_blank">多乐中国象棋</a></p>
+    <p><span><a href="/list-2-0-0-1.html" target="_blank" class="flei">斗地主</a></span><span>64人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">迷你炫斗</p>
-    <p class="flei">动作</p>
+    <p class="tit">多乐中国象棋</p>
+    <p class="flei">斗地主</p>
   </div>
 </li>
 <li> <em class="num">4</em>
   <div class="box1">
-    <div class="pic"><a href="/danji/123.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615175231.png" alt="大小跳不停"></a></div>
-    <p class="tit"><a href="/danji/123.html" target="_blank">大小跳不停</a></p>
-    <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>9人在玩</span></p>
+    <div class="pic"><a href="/qilei/1.html" target="_blank"><img src="/d/file/qilei/2018-12-17/294cd29df15638b32ad5a2b378e47c1c.jpg" alt="天天象棋"></a></div>
+    <p class="tit"><a href="/qilei/1.html" target="_blank">天天象棋</a></p>
+    <p><span><a href="/list-2-0-0-1.html" target="_blank" class="flei">斗地主</a></span><span>48人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">大小跳不停</p>
-    <p class="flei">休闲</p>
+    <p class="tit">天天象棋</p>
+    <p class="flei">斗地主</p>
   </div>
 </li>
 <li> <em class="num">5</em>
   <div class="box1">
-    <div class="pic"><a href="/danji/103.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170616155942.jpg" alt="跳跃的小青蛙"></a></div>
-    <p class="tit"><a href="/danji/103.html" target="_blank">跳跃的小青蛙</a></p>
-    <p><span><a href="/list-5-0-0-1.html" target="_blank" class="flei">敏捷</a></span><span>5人在玩</span></p>
+    <div class="pic"><a href="/qilei/22.html" target="_blank"><img src="/d/file/qilei/2018-12-19/4550da0a1f8f9c213699a75a9ea656f2.png" alt="彩色五子棋"></a></div>
+    <p class="tit"><a href="/qilei/22.html" target="_blank">彩色五子棋</a></p>
+    <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">斗地主</a></span><span>17人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">跳跃的小青蛙</p>
-    <p class="flei">敏捷</p>
+    <p class="tit">彩色五子棋</p>
+    <p class="flei">斗地主</p>
   </div>
 </li>
 <li> <em class="num">6</em>
   <div class="box1">
-    <div class="pic"><a href="/danji/121.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170616133704.jpg" alt="贱人配对"></a></div>
-    <p class="tit"><a href="/danji/121.html" target="_blank">贱人配对</a></p>
-    <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">益智</a></span><span>3人在玩</span></p>
+    <div class="pic"><a href="/qilei/2.html" target="_blank"><img src="/d/file/qilei/2018-12-17/516b30aa7cd6eeaeab01030dca9ed148.jpg" alt="天天军旗"></a></div>
+    <p class="tit"><a href="/qilei/2.html" target="_blank">天天军旗</a></p>
+    <p><span><a href="/list-8-0-0-1.html" target="_blank" class="flei">斗地主</a></span><span>16人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">贱人配对</p>
-    <p class="flei">益智</p>
+    <p class="tit">天天军旗</p>
+    <p class="flei">斗地主</p>
   </div>
 </li>
 <li> <em class="num">7</em>
   <div class="box1">
-    <div class="pic"><a href="/danji/124.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615170050.jpg" alt="抽打神经猫"></a></div>
-    <p class="tit"><a href="/danji/124.html" target="_blank">抽打神经猫</a></p>
-    <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>3人在玩</span></p>
+    <div class="pic"><a href="/qilei/4.html" target="_blank"><img src="/d/file/qilei/2018-12-18/27e593800bbdd2f8ea591094f697ca70.png" alt="飞行棋"></a></div>
+    <p class="tit"><a href="/qilei/4.html" target="_blank">飞行棋</a></p>
+    <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">斗地主</a></span><span>16人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">抽打神经猫</p>
-    <p class="flei">休闲</p>
+    <p class="tit">飞行棋</p>
+    <p class="flei">斗地主</p>
   </div>
 </li>
 <li> <em class="num">8</em>
   <div class="box1">
-    <div class="pic"><a href="/danji/78.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170621104440.jpg" alt="糖果乐园"></a></div>
-    <p class="tit"><a href="/danji/78.html" target="_blank">糖果乐园</a></p>
-    <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>2人在玩</span></p>
+    <div class="pic"><a href="/qilei/6.html" target="_blank"><img src="/d/file/qilei/2018-12-19/962935430cd3a26840fb6ddaba80df40.png" alt="中国象棋"></a></div>
+    <p class="tit"><a href="/qilei/6.html" target="_blank">中国象棋</a></p>
+    <p><span><a href="/list-2-0-0-1.html" target="_blank" class="flei">斗地主</a></span><span>16人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">糖果乐园</p>
-    <p class="flei">休闲</p>
+    <p class="tit">中国象棋</p>
+    <p class="flei">斗地主</p>
   </div>
 </li>
 <li> <em class="num">9</em>
   <div class="box1">
-    <div class="pic"><a href="/danji/107.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170616135202.png" alt="六角消除"></a></div>
-    <p class="tit"><a href="/danji/107.html" target="_blank">六角消除</a></p>
-    <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">益智</a></span><span>2人在玩</span></p>
+    <div class="pic"><a href="/qilei/9.html" target="_blank"><img src="/d/file/qilei/2018-12-19/a2c0a82a7475c462146612b1af91aee2.png" alt="途游五子棋"></a></div>
+    <p class="tit"><a href="/qilei/9.html" target="_blank">途游五子棋</a></p>
+    <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">斗地主</a></span><span>13人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">六角消除</p>
-    <p class="flei">益智</p>
+    <p class="tit">途游五子棋</p>
+    <p class="flei">斗地主</p>
   </div>
 </li>
 <li> <em class="num">10</em>
   <div class="box1">
-    <div class="pic"><a href="/danji/120.html" target="_blank"><img src="/d/file/96kaifa/201710260938/20170616091554.jpg" alt="高尔夫花园"></a></div>
-    <p class="tit"><a href="/danji/120.html" target="_blank">高尔夫花园</a></p>
-    <p><span><a href="/list-8-0-0-1.html" target="_blank" class="flei">体育</a></span><span>2人在玩</span></p>
+    <div class="pic"><a href="/qilei/17.html" target="_blank"><img src="/d/file/qilei/2018-12-19/34ff486bb8463bc0580d1e38afee5c86.jpg" alt="四国军棋"></a></div>
+    <p class="tit"><a href="/qilei/17.html" target="_blank">四国军棋</a></p>
+    <p><span><a href="/list-8-0-0-1.html" target="_blank" class="flei">斗地主</a></span><span>12人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">高尔夫花园</p>
-    <p class="flei">体育</p>
+    <p class="tit">四国军棋</p>
+    <p class="flei">斗地主</p>
   </div>
 </li>
   </ul>
 </div>
 <div class="rank-box tj-rank">
-  <h4><i></i><b>推荐</b>排行榜</h4>
+  <h4><i></i><b>麻将</b>排行榜</h4>
   <ul>
 <li class="top"> <em class="num num1">1</em>
   <div class="box1">
-    <div class="pic"><a href="/game/891.html" target="_blank"><img src="/d/file/96kaifa/201710241647/20170628092649.png" alt="武道至尊"></a></div>
-    <p class="tit"><a href="/game/891.html" target="_blank">武道至尊</a></p>
-    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>10人在玩</span></p>
+    <div class="pic"><a href="/majiang/2.html" target="_blank"><img src="/d/file/majiang/2018-12-17/86daee5dab8c843e5938e94ecec567bc.png" alt="筑志红中麻将"></a></div>
+    <p class="tit"><a href="/majiang/2.html" target="_blank">筑志红中麻将</a></p>
+    <p><span><a href="/list-31-0-0-0.html" target="_blank" class="flei">红中麻将</a></span><span>68人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">武道至尊</p>
-    <p class="flei">角色扮演</p>
+    <p class="tit">筑志红中麻将</p>
+    <p class="flei">红中麻将</p>
   </div>
 </li>
 <li> <em class="num num2">2</em>
   <div class="box1">
-    <div class="pic"><a href="/game/888.html" target="_blank"><img src="/d/file/96kaifa/201710241647/20170407085353.png" alt="爬塔西游"></a></div>
-    <p class="tit"><a href="/game/888.html" target="_blank">爬塔西游</a></p>
-    <p><span><a href="/list-8-0-0-0.html" target="_blank" class="flei">休闲游戏</a></span><span>9人在玩</span></p>
+    <div class="pic"><a href="/majiang/23.html" target="_blank"><img src="/d/file/majiang/2018-12-18/d29ea653f4c84020e925cbce96f7de9c.jpg" alt="四川麻将"></a></div>
+    <p class="tit"><a href="/majiang/23.html" target="_blank">四川麻将</a></p>
+    <p><span><a href="/list-8-0-0-0.html" target="_blank" class="flei">四川麻将</a></span><span>60人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">爬塔西游</p>
-    <p class="flei">休闲游戏</p>
+    <p class="tit">四川麻将</p>
+    <p class="flei">四川麻将</p>
   </div>
 </li>
 <li> <em class="num num3">3</em>
   <div class="box1">
-    <div class="pic"><a href="/game/863.html" target="_blank"><img src="/d/file/96kaifa/201710241647/20170522143815.png" alt="华丽贪吃蛇"></a></div>
-    <p class="tit"><a href="/game/863.html" target="_blank">华丽贪吃蛇</a></p>
-    <p><span><a href="/list-8-0-0-0.html" target="_blank" class="flei">休闲游戏</a></span><span>3人在玩</span></p>
+    <div class="pic"><a href="/majiang/24.html" target="_blank"><img src="/d/file/majiang/2018-12-19/60554299953ce0644cdcd632c2ea96cc.png" alt="广东麻将"></a></div>
+    <p class="tit"><a href="/majiang/24.html" target="_blank">广东麻将</a></p>
+    <p><span><a href="/list-10-0-0-0.html" target="_blank" class="flei">广东麻将</a></span><span>54人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">华丽贪吃蛇</p>
-    <p class="flei">休闲游戏</p>
+    <p class="tit">广东麻将</p>
+    <p class="flei">广东麻将</p>
   </div>
 </li>
 <li> <em class="num">4</em>
   <div class="box1">
-    <div class="pic"><a href="/game/879.html" target="_blank"><img src="/d/file/96kaifa/201710241647/20170628145156.jpg" alt="卧龙之力"></a></div>
-    <p class="tit"><a href="/game/879.html" target="_blank">卧龙之力</a></p>
-    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>3人在玩</span></p>
+    <div class="pic"><a href="/majiang/31.html" target="_blank"><img src="/d/file/majiang/2018-12-19/73d68c742647a4381f5d275f1da50205.png" alt="日本麻将中文版"></a></div>
+    <p class="tit"><a href="/majiang/31.html" target="_blank">日本麻将中文版</a></p>
+    <p><span><a href="/list-4-0-0-0.html" target="_blank" class="flei">日本麻将</a></span><span>13人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">卧龙之力</p>
-    <p class="flei">角色扮演</p>
+    <p class="tit">日本麻将中文版</p>
+    <p class="flei">日本麻将</p>
   </div>
 </li>
 <li> <em class="num">5</em>
   <div class="box1">
-    <div class="pic"><a href="/game/799.html" target="_blank"><img src="/d/file/96kaifa/201710241646/20171010135743.jpg" alt="我要当首富2"></a></div>
-    <p class="tit"><a href="/game/799.html" target="_blank">我要当首富2</a></p>
-    <p><span><a href="/list-3-0-0-0.html" target="_blank" class="flei">模拟经营</a></span><span>2人在玩</span></p>
+    <div class="pic"><a href="/majiang/14.html" target="_blank"><img src="/d/file/majiang/2018-12-19/a3ff0dbc74034f0b87961f7695940d3e.jpg" alt="长春麻将"></a></div>
+    <p class="tit"><a href="/majiang/14.html" target="_blank">长春麻将</a></p>
+    <p><span><a href="/list-14-0-0-0.html" target="_blank" class="flei">长春麻将</a></span><span>11人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">我要当首富2</p>
-    <p class="flei">模拟经营</p>
+    <p class="tit">长春麻将</p>
+    <p class="flei">长春麻将</p>
   </div>
 </li>
 <li> <em class="num">6</em>
   <div class="box1">
-    <div class="pic"><a href="/game/808.html" target="_blank"><img src="/d/file/96kaifa/201710241646/20170815100319.jpg" alt="街机捕鱼"></a></div>
-    <p class="tit"><a href="/game/808.html" target="_blank">街机捕鱼</a></p>
-    <p><span><a href="/list-8-0-0-0.html" target="_blank" class="flei">休闲游戏</a></span><span>1人在玩</span></p>
+    <div class="pic"><a href="/majiang/18.html" target="_blank"><img src="/d/file/majiang/2018-12-19/b34ad829915415b913c9d625e4779de5.png" alt="山东麻将"></a></div>
+    <p class="tit"><a href="/majiang/18.html" target="_blank">山东麻将</a></p>
+    <p><span><a href="/list-16-0-0-0.html" target="_blank" class="flei">山东麻将</a></span><span>10人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">街机捕鱼</p>
-    <p class="flei">休闲游戏</p>
+    <p class="tit">山东麻将</p>
+    <p class="flei">山东麻将</p>
   </div>
 </li>
 <li> <em class="num">7</em>
   <div class="box1">
-    <div class="pic"><a href="/game/827.html" target="_blank"><img src="/d/file/96kaifa/201710241646/20171018093618.jpg" alt="鬼武之刃之皇城至尊"></a></div>
-    <p class="tit"><a href="/game/827.html" target="_blank">鬼武之刃之皇城至尊</a></p>
-    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>1人在玩</span></p>
+    <div class="pic"><a href="/majiang/12.html" target="_blank"><img src="/d/file/majiang/2018-12-17/019536531296f20e5b91679a680ca340.jpg" alt="幺妹四川麻将"></a></div>
+    <p class="tit"><a href="/majiang/12.html" target="_blank">幺妹四川麻将</a></p>
+    <p><span><a href="/list-8-0-0-0.html" target="_blank" class="flei">四川麻将</a></span><span>9人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">鬼武之刃之皇城至尊</p>
-    <p class="flei">角色扮演</p>
+    <p class="tit">幺妹四川麻将</p>
+    <p class="flei">四川麻将</p>
   </div>
 </li>
 <li> <em class="num">8</em>
   <div class="box1">
-    <div class="pic"><a href="/game/861.html" target="_blank"><img src="/d/file/96kaifa/201710241647/20170517104131.png" alt="风爆远征"></a></div>
-    <p class="tit"><a href="/game/861.html" target="_blank">风爆远征</a></p>
-    <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>1人在玩</span></p>
+    <div class="pic"><a href="/majiang/13.html" target="_blank"><img src="/d/file/majiang/2018-12-20/67a8beba6bc72ca831c7e4a877e15da9.png" alt="长沙麻将"></a></div>
+    <p class="tit"><a href="/majiang/13.html" target="_blank">长沙麻将</a></p>
+    <p><span><a href="/list-13-0-0-0.html" target="_blank" class="flei">长沙麻将</a></span><span>9人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">风爆远征</p>
-    <p class="flei">卡牌游戏</p>
+    <p class="tit">长沙麻将</p>
+    <p class="flei">长沙麻将</p>
   </div>
 </li>
 <li> <em class="num">9</em>
   <div class="box1">
-    <div class="pic"><a href="/game/877.html" target="_blank"><img src="/d/file/96kaifa/201710241647/20170614165244.jpg" alt="大宗师"></a></div>
-    <p class="tit"><a href="/game/877.html" target="_blank">大宗师</a></p>
-    <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>1人在玩</span></p>
+    <div class="pic"><a href="/majiang/17.html" target="_blank"><img src="/d/file/majiang/2018-12-19/315fc61630bf039c32f90b52f6a4741a.jpg" alt="陕西麻将"></a></div>
+    <p class="tit"><a href="/majiang/17.html" target="_blank">陕西麻将</a></p>
+    <p><span><a href="/list-11-0-0-0.html" target="_blank" class="flei">陕西麻将</a></span><span>8人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">大宗师</p>
-    <p class="flei">卡牌游戏</p>
+    <p class="tit">陕西麻将</p>
+    <p class="flei">陕西麻将</p>
   </div>
 </li>
 <li> <em class="num">10</em>
   <div class="box1">
-    <div class="pic"><a href="/game/802.html" target="_blank"><img src="/d/file/96kaifa/201710241646/20170830095026.jpg" alt="狼人趴"></a></div>
-    <p class="tit"><a href="/game/802.html" target="_blank">狼人趴</a></p>
-    <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>0人在玩</span></p>
+    <div class="pic"><a href="/majiang/20.html" target="_blank"><img src="/d/file/majiang/2018-12-19/9edde4252bcb4b2a4d33041f1b8360c1.png" alt="南昌麻将"></a></div>
+    <p class="tit"><a href="/majiang/20.html" target="_blank">南昌麻将</a></p>
+    <p><span><a href="/list-12-0-0-0.html" target="_blank" class="flei">南昌麻将</a></span><span>8人在玩</span></p>
   </div>
   <div class="box2">
-    <p class="tit">狼人趴</p>
-    <p class="flei">角色扮演</p>
+    <p class="tit">南昌麻将</p>
+    <p class="flei">南昌麻将</p>
   </div>
 </li>
   </ul>

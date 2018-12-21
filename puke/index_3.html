@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>扑克_仿3500游戏</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/96kaifa/statics/home/css/base.css" type="text/css" rel="stylesheet">
+<link href="/96kaifa/statics/home/css/style3500.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="/96kaifa/statics/home/js/jquery-1.8.2.min.js"></script>
+</head>
+<script type="text/javascript">
+	showMobile("http://test.yanwowenda.cn/puke/");
+</script>
+<body>
+<div class="cover"></div>
+<div class="topbox">
+  <div class="boxin clearfix">
+    <div class="topl fl"> <span class="home"><a href="/">游戏首页</a></span>
+      <ul>
+        <li>|<a href="http://www.96kaifa.com" target="_blank">手机版</a></li>
+        <li>|<a href="#" target="_blank">客户端下载</a></li>
+        <li>|<a href="javascript:;" class="wx_show">关注微信</a>
+          <div class="wx_hide"> <i class="angle"></i> <img src="/96kaifa/statics/home/images/wx_code.jpg" width="103" height="103"> <span>关注微信公众号</span> </div>
+        </li>
+        <li>|<a href="#" target="_blank">开放平台</a></li>
+      </ul>
+    </div>
+    <div class="topr fr">
+        <div class="login_ok">
+        
+        <script>
+            document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+            $(function(){
+            var dqurl = window.location.href;
+            $('#dquurl').val(dqurl);
+            })
+            </script>
+        
+        </div>
+        <a href="javascript:;" onclick="AddFavorite();">收藏本站</a> </div>
+</div>
+<div class="header">
+  <div class="header-top">
+    <div class="in">
+      <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="棋游之家"></a></div>
+      <div class="search fr">
+       
+        <form action="/search/game.php" method="get" target="_blank" name="searchTop">
+          <div class="search_box tr">
+            <input type="text" id="bdcsMain" name="key" class="sech_keyword" placeholder="请输入游戏名称">
+            <input type="submit" value="搜索" class="sech_btn">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="in">
+      <ul>
+        <li><a href="/" class="nav-cur"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qipailei/"><span class="menu-txt">棋牌</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qilei/"><span class="menu-txt">棋类</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qiyouchangshang/"><span class="menu-txt">棋游厂商</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
+      </ul>
+      <div class="grzx">
+	  	<script> document.write('<script src="./e/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
+	  </div>
+    </div>
+  </div>
+</div>
+<div class="my_pop">
+    <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">账号登录</p>
+    <form action="/e/member/doaction.php" method="post" onsubmit="return userLogin()" id="form_login1" class="form-login">
+    <input type="hidden" name="ecmsfrom" value="http://3500.96demo.com/" id="dquurl">
+    <input type="hidden" name="enews" value="login">
+    <input name="tobind" type="hidden" id="tobind" value="0">
+    <div class="modal-body">
+    <div class="error_font">*错误提示</div>
+     <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
+    </div>
+    <div class="outer">
+    <div class="captcha" id="logcaptcha"></div>
+    </div>
+    </div>
+    <div class="modal-footer" style="margin-bottom:40px;">
+    <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
+    </div>
+    </form>
+    </div>
+    
+    
+    <div class="register_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">会员注册</p>
+    <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
+    <input type="hidden" name="enews" value="register">
+    <div class="modal-body">
+    <div class="error_font">*错误提示</div>
+    <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
+    </div>
+    <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
+    </div>
+    <div class="outer">
+    <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
+    <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&amp;t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
+    </div>
+    <div class="modal-footer">
+    <p class="outer"> <input type="submit" name="Submit" class="orange_btn" id="btnRegister" value="立即注册"> </p>
+    <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
+    </div>
+    </form>
+    </div>
+    
+    </div>
+<div class="main">
+  <div class="position">当前位置：<a href="/">首页</a>&nbsp;>&nbsp;<a href="/puke/">扑克</a></div>
+  <div class="game-filter">
+    <h3>游戏筛选</h3>
+	<dl class="clearfix"><dt>分类>></dt><dd><a href="/list-0-0-0-2.html" class="on">全部</a> <a href="/list-1-0-0-2.html" class="fieldandcss">斗地主</a> <a href="/list-2-0-0-2.html" class="fieldandcss">跑胡子</a> <a href="/list-3-0-0-2.html" class="fieldandcss">21点</a> <a href="/list-4-0-0-2.html" class="fieldandcss">保皇</a> <a href="/list-5-0-0-2.html" class="fieldandcss">打滚子</a> <a href="/list-6-0-0-2.html" class="fieldandcss">干瞪眼</a> <a href="/list-7-0-0-2.html" class="fieldandcss">打大A</a> <a href="/list-8-0-0-2.html" class="fieldandcss">四冲</a> <a href="/list-9-0-0-2.html" class="fieldandcss">三代</a> <a href="/list-10-0-0-2.html" class="fieldandcss">5十K</a> <a href="/list-11-0-0-2.html" class="fieldandcss">三打一</a> <a href="/list-12-0-0-2.html" class="fieldandcss">挖坑</a> <a href="/list-13-0-0-2.html" class="fieldandcss">拱猪</a> <a href="/list-14-0-0-2.html" class="fieldandcss">红五</a> <a href="/list-15-0-0-2.html" class="fieldandcss">黑尖</a> <a href="/list-16-0-0-2.html" class="fieldandcss">攉龙</a> <a href="/list-17-0-0-2.html" class="fieldandcss">大怪路子</a> <a href="/list-18-0-0-2.html" class="fieldandcss">掼蛋</a> <a href="/list-19-0-0-2.html" class="fieldandcss">包分</a> <a href="/list-20-0-0-2.html" class="fieldandcss">拖拉机</a> <a href="/list-21-0-0-2.html" class="fieldandcss">接龙</a> <a href="/list-22-0-0-2.html" class="fieldandcss">跑得快</a> <a href="/list-23-0-0-2.html" class="fieldandcss">锄大地</a> <a href="/list-24-0-0-2.html" class="fieldandcss">梭哈</a> <a href="/list-25-0-0-2.html" class="fieldandcss">德州扑克</a> <a href="/list-26-0-0-2.html" class="fieldandcss">炸金花</a> <a href="/list-27-0-0-2.html" class="fieldandcss">够级</a> <a href="/list-28-0-0-2.html" class="fieldandcss">纸牌</a> <a href="/list-29-0-0-2.html" class="fieldandcss">牌九</a> <a href="/list-30-0-0-2.html" class="fieldandcss">十三张</a> <a href="/list-31-0-0-2.html" class="fieldandcss">刨幺</a> <a href="/list-32-0-0-2.html" class="fieldandcss">升级</a> <a href="/list-33-0-0-2.html" class="fieldandcss">三公</a> <a href="/list-34-0-0-2.html" class="fieldandcss">尖子顶</a> <a href="/list-35-0-0-2.html" class="fieldandcss">花牌</a> <a href="/list-36-0-0-2.html" class="fieldandcss">红十</a> <a href="/list-37-0-0-2.html" class="fieldandcss">斗牛</a> </dd> </dl>    <dl class="clearfix m-list-paixu">
+      <dt>排序>></dt>
+      <dd><a href="/list-0-0-0-2.html" class="on">最新</a><a href="/list-0-1-0-0.html">最热</a></dd>
+    </dl>
+  </div>
+  <div class="game-ku">
+    <ul class="game-list clearfix">
+
+<li>
+        <div class="img"><a href="/puke/71.html" target="_blank"><img src="/d/file/puke/2018-12-20/229e16daa00b5ba2403a317d9c14e13e.jpg" alt="保皇HD"></a></div>
+        <div class="con"> <a href="/puke/71.html" target="_blank" class="title">保皇HD</a>
+          <p><a href="/list-4-0-0-2.html">保皇</a><span>|</span>2人在玩</p>
+          <p>保皇HD是第一款研制出来的保皇棋牌手游。</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/71.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/72.html" target="_blank"><img src="/d/file/puke/2018-12-20/9a078a3d7a7c9a30f64bcd047500ed1e.png" alt="欢乐牛牛 "></a></div>
+        <div class="con"> <a href="/puke/72.html" target="_blank" class="title">欢乐牛牛 </a>
+          <p><a href="/list-37-0-0-2.html">斗牛</a><span>|</span>2人在玩</p>
+          <p>欢乐牛牛是一款玩法刺激人气棋牌娱乐游戏，以精致炫酷的游戏画面，带给玩家刺激的斗牛玩法，多人在线同时PK，切磋调整牌技大比拼，可以与来自全国的玩家同台竞技。感兴趣的朋友赶紧下载体验吧。</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/72.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/69.html" target="_blank"><img src="/d/file/puke/2018-12-19/30b6f2200d6e4d63972a5c1ec26c940c.jpg" alt="qq干瞪眼"></a></div>
+        <div class="con"> <a href="/puke/69.html" target="_blank" class="title">qq干瞪眼</a>
+          <p><a href="/list-6-0-0-2.html">干瞪眼</a><span>|</span>2人在玩</p>
+          <p>qq干瞪眼是腾讯开发的一款比斗地主还要刺激10倍手机棋牌游戏。</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/69.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/70.html" target="_blank"><img src="/d/file/puke/2018-12-20/12b5ee8ced782779cbd92ab5aa66e6d6.png" alt="欢乐斗牛 (茶苑版)"></a></div>
+        <div class="con"> <a href="/puke/70.html" target="_blank" class="title">欢乐斗牛 (茶苑版)</a>
+          <p><a href="/list-37-0-0-2.html">斗牛</a><span>|</span>7人在玩</p>
+          <p>欢乐斗牛是一款玩法刺激游戏速度极快的棋牌类游戏，该作画面精美，有趣好玩，娱乐性强，是非常流行的一种纸牌游戏，深受广大玩家的喜爱，每天还有大量海牛豆豆等你来拿，还在等什么，快来下载体验吧！</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/70.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/68.html" target="_blank"><img src="/d/file/puke/2018-12-20/ce1c8a5cdfa056b30a77e773e74ba6a2.png" alt="好友斗牛"></a></div>
+        <div class="con"> <a href="/puke/68.html" target="_blank" class="title">好友斗牛</a>
+          <p><a href="/list-37-0-0-2.html">斗牛</a><span>|</span>6人在玩</p>
+          <p>好友斗牛是一款超好玩，娱乐性极强的斗牛游戏，每日登陆，签到有好礼，丰富海量道具，助力斗牛。与好友同玩，畅享游戏人生，以小博大，畅享极致挑战，感兴趣的朋友赶紧下载体验吧。</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/68.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/67.html" target="_blank"><img src="/d/file/puke/2018-12-20/51e402c7efe6e7db557e8f31b208cd6f.png" alt="疯狂斗牛 "></a></div>
+        <div class="con"> <a href="/puke/67.html" target="_blank" class="title">疯狂斗牛 </a>
+          <p><a href="/list-37-0-0-2.html">斗牛</a><span>|</span>6人在玩</p>
+          <p>疯狂斗牛是一款非常刺激的棋牌游戏，全新自定义，丰富任务，对战即可领道具，真人在线，比拼牛气，包你玩过瘾。顶牛大作战，血洗全桌玩更嗨。赛事不断，好礼送不停，喜欢的朋友们赶紧下载体验吧！</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/67.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/66.html" target="_blank"><img src="/d/file/puke/2018-12-20/2b5594ee1560d8db4b8e891fa696d743.jpg" alt="百人斗牛牛"></a></div>
+        <div class="con"> <a href="/puke/66.html" target="_blank" class="title">百人斗牛牛</a>
+          <p><a href="/list-37-0-0-2.html">斗牛</a><span>|</span>7人在玩</p>
+          <p>百人斗牛牛是一款娱乐性极强，非常趣味的休闲游戏，百人抢庄不不停歇，抢庄血洗三家，手气旺盛挡不住。局局有牛，激情顶牛，互搏不断，感兴趣的朋友赶紧下载体验吧。</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/66.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/65.html" target="_blank"><img src="/d/file/puke/2018-12-20/ee5b81b306802f6fc8ffd8fb2f00045d.png" alt="欢乐斗牛"></a></div>
+        <div class="con"> <a href="/puke/65.html" target="_blank" class="title">欢乐斗牛</a>
+          <p><a href="/list-37-0-0-2.html">斗牛</a><span>|</span>13人在玩</p>
+          <p>欢乐斗牛是由腾讯公司打造的一款快节奏棋牌手游。</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/65.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/64.html" target="_blank"><img src="/d/file/puke/2018-12-19/2c99b1e803f2c267ad0197ebef084b40.png" alt="保皇"></a></div>
+        <div class="con"> <a href="/puke/64.html" target="_blank" class="title">保皇</a>
+          <p><a href="/list-4-0-0-2.html">保皇</a><span>|</span>12人在玩</p>
+          <p>保皇是一款由5人使用4副扑克进行的棋牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/64.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/63.html" target="_blank"><img src="/d/file/puke/2018-12-19/61807bf5a29f797c42fd2bb0cb8a47ee.jpg" alt="炸金花"></a></div>
+        <div class="con"> <a href="/puke/63.html" target="_blank" class="title">炸金花</a>
+          <p><a href="/list-26-0-0-2.html">炸金花</a><span>|</span>14人在玩</p>
+          <p>一款以三张牌比胜负的棋牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/63.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/62.html" target="_blank"><img src="/d/file/puke/2018-12-19/f2e143a77d0dc3d84f381ddec7f84e3a.jpg" alt="挖坑"></a></div>
+        <div class="con"> <a href="/puke/62.html" target="_blank" class="title">挖坑</a>
+          <p><a href="/list-12-0-0-2.html">挖坑</a><span>|</span>8人在玩</p>
+          <p>挖坑游戏是一款根据陕西西安，宝鸡一带的扑克牌游戏制作而成的棋牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/62.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/61.html" target="_blank"><img src="/d/file/puke/2018-12-19/17fa2808c9a525ea735ded237ea02e11.png" alt="干瞪眼"></a></div>
+        <div class="con"> <a href="/puke/61.html" target="_blank" class="title">干瞪眼</a>
+          <p><a href="/list-6-0-0-2.html">干瞪眼</a><span>|</span>31人在玩</p>
+          <p>干瞪眼是一款流行于四川地区的扑克牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/61.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/60.html" target="_blank"><img src="/d/file/puke/2018-12-19/90a68f6bfb0635325977dfc0dc3a587f.png" alt="掼蛋"></a></div>
+        <div class="con"> <a href="/puke/60.html" target="_blank" class="title">掼蛋</a>
+          <p><a href="/list-18-0-0-2.html">掼蛋</a><span>|</span>102人在玩</p>
+          <p>掼蛋起源于苏皖地区的棋牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/60.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/57.html" target="_blank"><img src="/d/file/puke/2018-12-18/d6fa7b0ab12eac4f2e97fd14f54a0289.jpg" alt="大连红五"></a></div>
+        <div class="con"> <a href="/puke/57.html" target="_blank" class="title">大连红五</a>
+          <p><a href="/list-14-0-0-2.html">红五</a><span>|</span>66人在玩</p>
+          <p>大连红五是辽宁人最喜欢的一款棋牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/57.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/56.html" target="_blank"><img src="/d/file/puke/2018-12-18/27b505d6aff5d7a5b5c3645fb9017200.png" alt="天天斗地主"></a></div>
+        <div class="con"> <a href="/puke/56.html" target="_blank" class="title">天天斗地主</a>
+          <p><a href="/list-1-0-0-2.html">斗地主</a><span>|</span>22人在玩</p>
+          <p>天天斗地主游戏天天玩</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/56.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/55.html" target="_blank"><img src="/d/file/puke/2018-12-18/b421fb42a8c19ef3c10a30286707bed9.jpg" alt="qq拱猪"></a></div>
+        <div class="con"> <a href="/puke/55.html" target="_blank" class="title">qq拱猪</a>
+          <p><a href="/list-13-0-0-2.html">拱猪</a><span>|</span>10人在玩</p>
+          <p>qq拱猪是腾讯官方出的一款棋牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/55.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/54.html" target="_blank"><img src="/d/file/puke/2018-12-18/09de4fe3df452d3991b09f283958ecb8.jpg" alt="qq保皇"></a></div>
+        <div class="con"> <a href="/puke/54.html" target="_blank" class="title">qq保皇</a>
+          <p><a href="/list-4-0-0-2.html">保皇</a><span>|</span>6人在玩</p>
+          <p>qq保皇时一款由各地保皇游戏改制而来的棋牌游戏。</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/54.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/53.html" target="_blank"><img src="/d/file/puke/2018-12-18/1728f778611058d01ad2ab8e8022a14e.png" alt="竖屏斗地主"></a></div>
+        <div class="con"> <a href="/puke/53.html" target="_blank" class="title">竖屏斗地主</a>
+          <p><a href="/list-1-0-0-2.html">斗地主</a><span>|</span>15人在玩</p>
+          <p>竖屏斗地主是一款可以竖屏玩的休闲斗地主游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/53.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/52.html" target="_blank"><img src="/d/file/puke/2018-12-20/90a15ef07396111ad374ec16273c8a0a.png" alt="沈阳四冲"></a></div>
+        <div class="con"> <a href="/puke/52.html" target="_blank" class="title">沈阳四冲</a>
+          <p><a href="/list-8-0-0-2.html">四冲</a><span>|</span>5人在玩</p>
+          <p> 沈阳四冲是一款具有沈阳特色的休闲棋牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/52.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/51.html" target="_blank"><img src="/d/file/puke/2018-12-18/e6b42818a5d6c2305047b3611c17de6d.png" alt="陕西三代"></a></div>
+        <div class="con"> <a href="/puke/51.html" target="_blank" class="title">陕西三代</a>
+          <p><a href="/list-9-0-0-2.html">三代</a><span>|</span>36人在玩</p>
+          <p>陕西三代是一款具有陕西特色的休闲棋牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/51.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/50.html" target="_blank"><img src="/d/file/puke/2018-12-18/e121d1296ca74616da853b43f731709c.png" alt="三人挖坑"></a></div>
+        <div class="con"> <a href="/puke/50.html" target="_blank" class="title">三人挖坑</a>
+          <p><a href="/list-12-0-0-2.html">挖坑</a><span>|</span>4人在玩</p>
+          <p>三人挖坑是一款趣味性极强的棋牌休闲小游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/50.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/49.html" target="_blank"><img src="/d/file/puke/2018-12-18/f7c58dcec54fb2e3b04aadae518edca9.png" alt="平潭510K"></a></div>
+        <div class="con"> <a href="/puke/49.html" target="_blank" class="title">平潭510K</a>
+          <p><a href="/list-10-0-0-2.html">5十K</a><span>|</span>5人在玩</p>
+          <p>平潭510k安卓版是一款流行于于平潭的扑克休闲游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/49.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/48.html" target="_blank"><img src="/d/file/puke/2018-12-18/bbcc51f13f03f013040807174ac0ae54.png" alt="内蒙打大a"></a></div>
+        <div class="con"> <a href="/puke/48.html" target="_blank" class="title">内蒙打大a</a>
+          <p><a href="/list-7-0-0-2.html">打大A</a><span>|</span>7人在玩</p>
+          <p>内蒙打大a手机版真人版是一款具有蒙古特色的手机大打a扑克游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/48.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/47.html" target="_blank"><img src="/d/file/puke/2018-12-20/1be28df65d393702fde7d893914e750a.png" alt="锦州510k"></a></div>
+        <div class="con"> <a href="/puke/47.html" target="_blank" class="title">锦州510k</a>
+          <p><a href="/list-10-0-0-2.html">5十K</a><span>|</span>19人在玩</p>
+          <p>锦州510k游戏官方版是一款社区聊天交友的棋牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/47.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/46.html" target="_blank"><img src="/d/file/puke/2018-12-18/a5ff3d8cddf57b8e116121ec56b755ba.png" alt="欢乐三打一"></a></div>
+        <div class="con"> <a href="/puke/46.html" target="_blank" class="title">欢乐三打一</a>
+          <p><a href="/list-11-0-0-2.html">三打一</a><span>|</span>11人在玩</p>
+          <p>欢乐三打一是一款最近流行起来的纸牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/46.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/45.html" target="_blank"><img src="/d/file/puke/2018-12-20/c69b6a9688dd3d8e0daa44d3c397655a.png" alt="接龙憋七"></a></div>
+        <div class="con"> <a href="/puke/45.html" target="_blank" class="title">接龙憋七</a>
+          <p><a href="/list-21-0-0-2.html">接龙</a><span>|</span>21人在玩</p>
+          <p>接龙憋七全新的接龙游戏玩法，操作简单易于上手，可玩性超强的娱乐玩法。挑战奖励丰富，多种自由模式挑选，万人全天候娱乐，对战不停歇，天天赢好礼。喜欢的朋友们赶紧下载体验吧！</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/45.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/44.html" target="_blank"><img src="/d/file/puke/2018-12-20/9178768937187980d34dccae03b4dad7.jpg" alt="拖拉机"></a></div>
+        <div class="con"> <a href="/puke/44.html" target="_blank" class="title">拖拉机</a>
+          <p><a href="/list-20-0-0-2.html">拖拉机</a><span>|</span>13人在玩</p>
+          <p>拖拉机是一款由著名的扑克牌“升级”发展演化而来4人扑克牌游戏，有趣的游戏规则，简单的游戏玩法，都得到广大玩家的喜爱。四人开局，玩家之间不断斗智斗勇，对抗性强，无需注册直接进行游戏。喜欢的朋友们赶紧下载体验吧！</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/44.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/43.html" target="_blank"><img src="/d/file/puke/2018-12-20/80283d9bc4cb4ba92aeac64fbda587d3.png" alt="同城游包分"></a></div>
+        <div class="con"> <a href="/puke/43.html" target="_blank" class="title">同城游包分</a>
+          <p><a href="/list-19-0-0-2.html">包分</a><span>|</span>12人在玩</p>
+          <p>同城游包分是一款在中国江苏地区广为流传的扑克游戏，由二人结对对抗改变为一人对三人的打法，更能体现竞赛者独立和合作作战技巧，使牌局的对抗性增强。该游戏画面精致美观，游戏玩法丰富多样，操作简单易上手，更有多种好礼送不停。喜欢的朋友们赶紧下载体验吧！</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/43.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/42.html" target="_blank"><img src="/d/file/puke/2018-12-18/c1d70eff0885cdef69352caae3515877.png" alt="经典掼蛋"></a></div>
+        <div class="con"> <a href="/puke/42.html" target="_blank" class="title">经典掼蛋</a>
+          <p><a href="/list-18-0-0-2.html">掼蛋</a><span>|</span>7人在玩</p>
+          <p>经典掼蛋是一款上手简单、玩法丰富、画质精美等休闲扑克类游戏，这款游戏为玩家带来了原汁原味的掼蛋玩法，多样化的游戏社交功能，更有多重好礼送不停。喜欢的朋友们赶紧下载体验吧！</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/42.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/puke/41.html" target="_blank"><img src="/d/file/puke/2018-12-18/76088cfdd50c74b588b6c0889e9bf620.png" alt="QQ游戏大怪路子"></a></div>
+        <div class="con"> <a href="/puke/41.html" target="_blank" class="title">QQ游戏大怪路子</a>
+          <p><a href="/list-17-0-0-2.html">大怪路子</a><span>|</span>8人在玩</p>
+          <p>QQ游戏大怪路子是一款上海周边地区流行的一种纸牌类游戏，大怪路子每局有6个玩家，使用3副扑克牌进行游戏，其中大怪和小怪可以作为“自由牌（万能牌）”组合到除单张外任何一种牌型中；同样的牌根据不同的方式可以变化出许多种不同的打法。想要取得胜利，尽可能计算对手及帮助队友出牌。喜欢的朋友们赶快下载体验吧！</p>
+        </div>
+        <div class="wan-btn"><a href="/puke/41.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+    </ul>
+    <div class="page"> <span class="a1 disabled">共 5 页</span><a href="/puke/index_2.html">上一页</a><a href="/puke/index.html">1</a><a href="/puke/index_2.html">2</a><span>3</span><a href="/puke/index_4.html">4</a><a href="/puke/index_5.html">5</a><a href="/puke/index_4.html">下一页</a> </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="about_me"> <a href="/aboutus.html" target="_blank">关于我们</a> | <a href="/contact.html" target="_blank">联系方式</a> | <a href="/sitemap.html" target="_blank">网站地图</a> | <a href="/explain.html" target="_blank">用户协议</a> </div>
+  <div class="safety"> <a><i class="icon_safe1"></i>中国互联网举报中心</a> <a><i class="icon_safe2"></i>网络违法举报中心</a> <a><i class="icon_safe3"></i>垃圾信息举报中心</a> <a><i class="icon_safe4"></i>闽公网安备35020302001953号</a> </div>
+  <p class="tips_text">©2017-2018 &nbsp; 仿3500游戏 &nbsp; 47.52.203.166 <em>礼包交流群：</em><a href="http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b" target="_blank" class="qqun"></a></p>
+  <p class="tips_text">备案号：粤ICP备17024501号-2 &nbsp;  技术支持：<a href="https://www.96kaifa.com" target="_blank">96KaiFa源码</a></p>
+</div>
+<div id="backtop">返回顶部</div>
+<script type="text/javascript" src="/96kaifa/statics/home/js/member.js"></script>
+<script type="text/javascript">
+	var member = new Member();
+</script>
+<script type="text/javascript" src="/96kaifa/statics/home/js/global.js"></script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>棋类_仿3500游戏</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/96kaifa/statics/home/css/base.css" type="text/css" rel="stylesheet">
+<link href="/96kaifa/statics/home/css/style3500.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="/96kaifa/statics/home/js/jquery-1.8.2.min.js"></script>
+</head>
+<script type="text/javascript">
+	showMobile("http://test.yanwowenda.cn/qilei/");
+</script>
+<body>
+<div class="cover"></div>
+<div class="topbox">
+  <div class="boxin clearfix">
+    <div class="topl fl"> <span class="home"><a href="/">游戏首页</a></span>
+      <ul>
+        <li>|<a href="http://www.96kaifa.com" target="_blank">手机版</a></li>
+        <li>|<a href="#" target="_blank">客户端下载</a></li>
+        <li>|<a href="javascript:;" class="wx_show">关注微信</a>
+          <div class="wx_hide"> <i class="angle"></i> <img src="/96kaifa/statics/home/images/wx_code.jpg" width="103" height="103"> <span>关注微信公众号</span> </div>
+        </li>
+        <li>|<a href="#" target="_blank">开放平台</a></li>
+      </ul>
+    </div>
+    <div class="topr fr">
+        <div class="login_ok">
+        
+        <script>
+            document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+            $(function(){
+            var dqurl = window.location.href;
+            $('#dquurl').val(dqurl);
+            })
+            </script>
+        
+        </div>
+        <a href="javascript:;" onclick="AddFavorite();">收藏本站</a> </div>
+</div>
+<div class="header">
+  <div class="header-top">
+    <div class="in">
+      <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="棋游之家"></a></div>
+      <div class="search fr">
+       
+        <form action="/search/game.php" method="get" target="_blank" name="searchTop">
+          <div class="search_box tr">
+            <input type="text" id="bdcsMain" name="key" class="sech_keyword" placeholder="请输入游戏名称">
+            <input type="submit" value="搜索" class="sech_btn">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="in">
+      <ul>
+        <li><a href="/" class="nav-cur"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qipailei/"><span class="menu-txt">棋牌</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qilei/"><span class="menu-txt">棋类</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qiyouchangshang/"><span class="menu-txt">棋游厂商</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
+      </ul>
+      <div class="grzx">
+	  	<script> document.write('<script src="./e/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
+	  </div>
+    </div>
+  </div>
+</div>
+<div class="my_pop">
+    <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">账号登录</p>
+    <form action="/e/member/doaction.php" method="post" onsubmit="return userLogin()" id="form_login1" class="form-login">
+    <input type="hidden" name="ecmsfrom" value="http://3500.96demo.com/" id="dquurl">
+    <input type="hidden" name="enews" value="login">
+    <input name="tobind" type="hidden" id="tobind" value="0">
+    <div class="modal-body">
+    <div class="error_font">*错误提示</div>
+     <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
+    </div>
+    <div class="outer">
+    <div class="captcha" id="logcaptcha"></div>
+    </div>
+    </div>
+    <div class="modal-footer" style="margin-bottom:40px;">
+    <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
+    </div>
+    </form>
+    </div>
+    
+    
+    <div class="register_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">会员注册</p>
+    <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
+    <input type="hidden" name="enews" value="register">
+    <div class="modal-body">
+    <div class="error_font">*错误提示</div>
+    <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
+    </div>
+    <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
+    </div>
+    <div class="outer">
+    <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
+    <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&amp;t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
+    </div>
+    <div class="modal-footer">
+    <p class="outer"> <input type="submit" name="Submit" class="orange_btn" id="btnRegister" value="立即注册"> </p>
+    <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
+    </div>
+    </form>
+    </div>
+    
+    </div>
+<div class="main">
+  <div class="position">当前位置：<a href="/">首页</a>&nbsp;>&nbsp;<a href="/qilei/">棋类</a></div>
+  <div class="game-filter">
+    <h3>游戏筛选</h3>
+	<dl class="clearfix"><dt>分类>></dt><dd><a href="/list-0-0-0-4.html" class="on">全部</a> <a href="/list-1-0-0-4.html" class="fieldandcss">五子棋</a> <a href="/list-2-0-0-4.html" class="fieldandcss">象棋</a> <a href="/list-3-0-0-4.html" class="fieldandcss">围棋</a> <a href="/list-4-0-0-4.html" class="fieldandcss">飞行棋</a> <a href="/list-5-0-0-4.html" class="fieldandcss">中国暗棋</a> <a href="/list-6-0-0-4.html" class="fieldandcss">跳棋</a> <a href="/list-7-0-0-4.html" class="fieldandcss">井字棋</a> <a href="/list-8-0-0-4.html" class="fieldandcss">军棋</a> <a href="/list-9-0-0-4.html" class="fieldandcss">斗兽棋</a> <a href="/list-10-0-0-4.html" class="fieldandcss">将棋</a> <a href="/list-11-0-0-4.html" class="fieldandcss">四子棋</a> <a href="/list-12-0-0-4.html" class="fieldandcss">大富翁</a> <a href="/list-13-0-0-4.html" class="fieldandcss">国际象棋</a> </dd> </dl>    <dl class="clearfix m-list-paixu">
+      <dt>排序>></dt>
+      <dd><a href="/list-0-0-0-4.html" class="on">最新</a><a href="/list-0-1-0-0.html">最热</a></dd>
+    </dl>
+  </div>
+  <div class="game-ku">
+    <ul class="game-list clearfix">
+
+<li>
+        <div class="img"><a href="/qilei/14.html" target="_blank"><img src="/d/file/qilei/2018-12-19/63d69d6a31f6f59f9b12c69593a36f86.png" alt="双人五子棋"></a></div>
+        <div class="con"> <a href="/qilei/14.html" target="_blank" class="title">双人五子棋</a>
+          <p><a href="/list-1-0-0-4.html">五子棋</a><span>|</span>3人在玩</p>
+          <p>双人五子棋是一款两个人可以玩的趣味五子棋网页小游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/14.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qilei/20.html" target="_blank"><img src="/d/file/qilei/2018-12-19/4948a577e9f823c655c7ebeadced957f.png" alt="将棋"></a></div>
+        <div class="con"> <a href="/qilei/20.html" target="_blank" class="title">将棋</a>
+          <p><a href="/list-10-0-0-4.html">将棋</a><span>|</span>4人在玩</p>
+          <p>将棋是一款在日本流行的棋类游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/20.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qilei/12.html" target="_blank"><img src="/d/file/qilei/2018-12-19/21143fd495854a44cf82076d8b6e430b.png" alt="天天五子棋"></a></div>
+        <div class="con"> <a href="/qilei/12.html" target="_blank" class="title">天天五子棋</a>
+          <p><a href="/list-1-0-0-4.html">五子棋</a><span>|</span>5人在玩</p>
+          <p>天天五子棋是一款网页休闲五子棋游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/12.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qilei/11.html" target="_blank"><img src="/d/file/qilei/2018-12-19/d739bda878bca6d2f0505284b4e5b902.png" alt="五子棋"></a></div>
+        <div class="con"> <a href="/qilei/11.html" target="_blank" class="title">五子棋</a>
+          <p><a href="/list-1-0-0-4.html">五子棋</a><span>|</span>3人在玩</p>
+          <p>一款最考验脑力的趣味五子棋游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/11.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qilei/10.html" target="_blank"><img src="/d/file/qilei/2018-12-19/64ab4141f0435610c58f0c1849ddb3ac.jpg" alt="丁丁中国象棋"></a></div>
+        <div class="con"> <a href="/qilei/10.html" target="_blank" class="title">丁丁中国象棋</a>
+          <p><a href="/list-2-0-0-4.html">象棋</a><span>|</span>8人在玩</p>
+          <p>丁丁中国象棋是由Home Page开发的一款休闲益智的单机游戏。</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/10.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qilei/9.html" target="_blank"><img src="/d/file/qilei/2018-12-19/a2c0a82a7475c462146612b1af91aee2.png" alt="途游五子棋"></a></div>
+        <div class="con"> <a href="/qilei/9.html" target="_blank" class="title">途游五子棋</a>
+          <p><a href="/list-1-0-0-4.html">五子棋</a><span>|</span>13人在玩</p>
+          <p>途游五子棋是一款双人网络竞技对战五子棋游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/9.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qilei/8.html" target="_blank"><img src="/d/file/qilei/2018-12-19/a0dfa9543f781ca674c6a9c962033c07.jpg" alt="军棋"></a></div>
+        <div class="con"> <a href="/qilei/8.html" target="_blank" class="title">军棋</a>
+          <p><a href="/list-8-0-0-4.html">军棋</a><span>|</span>7人在玩</p>
+          <p>军棋是一款经典的两人对战策略类手游</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/8.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qilei/7.html" target="_blank"><img src="/d/file/qilei/2018-12-18/a16ffb14d32515709453f6beebf03438.png" alt="腾讯围棋"></a></div>
+        <div class="con"> <a href="/qilei/7.html" target="_blank" class="title">腾讯围棋</a>
+          <p><a href="/list-3-0-0-4.html">围棋</a><span>|</span>9人在玩</p>
+          <p>腾讯游戏出品的围棋游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/7.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qilei/6.html" target="_blank"><img src="/d/file/qilei/2018-12-19/962935430cd3a26840fb6ddaba80df40.png" alt="中国象棋"></a></div>
+        <div class="con"> <a href="/qilei/6.html" target="_blank" class="title">中国象棋</a>
+          <p><a href="/list-2-0-0-4.html">象棋</a><span>|</span>16人在玩</p>
+          <p>中国象棋是中国比较流行的一款传统益智棋类游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/6.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qilei/5.html" target="_blank"><img src="/d/file/qilei/2018-12-18/9e832f3d743682462bc9892fd5fa3e34.png" alt="将棋の王"></a></div>
+        <div class="con"> <a href="/qilei/5.html" target="_blank" class="title">将棋の王</a>
+          <p><a href="/list-10-0-0-4.html">将棋</a><span>|</span>7人在玩</p>
+          <p>将棋の王是一款智能手机终端能玩的将棋游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/5.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qilei/4.html" target="_blank"><img src="/d/file/qilei/2018-12-18/27e593800bbdd2f8ea591094f697ca70.png" alt="飞行棋"></a></div>
+        <div class="con"> <a href="/qilei/4.html" target="_blank" class="title">飞行棋</a>
+          <p><a href="/list-4-0-0-4.html">飞行棋</a><span>|</span>16人在玩</p>
+          <p>飞行棋是一款休闲放松的棋类游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/4.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qilei/3.html" target="_blank"><img src="/d/file/qilei/2018-12-17/bfa4a0baa6360542e9be924d796e6552.png" alt="腾讯欢乐五子棋"></a></div>
+        <div class="con"> <a href="/qilei/3.html" target="_blank" class="title">腾讯欢乐五子棋</a>
+          <p><a href="/list-1-0-0-4.html">五子棋</a><span>|</span>106人在玩</p>
+          <p>欢乐五子棋是由腾讯推出的一款即时棋类游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/3.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qilei/2.html" target="_blank"><img src="/d/file/qilei/2018-12-17/516b30aa7cd6eeaeab01030dca9ed148.jpg" alt="天天军旗"></a></div>
+        <div class="con"> <a href="/qilei/2.html" target="_blank" class="title">天天军旗</a>
+          <p><a href="/list-8-0-0-4.html">军棋</a><span>|</span>16人在玩</p>
+          <p></p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/2.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qilei/1.html" target="_blank"><img src="/d/file/qilei/2018-12-17/294cd29df15638b32ad5a2b378e47c1c.jpg" alt="天天象棋"></a></div>
+        <div class="con"> <a href="/qilei/1.html" target="_blank" class="title">天天象棋</a>
+          <p><a href="/list-2-0-0-4.html">象棋</a><span>|</span>48人在玩</p>
+          <p>天天象棋是由腾讯推出的一款即时象棋游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/qilei/1.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+    </ul>
+    <div class="page"> <span class="a1 disabled">共 2 页</span><a href="/qilei/index.html">上一页</a><a href="/qilei/index.html">1</a><span>2</span> </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="about_me"> <a href="/aboutus.html" target="_blank">关于我们</a> | <a href="/contact.html" target="_blank">联系方式</a> | <a href="/sitemap.html" target="_blank">网站地图</a> | <a href="/explain.html" target="_blank">用户协议</a> </div>
+  <div class="safety"> <a><i class="icon_safe1"></i>中国互联网举报中心</a> <a><i class="icon_safe2"></i>网络违法举报中心</a> <a><i class="icon_safe3"></i>垃圾信息举报中心</a> <a><i class="icon_safe4"></i>闽公网安备35020302001953号</a> </div>
+  <p class="tips_text">©2017-2018 &nbsp; 仿3500游戏 &nbsp; 47.52.203.166 <em>礼包交流群：</em><a href="http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b" target="_blank" class="qqun"></a></p>
+  <p class="tips_text">备案号：粤ICP备17024501号-2 &nbsp;  技术支持：<a href="https://www.96kaifa.com" target="_blank">96KaiFa源码</a></p>
+</div>
+<div id="backtop">返回顶部</div>
+<script type="text/javascript" src="/96kaifa/statics/home/js/member.js"></script>
+<script type="text/javascript">
+	var member = new Member();
+</script>
+<script type="text/javascript" src="/96kaifa/statics/home/js/global.js"></script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+</body>
+</html>
