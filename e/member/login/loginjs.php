@@ -16,7 +16,7 @@ if($myuserid)
 	$link=db_connect();
 	$empire=new mysqlquery();
 	$mhavelogin=1;
-	//数据 
+	//数据
 	$myusername=RepPostVar(getcvar('mlusername'));
 	$myrnd=RepPostVar(getcvar('mlrnd'));
 	$qcklgr=qCheckLoginAuthstr();
@@ -73,7 +73,7 @@ document.write("&raquo;&nbsp;<font color=red><b><?=$myusername?></b></font>&nbsp
 else
 {
 ?>
-document.write("<form name=login method=post action=\"/e/member/doaction.php\">    <input type=hidden name=enews value=login>    <input type=hidden name=ecmsfrom value=9>    <a href=\"javascript:;\" class=\"a1 a_login\" id=\"a_login\">登录</a> <a href=\"javascript:;\" class=\"a2 a_register\" id=\"register_btn\">注册</a>|   </form>");
+    document.write("<form name=login method=post action=\"//www.96.com/e/member/doaction.php\">    <input type=hidden name=enews value=login>    <input type=hidden name=ecmsfrom value=9>  <a href=\"javascript:;\" class=\"a1 a_login\" id=\"a_login\">登录</a><a href=\"javascript:;\" class=\"a2 a_register\" id=\"register_btn\">注册</a>   /></form>");
 <?php
 }
 ?>
