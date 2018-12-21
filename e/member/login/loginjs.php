@@ -73,7 +73,11 @@ document.write("&raquo;&nbsp;<font color=red><b><?=$myusername?></b></font>&nbsp
 else
 {
 ?>
+<<<<<<< HEAD
 document.write("<form name=login method=post action=\"/e/member/doaction.php\">    <input type=hidden name=enews value=login>    <input type=hidden name=ecmsfrom value=9>    用户名：<input name=\"username\" type=\"text\" class=\"inputText\" size=\"16\" />&nbsp;    密码：<input name=\"password\" type=\"password\" class=\"inputText\" size=\"16\" />&nbsp;    <input type=\"submit\" name=\"Submit\" value=\"登陆\" class=\"inputSub\" />&nbsp;    <input type=\"button\" name=\"Submit2\" value=\"注册\" class=\"inputSub\" onclick=\"window.open(\'/e/member/register/\');\" /></form>");
+=======
+    document.write("<form name=login method=post action=\"//www.96.com/e/member/doaction.php\">    <input type=hidden name=enews value=login>    <input type=hidden name=ecmsfrom value=9>  <a href=\"javascript:;\" class=\"a1 a_login\" id=\"a_login\">登录</a><a href=\"javascript:;\" class=\"a2 a_register\" id=\"register_btn\">注册</a>   /></form>");
+>>>>>>> 028155234842d507e3c52a9b0866848ae071118c
 <?php
 }
 ?>
