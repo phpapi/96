@@ -16,7 +16,7 @@ if($myuserid)
 	$link=db_connect();
 	$empire=new mysqlquery();
 	$mhavelogin=1;
-	//数据
+	//数据 
 	$myusername=RepPostVar(getcvar('mlusername'));
 	$myrnd=RepPostVar(getcvar('mlrnd'));
 	$qcklgr=qCheckLoginAuthstr();
