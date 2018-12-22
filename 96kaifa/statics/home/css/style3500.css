@@ -31,14 +31,14 @@
 .slider .item a:hover img{ opacity: 0.8; filter:alpha(opacity=80); }
 
 .hd{ height: 44px; border-bottom:1px solid #dcdcdc; padding-right:2px; position:relative; }
-.hd h3{ float: left; border-bottom: 3px solid #ff9a00; padding:0 2px; font-size: 22px; font-weight: bold; line-height: 38px; height: 42px; overflow: hidden; }
+.hd h3{ float: left; border-bottom: 3px solid #2ca5ff; padding:0 2px; font-size: 22px; font-weight: bold; line-height: 38px; height: 42px; overflow: hidden; }
 .hd20{ height: 44px; border-bottom:1px solid #dcdcdc; padding-right:2px; position:relative; }
 .hd20 h3{ float: left; border-bottom: 3px solid #ff9a00; padding:0 2px; font-size: 20px; font-weight: bold; line-height: 40px; height: 42px; overflow: hidden; }
 .more{ float: right; display: inline-block; height: 21px; line-height: 21px; color:#888; padding-right:26px; margin-top: 10px; position:relative; }
 .more i{ display: inline-block; position: absolute; right: 0; top: 0; width: 21px; height: 21px; background: url(../images/icos.png) no-repeat -23px -34px; overflow: hidden; -webkit-transition:all .2s; -moz-transition:all .2s; transition:all .2s; }
 .more:hover{ color:#f70; }
 .more:hover i{ background-position: 0 -34px; }
-.wanBtn{ width: 66px; height: 26px; line-height: 25px; border:1px solid #5bba22; background-color: #5bba22; color: #fff; display: inline-block; text-align: center; border-radius: 3px; }
+.wanBtn{ width: 66px; height: 26px; line-height: 25px; border:1px solid #2ca5ff; background-color: #2ca5ff; color: #fff; display: inline-block; text-align: center; border-radius: 3px; }
 .wanBtn:hover{ color:#fff; background-color: #53ae1d; border-color: #53ae1d; }
 .lqBtn{ width: 66px; height: 26px; line-height: 25px; border:1px solid #5bba22; color: #5bba22; background-color: #fff; display: inline-block; text-align: center; border-radius: 3px; position: relative; }
 .lqBtn:hover{ color:#fff; background-color: #5bba22; }
