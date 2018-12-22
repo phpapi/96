@@ -65,8 +65,8 @@ if(!defined('InEmpireCMS'))
   </div>
   <div class="nav">
     <div class="in">
-      <ul>
-        <li><a href="/" class="nav-cur"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+      <ul id="navi">
+        <li><a href="/"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/qipailei/"><span class="menu-txt">棋牌</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
@@ -74,6 +74,14 @@ if(!defined('InEmpireCMS'))
         <li><a class="" href="/qiyouchangshang/"><span class="menu-txt">棋游厂商</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
       </ul>
+   <script type="text/javascript" language="javascript">
+     
+    $("#navi li a").each(function(){ 
+    if($(this)[0].href==String(window.location)){ 
+      $(this).addClass("nav-cur").siblings().removeClass("nav-cur"); 
+    } 
+  });   
+        </script>
       <div class="grzx">
 	  	<script> document.write('<script src="./e/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
 	  </div>
@@ -155,7 +163,7 @@ if(!defined('InEmpireCMS'))
         <li>
 <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_qipai order by onclick desc limit 30",6,24,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_qipailei order by onclick desc limit 30",6,24,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
@@ -225,7 +233,7 @@ $bqno++;
        <li>
 <?php
 $bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_qipai where fenlei=38 order by onclick desc limit 30",6,24,0);
+$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_puke where fenlei=38 order by onclick desc limit 30",6,24,0);
 if($ecms_bq_sql){
 while($bqr=$empire->fetch($ecms_bq_sql)){
 $bqsr=sys_ReturnEcmsLoopStext($bqr);
@@ -1396,7 +1404,7 @@ $bqno++;
 </div>
 <div class="bd clearfix">
 <div class="rank-box xy-rank">
-  <h4><i></i><b>新游</b>排行榜</h4>
+  <h4><i class="icon"></i><b>新游</b>排行榜</h4>
   <ul>
 <?php
 $bqno=0;
@@ -1690,7 +1698,7 @@ else if($bqr[fenlei]==13){$bfenlei="国际象棋";}
   </ul>
 </div>
 <div class="rank-box wy-rank">
-<h4><i></i><b>扑克</b>排行榜</h4>
+<h4><i class="icon1"></i><b>扑克</b>排行榜</h4>
 <ul>
 <?php
 $bqno=0;
@@ -1880,7 +1888,7 @@ else if($bqr[fenlei]==37){$bfenlei="斗牛";}
 ?>
 </div>
 <div class="rank-box xyx-rank">
-  <h4><i></i><b>棋盘</b>排行榜</h4>
+  <h4><i class="icon2"></i><b>棋盘</b>排行榜</h4>
   <ul>
 <?php
 $bqno=0;
@@ -1999,7 +2007,7 @@ else if($bqr[fenlei]==13){$bfenlei="国际象棋";}
   </ul>
 </div>
 <div class="rank-box tj-rank">
-  <h4><i></i><b>麻将</b>排行榜</h4>
+  <h4><i class="icon3"></i><b>麻将</b>排行榜</h4>
   <ul>
 <?php
 $bqno=0;

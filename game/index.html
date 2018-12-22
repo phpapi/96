@@ -11,7 +11,7 @@
 <script type="text/javascript" src="/96kaifa/statics/home/js/jquery-1.8.2.min.js"></script>
 </head>
 <script type="text/javascript">
-	showMobile("http://test.yanwowenda.cn/game/");
+	showMobile("http://47.52.203.166//game/");
 </script>
 <body>
 <div class="cover"></div>
@@ -58,8 +58,8 @@
   </div>
   <div class="nav">
     <div class="in">
-      <ul>
-        <li><a href="/" class="nav-cur"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+      <ul id="navi">
+        <li><a href="/"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/qipailei/"><span class="menu-txt">棋牌</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
@@ -67,6 +67,14 @@
         <li><a class="" href="/qiyouchangshang/"><span class="menu-txt">棋游厂商</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
       </ul>
+   <script type="text/javascript" language="javascript">
+     
+    $("#navi li a").each(function(){ 
+    if($(this)[0].href==String(window.location)){ 
+      $(this).addClass("nav-cur").siblings().removeClass("nav-cur"); 
+    } 
+  });   
+        </script>
       <div class="grzx">
 	  	<script> document.write('<script src="./e/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
 	  </div>
@@ -144,7 +152,7 @@
 <li>
         <div class="img"><a href="/game/927.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027141345.png" alt="十里桃花"></a></div>
         <div class="con"> <a href="/game/927.html" target="_blank" class="title">十里桃花</a>
-          <p><a href="/list-2-0-0-0.html">角色扮演</a><span>|</span>114人在玩</p>
+          <p><a href="/list-2-0-0-0.html">角色扮演</a><span>|</span>148人在玩</p>
           <p>正版影视授权，白浅夜华邀你仙恋之旅</p>
         </div>
         <div class="wan-btn"><a href="/game/927.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
@@ -189,7 +197,7 @@
 <li>
         <div class="img"><a href="/game/921.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170123093500.png" alt="点兵三国志"></a></div>
         <div class="con"> <a href="/game/921.html" target="_blank" class="title">点兵三国志</a>
-          <p><a href="/list-5-0-0-0.html">动作游戏</a><span>|</span>3人在玩</p>
+          <p><a href="/list-5-0-0-0.html">动作游戏</a><span>|</span>4人在玩</p>
           <p>点千军万马，成三国霸业！</p>
         </div>
         <div class="wan-btn"><a href="/game/921.html" target="_blank" class="wanBtn playgame">开始玩</a></div>

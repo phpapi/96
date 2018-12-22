@@ -16,7 +16,7 @@
 <script src="/96kaifa/libao/base/js/base.js"></script>
 </head>
 <script type="text/javascript">
-	showMobile("http://test.yanwowenda.cn/libao/7.html");
+	showMobile("http://47.52.203.166//libao/7.html");
 </script>
 <body>
 <div class="cover"></div>
@@ -63,8 +63,8 @@
   </div>
   <div class="nav">
     <div class="in">
-      <ul>
-        <li><a href="/" class="nav-cur"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+      <ul id="navi">
+        <li><a href="/"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/qipailei/"><span class="menu-txt">棋牌</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
@@ -72,6 +72,14 @@
         <li><a class="" href="/qiyouchangshang/"><span class="menu-txt">棋游厂商</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
       </ul>
+   <script type="text/javascript" language="javascript">
+     
+    $("#navi li a").each(function(){ 
+    if($(this)[0].href==String(window.location)){ 
+      $(this).addClass("nav-cur").siblings().removeClass("nav-cur"); 
+    } 
+  });   
+        </script>
       <div class="grzx">
 	  	<script> document.write('<script src="./e/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
 	  </div>
@@ -168,7 +176,7 @@
           <div class="prompt">
             <p class="title"><b>温馨提示：通过以下两种方式可免费领取所有礼包！</b></p>
             <div class="sm-code"> <span> <img src="/96kaifa/statics/home/images/weixin.jpg" width="120" height="120" alt=""> 微信扫描<br />
-              关注官方公众号 </span> <span> <img src="/qr/api.php?url=http://test.yanwowenda.cn/libao/7.html&p=6.5&m=1" width="120" height="120" alt=""> 手机扫描<br />
+              关注官方公众号 </span> <span> <img src="/qr/api.php?url=http://47.52.203.166//libao/7.html&p=6.5&m=1" width="120" height="120" alt=""> 手机扫描<br />
               扫一扫手机访问 </span> </div>
           </div>
         </div>
@@ -238,7 +246,7 @@
               <div class="box1">
                 <div class="pic"><a href="/game/927.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027141345.png" alt="十里桃花"></a></div>
                 <p class="tit"><a href="/game/927.html" target="_blank">十里桃花</a></p>
-                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>114人在玩</span></p>
+                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>148人在玩</span></p>
               </div>
               <div class="ksw"><a href="/game/927.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
             </li>

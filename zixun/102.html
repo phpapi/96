@@ -11,7 +11,7 @@
 <script type="text/javascript" src="/96kaifa/statics/home/js/jquery-1.8.2.min.js"></script>
 </head>
 <script type="text/javascript">
-	showMobile("http://test.yanwowenda.cn/zixun/102.html");
+	showMobile("http://47.52.203.166//zixun/102.html");
 </script>
 <body>
 <div class="cover"></div>
@@ -58,8 +58,8 @@
   </div>
   <div class="nav">
     <div class="in">
-      <ul>
-        <li><a href="/" class="nav-cur"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+      <ul id="navi">
+        <li><a href="/"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/qipailei/"><span class="menu-txt">棋牌</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
@@ -67,6 +67,14 @@
         <li><a class="" href="/qiyouchangshang/"><span class="menu-txt">棋游厂商</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
       </ul>
+   <script type="text/javascript" language="javascript">
+     
+    $("#navi li a").each(function(){ 
+    if($(this)[0].href==String(window.location)){ 
+      $(this).addClass("nav-cur").siblings().removeClass("nav-cur"); 
+    } 
+  });   
+        </script>
       <div class="grzx">
 	  	<script> document.write('<script src="./e/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
 	  </div>
@@ -231,96 +239,53 @@
       <div class="w-rank mt15">
         <div class="hd20">
           <h3>游戏排行</h3>
-          <ul class="rank_tab">
-            <li onMouseMove="onSelect(this,'rank_con')" class="tab_2">网游</li>
-            <li onMouseMove="onSelect(this,'rank_con')" class="tab_1">小游戏</li>
-          </ul>
+          
         </div>
         <div class="bd">
           <ol id="rank_con_0">
             <li> <em class="num num1">1</em>
               <div class="box1">
-                <div class="pic"><a href="/game/927.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027141345.png" alt="十里桃花"></a></div>
-                <p class="tit"><a href="/game/927.html" target="_blank">十里桃花</a></p>
-                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>114人在玩</span></p>
+                <div class="pic"><a href="/puke/1.html" target="_blank"><img src="/d/file/puke/2018-12-15/6f8befea7aa4df48fab66312d2c956af.png" alt="欢乐斗地主"></a></div>
+                <p class="tit"><a href="/puke/1.html" target="_blank">欢乐斗地主</a></p>
+                <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">动作游戏</a></span><span>405人在玩</span></p>
               </div>
-              <div class="ksw"><a href="/game/927.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+              <div class="ksw"><a href="/puke/1.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
             </li>
             <li> <em class="num num2">2</em>
               <div class="box1">
-                <div class="pic"><a href="/game/926.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171025093310.png" alt="决斗之皇"></a></div>
-                <p class="tit"><a href="/game/926.html" target="_blank">决斗之皇</a></p>
-                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>5人在玩</span></p>
+                <div class="pic"><a href="/qilei/13.html" target="_blank"><img src="/d/file/qilei/2018-12-19/85705316b31d9161138d9ea28db1b647.png" alt="欢乐围棋"></a></div>
+                <p class="tit"><a href="/qilei/13.html" target="_blank">欢乐围棋</a></p>
+                <p><span><a href="/list-3-0-0-0.html" target="_blank" class="flei">围棋</a></span><span>155人在玩</span></p>
               </div>
-              <div class="ksw"><a href="/game/926.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+              <div class="ksw"><a href="/qilei/13.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
             </li>
             <li> <em class="num num3">3</em>
               <div class="box1">
-                <div class="pic"><a href="/game/925.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027142939.jpg" alt="奇迹仙侠"></a></div>
-                <p class="tit"><a href="/game/925.html" target="_blank">奇迹仙侠</a></p>
-                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>16人在玩</span></p>
+                <div class="pic"><a href="/qilei/3.html" target="_blank"><img src="/d/file/qilei/2018-12-17/bfa4a0baa6360542e9be924d796e6552.png" alt="腾讯欢乐五子棋"></a></div>
+                <p class="tit"><a href="/qilei/3.html" target="_blank">腾讯欢乐五子棋</a></p>
+                <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">五子棋</a></span><span>107人在玩</span></p>
               </div>
-              <div class="ksw"><a href="/game/925.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+              <div class="ksw"><a href="/qilei/3.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
             </li>
             <li> <em class="num num">4</em>
               <div class="box1">
-                <div class="pic"><a href="/game/924.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170306150106.png" alt="莽荒纪H5"></a></div>
-                <p class="tit"><a href="/game/924.html" target="_blank">莽荒纪H5</a></p>
-                <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>17人在玩</span></p>
+                <div class="pic"><a href="/puke/60.html" target="_blank"><img src="/d/file/puke/2018-12-19/90a68f6bfb0635325977dfc0dc3a587f.png" alt="掼蛋"></a></div>
+                <p class="tit"><a href="/puke/60.html" target="_blank">掼蛋</a></p>
+                <p><span><a href="/list-18-0-0-0.html" target="_blank" class="flei">掼蛋</a></span><span>106人在玩</span></p>
               </div>
-              <div class="ksw"><a href="/game/924.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+              <div class="ksw"><a href="/puke/60.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
             </li>
             <li> <em class="num num">5</em>
               <div class="box1">
-                <div class="pic"><a href="/game/923.html" target="_blank"><img src="/d/file/96kaifa/201710241648/20170107092745.png" alt="大侠归来"></a></div>
-                <p class="tit"><a href="/game/923.html" target="_blank">大侠归来</a></p>
-                <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">卡牌游戏</a></span><span>11人在玩</span></p>
+                <div class="pic"><a href="/majiang/2.html" target="_blank"><img src="/d/file/majiang/2018-12-17/86daee5dab8c843e5938e94ecec567bc.png" alt="筑志红中麻将"></a></div>
+                <p class="tit"><a href="/majiang/2.html" target="_blank">筑志红中麻将</a></p>
+                <p><span><a href="/list-31-0-0-0.html" target="_blank" class="flei">红中麻将</a></span><span>83人在玩</span></p>
               </div>
-              <div class="ksw"><a href="/game/923.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+              <div class="ksw"><a href="/majiang/2.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
             </li>
           </ol>
-          <ol id="rank_con_1" style="display: none;">
-            <li> <em class="num num1">1</em>
-              <div class="box1">
-                <div class="pic"><a href="/danji/125.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615161819.jpg" alt="八爪鱼拉拉手"></a></div>
-                <p class="tit"><a href="/danji/125.html" target="_blank">八爪鱼拉拉手</a></p>
-                <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">益智</a></span><span>16人在玩</span></p>
-              </div>
-              <div class="ksw"><a href="/danji/125.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
-            </li>
-            <li> <em class="num num2">2</em>
-              <div class="box1">
-                <div class="pic"><a href="/danji/124.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615170050.jpg" alt="抽打神经猫"></a></div>
-                <p class="tit"><a href="/danji/124.html" target="_blank">抽打神经猫</a></p>
-                <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>7人在玩</span></p>
-              </div>
-              <div class="ksw"><a href="/danji/124.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
-            </li>
-            <li> <em class="num num3">3</em>
-              <div class="box1">
-                <div class="pic"><a href="/danji/123.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615175231.png" alt="大小跳不停"></a></div>
-                <p class="tit"><a href="/danji/123.html" target="_blank">大小跳不停</a></p>
-                <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>11人在玩</span></p>
-              </div>
-              <div class="ksw"><a href="/danji/123.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
-            </li>
-            <li> <em class="num num">4</em>
-              <div class="box1">
-                <div class="pic"><a href="/danji/122.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170615173331.png" alt="大长腿"></a></div>
-                <p class="tit"><a href="/danji/122.html" target="_blank">大长腿</a></p>
-                <p><span><a href="/list-4-0-0-1.html" target="_blank" class="flei">休闲</a></span><span>2人在玩</span></p>
-              </div>
-              <div class="ksw"><a href="/danji/122.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
-            </li>
-            <li> <em class="num num">5</em>
-              <div class="box1">
-                <div class="pic"><a href="/danji/121.html" target="_blank"><img src="/d/file/96kaifa/201710260937/20170616133704.jpg" alt="贱人配对"></a></div>
-                <p class="tit"><a href="/danji/121.html" target="_blank">贱人配对</a></p>
-                <p><span><a href="/list-1-0-0-1.html" target="_blank" class="flei">益智</a></span><span>3人在玩</span></p>
-              </div>
-              <div class="ksw"><a href="/danji/121.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
-            </li>
-          </ol>
+          
+     
         </div>
       </div>
       <div class="w-texts mt15">
@@ -345,7 +310,7 @@
           <h3>最新资讯</h3>
         </div>
         <ul class="text-list">
-          <li>•<a href="/zixun/795.html" target="_blank" class="title">欢乐斗地主获取欢乐豆攻略</a></li>
+          <li>•<a href="/zixun/795.html" target="_blank" class="title">《欢乐斗地主》获取欢乐豆攻略</a></li>
           <li>•<a href="/zixun/794.html" target="_blank" class="title">《欢乐斗地主》新手攻略</a></li>
           <li>•<a href="/zixun/792.html" target="_blank" class="title">《妖怪宝可萌》活动，日充送好礼！</a></li>
           <li>•<a href="/zixun/791.html" target="_blank" class="title">《龙城霸业》合服活动火爆开启，合服礼包随心领！</a></li>

@@ -364,30 +364,4 @@ $class_r[14]=Array('classid'=>14,
 'bname'=>'棋牌厂商',
 
 'reorder'=>'newstime DESC');
-$class_r[15]=Array('classid'=>15,
-'bclassid'=>0,
-'classname'=>'新棋牌',
-'sonclass'=>'',
-'featherclass'=>'',
-'islast'=>1,
-'classpath'=>'xinqipai',
-'classtype'=>'.html',
-
-'down_num'=>2,
-'online_num'=>2,
-'islist'=>0,
-'tid'=>26,
-'tbname'=>'xinqipai',
-'modid'=>21,
-'lencord'=>25,'link_num'=>10,
-'newstempid'=>20,
-'listtempid'=>21,
-
-'filetype'=>'.html','ipath'=>'xinqipai',
-'openadd'=>1,
-
-'checked'=>1,
-'bname'=>'新棋牌',
-
-'reorder'=>'newstime DESC');
 ?>

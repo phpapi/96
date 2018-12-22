@@ -235,4 +235,8 @@ while($b_r=$empire->fetch($befrom_sql))
 </td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>封面图</td><td bgcolor='ffffff'>
 <input name="fmimg" type="text" id="fmimg" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[fmimg]))?>" size="45">
 <a onclick="window.open('ecmseditor/FileMain.php?type=1&classid=<?=$classid?>&infoid=<?=$id?>&filepass=<?=$filepass?>&sinfo=1&doing=1&field=fmimg<?=$ecms_hashur[ehref]?>','','width=700,height=550,scrollbars=yes');" title="选择已上传的图片"><img src="../data/images/changeimg.gif" border="0" align="absbottom"></a> 
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>业务介绍</td><td bgcolor='ffffff'>
+<?=ECMS_ShowEditorVar("jieshao",$ecmsfirstpost==1?"":stripSlashes($r[jieshao]),"Default","","300","100%")?>
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>位置</td><td bgcolor='ffffff'>
+<input name="weizhi" type="text" id="weizhi" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[weizhi]))?>" size="">
 </td></tr></table>

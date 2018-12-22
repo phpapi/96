@@ -11,7 +11,7 @@
 <script type="text/javascript" src="/96kaifa/statics/home/js/jquery-1.8.2.min.js"></script>
 </head>
 <script type="text/javascript">
-	showMobile("http://test.yanwowenda.cn/danji/21.html");
+	showMobile("http://47.52.203.166//danji/21.html");
 </script>
 <body>
 <div class="cover"></div>
@@ -58,8 +58,8 @@
   </div>
   <div class="nav">
     <div class="in">
-      <ul>
-        <li><a href="/" class="nav-cur"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+      <ul id="navi">
+        <li><a href="/"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/qipailei/"><span class="menu-txt">棋牌</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
@@ -67,6 +67,14 @@
         <li><a class="" href="/qiyouchangshang/"><span class="menu-txt">棋游厂商</span><span class="menu-line"></span></a></li>
         <li><a class="" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
       </ul>
+   <script type="text/javascript" language="javascript">
+     
+    $("#navi li a").each(function(){ 
+    if($(this)[0].href==String(window.location)){ 
+      $(this).addClass("nav-cur").siblings().removeClass("nav-cur"); 
+    } 
+  });   
+        </script>
       <div class="grzx">
 	  	<script> document.write('<script src="./e/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
 	  </div>
@@ -147,7 +155,7 @@
         <p class="tips">( 温馨提示：在电脑上玩，建议使用火狐/谷歌等浏览器；手机上玩，直接扫描右侧二维码进入游戏 )</p>
       </div>
     </div>
-    <div class="pcode"><img src="/qr/api.php?url=http://test.yanwowenda.cn/danji/21.html&p=4.5&m=4"><span>手机扫描 马上玩</span></div>
+    <div class="pcode"><img src="/qr/api.php?url=http://47.52.203.166//danji/21.html&p=4.5&m=4"><span>手机扫描 马上玩</span></div>
   </div>
   <div class="game-container">
     <div class="w804">
@@ -236,7 +244,7 @@ conf: 'prod_8e11cfb50c20f2a0b31d59926e9e42c7'
               <dd class="desc">《欢乐斗地主》新手攻略</dd>
             </dl>
             <ul>
-              <li>•<a href="/zixun/795.html" target="_blank" class="title">欢乐斗地主获取欢乐豆攻略</a></li>
+              <li>•<a href="/zixun/795.html" target="_blank" class="title">《欢乐斗地主》获取欢乐豆攻略</a></li>
               <li>•<a href="/zixun/794.html" target="_blank" class="title">《欢乐斗地主》新手攻略</a></li>
               <li>•<a href="/zixun/792.html" target="_blank" class="title">《妖怪宝可萌》活动，日充送好礼！</a></li>
               <li>•<a href="/zixun/791.html" target="_blank" class="title">《龙城霸业》合服活动火爆开启，合服礼包随心领！</a></li>
@@ -271,7 +279,7 @@ conf: 'prod_8e11cfb50c20f2a0b31d59926e9e42c7'
               <div class="box1">
                 <div class="pic"><a href="/game/927.html" target="_blank"><img src="/d/file/96kaifa/201710281132/20171027141345.png" alt="十里桃花"></a></div>
                 <p class="tit"><a href="/game/927.html" target="_blank">十里桃花</a></p>
-                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>114人在玩</span></p>
+                <p><span><a href="/list-2-0-0-0.html" target="_blank" class="flei">角色扮演</a></span><span>148人在玩</span></p>
               </div>
               <div class="ksw"><a href="/game/927.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
             </li>

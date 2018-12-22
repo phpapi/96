@@ -235,4 +235,22 @@ while($b_r=$empire->fetch($befrom_sql))
 </td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>封面图</td><td bgcolor='ffffff'>
 <input name="fmimg" type="text" id="fmimg" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[fmimg]))?>" size="45">
 <a onclick="window.open('ecmseditor/FileMain.php?type=1&classid=<?=$classid?>&infoid=<?=$id?>&filepass=<?=$filepass?>&sinfo=1&doing=1&field=fmimg<?=$ecms_hashur[ehref]?>','','width=700,height=550,scrollbars=yes');" title="选择已上传的图片"><img src="../data/images/changeimg.gif" border="0" align="absbottom"></a> 
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>软件介绍</td><td bgcolor='ffffff'>
+<?=ECMS_ShowEditorVar("jieshao",$ecmsfirstpost==1?"":stripSlashes($r[jieshao]),"Default","","300","100%")?>
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>软件特色</td><td bgcolor='ffffff'>
+<?=ECMS_ShowEditorVar("tese",$ecmsfirstpost==1?"":stripSlashes($r[tese]),"Default","","300","100%")?>
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>软件测评</td><td bgcolor='ffffff'>
+<?=ECMS_ShowEditorVar("ceping",$ecmsfirstpost==1?"":stripSlashes($r[ceping]),"Default","","300","100%")?>
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>版本</td><td bgcolor='ffffff'>
+<input name="banben" type="text" id="banben" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[banben]))?>" size="">
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>机型</td><td bgcolor='ffffff'>
+<input name="jixing" type="text" id="jixing" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[jixing]))?>" size="">
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>平台</td><td bgcolor='ffffff'>
+<input name="pingtai" type="text" id="pingtai" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[pingtai]))?>" size="">
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>语言</td><td bgcolor='ffffff'>
+<input name="language" type="text" id="language" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[language]))?>" size="">
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>大小</td><td bgcolor='ffffff'>
+<input name="daxiao" type="text" id="daxiao" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[daxiao]))?>" size="">
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>更新时间</td><td bgcolor='ffffff'>
+<input name="updatetime" type="text" id="updatetime" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[updatetime]))?>" size="">
 </td></tr></table>
