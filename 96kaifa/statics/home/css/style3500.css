@@ -91,7 +91,7 @@
 /*排行榜*/
 .rank-box{ float: left; width: 268px; margin-right: 32px; }
 .rank-box h4{ font-size: 20px; padding-left: 28px; margin-top: 20px; position: relative; }
-.rank-box h4 i{ position: absolute; left: 0; top: 0; display: block; width: 21px; height: 23px; background: url(../images/icos.png) no-repeat; overflow: hidden; }
+.rank-box h4 i{ position: absolute; left: 0; top: 0; display: block; width: 21px; height: 23px; background: url(../images/icon1.png) no-repeat; overflow: hidden; }
 .xy-rank h4 i{ background-position: 0 -60px; }
 .xy-rank h4 b{ font-weight: normal; color: #ff5858; }
 .wy-rank h4 i{ background-position: 0 -95px; }
@@ -595,3 +595,16 @@
 .fowarp .contact-item span{ font-size: 16px; color: #888; margin-top: 15px; display: block; }
 .fowarp .contact-item a{ color: #888; }
 .fowarp .contact-item a:hover{ text-decoration: underline; color: #f70; }
+
+
+.rank-box i.icon{
+    background:url("../images/icon1.png")no-repeat -5px -10px ;}
+.rank-box i.icon1{
+    background:url("../images/icon1.png")no-repeat -40px -40px ;
+}
+.rank-box i.icon2{
+    background:url("../images/icon1.png")no-repeat -5px -42px ;
+}
+.rank-box i.icon3{
+    background:url("../images/icon1.png")no-repeat -40px -6px ;
+}
