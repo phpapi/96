@@ -25,3 +25,4 @@ h2{
 .gameplay{
 	line-height: 40px;
 }
+#feedAv{ margin-top: -250px!important;transform: scale(0);}
