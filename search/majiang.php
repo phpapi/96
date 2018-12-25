@@ -68,7 +68,7 @@ $www_96kaifa_com_header=$empire->fetch1("select varvalue from {$dbtbpre}enewstem
 $www_96kaifa_com_footer=$empire->fetch1("select varvalue from {$dbtbpre}enewstempvar where myvar='www_96kaifa_com_sfoot' limit 1");
 
 $num = 0;
-if ($num != ''){
+if ($word != ''){
     $num=$empire->gettotal("select count(*) as total from www_96kaifa_com_ecms_majiang  where title like '%$word%'");
 }
 
@@ -235,136 +235,270 @@ $key.='</div>';
          <?php if($page_count==0){}else{ echo $key; } ?>
       </div>
     </div>
-    <div class="w336">
-      <div class="w-rank">
-        <div class="hd20">
-          <h3>游戏排行</h3>
-          <ul class="rank_tab">
-            <li onmousemove="onSelect(this,'rank_con')" class="tab_2">网游</li>
-            <li onmousemove="onSelect(this,'rank_con')" class="tab_1">小游戏</li>
-          </ul>
-        </div>
-        <div class="bd">
-          <ol id="rank_con_0">
-<?php 
-$query = $empire->query("select * from www_96kaifa_com_ecms_game order by onclick desc limit 3");
-$no=1;
-while($rs = $empire->fetch($query)){
-$xwtitle=$rs['title'];
-$titleurl=$rs['titleurl'];
-$xwtitlepic=$rs['titlepic'];
-$onclick=$rs['onclick'];
-
-if($rs[fenlei]==1){$bfenlei="卡牌游戏";}
-else if($rs[fenlei]==2){$bfenlei="角色扮演";}
-else if($rs[fenlei]==3){$bfenlei="模拟经营";}
-else if($rs[fenlei]==4){$bfenlei="射击游戏";}
-else if($rs[fenlei]==5){$bfenlei="动作游戏";}
-else if($rs[fenlei]==6){$bfenlei="战争策略";}
-else if($rs[fenlei]==7){$bfenlei="棋牌游戏";}
-else if($rs[fenlei]==8){$bfenlei="休闲游戏";}
-?>
-            <li> <em class="num num<?=$no?>"><?=$no?></em>
-              <div class="box1">
-                <div class="pic"><a href="<?=$titleurl?>" target="_blank"><img src="<?=$xwtitlepic?>" alt="<?=$xwtitle?>"></a></div>
-                <p class="tit"><a href="<?=$titleurl?>" target="_blank"><?=$xwtitle?></a></p>
-                <p><span><a href="/list-<?=$rs['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$onclick?>人在玩</span></p>
+      <div class="w336">
+          <div class="w-rank">
+              <div class="hd20">
+                  <h3>游戏排行</h3>
               </div>
-              <div class="ksw"><a href="<?=$titleurl?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
-            </li>
-<?php $no++;} ?> 
-<?php 
-$query = $empire->query("select * from www_96kaifa_com_ecms_game order by onclick desc limit 3,2");
-$no=4;
-while($rs = $empire->fetch($query)){
-$xwtitle=$rs['title'];
-$titleurl=$rs['titleurl'];
-$xwtitlepic=$rs['titlepic'];
-$onclick=$rs['onclick'];
+              <div class="bd">
+                  <ol id="rank_con_0">
+                      <?php
+                      $query = $empire->query("select * from `www_96kaifa_com_ecms_puke` union select * from `www_96kaifa_com_ecms_majiang` union select * from `www_96kaifa_com_ecms_qipai` order by onclick desc limit 3");
+                      $no=1;
+                      while($rs = $empire->fetch($query)){
+                          $xwtitle=$rs['title'];
+                          $titleurl=$rs['titleurl'];
+                          $xwtitlepic=$rs['titlepic'];
+                          $onclick=$rs['onclick'];
 
-if($rs[fenlei]==1){$bfenlei="卡牌游戏";}
-else if($rs[fenlei]==2){$bfenlei="角色扮演";}
-else if($rs[fenlei]==3){$bfenlei="模拟经营";}
-else if($rs[fenlei]==4){$bfenlei="射击游戏";}
-else if($rs[fenlei]==5){$bfenlei="动作游戏";}
-else if($rs[fenlei]==6){$bfenlei="战争策略";}
-else if($rs[fenlei]==7){$bfenlei="棋牌游戏";}
-else if($rs[fenlei]==8){$bfenlei="休闲游戏";}
-?>
-            <li> <em class="num"><?=$no?></em>
-              <div class="box1">
-                <div class="pic"><a href="<?=$titleurl?>" target="_blank"><img src="<?=$xwtitlepic?>" alt="<?=$xwtitle?>"></a></div>
-                <p class="tit"><a href="<?=$titleurl?>" target="_blank"><?=$xwtitle?></a></p>
-                <p><span><a href="/list-<?=$rs['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$onclick?>人在玩</span></p>
-              </div>
-              <div class="ksw"><a href="<?=$titleurl?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
-            </li>
-<?php $no++;} ?> 
-          </ol>
-          <ol id="rank_con_1" style="display: none;">
-<?php 
-$query = $empire->query("select * from www_96kaifa_com_ecms_danji order by onclick desc limit 3");
-$no=1;
-while($rs = $empire->fetch($query)){
-$xwtitle=$rs['title'];
-$titleurl=$rs['titleurl'];
-$xwtitlepic=$rs['titlepic'];
-$onclick=$rs['onclick'];
+                          if($rs[classid]==10){
+                              if($rs[fenlei]==1){$bfenlei="斗地主";}
+                              else if($rs[fenlei]==2){$bfenlei="跑胡子";}
+                              else if($rs[fenlei]==3){$bfenlei="21点";}
+                              else if($rs[fenlei]==4){$bfenlei="保皇";}
+                              else if($rs[fenlei]==5){$bfenlei="打滚子";}
+                              else if($rs[fenlei]==6){$bfenlei="干瞪眼";}
+                              else if($rs[fenlei]==7){$bfenlei="打大A";}
+                              else if($rs[fenlei]==8){$bfenlei="四冲";}
+                              else if($rs[fenlei]==9){$bfenlei="三代";}
+                              else if($rs[fenlei]==10){$bfenlei="5十K";}
+                              else if($rs[fenlei]==11){$bfenlei="三打一";}
+                              else if($rs[fenlei]==12){$bfenlei="挖坑";}
+                              else if($rs[fenlei]==13){$bfenlei="拱猪";}
+                              else if($rs[fenlei]==14){$bfenlei="红五";}
+                              else if($rs[fenlei]==15){$bfenlei="黑尖";}
+                              else if($rs[fenlei]==16){$bfenlei="攉龙";}
+                              else if($rs[fenlei]==17){$bfenlei="大怪路子";}
+                              else if($rs[fenlei]==18){$bfenlei="掼蛋";}
+                              else if($rs[fenlei]==19){$bfenlei="包分";}
+                              else if($rs[fenlei]==20){$bfenlei="拖拉机";}
+                              else if($rs[fenlei]==21){$bfenlei="接龙";}
+                              else if($rs[fenlei]==22){$bfenlei="跑得快";}
+                              else if($rs[fenlei]==23){$bfenlei="锄大地";}
+                              else if($rs[fenlei]==24){$bfenlei="梭哈";}
+                              else if($rs[fenlei]==25){$bfenlei="德州扑克";}
+                              else if($rs[fenlei]==26){$bfenlei="炸金花";}
+                              else if($rs[fenlei]==27){$bfenlei="够级";}
+                              else if($rs[fenlei]==28){$bfenlei="纸牌";}
+                              else if($rs[fenlei]==29){$bfenlei="牌九";}
+                              else if($rs[fenlei]==30){$bfenlei="十三张";}
+                              else if($rs[fenlei]==31){$bfenlei="刨幺";}
+                              else if($rs[fenlei]==32){$bfenlei="升级";}
+                              else if($rs[fenlei]==33){$bfenlei="三公";}
+                              else if($rs[fenlei]==34){$bfenlei="尖子顶";}
+                              else if($rs[fenlei]==35){$bfenlei="花牌";}
+                              else if($rs[fenlei]==36){$bfenlei="红十";}
+                              else if($rs[fenlei]==37){$bfenlei="斗牛";}
+                              else if($rs[fenlei]==38){$bfenlei="捕鱼";}
+                              else if($rs[fenlei]==39){$bfenlei="桥牌";}
+                              else if($rs[fenlei]==40){$bfenlei="长牌";}
+                              else if($rs[fenlei]==41){$bfenlei="歪胡子";}
+                              else if($rs[fenlei]==42){$bfenlei="大字牌";}
+                              else if($rs[fenlei]==43){$bfenlei="大贰";}
+                          }else if($rs[classid]==11){
+                              if($rs[fenlei]==1){$bfenlei="二人麻将";}
+                              else if($rs[fenlei]==2){$bfenlei="三人麻将";}
+                              else if($rs[fenlei]==3){$bfenlei="四人麻将";}
+                              else if($rs[fenlei]==4){$bfenlei="日本麻将";}
+                              else if($rs[fenlei]==5){$bfenlei="贵阳麻将";}
+                              else if($rs[fenlei]==6){$bfenlei="台湾麻将";}
+                              else if($rs[fenlei]==7){$bfenlei="上海麻将";}
+                              else if($rs[fenlei]==8){$bfenlei="四川麻将";}
+                              else if($rs[fenlei]==9){$bfenlei="北京麻将";}
+                              else if($rs[fenlei]==10){$bfenlei="广东麻将";}
+                              else if($rs[fenlei]==11){$bfenlei="陕西麻将";}
+                              else if($rs[fenlei]==12){$bfenlei="南昌麻将";}
+                              else if($rs[fenlei]==13){$bfenlei="长沙麻将";}
+                              else if($rs[fenlei]==14){$bfenlei="长春麻将";}
+                              else if($rs[fenlei]==15){$bfenlei="武汉麻将";}
+                              else if($rs[fenlei]==16){$bfenlei="山东麻将";}
+                              else if($rs[fenlei]==17){$bfenlei="宁波麻将";}
+                              else if($rs[fenlei]==18){$bfenlei="合肥麻将";}
+                              else if($rs[fenlei]==19){$bfenlei="河北麻将";}
+                              else if($rs[fenlei]==20){$bfenlei="天津麻将";}
+                              else if($rs[fenlei]==21){$bfenlei="太原麻将";}
+                              else if($rs[fenlei]==22){$bfenlei="福州麻将";}
+                              else if($rs[fenlei]==23){$bfenlei="杭州麻将";}
+                              else if($rs[fenlei]==24){$bfenlei="南京麻将";}
+                              else if($rs[fenlei]==25){$bfenlei="大连麻将";}
+                              else if($rs[fenlei]==26){$bfenlei="芜湖麻将";}
+                              else if($rs[fenlei]==27){$bfenlei="淮安麻将";}
+                              else if($rs[fenlei]==28){$bfenlei="南宁麻将";}
+                              else if($rs[fenlei]==29){$bfenlei="沈阳麻将";}
+                              else if($rs[fenlei]==30){$bfenlei="西安麻将";}
+                              else if($rs[fenlei]==31){$bfenlei="红中麻将";}
+                              else if($rs[fenlei]==32){$bfenlei="麻将接龙";}
 
-if($rs[fenlei]==1){$fenlei="益智";}
-else if($rs[fenlei]==2){$fenlei="动作";}
-else if($rs[fenlei]==3){$fenlei="射击";}
-else if($rs[fenlei]==4){$fenlei="休闲";}
-else if($rs[fenlei]==5){$fenlei="敏捷";}
-else if($rs[fenlei]==6){$fenlei="棋牌";}
-else if($rs[fenlei]==7){$fenlei="经营";}
-else if($rs[fenlei]==8){$fenlei="体育";}
-else if($rs[fenlei]==9){$fenlei="策略";}
-else if($rs[fenlei]==10){$fenlei="冒险";}
-else if($rs[fenlei]==11){$fenlei="装扮";}
-?>
-            <li> <em class="num num<?=$no?>"><?=$no?></em>
-              <div class="box1">
-                <div class="pic"><a href="<?=$titleurl?>" target="_blank"><img src="<?=$xwtitlepic?>" alt="<?=$xwtitle?>"></a></div>
-                <p class="tit"><a href="<?=$titleurl?>" target="_blank"><?=$xwtitle?></a></p>
-                <p><span><a href="/list-<?=$rs['fenlei']?>-0-0-1.html" target="_blank" class="flei"><?=$fenlei?></a></span><span><?=$onclick?>人在玩</span></p>
-              </div>
-              <div class="ksw"><a href="<?=$titleurl?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
-            </li>
-<?php $no++;} ?> 
-<?php 
-$query = $empire->query("select * from www_96kaifa_com_ecms_danji order by onclick desc limit 3,2");
-$no=4;
-while($rs = $empire->fetch($query)){
-$xwtitle=$rs['title'];
-$titleurl=$rs['titleurl'];
-$xwtitlepic=$rs['titlepic'];
-$onclick=$rs['onclick'];
+                          }else if($rs[classid]==12) {
+                              if ($rs[fenlei] == 1) {
+                                  $bfenlei = "五子棋";
+                              } else if ($rs[fenlei] == 2) {
+                                  $bfenlei = "象棋";
+                              } else if ($rs[fenlei] == 3) {
+                                  $bfenlei = "围棋";
+                              } else if ($rs[fenlei] == 4) {
+                                  $bfenlei = "飞行棋";
+                              } else if ($rs[fenlei] == 5) {
+                                  $bfenlei = "中国暗棋";
+                              } else if ($rs[fenlei] == 6) {
+                                  $bfenlei = "跳棋";
+                              } else if ($rs[fenlei] == 7) {
+                                  $bfenlei = "井字棋";
+                              } else if ($rs[fenlei] == 8) {
+                                  $bfenlei = "军棋";
+                              } else if ($rs[fenlei] == 9) {
+                                  $bfenlei = "斗兽棋";
+                              } else if ($rs[fenlei] == 10) {
+                                  $bfenlei = "将棋";
+                              } else if ($rs[fenlei] == 11) {
+                                  $bfenlei = "四子棋";
+                              } else if ($rs[fenlei] == 12) {
+                                  $bfenlei = "大富翁";
+                              } else if ($rs[fenlei] == 13) {
+                                  $bfenlei = "国际象棋";
+                              }
+                          }
+                          ?>
+                          <li> <em class="num num<?=$no?>"><?=$no?></em>
+                              <div class="box1">
+                                  <div class="pic"><a href="<?=$titleurl?>" target="_blank"><img src="<?=$xwtitlepic?>" alt="<?=$xwtitle?>"></a></div>
+                                  <p class="tit"><a href="<?=$titleurl?>" target="_blank"><?=$xwtitle?></a></p>
+                                  <p><span><?=$bfenlei?></span><span><?=$onclick?>人在玩</span></p>
+                              </div>
+                              <div class="ksw"><a href="<?=$titleurl?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
+                          </li>
+                          <?php $no++;} ?>
+                      <?php
+                      $query = $empire->query("select * from `www_96kaifa_com_ecms_puke` union select * from `www_96kaifa_com_ecms_majiang` union select * from `www_96kaifa_com_ecms_qipai` order by onclick desc limit 3,2");
+                      $no=4;
+                      while($rs = $empire->fetch($query)){
+                          $xwtitle=$rs['title'];
+                          $titleurl=$rs['titleurl'];
+                          $xwtitlepic=$rs['titlepic'];
+                          $onclick=$rs['onclick'];
 
-if($rs[fenlei]==1){$fenlei="益智";}
-else if($rs[fenlei]==2){$fenlei="动作";}
-else if($rs[fenlei]==3){$fenlei="射击";}
-else if($rs[fenlei]==4){$fenlei="休闲";}
-else if($rs[fenlei]==5){$fenlei="敏捷";}
-else if($rs[fenlei]==6){$fenlei="棋牌";}
-else if($rs[fenlei]==7){$fenlei="经营";}
-else if($rs[fenlei]==8){$fenlei="体育";}
-else if($rs[fenlei]==9){$fenlei="策略";}
-else if($rs[fenlei]==10){$fenlei="冒险";}
-else if($rs[fenlei]==11){$fenlei="装扮";}
-?>
-            <li> <em class="num"><?=$no?></em>
-              <div class="box1">
-                <div class="pic"><a href="<?=$titleurl?>" target="_blank"><img src="<?=$xwtitlepic?>" alt="<?=$xwtitle?>"></a></div>
-                <p class="tit"><a href="<?=$titleurl?>" target="_blank"><?=$xwtitle?></a></p>
-                <p><span><a href="/list-<?=$rs['fenlei']?>-0-0-1.html" target="_blank" class="flei"><?=$fenlei?></a></span><span><?=$onclick?>人在玩</span></p>
+                          if($rs[classid]==10){
+                              if($rs[fenlei]==1){$bfenlei="斗地主";}
+                              else if($rs[fenlei]==2){$bfenlei="跑胡子";}
+                              else if($rs[fenlei]==3){$bfenlei="21点";}
+                              else if($rs[fenlei]==4){$bfenlei="保皇";}
+                              else if($rs[fenlei]==5){$bfenlei="打滚子";}
+                              else if($rs[fenlei]==6){$bfenlei="干瞪眼";}
+                              else if($rs[fenlei]==7){$bfenlei="打大A";}
+                              else if($rs[fenlei]==8){$bfenlei="四冲";}
+                              else if($rs[fenlei]==9){$bfenlei="三代";}
+                              else if($rs[fenlei]==10){$bfenlei="5十K";}
+                              else if($rs[fenlei]==11){$bfenlei="三打一";}
+                              else if($rs[fenlei]==12){$bfenlei="挖坑";}
+                              else if($rs[fenlei]==13){$bfenlei="拱猪";}
+                              else if($rs[fenlei]==14){$bfenlei="红五";}
+                              else if($rs[fenlei]==15){$bfenlei="黑尖";}
+                              else if($rs[fenlei]==16){$bfenlei="攉龙";}
+                              else if($rs[fenlei]==17){$bfenlei="大怪路子";}
+                              else if($rs[fenlei]==18){$bfenlei="掼蛋";}
+                              else if($rs[fenlei]==19){$bfenlei="包分";}
+                              else if($rs[fenlei]==20){$bfenlei="拖拉机";}
+                              else if($rs[fenlei]==21){$bfenlei="接龙";}
+                              else if($rs[fenlei]==22){$bfenlei="跑得快";}
+                              else if($rs[fenlei]==23){$bfenlei="锄大地";}
+                              else if($rs[fenlei]==24){$bfenlei="梭哈";}
+                              else if($rs[fenlei]==25){$bfenlei="德州扑克";}
+                              else if($rs[fenlei]==26){$bfenlei="炸金花";}
+                              else if($rs[fenlei]==27){$bfenlei="够级";}
+                              else if($rs[fenlei]==28){$bfenlei="纸牌";}
+                              else if($rs[fenlei]==29){$bfenlei="牌九";}
+                              else if($rs[fenlei]==30){$bfenlei="十三张";}
+                              else if($rs[fenlei]==31){$bfenlei="刨幺";}
+                              else if($rs[fenlei]==32){$bfenlei="升级";}
+                              else if($rs[fenlei]==33){$bfenlei="三公";}
+                              else if($rs[fenlei]==34){$bfenlei="尖子顶";}
+                              else if($rs[fenlei]==35){$bfenlei="花牌";}
+                              else if($rs[fenlei]==36){$bfenlei="红十";}
+                              else if($rs[fenlei]==37){$bfenlei="斗牛";}
+                              else if($rs[fenlei]==38){$bfenlei="捕鱼";}
+                              else if($rs[fenlei]==39){$bfenlei="桥牌";}
+                              else if($rs[fenlei]==40){$bfenlei="长牌";}
+                              else if($rs[fenlei]==41){$bfenlei="歪胡子";}
+                              else if($rs[fenlei]==42){$bfenlei="大字牌";}
+                              else if($rs[fenlei]==43){$bfenlei="大贰";}
+                          }else if($rs[classid]==11){
+                              if($rs[fenlei]==1){$bfenlei="二人麻将";}
+                              else if($rs[fenlei]==2){$bfenlei="三人麻将";}
+                              else if($rs[fenlei]==3){$bfenlei="四人麻将";}
+                              else if($rs[fenlei]==4){$bfenlei="日本麻将";}
+                              else if($rs[fenlei]==5){$bfenlei="贵阳麻将";}
+                              else if($rs[fenlei]==6){$bfenlei="台湾麻将";}
+                              else if($rs[fenlei]==7){$bfenlei="上海麻将";}
+                              else if($rs[fenlei]==8){$bfenlei="四川麻将";}
+                              else if($rs[fenlei]==9){$bfenlei="北京麻将";}
+                              else if($rs[fenlei]==10){$bfenlei="广东麻将";}
+                              else if($rs[fenlei]==11){$bfenlei="陕西麻将";}
+                              else if($rs[fenlei]==12){$bfenlei="南昌麻将";}
+                              else if($rs[fenlei]==13){$bfenlei="长沙麻将";}
+                              else if($rs[fenlei]==14){$bfenlei="长春麻将";}
+                              else if($rs[fenlei]==15){$bfenlei="武汉麻将";}
+                              else if($rs[fenlei]==16){$bfenlei="山东麻将";}
+                              else if($rs[fenlei]==17){$bfenlei="宁波麻将";}
+                              else if($rs[fenlei]==18){$bfenlei="合肥麻将";}
+                              else if($rs[fenlei]==19){$bfenlei="河北麻将";}
+                              else if($rs[fenlei]==20){$bfenlei="天津麻将";}
+                              else if($rs[fenlei]==21){$bfenlei="太原麻将";}
+                              else if($rs[fenlei]==22){$bfenlei="福州麻将";}
+                              else if($rs[fenlei]==23){$bfenlei="杭州麻将";}
+                              else if($rs[fenlei]==24){$bfenlei="南京麻将";}
+                              else if($rs[fenlei]==25){$bfenlei="大连麻将";}
+                              else if($rs[fenlei]==26){$bfenlei="芜湖麻将";}
+                              else if($rs[fenlei]==27){$bfenlei="淮安麻将";}
+                              else if($rs[fenlei]==28){$bfenlei="南宁麻将";}
+                              else if($rs[fenlei]==29){$bfenlei="沈阳麻将";}
+                              else if($rs[fenlei]==30){$bfenlei="西安麻将";}
+                              else if($rs[fenlei]==31){$bfenlei="红中麻将";}
+                              else if($rs[fenlei]==32){$bfenlei="麻将接龙";}
+
+                          }else if($rs[classid]==12) {
+                              if ($rs[fenlei] == 1) {
+                                  $bfenlei = "五子棋";
+                              } else if ($rs[fenlei] == 2) {
+                                  $bfenlei = "象棋";
+                              } else if ($rs[fenlei] == 3) {
+                                  $bfenlei = "围棋";
+                              } else if ($rs[fenlei] == 4) {
+                                  $bfenlei = "飞行棋";
+                              } else if ($rs[fenlei] == 5) {
+                                  $bfenlei = "中国暗棋";
+                              } else if ($rs[fenlei] == 6) {
+                                  $bfenlei = "跳棋";
+                              } else if ($rs[fenlei] == 7) {
+                                  $bfenlei = "井字棋";
+                              } else if ($rs[fenlei] == 8) {
+                                  $bfenlei = "军棋";
+                              } else if ($rs[fenlei] == 9) {
+                                  $bfenlei = "斗兽棋";
+                              } else if ($rs[fenlei] == 10) {
+                                  $bfenlei = "将棋";
+                              } else if ($rs[fenlei] == 11) {
+                                  $bfenlei = "四子棋";
+                              } else if ($rs[fenlei] == 12) {
+                                  $bfenlei = "大富翁";
+                              } else if ($rs[fenlei] == 13) {
+                                  $bfenlei = "国际象棋";
+                              }
+                          }
+                          ?>
+                          <li> <em class="num"><?=$no?></em>
+                              <div class="box1">
+                                  <div class="pic"><a href="<?=$titleurl?>" target="_blank"><img src="<?=$xwtitlepic?>" alt="<?=$xwtitle?>"></a></div>
+                                  <p class="tit"><a href="<?=$titleurl?>" target="_blank"><?=$xwtitle?></a></p>
+                                  <p><span><?=$bfenlei?></span><span><?=$onclick?>人在玩</span></p>
+                              </div>
+                              <div class="ksw"><a href="<?=$titleurl?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
+                          </li>
+                          <?php $no++;} ?>
+                  </ol>
+                  <ol id="rank_con_1" style="display: none;">
+
               </div>
-              <div class="ksw"><a href="<?=$titleurl?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
-            </li>
-<?php $no++;} ?> 
-          </ol>
-        </div>
-      </div>
+          </div>
       <div class="w-texts mt15">
         <div class="hd20">
           <h3>最新资讯</h3>
