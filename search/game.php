@@ -177,7 +177,7 @@ else if($row[fenlei]==43){$fenlei="大贰";}
           <li>
             <div class="img"><a href="<?php echo $row['titleurl']?>" target="_blank"><img src="<?php echo $row['titlepic']?>" alt="<?php echo $row['title']?>"></a></div>
             <div class="con"> <a href="<?php echo $row['titleurl']?>" target="_blank" class="title"><?php echo $row['title']?></a>
-              <p><a href="/list-<?php echo $row['fenlei']?>-0-0-0.html" target="_blank"><?=$fenlei?></a><span>|</span><?php echo $row['onclick']?>人在玩</p>
+              <p><?=$fenlei?><span>|</span><?php echo $row['onclick']?>人在玩</p>
               <p><?php echo $row['yijuhua']?></p>
             </div>
             <div class="wan-btn"><a href="<?php echo $row['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
@@ -374,7 +374,7 @@ if($rs[classid]==10){
               <div class="box1">
                 <div class="pic"><a href="<?=$titleurl?>" target="_blank"><img src="<?=$xwtitlepic?>" alt="<?=$xwtitle?>"></a></div>
                 <p class="tit"><a href="<?=$titleurl?>" target="_blank"><?=$xwtitle?></a></p>
-                <p><span><a href="/list-<?=$rs['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$onclick?>人在玩</span></p>
+                <p><span><?=$bfenlei?></span><span><?=$onclick?>人在玩</span></p>
               </div>
               <div class="ksw"><a href="<?=$titleurl?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
             </li>
@@ -500,7 +500,7 @@ $onclick=$rs['onclick'];
               <div class="box1">
                 <div class="pic"><a href="<?=$titleurl?>" target="_blank"><img src="<?=$xwtitlepic?>" alt="<?=$xwtitle?>"></a></div>
                 <p class="tit"><a href="<?=$titleurl?>" target="_blank"><?=$xwtitle?></a></p>
-                <p><span><a href="/list-<?=$rs['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$onclick?>人在玩</span></p>
+                <p><span><?=$bfenlei?></span><span><?=$onclick?>人在玩</span></p>
               </div>
               <div class="ksw"><a href="<?=$titleurl?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
             </li>
