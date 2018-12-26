@@ -608,3 +608,18 @@
 .rank-box i.icon3{
     background:url("../images/icon1.png")no-repeat -40px -6px ;
 }
+/* 网站地图游戏分类  */
+.lei{
+    display: none;
+}
+.on{
+    display: none;
+}
+.clearfix_x a{
+    margin-right: 45px;
+    line-height: 32px;
+    font-size: 16px;
+}
+.tend a{
+    margin-right: 20px;
+}
