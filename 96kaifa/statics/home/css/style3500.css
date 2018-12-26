@@ -608,18 +608,33 @@
 .rank-box i.icon3{
     background:url("../images/icon1.png")no-repeat -40px -6px ;
 }
-/* 网站地图游戏分类  */
-.lei{
-    display: none;
-}
-.on{
+/* 网站地图游戏分类 */
+
+.clearfix_x .on{
     display: none;
 }
 .clearfix_x a{
-    margin-right: 45px;
-    line-height: 32px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    width: 78px;
+    text-align: center;
+    border: 1px solid #fff;
+    margin-top: 14px;
+    margin-right: 17px;
     font-size: 16px;
+
 }
-.tend a{
-    margin-right: 20px;
+.map-con dd{
+    margin-left: -3px;
+}
+
+.Pendl a{
+    display: inline-block;
+    width: 78px;
+    text-align: center;
+    border: 1px solid #fff;
+    margin-top: 14px;
+    margin-right: 17px;
+    font-size: 16px;
 }
