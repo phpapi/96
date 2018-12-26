@@ -214,6 +214,30 @@ tyMap['4'] = function(){
 }
 
 
+var urlArr = ['','qipai', 'puke', 'majiang', 'qilei','qiyouchangshang','zixun'];
+
+function GetUrlRelativePath() {
+    var url = document.location.toString();
+    var arrUrl = url.split("//");
+
+    var start = arrUrl[1].indexOf("/");
+    var relUrl = arrUrl[1].substring(start); //stop省略，截取从start开始到结尾的所有字符
+
+    if (relUrl.indexOf("?") != -1) {
+        relUrl = relUrl.split("?")[0];
+    }
+    return relUrl;
+}
+//console.log(GetUrlRelativePath());
+var url = GetUrlRelativePath()
+for (let i = 0; i < urlArr.length; i++) {
+    const element = urlArr[i];
+    if (url.indexOf(element) != -1) {
+        $('#navi li a').removeClass('nav-cur');
+        $('#navi li a:eq(' + i + ')').addClass('nav-cur');
+    }
+}
+
 
 
 
