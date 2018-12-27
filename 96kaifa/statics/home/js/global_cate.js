@@ -7,7 +7,7 @@ function tabPath() {
     var relUrl = arrUrl[1].substring(start); //stop省略，截取从start开始到结尾的所有字符
     console.log(relUrl);
 
-    if(relUrl.length==26){
+    if(relUrl.length==19){
         var str =relUrl.substring(13,12);
     }else{
         var str =relUrl.substring(14,13);
