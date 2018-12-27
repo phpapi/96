@@ -1,4 +1,4 @@
-function GetUrlRelativePath() {
+function tabPath() {
     var url = document.location.toString();
     var arrUrl = url.split("//");
 
@@ -8,18 +8,18 @@ function GetUrlRelativePath() {
     console.log(relUrl);
 
     if(relUrl.length==26){
-        var str =relUrl.substring(26,25);
+        var str =relUrl.substring(13,12);
     }else{
-        var str =relUrl.substring(27,26);
+        var str =relUrl.substring(14,13);
     }
     return str;
 }
-var url = GetUrlRelativePath()
-// console.log(url);
-if(url==2){
+var  taburl= tabPath()
+console.log(taburl);
+if(taburl==2){
     $("#navi li a").eq(2).addClass("nav-cur").siblings().removeClass("nav-cur");
-}else if(url==3){
+}else if(taburl==3){
     $("#navi li a").eq(3).addClass("nav-cur").siblings().removeClass("nav-cur");
-}else if(url==4){
+}else if(taburl==4){
     $("#navi li a").eq(4).addClass("nav-cur").siblings().removeClass("nav-cur");
 }
