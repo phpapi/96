@@ -8,9 +8,9 @@ if(!defined('InEmpireCMS'))
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>仿3500游戏源码-96KaiFa原创源码（www.96kaifa.com）</title>
-<meta name="keywords" content="仿3500游戏源码,3500游戏源码" />
-<meta name="description" content="仿3500游戏源码-在线玩H5游戏为用户提供海量手机上不用下载就可以玩的手机页游、免费H5小游戏在线玩。好玩的H5游戏，就在3500游戏平台。" />
+<title>棋游之家</title>
+<meta name="keywords" content="棋游之家" />
+<meta name="description" content="棋游之家为广大玩家提供各种游戏下载以及补丁，视频，工具等下载，每日更新玩家喜爱的游戏资讯及游戏攻略，更多精彩就在棋游之家。" />
 <link href="/96kaifa/statics/home/css/base.css" type="text/css" rel="stylesheet">
 <link href="/96kaifa/statics/home/css/style3500.css" type="text/css" rel="stylesheet">
 <link href="/96kaifa/statics/home/css/newadd.css" type="text/css" rel="stylesheet">
@@ -33,17 +33,18 @@ if(!defined('InEmpireCMS'))
         </li>
         <li>|<a href="#" target="_blank">开放平台</a></li>
       </ul>
+
     </div>
     <div class="topr fr">
         <div class="login_ok">
         
-        <script>
+        <!--<script>
             document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
             $(function(){
             var dqurl = window.location.href;
             $('#dquurl').val(dqurl);
             })
-            </script>
+            </script>-->
         
         </div>
         <a href="javascript:;" onclick="AddFavorite();">收藏本站</a> </div>
@@ -151,13 +152,13 @@ if(!defined('InEmpireCMS'))
     <dl>
         
         <dd class="nowshow"> <img src="/96kaifa/statics/home/images/1.png" alt=""> <span>棋牌推荐</span> </dd>
-        <dd class=""> <img src="/96kaifa/statics/home/images/2.png" alt=""> <span>牛牛</span> </dd>
-        <dd class=""> <img src="/96kaifa/statics/home/images/3.png" alt=""> <span>炸金花</span> </dd>
-        <dd class=""> <img src="/96kaifa/statics/home/images/4.png" alt=""> <span>21点</span> </dd>
-        <dd class=""> <img src="/96kaifa/statics/home/images/5.png" alt=""> <span>捕鱼</span> </dd>
-        <dd class=""> <img src="/96kaifa/statics/home/images/6.png" alt=""> <span>梭哈</span> </dd>
-        <dd class=""> <img src="/96kaifa/statics/home/images/7.png" alt=""> <span>德州扑克</span> </dd>
-         <dd class=""> <img src="/96kaifa/statics/home/images/8.png" alt=""> <span>牌九</span> </dd>
+        <dd class=""> <img src="/96kaifa/statics/home/images/niu.jpg" alt=""> <span>牛牛</span> </dd>
+        <dd class=""> <img src="/96kaifa/statics/home/images/zjh.jpg" alt=""> <span>炸金花</span> </dd>
+        <dd class=""> <img src="/96kaifa/statics/home/images/21.jpg" alt=""> <span>21点</span> </dd>
+        <dd class=""> <img src="/96kaifa/statics/home/images/buyu.jpg" alt=""> <span>捕鱼</span> </dd>
+        <dd class=""> <img src="/96kaifa/statics/home/images/suoha.jpg" alt=""> <span>梭哈</span> </dd>
+        <dd class=""> <img src="/96kaifa/statics/home/images/dezhou.jpg" alt=""> <span>德州扑克</span> </dd>
+         <dd class=""> <img src="/96kaifa/statics/home/images/paijiu.jpg" alt=""> <span>牌九</span> </dd>
     </dl>
     <ul class="cc" style="display: block;">
         <li>
@@ -335,7 +336,7 @@ exchange(".yuleSortBtn dd",".yuleHji","cur");
   <div class="mogame fl">
     <div class="hd">
       <h3>新游上线</h3>
-      <a href="/game/" class="more">更多<i></i></a></div>
+      <!--<a href="/game/" class="more">更多<i></i></a>--></div>
     <ul class="game-list clearfix">
 <?php
 $bqno=0;
@@ -383,11 +384,17 @@ else if($bqr[fenlei]==34){$bfenlei="尖子顶";}
 else if($bqr[fenlei]==35){$bfenlei="花牌";}
 else if($bqr[fenlei]==36){$bfenlei="红十";}
 else if($bqr[fenlei]==37){$bfenlei="斗牛";}
+else if($bqr[fenlei]==38){$bfenlei="捕鱼";}
+else if($bqr[fenlei]==39){$bfenlei="桥牌";}
+else if($bqr[fenlei]==40){$bfenlei="长牌";}
+else if($bqr[fenlei]==41){$bfenlei="歪胡子";}
+else if($bqr[fenlei]==42){$bfenlei="大字牌";}
+else if($bqr[fenlei]==43){$bfenlei="大贰";}
 ?>
       <li>
         <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
         <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank"><?=$bfenlei?></a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank"><?=$bfenlei?></a><span>|</span><?=$bqr['onclick']?>人在玩</p>
           <p><?=$bqr['yijuhua']?></p>
         </div>
         <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
@@ -442,7 +449,7 @@ else if($bqr[fenlei]==32){$bfenlei="麻将接龙";}
       <li>
         <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
         <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank"><?=$bfenlei?></a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank"><?=$bfenlei?></a><span>|</span><?=$bqr['onclick']?>人在玩</p>
           <p><?=$bqr['yijuhua']?></p>
         </div>
         <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
@@ -478,7 +485,7 @@ else if($bqr[fenlei]==13){$bfenlei="国际象棋";}
       <li>
         <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
         <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank"><?=$bfenlei?></a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank"><?=$bfenlei?></a><span>|</span><?=$bqr['onclick']?>人在玩</p>
           <p><?=$bqr['yijuhua']?></p>
         </div>
         <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
@@ -516,34 +523,10 @@ $bqno++;
   <div class="scrollable">
     <ul class="items clearfix">
       <li class="item">
-<?php
-$bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_game where firsttitle=1 and fmimg<>'' order by newstime desc limit 2",6,24,0);
-if($ecms_bq_sql){
-while($bqr=$empire->fetch($ecms_bq_sql)){
-$bqsr=sys_ReturnEcmsLoopStext($bqr);
-$bqno++;
-?>
-		<a href="<?=$bqsr['titleurl']?>" target="_blank" class="posited"><img src="<?=$bqr['fmimg']?>" alt="<?=$bqr['title']?>"></a> 
-<?php
-}
-}
-?>
+<a href="" target="_blank" class="posited"><img src="/96kaifa/statics/home/images/banner1.jpg" alt=""></a> 
 	  </li>
 	  <li class="item">
-<?php
-$bqno=0;
-$ecms_bq_sql=sys_ReturnEcmsLoopBq("select * from www_96kaifa_com_ecms_game where firsttitle=1 and fmimg<>'' order by newstime desc limit 2,2",6,24,0);
-if($ecms_bq_sql){
-while($bqr=$empire->fetch($ecms_bq_sql)){
-$bqsr=sys_ReturnEcmsLoopStext($bqr);
-$bqno++;
-?>
-		<a href="<?=$bqsr['titleurl']?>" target="_blank" class="posited"><img src="<?=$bqr['fmimg']?>" alt="<?=$bqr['title']?>"></a> 
-<?php
-}
-}
-?>
+<a href="" target="_blank" class="posited"><img src="/96kaifa/statics/home/images/banner2.jpg" alt=""></a> 
 	  </li>
     </ul>
   </div>
@@ -555,7 +538,7 @@ $bqno++;
   <div class="mogame">
     <div class="hd">
       <h3>精品游戏</h3>
-      <a href="/game/" class="more">更多<i></i></a></div>
+      </div>
     <ul class="game-list clearfix">
 <?php
 $bqno=0;
@@ -568,7 +551,7 @@ $bqno++;
       <li>
         <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
         <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank">斗地主</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">斗地主</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
           <p><?=$bqr['yijuhua']?></p>
         </div>
         <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
@@ -588,7 +571,7 @@ $bqno++;
       <li>
         <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
         <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank">斗牛</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">斗牛</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
           <p><?=$bqr['yijuhua']?></p>
         </div>
         <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
@@ -608,7 +591,7 @@ $bqno++;
       <li>
         <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
         <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank">象棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank">象棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
           <p><?=$bqr['yijuhua']?></p>
         </div>
         <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
@@ -628,7 +611,7 @@ $bqno++;
       <li>
         <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
         <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank">飞行棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank">飞行棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
           <p><?=$bqr['yijuhua']?></p>
         </div>
         <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
@@ -648,7 +631,7 @@ $bqno++;
       <li>
         <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
         <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank">四川麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank">四川麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
           <p><?=$bqr['yijuhua']?></p>
         </div>
         <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
@@ -668,7 +651,7 @@ $bqno++;
       <li>
         <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
         <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank">广东麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank">广东麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
           <p><?=$bqr['yijuhua']?></p>
         </div>
         <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
@@ -688,7 +671,7 @@ $bqno++;
       <li>
         <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
         <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank">南昌麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank">南昌麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
           <p><?=$bqr['yijuhua']?></p>
         </div>
         <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
@@ -708,7 +691,7 @@ $bqno++;
       <li>
         <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
         <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank">锄大地</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+          <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">锄大地</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
           <p><?=$bqr['yijuhua']?></p>
         </div>
         <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
@@ -748,7 +731,7 @@ $bqno++;
 <div class="h5game">
   <div class="hd">
     <h3>扑克游戏</h3>
-    <a href="/danji/" class="more">更多<i></i></a></div>
+    <a href="/puke/" class="more">更多<i></i></a></div>
   <ul class="game-list clearfix">
 <?php
 $bqno=0;
@@ -762,7 +745,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">斗地主</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">斗地主</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -783,7 +766,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">斗牛</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">斗牛</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -804,7 +787,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">德州扑克</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">德州扑克</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -825,7 +808,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">掼蛋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">掼蛋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -846,7 +829,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">干瞪眼</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">干瞪眼</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -867,7 +850,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">挖坑</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">挖坑</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -888,7 +871,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">拱猪</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">拱猪</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -909,7 +892,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">炸金花</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">炸金花</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -930,7 +913,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">保皇</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">保皇</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -951,7 +934,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">斗地主</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">斗地主</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -972,7 +955,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">斗地主</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">斗地主</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -993,7 +976,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">梭哈</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank">梭哈</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1007,7 +990,7 @@ $bqno++;
 <div class="h5game">
   <div class="hd">
     <h3>棋盘游戏</h3>
-    <a href="/danji/" class="more">更多<i></i></a></div>
+    <a href="/qilei/" class="more">更多<i></i></a></div>
   <ul class="game-list clearfix">
 <?php
 $bqno=0;
@@ -1021,7 +1004,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">军棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank">军棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1042,7 +1025,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">象棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank">象棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1063,7 +1046,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">飞行棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank">飞行棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1084,7 +1067,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">国际象棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank">国际象棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1105,7 +1088,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">围棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank">围棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1126,7 +1109,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">跳棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank">跳棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1147,7 +1130,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">军棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank">军棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1168,7 +1151,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">斗兽棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank">斗兽棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1189,7 +1172,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">将棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank">将棋</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1205,7 +1188,7 @@ $bqno++;
 <div class="h5game">
   <div class="hd">
     <h3>麻将游戏</h3>
-    <a href="/danji/" class="more">更多<i></i></a></div>
+    <a href="/majiang/" class="more">更多<i></i></a></div>
   <ul class="game-list clearfix">
 <?php
 $bqno=0;
@@ -1219,7 +1202,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">广东麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank">广东麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1240,7 +1223,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">四川麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank">四川麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1261,7 +1244,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">皮皮四川麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank">皮皮四川麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1282,7 +1265,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">四人麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank">四人麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1303,7 +1286,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">二人麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank">二人麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1324,7 +1307,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">四人麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank">四人麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1345,7 +1328,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">长沙麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank">长沙麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1366,7 +1349,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">日本麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank">日本麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1387,7 +1370,7 @@ $bqno++;
     <li>
       <div class="img"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
       <div class="con"> <a href="<?=$bqsr['titleurl']?>" target="_blank" class="title"><?=$bqr['title']?></a>
-        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank">四人麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
+        <p><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank">四人麻将</a><span>|</span><?=$bqr['onclick']?>人在玩</p>
         <p><?=$bqr['yijuhua']?></p>
       </div>
       <div class="wan-btn"><a href="<?=$bqsr['titleurl']?>" target="_blank" class="wanBtn">开始玩</a></div>
@@ -1452,13 +1435,19 @@ else if($bqr[fenlei]==34){$bfenlei="尖子顶";}
 else if($bqr[fenlei]==35){$bfenlei="花牌";}
 else if($bqr[fenlei]==36){$bfenlei="红十";}
 else if($bqr[fenlei]==37){$bfenlei="斗牛";}
+else if($bqr[fenlei]==38){$bfenlei="捕鱼";}
+else if($bqr[fenlei]==39){$bfenlei="桥牌";}
+else if($bqr[fenlei]==40){$bfenlei="长牌";}
+else if($bqr[fenlei]==41){$bfenlei="歪胡子";}
+else if($bqr[fenlei]==42){$bfenlei="大字牌";}
+else if($bqr[fenlei]==43){$bfenlei="大贰";}
 ?>
 
 <li class="top"> <em class="num num1">1</em>
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>
@@ -1517,12 +1506,18 @@ else if($bqr[fenlei]==34){$bfenlei="尖子顶";}
 else if($bqr[fenlei]==35){$bfenlei="花牌";}
 else if($bqr[fenlei]==36){$bfenlei="红十";}
 else if($bqr[fenlei]==37){$bfenlei="斗牛";}
+else if($bqr[fenlei]==38){$bfenlei="捕鱼";}
+else if($bqr[fenlei]==39){$bfenlei="桥牌";}
+else if($bqr[fenlei]==40){$bfenlei="长牌";}
+else if($bqr[fenlei]==41){$bfenlei="歪胡子";}
+else if($bqr[fenlei]==42){$bfenlei="大字牌";}
+else if($bqr[fenlei]==43){$bfenlei="大贰";}
 ?>
 <li> <em class="num num<?=$bqno+1?>"><?=$bqno+1?></em>
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>
@@ -1579,12 +1574,18 @@ else if($bqr[fenlei]==34){$bfenlei="尖子顶";}
 else if($bqr[fenlei]==35){$bfenlei="花牌";}
 else if($bqr[fenlei]==36){$bfenlei="红十";}
 else if($bqr[fenlei]==37){$bfenlei="斗牛";}
+else if($bqr[fenlei]==38){$bfenlei="捕鱼";}
+else if($bqr[fenlei]==39){$bfenlei="桥牌";}
+else if($bqr[fenlei]==40){$bfenlei="长牌";}
+else if($bqr[fenlei]==41){$bfenlei="歪胡子";}
+else if($bqr[fenlei]==42){$bfenlei="大字牌";}
+else if($bqr[fenlei]==43){$bfenlei="大贰";}
 ?>
 <li> <em class="num"><?=$bqno+3?></em>
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>
@@ -1642,7 +1643,7 @@ else if($bqr[fenlei]==32){$bfenlei="麻将接龙";}
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>
@@ -1682,7 +1683,7 @@ else if($bqr[fenlei]==13){$bfenlei="国际象棋";}
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>
@@ -1709,7 +1710,7 @@ $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
 <?php
-if($bqr[fenlei]==1){$fenlei="斗地主";}
+if($bqr[fenlei]==1){$bfenlei="斗地主";}
 else if($bqr[fenlei]==2){$bfenlei="跑胡子";}
 else if($bqr[fenlei]==3){$bfenlei="21点";}
 else if($bqr[fenlei]==4){$bfenlei="保皇";}
@@ -1746,12 +1747,18 @@ else if($bqr[fenlei]==34){$bfenlei="尖子顶";}
 else if($bqr[fenlei]==35){$bfenlei="花牌";}
 else if($bqr[fenlei]==36){$bfenlei="红十";}
 else if($bqr[fenlei]==37){$bfenlei="斗牛";}
+else if($bqr[fenlei]==38){$bfenlei="捕鱼";}
+else if($bqr[fenlei]==39){$bfenlei="桥牌";}
+else if($bqr[fenlei]==40){$bfenlei="长牌";}
+else if($bqr[fenlei]==41){$bfenlei="歪胡子";}
+else if($bqr[fenlei]==42){$bfenlei="大字牌";}
+else if($bqr[fenlei]==43){$bfenlei="大贰";}
 ?>
 <li class="top"> <em class="num num1">1</em>
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>
@@ -1771,7 +1778,7 @@ $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
 <?php
-if($bqr[fenlei]==1){$fenlei="斗地主";}
+if($bqr[fenlei]==1){$bfenlei="斗地主";}
 else if($bqr[fenlei]==2){$bfenlei="跑胡子";}
 else if($bqr[fenlei]==3){$bfenlei="21点";}
 else if($bqr[fenlei]==4){$bfenlei="保皇";}
@@ -1808,12 +1815,18 @@ else if($bqr[fenlei]==34){$bfenlei="尖子顶";}
 else if($bqr[fenlei]==35){$bfenlei="花牌";}
 else if($bqr[fenlei]==36){$bfenlei="红十";}
 else if($bqr[fenlei]==37){$bfenlei="斗牛";}
+else if($bqr[fenlei]==38){$bfenlei="捕鱼";}
+else if($bqr[fenlei]==39){$bfenlei="桥牌";}
+else if($bqr[fenlei]==40){$bfenlei="长牌";}
+else if($bqr[fenlei]==41){$bfenlei="歪胡子";}
+else if($bqr[fenlei]==42){$bfenlei="大字牌";}
+else if($bqr[fenlei]==43){$bfenlei="大贰";}
 ?>
 <li> <em class="num num<?=$bqno+1?>"><?=$bqno+1?></em>
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>
@@ -1833,7 +1846,7 @@ $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
 <?php
-if($bqr[fenlei]==1){$fenlei="斗地主";}
+if($bqr[fenlei]==1){$bfenlei="斗地主";}
 else if($bqr[fenlei]==2){$bfenlei="跑胡子";}
 else if($bqr[fenlei]==3){$bfenlei="21点";}
 else if($bqr[fenlei]==4){$bfenlei="保皇";}
@@ -1870,12 +1883,18 @@ else if($bqr[fenlei]==34){$bfenlei="尖子顶";}
 else if($bqr[fenlei]==35){$bfenlei="花牌";}
 else if($bqr[fenlei]==36){$bfenlei="红十";}
 else if($bqr[fenlei]==37){$bfenlei="斗牛";}
+else if($bqr[fenlei]==38){$bfenlei="捕鱼";}
+else if($bqr[fenlei]==39){$bfenlei="桥牌";}
+else if($bqr[fenlei]==40){$bfenlei="长牌";}
+else if($bqr[fenlei]==41){$bfenlei="歪胡子";}
+else if($bqr[fenlei]==42){$bfenlei="大字牌";}
+else if($bqr[fenlei]==43){$bfenlei="大贰";}
 ?>
 <li> <em class="num"><?=$bqno+3?></em>
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-2.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>
@@ -1917,7 +1936,7 @@ else if($bqr[fenlei]==13){$bfenlei="国际象棋";}
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank" class="flei"><?=$fenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>
@@ -1955,7 +1974,7 @@ else if($bqr[fenlei]==13){$bfenlei="国际象棋";}
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank" class="flei"><?=$fenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>
@@ -1993,7 +2012,7 @@ else if($bqr[fenlei]==13){$bfenlei="国际象棋";}
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-1.html" target="_blank" class="flei"><?=$fenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-4.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>
@@ -2055,7 +2074,7 @@ else if($bqr[fenlei]==32){$bfenlei="麻将接龙";}
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>
@@ -2075,7 +2094,7 @@ $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
 <?php
-if($bqr[fenlei]==1){$fenlei="二人麻将";}
+if($bqr[fenlei]==1){$bfenlei="二人麻将";}
 else if($bqr[fenlei]==2){$bfenlei="三人麻将";}
 else if($bqr[fenlei]==3){$bfenlei="四人麻将";}
 else if($bqr[fenlei]==4){$bfenlei="日本麻将";}
@@ -2112,7 +2131,7 @@ else if($bqr[fenlei]==32){$bfenlei="麻将接龙";}
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>
@@ -2132,7 +2151,7 @@ $bqsr=sys_ReturnEcmsLoopStext($bqr);
 $bqno++;
 ?>
 <?php
-if($bqr[fenlei]==1){$fenlei="二人麻将";}
+if($bqr[fenlei]==1){$bfenlei="二人麻将";}
 else if($bqr[fenlei]==2){$bfenlei="三人麻将";}
 else if($bqr[fenlei]==3){$bfenlei="四人麻将";}
 else if($bqr[fenlei]==4){$bfenlei="日本麻将";}
@@ -2169,7 +2188,7 @@ else if($bqr[fenlei]==32){$bfenlei="麻将接龙";}
   <div class="box1">
     <div class="pic"><a href="<?=$bqsr['titleurl']?>" target="_blank"><img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a></div>
     <p class="tit"><a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a></p>
-    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-0.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
+    <p><span><a href="/list-<?=$bqr['fenlei']?>-0-0-3.html" target="_blank" class="flei"><?=$bfenlei?></a></span><span><?=$bqr['onclick']?>人在玩</span></p>
   </div>
   <div class="box2">
     <p class="tit"><?=$bqr['title']?></p>

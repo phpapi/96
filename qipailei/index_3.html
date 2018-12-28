@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>棋牌类_棋游之家</title>
+<meta name="keywords" content="" />
+<meta name="description" content="棋牌类模型" />
+<link href="/96kaifa/statics/home/css/base.css" type="text/css" rel="stylesheet">
+<link href="/96kaifa/statics/home/css/style3500.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="/96kaifa/statics/home/js/jquery-1.8.2.min.js"></script>
+</head>
+<script type="text/javascript">
+	showMobile("http://test.yanwowenda.cn/qipailei/");
+</script>
+<body>
+<div class="cover"></div>
+<div class="topbox">
+  <div class="boxin clearfix">
+    <div class="topl fl"> <span class="home"><a href="/">游戏首页</a></span>
+      <ul>
+        <li>|<a href="http://www.96kaifa.com" target="_blank">手机版</a></li>
+        <li>|<a href="#" target="_blank">客户端下载</a></li>
+        <li>|<a href="javascript:;" class="wx_show">关注微信</a>
+          <div class="wx_hide"> <i class="angle"></i> <img src="/96kaifa/statics/home/images/wx_code.jpg" width="103" height="103"> <span>关注微信公众号</span> </div>
+        </li>
+        <li>|<a href="#" target="_blank">开放平台</a></li>
+      </ul>
+
+    </div>
+    <div class="topr fr">
+        <div class="login_ok">
+        
+        <!--<script>
+            document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+            $(function(){
+            var dqurl = window.location.href;
+            $('#dquurl').val(dqurl);
+            })
+            </script>-->
+        
+        </div>
+        <a href="javascript:;" onclick="AddFavorite();">收藏本站</a> </div>
+</div>
+<div class="header">
+  <div class="header-top">
+    <div class="in">
+      <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="棋游之家"></a></div>
+      <div class="search fr">
+       
+        <form action="/search/game.php" method="get" target="_blank" name="searchTop">
+          <div class="search_box tr">
+            <input type="text" id="bdcsMain" name="key" class="sech_keyword" placeholder="请输入游戏名称">
+            <input type="submit" value="搜索" class="sech_btn">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="in">
+      <ul id="navi">
+        <li><a href="/"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qipailei/"><span class="menu-txt">棋牌</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qilei/"><span class="menu-txt">棋类</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qiyouchangshang/"><span class="menu-txt">棋游厂商</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
+      </ul>
+   <script type="text/javascript" language="javascript">
+     
+    $("#navi li a").each(function(){ 
+    if($(this)[0].href==String(window.location)){ 
+      $(this).addClass("nav-cur").siblings().removeClass("nav-cur"); 
+    } 
+  });   
+        </script>
+      <div class="grzx">
+	  	<script> document.write('<script src="./e/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
+	  </div>
+    </div>
+  </div>
+</div>
+<div class="my_pop">
+    <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">账号登录</p>
+    <form action="/e/member/doaction.php" method="post" onsubmit="return userLogin()" id="form_login1" class="form-login">
+    <input type="hidden" name="ecmsfrom" value="http://3500.96demo.com/" id="dquurl">
+    <input type="hidden" name="enews" value="login">
+    <input name="tobind" type="hidden" id="tobind" value="0">
+    <div class="modal-body">
+    <div class="error_font">*错误提示</div>
+     <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
+    </div>
+    <div class="outer">
+    <div class="captcha" id="logcaptcha"></div>
+    </div>
+    </div>
+    <div class="modal-footer" style="margin-bottom:40px;">
+    <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
+    </div>
+    </form>
+    </div>
+    
+    
+    <div class="register_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">会员注册</p>
+    <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
+    <input type="hidden" name="enews" value="register">
+    <div class="modal-body">
+    <div class="error_font">*错误提示</div>
+    <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
+    </div>
+    <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
+    </div>
+    <div class="outer">
+    <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
+    <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&amp;t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
+    </div>
+    <div class="modal-footer">
+    <p class="outer"> <input type="submit" name="Submit" class="orange_btn" id="btnRegister" value="立即注册"> </p>
+    <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
+    </div>
+    </form>
+    </div>
+    
+    </div>
+<div class="main">
+  <div class="position">当前位置：<a href="/">首页</a>&nbsp;>&nbsp;<a href="/qipailei/">棋牌类</a></div>
+  <div class="game-ku">
+    <ul class="game-list clearfix">
+
+<li>
+        <div class="img"><a href="/qipailei/42.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/0d1af05c33e8d59269f80192698aba8e.png" alt="上游棋牌游戏大厅"></a></div>
+        <div class="con"> <a href="/qipailei/42.html" target="_blank" class="title">上游棋牌游戏大厅</a>
+          <p>7人在玩</p>
+          <p>上游棋牌游戏大厅是上海热线信息网络有限公司推出一款棋牌游戏大厅</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/42.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/41.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/f35eccb4bf02231353444628cc981afa.png" alt="老K游戏大厅"></a></div>
+        <div class="con"> <a href="/qipailei/41.html" target="_blank" class="title">老K游戏大厅</a>
+          <p>2人在玩</p>
+          <p></p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/41.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/40.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/9d99dfb576c22f3612f874b463058e1d.png" alt="金莎棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/40.html" target="_blank" class="title">金莎棋牌</a>
+          <p>5人在玩</p>
+          <p> 金莎棋牌是一款非常好玩的棋牌游戏平台</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/40.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/39.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/d8f9d7b44755a7dac904fc73d0cfb8c2.png" alt="金牛棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/39.html" target="_blank" class="title">金牛棋牌</a>
+          <p>5人在玩</p>
+          <p>  金牛棋牌手机版是一款有着高竞技性的棋牌手游平台</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/39.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/38.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/3d8fc41d02fc30079e44d8da30dcb3a7.jpg" alt="信誉棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/38.html" target="_blank" class="title">信誉棋牌</a>
+          <p>9人在玩</p>
+          <p>信誉棋牌是一款以各种扑克游戏棋牌游戏为主的平台软件</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/38.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/37.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/d9351664e65cd3313ed6a96b59afe27b.jpg" alt="新天地棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/37.html" target="_blank" class="title">新天地棋牌</a>
+          <p>9人在玩</p>
+          <p>新天地棋牌是一款具有中国传统棋牌游戏特色的手机棋牌游戏。</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/37.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/36.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/74a5f1c9a4b73b695402b8f787aa006d.jpg" alt="天天乐棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/36.html" target="_blank" class="title">天天乐棋牌</a>
+          <p>11人在玩</p>
+          <p>天天乐棋牌是一款专门为移动端打造的竞技性棋牌游戏。</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/36.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/35.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/2bb0856df3a0f183648d2334ccefbd06.jpg" alt="腾讯棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/35.html" target="_blank" class="title">腾讯棋牌</a>
+          <p>9人在玩</p>
+          <p>腾讯棋牌是一个由腾讯团队进行开发的大型棋牌项目。</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/35.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/34.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/d82ac2d5f2216ae7600ff880b4115f06.jpg" alt="零点棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/34.html" target="_blank" class="title">零点棋牌</a>
+          <p>10人在玩</p>
+          <p>零点棋牌是集合了众多娱乐游戏于一身的大型棋手游平台。</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/34.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/33.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/3ca38bd0e20714c35187838dd35a9103.jpg" alt="金星棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/33.html" target="_blank" class="title">金星棋牌</a>
+          <p>8人在玩</p>
+          <p>金星棋牌会议开玩法以丰富多样著称的游戏棋牌平台。</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/33.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/32.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/fc75fe862d7dfe4b40b3f354205deeef.jpg" alt="冠通棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/32.html" target="_blank" class="title">冠通棋牌</a>
+          <p>6人在玩</p>
+          <p> 冠通棋牌是一个具有东北地方特色的棋牌游戏娱乐大厅。</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/32.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/31.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/6624536b7266b5dda2a50e7017dfb78f.jpg" alt="大富豪棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/31.html" target="_blank" class="title">大富豪棋牌</a>
+          <p>18人在玩</p>
+          <p>大富豪棋牌是一款非常爽的棋牌对战类手机游戏。</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/31.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/30.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/5d94559559487b391e5236f8bc8505db.jpg" alt="爱玩棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/30.html" target="_blank" class="title">爱玩棋牌</a>
+          <p>4人在玩</p>
+          <p>爱玩棋牌游戏平台从内测到公测都被玩家们所喜爱。</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/30.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/29.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/4db106c0c7b4835bf13c7102cb1cb99f.jpg" alt="JJ棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/29.html" target="_blank" class="title">JJ棋牌</a>
+          <p>5人在玩</p>
+          <p>JJ棋牌是一款休闲好玩的棋牌竞技平台。</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/29.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/28.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/268072da7106864f06acca94943344ca.jpg" alt="865棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/28.html" target="_blank" class="title">865棋牌</a>
+          <p>5人在玩</p>
+          <p>865棋牌是一款在线手机棋牌游戏大型平台。</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/28.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/27.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/6e25c12c20764cd76eaa98287d3b1535.png" alt="Ewin棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/27.html" target="_blank" class="title">Ewin棋牌</a>
+          <p>37人在玩</p>
+          <p>Ewin棋牌游戏一款为各种爱好竞技棋牌的游戏玩家量身打造的棋牌游戏软件</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/27.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/24.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/0059ebe47ab7aaa9df357fcb3a569360.jpg" alt="大家玩棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/24.html" target="_blank" class="title">大家玩棋牌</a>
+          <p>31人在玩</p>
+          <p>大家玩棋牌是一款集合不同棋牌游戏的专业棋牌游戏软件</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/24.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/23.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/3d3b8205e41bd9ca2b625ec936d065bc.png" alt="杰克棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/23.html" target="_blank" class="title">杰克棋牌</a>
+          <p>36人在玩</p>
+          <p>杰克棋牌是由杰克游戏开发公司开发的大型综合网络游戏平台，该平台包含不同多种热门游戏随意选择，一键点击即可娱乐来这里从来不会缺少玩家，同台竞技更加考验你的技术，杰克棋牌高手如云，你敢来试试吗？</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/23.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/22.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/4cd380ace3743668b5410f9714cb608d.jpg" alt="金豪棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/22.html" target="_blank" class="title">金豪棋牌</a>
+          <p>19人在玩</p>
+          <p>金豪棋牌是目前最好玩的掌上棋牌游戏，为玩家提供了即时、刺激、高信誉的服务保证,以及丰富的精品游戏，并且致力于为玩家打造最公平安全的游戏环境,在这里所有玩家都能得到最专业的保障。</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/22.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/21.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/5835e525e37173b3fee489da9859e7e7.png" alt="联众棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/21.html" target="_blank" class="title">联众棋牌</a>
+          <p>15人在玩</p>
+          <p>联众棋牌是由北京联众互动网络股份有限公司开发的大型综合网络游戏平台，该平台包含不同多种热门游戏随意选择，适合各个年龄阶段的人进行休闲游戏，绝对是一款花样多多，安全稳定的棋牌游戏，欢迎大家下载体验！</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/21.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/19.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/8359cfcf874ff7811bb41e9b0d7ee384.jpg" alt="博远棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/19.html" target="_blank" class="title">博远棋牌</a>
+          <p>7人在玩</p>
+          <p>博远棋牌是一款画面精致，操作流畅，棋牌游戏众多，使用地道游戏规则的掌上棋牌游戏大厅</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/19.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/20.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/14b02aee069f8c9136dcc69f6aa83619.png" alt="网上棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/20.html" target="_blank" class="title">网上棋牌</a>
+          <p>9人在玩</p>
+          <p>网上棋牌是在2013年1月2日成立棋牌游戏，包含不同多种热门游戏随意选择，也是运营实力最强的游戏平台之一，为棋牌游戏爱好者提供了时下流行的网络棋牌手游。</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/20.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/18.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/e88dce65b1d8e4157662058f9112ccfc.png" alt="云顶娱乐棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/18.html" target="_blank" class="title">云顶娱乐棋牌</a>
+          <p>103人在玩</p>
+          <p>云顶娱乐棋牌游戏平台集合了云顶娱乐棋牌旗下所有休闲棋牌游戏</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/18.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/17.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/2f14f0d3490319d2b2808621eb226099.png" alt="娱网棋牌游戏大厅"></a></div>
+        <div class="con"> <a href="/qipailei/17.html" target="_blank" class="title">娱网棋牌游戏大厅</a>
+          <p>9人在玩</p>
+          <p>娱网棋牌游戏大厅是大连大连经典网络发展有限公司开发的一款辽宁本地特色的棋牌游戏大厅软件</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/17.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+<li>
+        <div class="img"><a href="/qipailei/16.html" target="_blank"><img src="/d/file/qipailei/2018-12-22/624a10800758cc90be347e90b15d9029.png" alt="天天棋牌"></a></div>
+        <div class="con"> <a href="/qipailei/16.html" target="_blank" class="title">天天棋牌</a>
+          <p>11人在玩</p>
+          <p>天天棋牌是一款综合棋游平软件，集合了数种游戏APP，麻将、扑克一应俱全</p>
+        </div>
+        <div class="wan-btn"><a href="/qipailei/16.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+      </li>
+
+    </ul>
+    <div class="page"> <span class="a1 disabled">共 4 页</span><a href="/qipailei/index_2.html">上一页</a><a href="/qipailei/index.html">1</a><a href="/qipailei/index_2.html">2</a><span>3</span><a href="/qipailei/index_4.html">4</a><a href="/qipailei/index_4.html">下一页</a> </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="about_me"> <a href="/aboutus.html" target="_blank">关于我们</a> | <a href="/contact.html" target="_blank">联系方式</a> | <a href="/sitemap.html" target="_blank">网站地图</a> | <a href="/explain.html" target="_blank">用户协议</a> </div>
+  <div class="safety"> <a><i class="icon_safe1"></i>中国互联网举报中心</a> <a><i class="icon_safe2"></i>网络违法举报中心</a> <a><i class="icon_safe3"></i>垃圾信息举报中心</a> <a><i class="icon_safe4"></i>闽公网安备35020302001953号</a> </div>
+  <p class="tips_text">©2017-2018 &nbsp; 棋游之家 &nbsp; 47.52.203.166 <em>礼包交流群：</em><a href="http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b" target="_blank" class="qqun"></a></p>
+  <p class="tips_text">备案号：粤ICP备17024501号-2 &nbsp;  技术支持：<a href="https://www.96kaifa.com" target="_blank">96KaiFa源码</a></p>
+</div>
+<div id="backtop">返回顶部</div>
+<script type="text/javascript" src="/96kaifa/statics/home/js/member.js"></script>
+<script type="text/javascript">
+	var member = new Member();
+</script>
+<script type="text/javascript" src="/96kaifa/statics/home/js/global.js"></script>
+
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+</body>
+</html>

@@ -31,17 +31,18 @@ if(!defined('InEmpireCMS'))
         </li>
         <li>|<a href="#" target="_blank">开放平台</a></li>
       </ul>
+
     </div>
     <div class="topr fr">
         <div class="login_ok">
         
-        <script>
+        <!--<script>
             document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
             $(function(){
             var dqurl = window.location.href;
             $('#dquurl').val(dqurl);
             })
-            </script>
+            </script>-->
         
         </div>
         <a href="javascript:;" onclick="AddFavorite();">收藏本站</a> </div>
@@ -143,13 +144,14 @@ if(!defined('InEmpireCMS'))
     
     </div>
 <div class="main">
+
   <div class="position">当前位置：[!--newsnav--]</div>
   <div class="game-filter">
     <h3>游戏筛选</h3>
 	<?=user_ShowFieldandChange(2)?>
     <dl class="clearfix m-list-paixu">
       <dt>排序>></dt>
-      <dd><a href="/list-0-0-0-2.html" class="on">最新</a><a href="/list-0-1-0-0.html">最热</a></dd>
+      <dd><a href="/list-0-0-0-2.html" class="on">最新</a><a href="/list-0-1-0-2.html">最热</a></dd>
     </dl>
   </div>
   <div class="game-ku">
@@ -173,6 +175,8 @@ if(!defined('InEmpireCMS'))
 	var member = new Member();
 </script>
 <script type="text/javascript" src="/96kaifa/statics/home/js/global.js"></script>
+
+<script type="text/javascript" src="/96kaifa/statics/home/js/global_cate.js"></script>
 <script>tyLoader();</script>
 <script class="closetag">tyLoader(true);</script>
 <script>tyLoader();</script>

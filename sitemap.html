@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>网站地图 - 仿3500游戏</title>
+<title>网站地图 - 棋游之家</title>
 <meta name='keywords' content='网站地图' />
 <meta name='description' content='网站地图' />
 <link href="/96kaifa/statics/home/css/base.css" type="text/css" rel="stylesheet">
@@ -27,13 +27,13 @@
     <div class="topr fr">
         <div class="login_ok">
         
-        <script>
+        <!--<script>
             document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
             $(function(){
             var dqurl = window.location.href;
             $('#dquurl').val(dqurl);
             })
-            </script>
+            </script>-->
         
         </div>
         <a href="javascript:;" onclick="AddFavorite();">收藏本站</a> </div>
@@ -55,17 +55,17 @@
   </div>
   <div class="nav">
     <div class="in">
-      <ul id="navi>
-        <li><a href="/" class="nav-cur"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
-        <li><a  href="/qipailei/"><span class="menu-txt">棋牌</span><span class="menu-line"></span></a></li>
-        <li><a  href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
-        <li><a href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
-        <li><a  href="/qilei/"><span class="menu-txt">棋类</span><span class="menu-line"></span></a></li>
-        <li><a  href="/qiyouchangshang/"><span class="menu-txt">棋游厂商</span><span class="menu-line"></span></a></li>
-        <li><a  href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
+      <ul id="navi">
+        <li><a href="/"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qipailei/"><span class="menu-txt">棋牌</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qilei/"><span class="menu-txt">棋类</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qiyouchangshang/"><span class="menu-txt">棋游厂商</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
       </ul>
-      <script type="text/javascript" language="javascript">
-          //导航栏切换
+   <script type="text/javascript" language="javascript">
+     
     $("#navi li a").each(function(){ 
     if($(this)[0].href==String(window.location)){ 
       $(this).addClass("nav-cur").siblings().removeClass("nav-cur"); 
@@ -148,10 +148,11 @@
     <div class="wrap-con">
       <div class="title">网站地图</div>
       <div class="map-con">
-        <p> <span class="flei"><a href="/" target="_blank">首页</a></span> <a href="/game/" target="_blank">网游库</a> <a href="/danji/" target="_blank">小游戏库</a> <a href="/libao/" target="_blank">游戏礼包</a> <a href="/zixun/" target="_blank">游戏资讯</a> <a href="/kaifu/" target="_blank">开服表</a> </p>
-        <p> <span class="flei"><a href="/game/" target="_blank">网游分类</a></span> <a href="/list-1-0-0-0.html" target="_blank">卡牌游戏</a><a href="/list-2-0-0-0.html" target="_blank">角色扮演</a><a href="/list-3-0-0-0.html" target="_blank">模拟经营</a><a href="/list-4-0-0-0.html" target="_blank">射击游戏</a><a href="/list-5-0-0-0.html" target="_blank">动作游戏</a><a href="/list-6-0-0-0.html" target="_blank">战争策略</a><a href="/list-7-0-0-0.html" target="_blank">棋牌游戏</a><a href="/list-8-0-0-0.html" target="_blank">休闲游戏</a> </p>
-        <p> <span class="flei"><a href="/danji/" target="_blank">小游戏分类</a></span> <a href="/list-1-0-0-1.html" target="_blank">益智</a><a href="/list-2-0-0-1.html" target="_blank">动作</a><a href="/list-3-0-0-1.html" target="_blank">射击</a><a href="/list-4-0-0-1.html" target="_blank">休闲</a><a href="/list-5-0-0-1.html" target="_blank">敏捷</a><a href="/list-6-0-0-1.html" target="_blank">棋牌</a><a href="/list-7-0-0-1.html" target="_blank">经营</a><a href="/list-8-0-0-1.html" target="_blank">体育</a><a href="/list-9-0-0-1.html" target="_blank">策略</a><a href="/list-10-0-0-1.html" target="_blank">冒险</a><a href="/list-11-0-0-1.html" target="_blank">装扮</a> </p>
-        <p> <span class="flei"><a href="/zixun/" target="_blank">资讯分类</a></span>
+        <p> <span class="flei"><a href="/" target="_blank">首页</a></span><div class="Pendl"> <a href="/qipailei/" target="_blank">棋牌游戏</a> <a href="/puke/" target="_blank">扑克游戏</a> <a href="/majiang/" target="_blank">麻将游戏</a> <a href="/qilei/" target="_blank">棋类</a> <a href="/qiyouchangshang/" target="_blank">棋游厂商</a>  <a href="/zixun/" target="_blank">游戏资讯</a></p> </div>
+        <p> <span class="flei"><a href="/game/" target="_blank">扑克分类</a></span> 
+<dl class="clearfix_x"><dd><a href="/list-0-0-0-2.html" class="on">全部</a> <a href="/list-1-0-0-2.html" class="fieldandcss">斗地主</a> <a href="/list-2-0-0-2.html" class="fieldandcss">跑胡子</a> <a href="/list-3-0-0-2.html" class="fieldandcss">21点</a> <a href="/list-4-0-0-2.html" class="fieldandcss">保皇</a> <a href="/list-5-0-0-2.html" class="fieldandcss">打滚子</a> <a href="/list-6-0-0-2.html" class="fieldandcss">干瞪眼</a> <a href="/list-7-0-0-2.html" class="fieldandcss">打大A</a> <a href="/list-8-0-0-2.html" class="fieldandcss">四冲</a> <a href="/list-9-0-0-2.html" class="fieldandcss">三代</a> <a href="/list-10-0-0-2.html" class="fieldandcss">5十K</a> <a href="/list-11-0-0-2.html" class="fieldandcss">三打一</a> <a href="/list-12-0-0-2.html" class="fieldandcss">挖坑</a> <a href="/list-13-0-0-2.html" class="fieldandcss">拱猪</a> <a href="/list-14-0-0-2.html" class="fieldandcss">红五</a> <a href="/list-15-0-0-2.html" class="fieldandcss">黑尖</a> <a href="/list-16-0-0-2.html" class="fieldandcss">攉龙</a> <a href="/list-17-0-0-2.html" class="fieldandcss">大怪路子</a> <a href="/list-18-0-0-2.html" class="fieldandcss">掼蛋</a> <a href="/list-19-0-0-2.html" class="fieldandcss">包分</a> <a href="/list-20-0-0-2.html" class="fieldandcss">拖拉机</a> <a href="/list-21-0-0-2.html" class="fieldandcss">接龙</a> <a href="/list-22-0-0-2.html" class="fieldandcss">跑得快</a> <a href="/list-23-0-0-2.html" class="fieldandcss">锄大地</a> <a href="/list-24-0-0-2.html" class="fieldandcss">梭哈</a> <a href="/list-25-0-0-2.html" class="fieldandcss">德州扑克</a> <a href="/list-26-0-0-2.html" class="fieldandcss">炸金花</a> <a href="/list-27-0-0-2.html" class="fieldandcss">够级</a> <a href="/list-28-0-0-2.html" class="fieldandcss">纸牌</a> <a href="/list-29-0-0-2.html" class="fieldandcss">牌九</a> <a href="/list-30-0-0-2.html" class="fieldandcss">十三张</a> <a href="/list-31-0-0-2.html" class="fieldandcss">刨幺</a> <a href="/list-32-0-0-2.html" class="fieldandcss">升级</a> <a href="/list-33-0-0-2.html" class="fieldandcss">三公</a> <a href="/list-34-0-0-2.html" class="fieldandcss">尖子顶</a> <a href="/list-35-0-0-2.html" class="fieldandcss">花牌</a> <a href="/list-36-0-0-2.html" class="fieldandcss">红十</a> <a href="/list-37-0-0-2.html" class="fieldandcss">斗牛</a> <a href="/list-38-0-0-2.html" class="fieldandcss">捕鱼</a> <a href="/list-39-0-0-2.html" class="fieldandcss">桥牌</a> <a href="/list-40-0-0-2.html" class="fieldandcss">长牌</a> <a href="/list-41-0-0-2.html" class="fieldandcss">歪胡子</a> <a href="/list-42-0-0-2.html" class="fieldandcss">大字牌</a> <a href="/list-43-0-0-2.html" class="fieldandcss">大贰</a> </dd> </dl>        <p> <span class="flei"><a href="/danji/" target="_blank">麻将分类</a></span>
+<dl class="clearfix_x"><dd><a href="/list-0-0-0-3.html" class="on">全部</a> <a href="/list-1-0-0-3.html" class="fieldandcss">二人麻将</a> <a href="/list-2-0-0-3.html" class="fieldandcss">三人麻将</a> <a href="/list-3-0-0-3.html" class="fieldandcss">四人麻将</a> <a href="/list-4-0-0-3.html" class="fieldandcss">日本麻将</a> <a href="/list-5-0-0-3.html" class="fieldandcss">贵阳麻将</a> <a href="/list-6-0-0-3.html" class="fieldandcss">台湾麻将</a> <a href="/list-7-0-0-3.html" class="fieldandcss">上海麻将</a> <a href="/list-8-0-0-3.html" class="fieldandcss">四川麻将</a> <a href="/list-9-0-0-3.html" class="fieldandcss">北京麻将</a> <a href="/list-10-0-0-3.html" class="fieldandcss">广东麻将</a> <a href="/list-11-0-0-3.html" class="fieldandcss">陕西麻将</a> <a href="/list-12-0-0-3.html" class="fieldandcss">南昌麻将</a> <a href="/list-13-0-0-3.html" class="fieldandcss">长沙麻将</a> <a href="/list-14-0-0-3.html" class="fieldandcss">长春麻将</a> <a href="/list-15-0-0-3.html" class="fieldandcss">武汉麻将</a> <a href="/list-16-0-0-3.html" class="fieldandcss">山东麻将</a> <a href="/list-17-0-0-3.html" class="fieldandcss">宁波麻将</a> <a href="/list-18-0-0-3.html" class="fieldandcss">合肥麻将</a> <a href="/list-19-0-0-3.html" class="fieldandcss">河北麻将</a> <a href="/list-20-0-0-3.html" class="fieldandcss">天津麻将</a> <a href="/list-21-0-0-3.html" class="fieldandcss">太原麻将</a> <a href="/list-22-0-0-3.html" class="fieldandcss">福州麻将</a> <a href="/list-23-0-0-3.html" class="fieldandcss">杭州麻将</a> <a href="/list-24-0-0-3.html" class="fieldandcss">南京麻将</a> <a href="/list-25-0-0-3.html" class="fieldandcss">大连麻将</a> <a href="/list-26-0-0-3.html" class="fieldandcss">芜湖麻将</a> <a href="/list-27-0-0-3.html" class="fieldandcss">淮安麻将</a> <a href="/list-28-0-0-3.html" class="fieldandcss">南宁麻将</a> <a href="/list-29-0-0-3.html" class="fieldandcss">沈阳麻将</a> <a href="/list-30-0-0-3.html" class="fieldandcss">西安麻将</a> <a href="/list-31-0-0-3.html" class="fieldandcss">红中麻将</a> <a href="/list-32-0-0-3.html" class="fieldandcss">麻将接龙</a> </dd> </dl><p> <span class="flei"><a href="/danji/" target="_blank">麻将分类</a></span>
+<dl class="clearfix_x"><dd><a href="/list-0-0-0-4.html" class="on">全部</a> <a href="/list-1-0-0-4.html" class="fieldandcss">五子棋</a> <a href="/list-2-0-0-4.html" class="fieldandcss">象棋</a> <a href="/list-3-0-0-4.html" class="fieldandcss">围棋</a> <a href="/list-4-0-0-4.html" class="fieldandcss">飞行棋</a> <a href="/list-5-0-0-4.html" class="fieldandcss">中国暗棋</a> <a href="/list-6-0-0-4.html" class="fieldandcss">跳棋</a> <a href="/list-7-0-0-4.html" class="fieldandcss">井字棋</a> <a href="/list-8-0-0-4.html" class="fieldandcss">军棋</a> <a href="/list-9-0-0-4.html" class="fieldandcss">斗兽棋</a> <a href="/list-10-0-0-4.html" class="fieldandcss">将棋</a> <a href="/list-11-0-0-4.html" class="fieldandcss">四子棋</a> <a href="/list-12-0-0-4.html" class="fieldandcss">大富翁</a> <a href="/list-13-0-0-4.html" class="fieldandcss">国际象棋</a> </dd> </dl>        <p> <span class="flei"><a href="/zixun/" target="_blank">资讯分类</a></span>
 			<a href="/zixun/xinwen/" target="_blank">新闻</a>
 			<a href="/zixun/gonglue/" target="_blank">攻略</a>
 			<a href="/zixun/huodong/" target="_blank">活动</a>
@@ -165,7 +166,7 @@
 <div id="footer">
   <div class="about_me"> <a href="/aboutus.html" target="_blank">关于我们</a> | <a href="/contact.html" target="_blank">联系方式</a> | <a href="/sitemap.html" target="_blank">网站地图</a> | <a href="/explain.html" target="_blank">用户协议</a> </div>
   <div class="safety"> <a><i class="icon_safe1"></i>中国互联网举报中心</a> <a><i class="icon_safe2"></i>网络违法举报中心</a> <a><i class="icon_safe3"></i>垃圾信息举报中心</a> <a><i class="icon_safe4"></i>闽公网安备35020302001953号</a> </div>
-  <p class="tips_text">©2017-2018 &nbsp; 仿3500游戏 &nbsp; 47.52.203.166 <em>礼包交流群：</em><a href="http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b" target="_blank" class="qqun"></a></p>
+  <p class="tips_text">©2017-2018 &nbsp; 棋游之家 &nbsp; 47.52.203.166 <em>礼包交流群：</em><a href="http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b" target="_blank" class="qqun"></a></p>
   <p class="tips_text">备案号：粤ICP备17024501号-2 &nbsp;  技术支持：<a href="https://www.96kaifa.com" target="_blank">96KaiFa源码</a></p>
 </div>
 <div id="backtop">返回顶部</div>

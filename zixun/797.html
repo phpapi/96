@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>《电玩捕鱼》新手攻略_棋游之家</title>
+<meta name="keywords" content="电玩捕鱼新手攻略、电玩捕鱼攻略"/>
+<meta name="description" content="捕鱼游戏是现在火热的手游之一，很多玩家都在捕鱼的世界里进行游玩和对拼。"/>
+<link href="/96kaifa/statics/home/css/base.css" type="text/css" rel="stylesheet">
+<link href="/96kaifa/statics/home/css/style3500.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="/96kaifa/statics/home/js/jquery-1.8.2.min.js"></script>
+</head>
+<script type="text/javascript">
+	showMobile("http://test.yanwowenda.cn/zixun/797.html");
+</script>
+<body>
+<div class="cover"></div>
+<div class="topbox">
+  <div class="boxin clearfix">
+    <div class="topl fl"> <span class="home"><a href="/">游戏首页</a></span>
+      <ul>
+        <li>|<a href="http://www.96kaifa.com" target="_blank">手机版</a></li>
+        <li>|<a href="#" target="_blank">客户端下载</a></li>
+        <li>|<a href="javascript:;" class="wx_show">关注微信</a>
+          <div class="wx_hide"> <i class="angle"></i> <img src="/96kaifa/statics/home/images/wx_code.jpg" width="103" height="103"> <span>关注微信公众号</span> </div>
+        </li>
+        <li>|<a href="#" target="_blank">开放平台</a></li>
+      </ul>
+
+    </div>
+    <div class="topr fr">
+        <div class="login_ok">
+        
+        <!--<script>
+            document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+            $(function(){
+            var dqurl = window.location.href;
+            $('#dquurl').val(dqurl);
+            })
+            </script>-->
+        
+        </div>
+        <a href="javascript:;" onclick="AddFavorite();">收藏本站</a> </div>
+</div>
+<div class="header">
+  <div class="header-top">
+    <div class="in">
+      <div class="logo fl"><a href="/"><img src="/96kaifa/statics/home/images/logo.png" alt="棋游之家"></a></div>
+      <div class="search fr">
+       
+        <form action="/search/game.php" method="get" target="_blank" name="searchTop">
+          <div class="search_box tr">
+            <input type="text" id="bdcsMain" name="key" class="sech_keyword" placeholder="请输入游戏名称">
+            <input type="submit" value="搜索" class="sech_btn">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="in">
+      <ul id="navi">
+        <li><a href="/"><span class="menu-txt">首页</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qipailei/"><span class="menu-txt">棋牌</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/puke/"><span class="menu-txt">扑克</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/majiang/"><span class="menu-txt">麻将</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qilei/"><span class="menu-txt">棋类</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/qiyouchangshang/"><span class="menu-txt">棋游厂商</span><span class="menu-line"></span></a></li>
+        <li><a class="" href="/zixun/"><span class="menu-txt">资讯</span><span class="menu-line"></span></a></li>
+      </ul>
+   <script type="text/javascript" language="javascript">
+     
+    $("#navi li a").each(function(){ 
+    if($(this)[0].href==String(window.location)){ 
+      $(this).addClass("nav-cur").siblings().removeClass("nav-cur"); 
+    } 
+  });   
+        </script>
+      <div class="grzx">
+	  	<script> document.write('<script src="./e/dh.php?t='+Math.random()+'"><'+'/script>'); </script>
+	  </div>
+    </div>
+  </div>
+</div>
+<div class="my_pop">
+    <div class="login_pop" id="login_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">账号登录</p>
+    <form action="/e/member/doaction.php" method="post" onsubmit="return userLogin()" id="form_login1" class="form-login">
+    <input type="hidden" name="ecmsfrom" value="http://3500.96demo.com/" id="dquurl">
+    <input type="hidden" name="enews" value="login">
+    <input name="tobind" type="hidden" id="tobind" value="0">
+    <div class="modal-body">
+    <div class="error_font">*错误提示</div>
+     <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="username" class="input-txt " id="login_username" placeholder="输入用户名">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="password" class="input-txt " id="login_password" placeholder="输入登录密码">
+    </div>
+    <div class="outer">
+    <div class="captcha" id="logcaptcha"></div>
+    </div>
+    </div>
+    <div class="modal-footer" style="margin-bottom:40px;">
+    <p class="outer"> <input class="login_btn" type="submit" name="submit" value="登录"> <a href="javascript:;" class="register_btn" id="register_btn2">注册</a> </p>
+    </div>
+    </form>
+    </div>
+    
+    
+    <div class="register_pop" style="display: none;"> <span class="pop_close"></span>
+    <p class="pop-tit">会员注册</p>
+    <form name="userinfoform" method="post" enctype="multipart/form-data" action="/e/member/doaction.php" class="form-register">
+    <input type="hidden" name="enews" value="register">
+    <div class="modal-body">
+    <div class="error_font">*错误提示</div>
+    <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="username" class="input-txt " id="reg_phone" placeholder="输入用户名">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="password" class="input-txt " id="reg_password" placeholder="设置密码(6-16位字母或数字)">
+    </div>
+    <div class="outer tr"> <i class="pwd"></i>
+    <input type="password" name="repassword" class="input-txt " id="reg_password" placeholder="重复输入密码">
+    </div>
+    <div class="outer tr"> <i class="user"></i>
+    <input type="text" name="email" class="input-txt " id="fullname" placeholder="邮箱">
+    </div>
+    <div class="outer">
+    <input type="text" name="key" class="input-txt " id="reg_sjyzm" placeholder="输入验证码">
+    <a class="get-yzm"><img src="/e/ShowKey/?v=reg" name="regKeyImg" id="regKeyImg" onclick="regKeyImg.src='/e/ShowKey/?v=reg&amp;t='+Math.random()" width="130px" height="44px" title="看不清楚,点击刷新"></a> </div>
+    </div>
+    <div class="modal-footer">
+    <p class="outer"> <input type="submit" name="Submit" class="orange_btn" id="btnRegister" value="立即注册"> </p>
+    <p class="other">已有账号? <a href="javascript:;" id="user_login">请登录</a></p>
+    </div>
+    </form>
+    </div>
+    
+    </div>
+<div class="main">
+  <div class="position">当前位置：<a href="/">首页</a>&nbsp;>&nbsp;<a href="/zixun/">资讯</a>&nbsp;>&nbsp;<a href="/zixun/gonglue/">攻略</a> > 《电玩捕鱼》新手攻略</div>
+  <div class="container">
+    <div class="w804">
+      <div class="show-news">
+        <div class="news-top">
+          <h1>《电玩捕鱼》新手攻略</h1>
+          <div class="info"> <span>2018-12-25 15:28:05</span> <span>作者：棋游之家oyzm</span> <span>来源：<a href="/" target="_blank">棋游之家</a></span> </div>
+        </div>
+        <div class="news-con">
+		&nbsp; &nbsp; &nbsp; 捕鱼游戏是现在火热的手游之一，很多玩家都在捕鱼的世界里进行游玩和对拼，那么新手玩家应该怎么玩捕鱼呢？怎么快速入门成为捕鱼大佬？
+<div style="text-align: center;"><img alt="电玩捕鱼游戏截图" src="http://47.52.203.166/d/file/zixun/gonglue/2018-12-25/532ba8b886e062475ec686642a788b3e.jpg" style="width: 595px; height: 332px;" /></div>
+&nbsp; &nbsp; &nbsp; 1、一开始玩捕鱼的时候，就注意新手的各项福利任务，这些福利都是很丰厚的，如果错过了这些福利的话，想要度过新手期就会被拖慢了。<br />
+&nbsp; &nbsp; &nbsp; 2、找到最有性价比的任务，每天我们玩游戏的时间都是有限的，因此我们完全福利最大化的游戏就可以了，我们对比各项数据，领取价值不错的游戏。<br />
+&nbsp; &nbsp; &nbsp; 3、说完任务这一块了，就要说说捕鱼的技巧，捕鱼除了靠操作外还有考大炮，但是大炮前期升级很费钱，而且一开始打的小鱼也用不了威力这么大的，因此先不用升级，留着后面升级特殊形态的大炮。
+<div style="text-align: center;"><img alt="电玩捕鱼游戏截图" src="http://47.52.203.166/d/file/zixun/gonglue/2018-12-25/4a1a5c3579cfc38756b08efdc151cf1b.jpg" style="width: 595px; height: 336px;" /></div>
+&nbsp; &nbsp; &nbsp; 4、捕鱼的时候一定要用好大炮，因为每一发炮弹都是金币，如果你不随意发生的话，就会导致你的金币入不敷出了，这样就会让自己的升级变得非常的慢。<br />
+&nbsp; &nbsp; &nbsp; 5、捕鱼还有一个技巧是我们要盯住一个机会，鱼在一定的时间会变慢，这段时间我们就要好好利用了，慢速的鱼儿我们可以轻易的把他们给抓起来。<br />
+&nbsp; &nbsp; &nbsp; 6、游戏中还有这许多的金币场，这都是日常需要玩的，每天第一次的收获是最大的，我们要利用好这个设定。
+<div style="text-align: center;"><img alt="电玩捕鱼游戏截图" src="http://47.52.203.166/d/file/zixun/gonglue/2018-12-25/9578b0fda7bedf1830e623ae73c74ccb.jpg" style="width: 594px; height: 333px;" /></div>
+&nbsp; &nbsp; &nbsp; 7、捕鱼中有很多的炸弹是好用的，例如深水炸弹，狂暴炸弹，这两种是收益最大的炸弹，一定要优先选择。<br />
+&nbsp; &nbsp; &nbsp; 8、每周一定要参与世界BOSS，打完世界BOSS每个参与者都会有一定额度的奖励，而且非常的丰富，千万不要错过、<br />
+&nbsp; &nbsp; &nbsp; 以上就是电玩捕鱼新手攻略的全部内容了，希望对电玩捕鱼的各位新手玩家有所帮助。更多最新资讯就在棋游之家，希望大家多多关注。        </div>
+		<div class="page"></div>
+        <div class="guanggao mt20"><script src=/d/js/acmsd/thea1.js></script></div>
+        <div class="page-bor"> <span class="page-pre">上一篇：
+		  <a target="_blank" href="/zixun/795.html">《欢乐斗地主》获取欢乐豆攻略</a>
+		</span> <span class="page-next">下一篇：
+		  <a target="_blank" href="/zixun/798.html">《QQ保皇》新手攻略</a>
+	
+		</span> </div>
+      </div>
+      <div class="rel-zixun">
+        <div class="hd20">
+          <h3>相关资讯</h3>
+        </div>
+        <ul class="relist clearfix">
+          <li>•<a href="/zixun/802.html" target="_blank" class="title">《捕鱼达人4》之千奇百怪的技能鱼</a></li>
+          <li>•<a href="/zixun/801.html" target="_blank" class="title">《捕鱼》游戏攻略</a></li>
+          <li>•<a href="/zixun/800.html" target="_blank" class="title">《佰游德州》新手FAQ-游戏热门问答</a></li>
+          <li>•<a href="/zixun/798.html" target="_blank" class="title">《QQ保皇》新手攻略</a></li>
+          <li>•<a href="/zixun/797.html" target="_blank" class="title">《电玩捕鱼》新手攻略</a></li>
+          <li>•<a href="/zixun/799.html" target="_blank" class="title">最新《欢乐斗地主》人物获取方式</a></li>
+          <li>•<a href="/zixun/795.html" target="_blank" class="title">《欢乐斗地主》获取欢乐豆攻略</a></li>
+          <li>•<a href="/zixun/794.html" target="_blank" class="title">《欢乐斗地主》新手攻略</a></li>
+          <li>•<a href="/zixun/792.html" target="_blank" class="title">《妖怪宝可萌》活动，日充送好礼！</a></li>
+          <li>•<a href="/zixun/791.html" target="_blank" class="title">《龙城霸业》合服活动火爆开启，合服礼包随心领！</a></li>
+
+
+      </ul>
+    </div>
+  </section>
+      <div class="new-games">
+        <div class="hd20">
+          <h3>最新游戏</h3>
+         </div>
+        <ul class="new_game_list clearfix">
+          <li> <a href="/puke/331.html" target="_blank" title="金牌桥牌（Bridge Gold）"><img src="/d/file/puke/2018-12-28/18e76cfc0d9f986670a17f93b15756cd.png" alt="金牌桥牌（Bridge Gold）"><span>金牌桥牌（Bridge Gold）</span></a>
+            <p>桥牌</p>
+          </li>
+          <li> <a href="/puke/330.html" target="_blank" title="有趣的桥牌(FunBridge)Mac版"><img src="/d/file/puke/2018-12-28/3dce96d395ffacaa234c4f862de9cb54.png" alt="有趣的桥牌(FunBridge)Mac版"><span>有趣的桥牌(FunBridge)Mac版</span></a>
+            <p>桥牌</p>
+          </li>
+          <li> <a href="/puke/329.html" target="_blank" title="天天梭哈PL"><img src="/d/file/puke/2018-12-27/598312a26a7da12077dddffd7935156a.jpg" alt="天天梭哈PL"><span>天天梭哈PL</span></a>
+            <p>梭哈</p>
+          </li>
+          <li> <a href="/puke/327.html" target="_blank" title="逍遥510k"><img src="/d/file/puke/2018-12-27/fffa476c180d83a008abce22d6f5d555.png" alt="逍遥510k"><span>逍遥510k</span></a>
+            <p>5十K</p>
+          </li>
+          <li> <a href="/puke/328.html" target="_blank" title="梭哈高手"><img src="/d/file/puke/2018-12-27/aff0ee80b28d301ce5aaadee80357bb4.jpg" alt="梭哈高手"><span>梭哈高手</span></a>
+            <p>梭哈</p>
+          </li>
+          <li> <a href="/puke/326.html" target="_blank" title="爱来510k"><img src="/d/file/puke/2018-12-27/f5219b622b2f0bff631ec80deb3e3c96.png" alt="爱来510k"><span>爱来510k</span></a>
+            <p>5十K</p>
+          </li>
+          <li> <a href="/puke/325.html" target="_blank" title="经典梭哈"><img src="/d/file/puke/2018-12-27/d7ca6c3823cce391efefdfdd74d652e5.jpg" alt="经典梭哈"><span>经典梭哈</span></a>
+            <p>梭哈</p>
+          </li>
+        </ul>
+      </div>
+</div>
+    <div class="w336">
+      <div class="w-news">
+        <div class="hd20">
+           <h3>热门活动</h3>
+          <a href="javascript:void(0);" class="refresh" id="w_refresh">换一批<i></i></a></div>
+        <div class="wbody">
+          <div class="wlist">
+            <dl>
+              <dt><a href="/zixun/800.html" target="_blank"><img src="/d/file/zixun/gonglue/2018-12-25/021aa92587703784516c428429cafe1a.jpg" alt="《佰游德州》新手FAQ-游戏热门问答"></a></dt>
+              <dd class="title"><a href="/zixun/800.html" target="_blank">《佰游德州》新手FAQ-游戏热门问答</a></dd>
+              <dd class="desc">《佰游德州》新手FAQ-游戏热门问答</dd>
+            </dl>
+            <ul>
+              <li>•<a href="/zixun/800.html" target="_blank" class="title">《佰游德州》新手FAQ-游戏热门问答</a></li>
+              <li>•<a href="/zixun/798.html" target="_blank" class="title">《QQ保皇》新手攻略</a></li>
+              <li>•<a href="/zixun/797.html" target="_blank" class="title">《电玩捕鱼》新手攻略</a></li>
+              <li>•<a href="/zixun/799.html" target="_blank" class="title">最新《欢乐斗地主》人物获取方式</a></li>
+            </ul>
+          </div>
+          <div class="wlist">
+            <dl>
+              <dt><a href="/zixun/798.html" target="_blank"><img src="/d/file/zixun/gonglue/2018-12-25/de739815728b29e4e3a078f28acecec3.jpg" alt="《QQ保皇》新手攻略"></a></dt>
+              <dd class="title"><a href="/zixun/798.html" target="_blank">《QQ保皇》新手攻略</a></dd>
+              <dd class="desc">《QQ保皇》新手攻略</dd>
+            </dl>
+            <ul>
+              <li>•<a href="/zixun/797.html" target="_blank" class="title">《电玩捕鱼》新手攻略</a></li>
+              <li>•<a href="/zixun/799.html" target="_blank" class="title">最新《欢乐斗地主》人物获取方式</a></li>
+              <li>•<a href="/zixun/795.html" target="_blank" class="title">《欢乐斗地主》获取欢乐豆攻略</a></li>
+              <li>•<a href="/zixun/794.html" target="_blank" class="title">《欢乐斗地主》新手攻略</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="w-rank mt15">
+        <div class="hd20">
+          <h3>游戏排行</h3>
+          
+        </div>
+        <div class="bd">
+          <ol id="rank_con_0">
+            <li> <em class="num num1">1</em>
+              <div class="box1">
+                <div class="pic"><a href="/puke/1.html" target="_blank"><img src="/d/file/puke/2018-12-15/6f8befea7aa4df48fab66312d2c956af.png" alt="欢乐斗地主"></a></div>
+                <p class="tit"><a href="/puke/1.html" target="_blank">欢乐斗地主</a></p>
+                <p><span><a href="/list-1-0-0-0.html" target="_blank" class="flei">斗地主</a></span><span>1048人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/puke/1.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num2">2</em>
+              <div class="box1">
+                <div class="pic"><a href="/qilei/13.html" target="_blank"><img src="/d/file/qilei/2018-12-19/85705316b31d9161138d9ea28db1b647.png" alt="欢乐围棋"></a></div>
+                <p class="tit"><a href="/qilei/13.html" target="_blank">欢乐围棋</a></p>
+                <p><span><a href="/list-3-0-0-0.html" target="_blank" class="flei">围棋</a></span><span>173人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/qilei/13.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num3">3</em>
+              <div class="box1">
+                <div class="pic"><a href="/puke/60.html" target="_blank"><img src="/d/file/puke/2018-12-19/90a68f6bfb0635325977dfc0dc3a587f.png" alt="掼蛋"></a></div>
+                <p class="tit"><a href="/puke/60.html" target="_blank">掼蛋</a></p>
+                <p><span><a href="/list-18-0-0-0.html" target="_blank" class="flei">掼蛋</a></span><span>167人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/puke/60.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">4</em>
+              <div class="box1">
+                <div class="pic"><a href="/majiang/2.html" target="_blank"><img src="/d/file/majiang/2018-12-17/86daee5dab8c843e5938e94ecec567bc.png" alt="筑志红中麻将"></a></div>
+                <p class="tit"><a href="/majiang/2.html" target="_blank">筑志红中麻将</a></p>
+                <p><span><a href="/list-31-0-0-0.html" target="_blank" class="flei">红中麻将</a></span><span>126人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/majiang/2.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+            <li> <em class="num num">5</em>
+              <div class="box1">
+                <div class="pic"><a href="/puke/88.html" target="_blank"><img src="/d/file/puke/2018-12-20/464d781ddf01780f1e2becfb0ea5d45c.jpg" alt="天天挖坑"></a></div>
+                <p class="tit"><a href="/puke/88.html" target="_blank">天天挖坑</a></p>
+                <p><span><a href="/list-12-0-0-0.html" target="_blank" class="flei">挖坑</a></span><span>122人在玩</span></p>
+              </div>
+              <div class="ksw"><a href="/puke/88.html" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            </li>
+          </ol>
+          
+     
+        </div>
+      </div>
+      <div class="w-texts mt15">
+        <div class="hd20">
+          <h3>推荐阅读</h3>
+        </div>
+        <ul class="text-list">
+          <li>•<a href="/zixun/787.html" target="_blank" class="title">《开心国王》十月豪礼献上，周末豪礼，天降元宝！</a></li>
+          <li>•<a href="/zixun/759.html" target="_blank" class="title">《飘飘欲仙》双节同庆！好礼赠不停！</a></li>
+          <li>•<a href="/zixun/620.html" target="_blank" class="title">​《口袋妖怪联盟》欢乐庆典活动！福利乐翻天!</a></li>
+          <li>•<a href="/zixun/558.html" target="_blank" class="title">《传奇世界H5》吃西瓜大比拼！赢豪礼！</a></li>
+          <li>•<a href="/zixun/515.html" target="_blank" class="title">《口袋妖怪联盟》月月有礼活动！</a></li>
+          <li>•<a href="/zixun/482.html" target="_blank" class="title">《蜀山世界》集字活动：侠客也谈情，集字兑奖换真爱大礼</a></li>
+          <li>•<a href="/zixun/454.html" target="_blank" class="title">3500有福利 “五一”充值赠大礼</a></li>
+          <li>•<a href="/zixun/439.html" target="_blank" class="title">《口袋妖怪联盟》“周年庆典”活动隆重开启</a></li>
+          <li>•<a href="/zixun/425.html" target="_blank" class="title">《爬塔西游》幸运大放送 限时勇者免费送</a></li>
+          <li>•<a href="/zixun/420.html" target="_blank" class="title">4.1礼愚天下 《蜀山世界》愚乐无极限</a></li>
+        </ul>
+      </div>
+      <div class="w-texts mt15">
+        <div class="hd20">
+          <h3>最新资讯</h3>
+        </div>
+        <ul class="text-list">
+          <li>•<a href="/zixun/802.html" target="_blank" class="title">《捕鱼达人4》之千奇百怪的技能鱼</a></li>
+          <li>•<a href="/zixun/801.html" target="_blank" class="title">《捕鱼》游戏攻略</a></li>
+          <li>•<a href="/zixun/800.html" target="_blank" class="title">《佰游德州》新手FAQ-游戏热门问答</a></li>
+          <li>•<a href="/zixun/798.html" target="_blank" class="title">《QQ保皇》新手攻略</a></li>
+          <li>•<a href="/zixun/797.html" target="_blank" class="title">《电玩捕鱼》新手攻略</a></li>
+          <li>•<a href="/zixun/799.html" target="_blank" class="title">最新《欢乐斗地主》人物获取方式</a></li>
+          <li>•<a href="/zixun/795.html" target="_blank" class="title">《欢乐斗地主》获取欢乐豆攻略</a></li>
+          <li>•<a href="/zixun/794.html" target="_blank" class="title">《欢乐斗地主》新手攻略</a></li>
+          <li>•<a href="/zixun/792.html" target="_blank" class="title">《妖怪宝可萌》活动，日充送好礼！</a></li>
+          <li>•<a href="/zixun/791.html" target="_blank" class="title">《龙城霸业》合服活动火爆开启，合服礼包随心领！</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div id="footer">
+  <div class="about_me"> <a href="/aboutus.html" target="_blank">关于我们</a> | <a href="/contact.html" target="_blank">联系方式</a> | <a href="/sitemap.html" target="_blank">网站地图</a> | <a href="/explain.html" target="_blank">用户协议</a> </div>
+  <div class="safety"> <a><i class="icon_safe1"></i>中国互联网举报中心</a> <a><i class="icon_safe2"></i>网络违法举报中心</a> <a><i class="icon_safe3"></i>垃圾信息举报中心</a> <a><i class="icon_safe4"></i>闽公网安备35020302001953号</a> </div>
+  <p class="tips_text">©2017-2018 &nbsp; 棋游之家 &nbsp; 47.52.203.166 <em>礼包交流群：</em><a href="http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b" target="_blank" class="qqun"></a></p>
+  <p class="tips_text">备案号：粤ICP备17024501号-2 &nbsp;  技术支持：<a href="https://www.96kaifa.com" target="_blank">96KaiFa源码</a></p>
+</div>
+<script src="/e/public/onclick/?enews=donews&classid=3&id=797"></script><div id="backtop">返回顶部</div>
+<script type="text/javascript" src="/96kaifa/statics/home/js/member.js"></script>
+<script type="text/javascript">
+	var member = new Member();
+</script>
+<script type="text/javascript" src="/96kaifa/statics/home/js/global.js"></script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+<script>tyLoader();</script>
+<script class="closetag">tyLoader(true);</script>
+</body>
+</html>
