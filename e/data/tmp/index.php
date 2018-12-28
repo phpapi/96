@@ -2253,7 +2253,7 @@ $bqno++;
 <script class="closetag">tyLoader(true);</script>
 <div id="floatCode">
   <div class="code1"><img src="/96kaifa/statics/home/images/wx_code.jpg" alt=""><span>微信扫描 马上玩</span></div>
-  <div class="code2"><img src="/qr/api.php?url=<?=$public_r['add_www_96kaifa_com_murl']?>&p=7&m=1" alt=""><span>手机扫描访问</span></div>
+  <div class="code2"><img src="/96kaifa/statics/home/images/wx.jpg" alt=""><span>手机扫描访问</span></div>
 </div>
 </body>
 </html>
