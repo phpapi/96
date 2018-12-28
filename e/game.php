@@ -26,7 +26,7 @@ document.write('<?=$down?>');
 }   
 else
 { 
-$down2="<a href=\"javascript:;\" class=\"jryx playgame\" id=\"gamego\">进入游戏</a>";
+$down2="<a href=\"javascript:;\" class=\"jryx playgame\">进入游戏</a>";
  //未登录显示
 ?>   
 document.write('<?=$down2?>');   
