@@ -372,7 +372,7 @@ $public_r=array('sitename'=>'棋游之家-棋牌游戏、手机棋牌游戏在�
 'qtoqjf'=>'',
 'ctimeaddre'=>0,
 'ctimeqaddre'=>0,
-'deftempid'=>0,'add_www_96kaifa_com_name'=>'棋游之家','add_www_96kaifa_com_url'=>'http://www.57u.com/','add_www_96kaifa_com_url2'=>'www.57u.com','add_www_96kaifa_com_murl'=>'http://m.57u.com/','add_www_96kaifa_com_ba'=>'粤ICP备17024501号-2','add_www_96kaifa_com_tongji'=>'','add_www_96kaifa_com_qq'=>'21617372','add_www_96kaifa_com_wx'=>'96kaifa','add_www_96kaifa_com_qun'=>'http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b','add_www_96kaifa_com_weiduan'=>'#广告链接后台修改');
+'deftempid'=>0,'add_www_96kaifa_com_name'=>'棋游之家','add_www_96kaifa_com_url'=>'http://www.57u.com/','add_www_96kaifa_com_url2'=>'www.57u.com','add_www_96kaifa_com_murl'=>'http://m.57u.com/','add_www_96kaifa_com_ba'=>'粤ICP备18159844号','add_www_96kaifa_com_tongji'=>'','add_www_96kaifa_com_qq'=>'21617372','add_www_96kaifa_com_wx'=>'96kaifa','add_www_96kaifa_com_qun'=>'http://shang.qq.com/wpa/qunwpa?idkey=9e9c89e736ef5e888ed9979bebfa50127b1206a0d3ddbea705e63b00e761868b','add_www_96kaifa_com_weiduan'=>'#广告链接后台修改');
 //------------e_public
 
 //moreports
