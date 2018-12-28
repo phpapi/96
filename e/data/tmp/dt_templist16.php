@@ -143,15 +143,15 @@ if(!defined('InEmpireCMS'))
     </div>
     
     </div>
-<div class="main">
 
+<div class="main">
   <div class="position">当前位置：[!--newsnav--]</div>
   <div class="game-filter">
     <h3>游戏筛选</h3>
-	<?=user_ShowFieldandChange(3)?>
+	<?=user_ShowFieldandChange(1)?>
     <dl class="clearfix m-list-paixu">
       <dt>排序>></dt>
-      <dd><a href="/list-0-0-0-4.html" class="on">最新</a><a href="/list-0-1-0-4.html">最热</a></dd>
+      <dd><a href="/list-0-0-0-3.html" class="on">最新</a><a href="/list-0-1-0-3.html">最热</a></dd>
     </dl>
   </div>
   <div class="game-ku">

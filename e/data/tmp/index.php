@@ -10,7 +10,7 @@ if(!defined('InEmpireCMS'))
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>棋游之家</title>
 <meta name="keywords" content="棋游之家" />
-<meta name="description" content="棋游之家为广大玩家提供各种游戏下载以及补丁，视频，工具等下载，每日更新玩家喜爱的游戏资讯及游戏攻略，更多精彩就在棋游之家。" />
+<meta name="description" content="棋游之家为广大玩家提供各种棋牌游戏下载以及补丁，视频，工具等下载，每日更新玩家喜爱的游戏资讯及游戏攻略，更多精彩就在棋游之家。" />
 <link href="/96kaifa/statics/home/css/base.css" type="text/css" rel="stylesheet">
 <link href="/96kaifa/statics/home/css/style3500.css" type="text/css" rel="stylesheet">
 <link href="/96kaifa/statics/home/css/newadd.css" type="text/css" rel="stylesheet">
