@@ -348,11 +348,11 @@
 .result{ float: left; width: 804px; }
 .result-tab{ margin-top: 5px; }
 .result-tab ul{ height: 40px; }
-.result-tab li{ float: left; height: 38px; line-height: 38px; width: 200px; text-align: center; background-color: #f7f7f7; border:1px solid #dcdcdc; margin-left:-1px; font-size: 16px; color: #666; z-index: 1; position: relative; }
+.result-tab li{ float: left; height: 38px; line-height: 38px; width: 133px; text-align: center; background-color: #f7f7f7; border:1px solid #dcdcdc; margin-left:-1px; font-size: 16px; color: #666; z-index: 1; position: relative; }
 .result-tab li.tab_2{ background-color: #ff9a00; border-color: #ff9a00; color: #fff; font-weight: bold; z-index: 2; }
 .result-tab li a{ color: #666; display: block; }
 .result-tab li a:hover{ color: #f70; }
-.result-tab li i{ display: none; position: absolute; bottom:-7px; left: 92px; width: 0; height: 0; border-width: 7px 9px 0; border-style: solid; border-color: #ff9a00 transparent transparent transparent; overflow: hidden; }
+.result-tab li i{ display: none; position: absolute; bottom:-7px; left: 56px; width: 0; height: 0; border-width: 7px 9px 0; border-style: solid; border-color: #ff9a00 transparent transparent transparent; overflow: hidden; }
 .result-tab li.tab_2 i{ display: block; }
 .result .game-list li{ width: 360px; }
 .default{ color: #999; line-height: 25px; text-align: center; background: url(../images/default.jpg) no-repeat center top; padding: 138px 0 37px; margin-top: 45px; }
