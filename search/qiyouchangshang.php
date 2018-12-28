@@ -69,7 +69,7 @@ $www_96kaifa_com_footer=$empire->fetch1("select varvalue from {$dbtbpre}enewstem
 
 $num = 0;
 if ($word != ''){
-    $num=$empire->gettotal("select count(*) as total from www_96kaifa_com_ecms_puke  where title like '%$word%'");
+    $num=$empire->gettotal("select count(*) as total from www_96kaifa_com_ecms_qiyouchangshang  where title like '%$word%'");
 }
 
 ?>
@@ -96,10 +96,10 @@ if ($word != ''){
       <div class="result-tab">
         <ul>
           <li class="tab_1"><a href="/search/qipailei.php?key=<?=$word?>">棋牌</a><i></i></li>
-          <li class="tab_2"><a href="/search/game.php?key=<?=$word?>">扑克<i></i></li>
+          <li class="tab_1"><a href="/search/game.php?key=<?=$word?>">扑克<i></i></li>
           <li class="tab_1"><a href="/search/majiang.php?key=<?=$word?>">麻将</a><i></i></li>
           <li class="tab_1"><a href="/search/qipai.php?key=<?=$word?>">棋类</a><i></i></li>
-          <li class="tab_1"><a href="/search/qiyouchangshang.php?key=<?=$word?>">棋游厂商</a><i></i></li>
+          <li class="tab_2"><a href="/search/qiyouchangshang.php?key=<?=$word?>">棋游厂商</a><i></i></li>
           <li class="tab_1"><a href="/search/zixun.php?key=<?=$word?>">资讯</a><i></i></li>
         </ul>
       </div>
@@ -114,7 +114,7 @@ if ($word != ''){
 <!--无关键词结束-->
 <?php }else{
 $Page_size=20; 
-$result=$empire->query("select * from www_96kaifa_com_ecms_puke where title like '%$word%'");
+$result=$empire->query("select * from www_96kaifa_com_ecms_qiyouchangshang where title like '%$word%'");
 $count = mysqli_num_rows($result); 
 $page_count = ceil($count/$Page_size); 
 $init=1; 
@@ -128,61 +128,18 @@ $page=1;
 $page=$_GET['page']; 
 } 
 $offset=$Page_size*($page-1); 
-$sql=$empire->query("select * from www_96kaifa_com_ecms_puke where title like '%$word%' order by newstime desc limit $offset,$Page_size");
+$sql=$empire->query("select * from www_96kaifa_com_ecms_qiyouchangshang where title like '%$word%' order by newstime desc limit $offset,$Page_size");
 
 while ($row=$empire->fetch($sql)) {
 
-if($row[fenlei]==1){$fenlei="斗地主";}
-else if($row[fenlei]==2){$fenlei="跑胡子";}
-else if($row[fenlei]==3){$fenlei="21点";}
-else if($row[fenlei]==4){$fenlei="保皇";}
-else if($row[fenlei]==5){$fenlei="打滚子";}
-else if($row[fenlei]==6){$fenlei="干瞪眼";}
-else if($row[fenlei]==7){$fenlei="打大A";}
-else if($row[fenlei]==8){$fenlei="四冲";}
-else if($row[fenlei]==9){$fenlei="三代";}
-else if($row[fenlei]==10){$fenlei="5十K";}
-else if($row[fenlei]==11){$fenlei="三打一";}
-else if($row[fenlei]==12){$fenlei="挖坑";}
-else if($row[fenlei]==13){$fenlei="拱猪";}
-else if($row[fenlei]==14){$fenlei="红五";}
-else if($row[fenlei]==15){$fenlei="黑尖";}
-else if($row[fenlei]==16){$fenlei="攉龙";}
-else if($row[fenlei]==17){$fenlei="大怪路子";}
-else if($row[fenlei]==18){$fenlei="掼蛋";}
-else if($row[fenlei]==19){$fenlei="包分";}
-else if($row[fenlei]==20){$fenlei="拖拉机";}
-else if($row[fenlei]==21){$fenlei="接龙";}
-else if($row[fenlei]==22){$fenlei="跑得快";}
-else if($row[fenlei]==23){$fenlei="锄大地";}
-else if($row[fenlei]==24){$fenlei="梭哈";}
-else if($row[fenlei]==25){$fenlei="德州扑克";}
-else if($row[fenlei]==26){$fenlei="炸金花";}
-else if($row[fenlei]==27){$fenlei="够级";}
-else if($row[fenlei]==28){$fenlei="纸牌";}
-else if($row[fenlei]==29){$fenlei="牌九";}
-else if($row[fenlei]==30){$fenlei="十三张";}
-else if($row[fenlei]==31){$fenlei="刨幺";}
-else if($row[fenlei]==32){$fenlei="升级";}
-else if($row[fenlei]==33){$fenlei="三公";}
-else if($row[fenlei]==34){$fenlei="尖子顶";}
-else if($row[fenlei]==35){$fenlei="花牌";}
-else if($row[fenlei]==36){$fenlei="红十";}
-else if($row[fenlei]==37){$fenlei="斗牛";}
-else if($row[fenlei]==38){$fenlei="捕鱼";}
-else if($row[fenlei]==39){$fenlei="桥牌";}
-else if($row[fenlei]==40){$fenlei="长牌";}
-else if($row[fenlei]==41){$fenlei="歪胡子";}
-else if($row[fenlei]==42){$fenlei="大字牌";}
-else if($row[fenlei]==43){$fenlei="大贰";}
+
 ?> 		
           <li>
             <div class="img"><a href="<?php echo $row['titleurl']?>" target="_blank"><img src="<?php echo $row['titlepic']?>" alt="<?php echo $row['title']?>"></a></div>
             <div class="con"> <a href="<?php echo $row['titleurl']?>" target="_blank" class="title"><?php echo $row['title']?></a>
-              <p><?=$fenlei?><span>|</span><?php echo $row['onclick']?>人在玩</p>
               <p><?php echo $row['yijuhua']?></p>
             </div>
-            <div class="wan-btn"><a href="<?php echo $row['titleurl']?>" target="_blank" class="wanBtn playgame">开始玩</a></div>
+            <div class="wan-btn"><a href="<?php echo $row['titleurl']?>" target="_blank" class="wanBtn playgame">开始阅读</a></div>
           </li>
 <?php 
 } 
@@ -229,13 +186,13 @@ for($i=$init;$i<=$max_p;$i++){
 if($i==$page){ 
 if($page_count==1){}else{$key.=' <span>'.$i.'</span>'; }
 } else { 
-$key.=" <a href=\"/search/game.php?key=".$word."&page=".$i."\" class=\"a1\">".$i."</a>"; 
+$key.=" <a href=\"/search/qiyouchangshang.php?key=".$word."&page=".$i."\" class=\"a1\">".$i."</a>";
 } 
 } 
 if($page!=$pages){ 
 
 
-$key.=" <a href=\"/search/game.php?key=".$word."&page=".($page+1)."\" class=\"a1\">下一页</a> ";//下一页 
+$key.=" <a href=\"/search/qiyouchangshang.php?key=".$word."&page=".($page+1)."\" class=\"a1\">下一页</a> ";//下一页
 //$key.=" <a href=\"/search/game.php?key=".$word."&page=".$pages."\" class=\"a1\">尾页</a>"; //尾页 
 }else { 
 $key.=" ";//下一页 
