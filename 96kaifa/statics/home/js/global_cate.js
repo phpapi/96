@@ -17,9 +17,9 @@ function tabPath() {
 var  taburl= tabPath()
 console.log(taburl);
 if(taburl==2){
-    $("#navi li a").eq(2).addClass("nav-cur").siblings().removeClass("nav-cur");
+    $("#navi li").eq(2).addClass("nav-cur").siblings().removeClass("nav-cur");
 }else if(taburl==3){
-    $("#navi li a").eq(3).addClass("nav-cur").siblings().removeClass("nav-cur");
+    $("#navi li").eq(3).addClass("nav-cur").siblings().removeClass("nav-cur");
 }else if(taburl==4){
-    $("#navi li a").eq(4).addClass("nav-cur").siblings().removeClass("nav-cur");
+    $("#navi li").eq(4).addClass("nav-cur").siblings().removeClass("nav-cur");
 }
